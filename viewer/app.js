@@ -19,6 +19,9 @@ const els = {
   dataPath: document.querySelector("#dataPath"),
   reloadButton: document.querySelector("#reloadButton"),
   statusStrip: document.querySelector("#statusStrip"),
+  roundLens: document.querySelector("#roundLens"),
+  roundReadout: document.querySelector("#roundReadout"),
+  playRounds: document.querySelector("#playRounds"),
   flowGraph: document.querySelector("#flowGraph"),
   graphLegend: document.querySelector("#graphLegend"),
   capsuleSearch: document.querySelector("#capsuleSearch"),
@@ -40,6 +43,8 @@ let statusFilter = "all";
 let focusAgent = "all";
 let searchQuery = "";
 let pulseEnabled = true;
+let roundLimit = 1;
+let playbackTimer = null;
 
 function getInitialPath() {
   const params = new URLSearchParams(window.location.search);
@@ -74,6 +79,8 @@ async function loadRuntime() {
     }
     const [state, capsules, invariants, conflicts, interventions] = loaded;
     runtimeData = { state, capsules, invariants, conflicts, interventions };
+    runtimeData.roundIndex = buildRoundIndex(runtimeData);
+    roundLimit = runtimeData.state.rounds.length || 1;
     renderAll();
   } catch (error) {
     els.statusStrip.innerHTML = `<div class="error">Could not load runtime output. ${escapeHtml(error.message)}</div>`;
@@ -81,6 +88,7 @@ async function loadRuntime() {
 }
 
 function renderAll() {
+  renderTemporalLens();
   renderStatusStrip();
   renderGraphLegend();
   renderGraphTools();
@@ -102,6 +110,29 @@ function renderAll() {
   });
 }
 
+function renderObservable() {
+  renderStatusStrip();
+  renderGraphLegend();
+  renderFlowGraph();
+  renderInvariantRail();
+  renderWeather();
+  renderResonanceMatrix();
+  renderTimeline();
+  renderConflicts();
+}
+
+function renderTemporalLens() {
+  const maxRound = runtimeData.state.rounds.length || 1;
+  els.roundLens.min = "1";
+  els.roundLens.max = String(maxRound);
+  els.roundLens.value = String(roundLimit);
+  const round = runtimeData.state.rounds[roundLimit - 1];
+  els.roundReadout.innerHTML = `
+    <strong>Round ${escapeHtml(roundLimit)} / ${escapeHtml(maxRound)}</strong>
+    <span>${escapeHtml(round?.query || "No query")}</span>
+  `;
+}
+
 function renderGraphTools() {
   const agents = runtimeData.state.runtime.agents;
   els.focusAgent.innerHTML = [
@@ -115,7 +146,7 @@ function renderGraphTools() {
 
 function capsuleCounts() {
   const counts = { active: 0, refused: 0, quarantined: 0, expired: 0 };
-  for (const capsule of runtimeData.capsules.capsules) {
+  for (const capsule of capsulesThroughRound()) {
     counts[capsule.status] = (counts[capsule.status] || 0) + 1;
   }
   return counts;
@@ -123,13 +154,14 @@ function capsuleCounts() {
 
 function renderStatusStrip() {
   const counts = capsuleCounts();
-  const rounds = runtimeData.state.rounds.length;
-  const conflicts = runtimeData.conflicts.conflicts.length;
-  const interventions = runtimeData.interventions.records.length;
-  const ok = runtimeData.invariants.overall_ok ? "OK" : "Attention";
+  const rounds = roundLimit;
+  const conflicts = conflictsThroughRound().length;
+  const interventions = interventionsThroughRound().length;
+  const invariantRound = runtimeData.invariants.history[roundLimit - 1];
+  const ok = (invariantRound?.overall_ok ?? runtimeData.invariants.overall_ok) ? "OK" : "Attention";
   els.statusStrip.innerHTML = [
-    stat("Invariant", ok, runtimeData.invariants.latest.length + " checks"),
-    stat("Capsules", runtimeData.capsules.capsules.length, `${counts.active} active`),
+    stat("Invariant", ok, (invariantRound?.results.length || runtimeData.invariants.latest.length) + " checks"),
+    stat("Capsules", capsulesThroughRound().length, `${counts.active} active`),
     stat("Refusals", counts.refused, "valid semantic states"),
     stat("Quarantine", counts.quarantined, `${interventions} interventions`),
     stat("Conflicts", conflicts, `${rounds} rounds retained`),
@@ -167,8 +199,8 @@ function renderFlowGraph() {
   svg.append(svgDefs());
 
   const agents = runtimeData.state.runtime.agents;
-  const deliveriesAll = runtimeData.capsules.deliveries;
-  const capsules = runtimeData.capsules.capsules.filter((capsule) => capsuleVisible(capsule, deliveriesAll));
+  const deliveriesAll = deliveriesThroughRound();
+  const capsules = capsulesThroughRound().filter((capsule) => capsuleVisible(capsule, deliveriesAll));
   const capsuleById = new Map(capsules.map((capsule) => [capsule.id, capsule]));
   const deliveries = deliveriesAll.filter((delivery) => {
     if (!capsuleById.has(delivery.capsule_id)) return false;
@@ -331,7 +363,7 @@ function renderResonanceMatrix() {
   const agents = runtimeData.state.runtime.agents.map((agent) => agent.id);
   const counts = new Map();
   let max = 1;
-  for (const delivery of runtimeData.capsules.deliveries) {
+  for (const delivery of deliveriesThroughRound()) {
     const key = `${delivery.source_agent}→${delivery.target_agent}`;
     const next = (counts.get(key) || 0) + 1;
     counts.set(key, next);
@@ -355,7 +387,7 @@ function renderResonanceMatrix() {
     cell.addEventListener("click", () => {
       const source = cell.dataset.source;
       const target = cell.dataset.target;
-      const routes = runtimeData.capsules.deliveries.filter(
+      const routes = deliveriesThroughRound().filter(
         (delivery) => delivery.source_agent === source && delivery.target_agent === target,
       );
       renderDetail({
@@ -369,7 +401,7 @@ function renderResonanceMatrix() {
 }
 
 function renderInvariantRail() {
-  const latest = runtimeData.invariants.latest || [];
+  const latest = runtimeData.invariants.history[roundLimit - 1]?.results || runtimeData.invariants.latest || [];
   els.invariantRail.innerHTML = latest
     .map((item) => `
       <div class="invariant-cell" title="${escapeHtml(item.message || "")}">
@@ -382,15 +414,16 @@ function renderInvariantRail() {
 
 function renderWeather() {
   const counts = capsuleCounts();
-  const total = Math.max(1, runtimeData.capsules.capsules.length);
-  const conflicts = runtimeData.conflicts.conflicts.length;
-  const deliveries = runtimeData.capsules.deliveries.length;
-  const latest = runtimeData.invariants.history.at(-1)?.results || [];
+  const activeCapsules = capsulesThroughRound();
+  const total = Math.max(1, activeCapsules.length);
+  const conflicts = conflictsThroughRound().length;
+  const deliveries = deliveriesThroughRound().length;
+  const latest = runtimeData.invariants.history[roundLimit - 1]?.results || [];
   const nonDom = latest.find((result) => result.name === "NonDomination");
   const shares = nonDom?.details?.shares || {};
   const maxShare = Object.values(shares).reduce((max, value) => Math.max(max, Number(value) || 0), 0);
-  const avgLoss = average(runtimeData.capsules.capsules.map((capsule) => capsule.metrics?.semantic_loss || 0));
-  const avgAmbiguity = average(runtimeData.capsules.capsules.map((capsule) => capsule.metrics?.ambiguity_score || 0));
+  const avgLoss = average(activeCapsules.map((capsule) => capsule.metrics?.semantic_loss || 0));
+  const avgAmbiguity = average(activeCapsules.map((capsule) => capsule.metrics?.ambiguity_score || 0));
 
   const items = [
     ["Refusal density", percent(counts.refused / total), "How much boundary-preserving non-translation is alive in the bus."],
@@ -447,7 +480,7 @@ function renderTimeline() {
         .map(([name, score]) => `${name} ${formatNumber(score)}`)
         .join(" / ");
       return `
-        <article class="timeline-item">
+        <article class="timeline-item ${round.round <= roundLimit ? "visible-round" : "future-round"}">
           <h3>Round ${escapeHtml(round.round)}: ${escapeHtml(round.routed_count)} routes</h3>
           <p>${escapeHtml(round.query)}</p>
           <div class="tag-row">
@@ -462,7 +495,8 @@ function renderTimeline() {
 }
 
 function renderConflicts() {
-  els.conflictList.innerHTML = runtimeData.conflicts.conflicts
+  const conflicts = conflictsThroughRound();
+  els.conflictList.innerHTML = conflicts
     .slice(0, 40)
     .map((conflict) => `
       <article class="conflict-item">
@@ -477,7 +511,7 @@ function renderConflicts() {
     .join("");
   els.conflictList.querySelectorAll(".conflict-item").forEach((item, index) => {
     item.addEventListener("click", () => {
-      const conflict = runtimeData.conflicts.conflicts[index];
+      const conflict = conflicts[index];
       renderDetail({
         title: conflict.id,
         body: conflict.claims.join(" / "),
@@ -510,7 +544,7 @@ function agentDetail(agent) {
 }
 
 function routeDetail(delivery) {
-  const capsule = runtimeData.capsules.capsules.find((item) => item.id === delivery.capsule_id);
+  const capsule = capsulesThroughRound().find((item) => item.id === delivery.capsule_id);
   return {
     kind: "route",
     title: `${delivery.route_kind}: ${delivery.capsule_id}`,
@@ -620,6 +654,69 @@ function normalize(vector) {
   return { x: vector.x / length, y: vector.y / length };
 }
 
+function buildRoundIndex(data) {
+  const capsuleRound = new Map();
+  const producedRound = new Map();
+  for (const round of data.state.rounds) {
+    for (const id of round.produced_capsules || []) {
+      producedRound.set(id, round.round);
+    }
+  }
+
+  let currentRound = 1;
+  for (const event of data.capsules.events || []) {
+    if (producedRound.has(event.capsule_id)) {
+      currentRound = producedRound.get(event.capsule_id);
+    }
+    if (event.capsule_id && !capsuleRound.has(event.capsule_id)) {
+      capsuleRound.set(event.capsule_id, currentRound);
+    }
+  }
+
+  for (const capsule of data.capsules.capsules) {
+    if (!capsuleRound.has(capsule.id)) {
+      capsuleRound.set(capsule.id, producedRound.get(capsule.id) || 1);
+    }
+  }
+
+  const conflictRound = new Map();
+  for (const conflict of data.conflicts.conflicts || []) {
+    const rounds = (conflict.capsule_ids || []).map((id) => capsuleRound.get(id) || 1);
+    conflictRound.set(conflict.id, Math.max(1, ...rounds));
+  }
+
+  return { capsuleRound, conflictRound };
+}
+
+function capsuleRound(capsuleId) {
+  return runtimeData.roundIndex.capsuleRound.get(capsuleId) || 1;
+}
+
+function capsulesThroughRound() {
+  return runtimeData.capsules.capsules.filter((capsule) => capsuleRound(capsule.id) <= roundLimit);
+}
+
+function deliveriesThroughRound() {
+  return runtimeData.capsules.deliveries.filter((delivery) => capsuleRound(delivery.capsule_id) <= roundLimit);
+}
+
+function conflictsThroughRound() {
+  return runtimeData.conflicts.conflicts.filter((conflict) => (
+    runtimeData.roundIndex.conflictRound.get(conflict.id) || 1
+  ) <= roundLimit);
+}
+
+function interventionsThroughRound() {
+  return runtimeData.interventions.records.filter((record) => capsuleRound(record.target) <= roundLimit);
+}
+
+function setRoundLimit(nextRound) {
+  const maxRound = runtimeData?.state.rounds.length || 1;
+  roundLimit = Math.min(maxRound, Math.max(1, Number(nextRound) || 1));
+  renderTemporalLens();
+  renderObservable();
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -648,6 +745,29 @@ els.focusAgent.addEventListener("change", () => {
 els.pulseToggle.addEventListener("change", () => {
   pulseEnabled = els.pulseToggle.checked;
   renderFlowGraph();
+});
+els.roundLens.addEventListener("input", () => {
+  setRoundLimit(els.roundLens.value);
+});
+els.playRounds.addEventListener("click", () => {
+  if (playbackTimer) {
+    clearInterval(playbackTimer);
+    playbackTimer = null;
+    els.playRounds.textContent = "Play";
+    return;
+  }
+  els.playRounds.textContent = "Pause";
+  playbackTimer = setInterval(() => {
+    const maxRound = runtimeData?.state.rounds.length || 1;
+    if (roundLimit >= maxRound) {
+      clearInterval(playbackTimer);
+      playbackTimer = null;
+      els.playRounds.textContent = "Play";
+      setRoundLimit(1);
+      return;
+    }
+    setRoundLimit(roundLimit + 1);
+  }, 1200);
 });
 
 els.dataPath.value = getInitialPath();
