@@ -97,6 +97,38 @@
         <div id="resonanceMatrix" class="resonance-matrix"></div>
       </section>
 
+      <section class="dashboard-grid tri-grid">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Live stack</p>
+              <h2>Backend Topology</h2>
+            </div>
+          </div>
+          <div id="backendTopology" class="signal-list"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Action without consensus</p>
+              <h2>Commitment Ledger</h2>
+            </div>
+          </div>
+          <div id="commitmentLedger" class="signal-list"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Boundary events</p>
+              <h2>Quarantine Watch</h2>
+            </div>
+          </div>
+          <div id="quarantineWatch" class="signal-list"></div>
+        </div>
+      </section>
+
       <section class="dashboard-grid lower-grid">
         <div class="panel">
           <div class="panel-heading">
@@ -144,6 +176,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./app.js?v=live-panels-1"></script>
   </body>
 </html>

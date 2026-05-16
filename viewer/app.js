@@ -31,6 +31,9 @@ const els = {
   weatherGrid: document.querySelector("#weatherGrid"),
   invariantRail: document.querySelector("#invariantRail"),
   resonanceMatrix: document.querySelector("#resonanceMatrix"),
+  backendTopology: document.querySelector("#backendTopology"),
+  commitmentLedger: document.querySelector("#commitmentLedger"),
+  quarantineWatch: document.querySelector("#quarantineWatch"),
   agentSelect: document.querySelector("#agentSelect"),
   contextGraphSummary: document.querySelector("#contextGraphSummary"),
   timeline: document.querySelector("#timeline"),
@@ -96,6 +99,9 @@ function renderAll() {
   renderInvariantRail();
   renderWeather();
   renderResonanceMatrix();
+  renderBackendTopology();
+  renderCommitmentLedger();
+  renderQuarantineWatch();
   renderContextSelector();
   renderTimeline();
   renderConflicts();
@@ -117,6 +123,9 @@ function renderObservable() {
   renderInvariantRail();
   renderWeather();
   renderResonanceMatrix();
+  renderBackendTopology();
+  renderCommitmentLedger();
+  renderQuarantineWatch();
   renderTimeline();
   renderConflicts();
 }
@@ -396,6 +405,120 @@ function renderResonanceMatrix() {
         tags: ["resonance", source, target],
         raw: routes,
       });
+    });
+  });
+}
+
+function renderBackendTopology() {
+  const agents = runtimeData.state.runtime.agents;
+  const capsules = capsulesThroughRound();
+  const sourceCounts = countBy(capsules, (capsule) => capsule.source_agent);
+  const known = new Set(agents.map((agent) => agent.id));
+  const syntheticSources = Object.keys(sourceCounts)
+    .filter((source) => !known.has(source))
+    .map((source) => ({
+      id: source,
+      role: source === "runtime_mediator" ? "runtime mediator" : "synthetic source",
+      ontology: "protocol",
+      model_backend: "runtime",
+      behavior: "mediator",
+    }));
+  const rows = [...agents, ...syntheticSources];
+  els.backendTopology.innerHTML = rows
+    .map((agent) => {
+      const backend = agent.model_backend || "unknown";
+      const backendClass = backend === "mock" ? "mock" : backend === "runtime" ? "runtime" : "live";
+      return `
+        <button class="signal-item backend-${backendClass}" type="button" data-agent="${escapeHtml(agent.id)}">
+          <div>
+            <h3>${escapeHtml(agent.id)}</h3>
+            <p>${escapeHtml(agent.role)} · ${escapeHtml(agent.ontology)}</p>
+          </div>
+          <div class="signal-metrics">
+            <span class="tag">${escapeHtml(backend)}</span>
+            <span class="tag">${escapeHtml(sourceCounts[agent.id] || 0)} capsules</span>
+          </div>
+        </button>
+      `;
+    })
+    .join("");
+  els.backendTopology.querySelectorAll(".signal-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      focusAgent = item.dataset.agent || "all";
+      if (![...els.focusAgent.options].some((option) => option.value === focusAgent)) {
+        focusAgent = "all";
+      }
+      els.focusAgent.value = focusAgent;
+      renderFlowGraph();
+      const agent = rows.find((row) => row.id === item.dataset.agent);
+      renderDetail({
+        title: agent.id,
+        body: `${agent.role} is running on ${agent.model_backend || "unknown"} and has emitted ${sourceCounts[agent.id] || 0} capsules through round ${roundLimit}.`,
+        tags: [agent.model_backend || "unknown", agent.ontology, agent.behavior].filter(Boolean),
+        raw: agent,
+      });
+    });
+  });
+}
+
+function renderCommitmentLedger() {
+  const commitments = capsulesThroughRound().filter((capsule) => capsule.intent === "bounded_commitment");
+  if (!commitments.length) {
+    els.commitmentLedger.innerHTML = `<div class="empty-state">No bounded commitments yet in this temporal lens.</div>`;
+    return;
+  }
+  els.commitmentLedger.innerHTML = commitments
+    .slice(-8)
+    .reverse()
+    .map((capsule) => {
+      const commitment = capsule.content?.data?.commitment || {};
+      return `
+        <button class="signal-item commitment-item" type="button" data-capsule="${escapeHtml(capsule.id)}">
+          <div>
+            <h3>${escapeHtml(capsule.id)}</h3>
+            <p>${escapeHtml(commitment.scope || "bounded local scope")} · ${escapeHtml(commitment.ttl_seconds || capsule.scope?.ttl_seconds || "")}s</p>
+          </div>
+          <div class="signal-metrics">
+            <span class="tag">${escapeHtml((commitment.basis_capsule_ids || []).length)} basis</span>
+            <span class="tag">${escapeHtml(commitment.conflict_count_at_creation ?? 0)} conflicts</span>
+          </div>
+        </button>
+      `;
+    })
+    .join("");
+  els.commitmentLedger.querySelectorAll(".signal-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const capsule = commitments.find((entry) => entry.id === item.dataset.capsule);
+      renderDetail(capsuleDetail(capsule));
+    });
+  });
+}
+
+function renderQuarantineWatch() {
+  const quarantines = capsulesThroughRound().filter((capsule) => capsule.status === "quarantined");
+  if (!quarantines.length) {
+    els.quarantineWatch.innerHTML = `<div class="empty-state">No quarantined capsules in this temporal lens.</div>`;
+    return;
+  }
+  els.quarantineWatch.innerHTML = quarantines
+    .slice(-10)
+    .reverse()
+    .map((capsule) => `
+      <button class="signal-item quarantine-item" type="button" data-capsule="${escapeHtml(capsule.id)}">
+        <div>
+          <h3>${escapeHtml(capsule.source_agent)}</h3>
+          <p>${escapeHtml(capsule.audit?.quarantine_reason || "protocol quarantine")}</p>
+        </div>
+        <div class="signal-metrics">
+          <span class="tag">${escapeHtml(capsule.content?.ontology || "unknown")}</span>
+        </div>
+      </button>
+    `)
+    .join("");
+  els.quarantineWatch.querySelectorAll(".signal-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const capsule = quarantines.find((entry) => entry.id === item.dataset.capsule);
+      renderDetail(capsuleDetail(capsule));
     });
   });
 }
