@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spiralreality.local/schemas/agent-config.schema.json",
+  "title": "MultipolarAgentConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "role",
+    "ontology",
+    "constraints",
+    "model"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ontology": {
+      "type": "string",
+      "minLength": 1
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "default": [
+        "no_total_state",
+        "no_private_state"
+      ]
+    },
+    "trust": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "model": {
+      "$ref": "#/$defs/ModelSpec"
+    },
+    "private_state": {
+      "type": "object",
+      "description": "Optional local-only state. This must never be emitted as a MeaningCapsule."
+    }
+  },
+  "$defs": {
+    "ModelSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "backend"
+      ],
+      "properties": {
+        "backend": {
+          "type": "string",
+          "enum": [
+            "mock",
+            "local_path",
+            "llama_cpp",
+            "transformers",
+            "openai_compatible",
+            "ollama"
+          ],
+          "description": "local_path auto-selects llama_cpp for .gguf, otherwise transformers."
+        },
+        "path": {
+          "type": "string",
+          "description": "Local model file path or local model directory. Example: /models/llama-3.1-8b-instruct.Q4_K_M.gguf"
+        },
+        "url": {
+          "type": "string",
+          "description": "Base URL for openai_compatible or ollama backends."
+        },
+        "model_name": {
+          "type": "string",
+          "description": "Remote/OpenAI-compatible/Ollama model name, or a human-readable local model label."
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "temperature": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "max_tokens": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "n_ctx": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "n_gpu_layers": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "backend": {
+                "enum": [
+                  "local_path",
+                  "llama_cpp",
+                  "transformers"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "path"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "backend": {
+                "enum": [
+                  "openai_compatible",
+                  "ollama"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "url",
+              "model_name"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

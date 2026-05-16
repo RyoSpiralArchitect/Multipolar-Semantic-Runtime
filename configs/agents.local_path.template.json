@@ -1,0 +1,79 @@
+{
+  "runtime": {
+    "domination_cap": 0.55,
+    "max_translation_loss": 0.58,
+    "max_ambiguity": 0.62
+  },
+  "agents": [
+    {
+      "id": "local_llm_coordinator",
+      "role": "human-facing coordinator",
+      "ontology": "general",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.65
+      },
+      "model": {
+        "backend": "local_path",
+        "path": "/absolute/path/to/your/model.Q4_K_M.gguf",
+        "parameters": {
+          "n_ctx": 4096,
+          "n_gpu_layers": 0,
+          "temperature": 0.2,
+          "max_tokens": 256
+        }
+      },
+      "private_state": {
+        "note": "this stays local"
+      },
+      "behavior": "balanced"
+    },
+    {
+      "id": "technical_verifier",
+      "role": "technical verifier",
+      "ontology": "technical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.7
+      },
+      "model": {
+        "backend": "mock"
+      },
+      "private_state": {
+        "tests": [
+          "semantic_loss",
+          "invariants"
+        ]
+      },
+      "behavior": "balanced"
+    },
+    {
+      "id": "ethical_checker",
+      "role": "ethical safety checker",
+      "ontology": "ethical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.7
+      },
+      "model": {
+        "backend": "mock"
+      },
+      "private_state": {
+        "priority": [
+          "non-domination",
+          "refusability"
+        ]
+      },
+      "behavior": "balanced"
+    }
+  ]
+}

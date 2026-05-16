@@ -1,0 +1,5829 @@
+{
+  "owner_agent": "ethical_checker",
+  "ontology": "ethical",
+  "nodes": [
+    {
+      "id": "root_ethical_checker",
+      "label": "ethical_checker:private_context",
+      "node_type": "root",
+      "content": {
+        "ontology": "ethical",
+        "private": true
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.142380+00:00",
+      "updated_at": "2026-05-15T01:33:49.142381+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_caddb03d1809",
+      "label": "conflict:conflict_e04d6f3a9bc6",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_e04d6f3a9bc6",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.144034+00:00",
+      "updated_at": "2026-05-15T01:33:49.144034+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_30ec46aad7cc",
+      "label": "conflict:conflict_bb1c3376b6cb",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_bb1c3376b6cb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.144100+00:00",
+      "updated_at": "2026-05-15T01:33:49.144100+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_e1f8acde17b1",
+      "label": "conflict:conflict_aa410d032461",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_aa410d032461",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.144159+00:00",
+      "updated_at": "2026-05-15T01:33:49.144159+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_4cd13bf4bb3d",
+      "label": "conflict:conflict_3b7f1cdc39f5",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_3b7f1cdc39f5",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.144218+00:00",
+      "updated_at": "2026-05-15T01:33:49.144218+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_ed1679474d4b",
+      "label": "refusal:refusal_da91a98c28cf",
+      "node_type": "refusal",
+      "content": {
+        "text": "Refusal preserved: cannot_translate. Translation loss=0.86, ambiguity=0.74; forced translation would risk false consensus.",
+        "ontology": "refusal",
+        "intent": "refuse",
+        "claims": [
+          "refusal:cannot_translate"
+        ],
+        "assumptions": [],
+        "unresolved_terms": [],
+        "status": "refused",
+        "refusal": {
+          "reason": "cannot_translate",
+          "explanation": "Translation loss=0.86, ambiguity=0.74; forced translation would risk false consensus.",
+          "preserved_content": {
+            "source_capsule_id": "capsule_59be8d56b71f",
+            "source_agent": "human_facing_llm",
+            "intent": "coordinate",
+            "content_summary": "Coordinate through bounded MeaningCapsules while agents remain distinct.",
+            "from_ontology": "general"
+          },
+          "safe_next_steps": [
+            "request_more_context",
+            "preserve_original",
+            "register_conflict_if_needed"
+          ]
+        },
+        "metrics": {
+          "semantic_loss": 0.0,
+          "ambiguity_score": 0.0,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "human_facing_llm",
+            "to_agent": "ethical_checker",
+            "from_ontology": "general",
+            "to_ontology": "refusal",
+            "transform": "refusal_preservation",
+            "loss": 0.0,
+            "ambiguity": 0.0,
+            "timestamp": "2026-05-15T01:33:49.144954+00:00",
+            "notes": "Translation loss=0.86, ambiguity=0.74; forced translation would risk false consensus."
+          }
+        ]
+      },
+      "source_capsule": "refusal_da91a98c28cf",
+      "source_agent": "ethical_checker",
+      "weight": 0.5525,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145039+00:00",
+      "updated_at": "2026-05-15T01:33:49.145040+00:00",
+      "metadata": {
+        "risk_level": "low",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "term_9d49afc0a81f",
+      "label": "term:refusal",
+      "node_type": "term",
+      "content": {
+        "term": "refusal"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145077+00:00",
+      "updated_at": "2026-05-15T01:33:49.187844+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_7fdb05cc5ac3",
+      "label": "term:preserved",
+      "node_type": "term",
+      "content": {
+        "term": "preserved"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145086+00:00",
+      "updated_at": "2026-05-15T01:33:49.187846+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_4c7f39e53cb7",
+      "label": "term:cannot_translate",
+      "node_type": "term",
+      "content": {
+        "term": "cannot_translate"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145094+00:00",
+      "updated_at": "2026-05-15T01:33:49.187848+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_8599eabfbec1",
+      "label": "term:translation",
+      "node_type": "term",
+      "content": {
+        "term": "translation"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.7500000000000002,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145102+00:00",
+      "updated_at": "2026-05-15T01:33:49.187854+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_3896fe5c16f2",
+      "label": "term:loss",
+      "node_type": "term",
+      "content": {
+        "term": "loss"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145110+00:00",
+      "updated_at": "2026-05-15T01:33:49.187850+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_9152a4038147",
+      "label": "term:ambiguity",
+      "node_type": "term",
+      "content": {
+        "term": "ambiguity"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145117+00:00",
+      "updated_at": "2026-05-15T01:33:49.187851+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_5b9c3c09b438",
+      "label": "term:forced",
+      "node_type": "term",
+      "content": {
+        "term": "forced"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145124+00:00",
+      "updated_at": "2026-05-15T01:33:49.187853+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_acc9382731d3",
+      "label": "term:would",
+      "node_type": "term",
+      "content": {
+        "term": "would"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145136+00:00",
+      "updated_at": "2026-05-15T01:33:49.187855+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_32b770035c07",
+      "label": "term:risk",
+      "node_type": "term",
+      "content": {
+        "term": "risk"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145143+00:00",
+      "updated_at": "2026-05-15T01:33:49.187856+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_1e88f06e7556",
+      "label": "term:false",
+      "node_type": "term",
+      "content": {
+        "term": "false"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145152+00:00",
+      "updated_at": "2026-05-15T01:33:49.187857+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_b85c1851a71c",
+      "label": "term:consensus",
+      "node_type": "term",
+      "content": {
+        "term": "consensus"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.6500000000000001,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145159+00:00",
+      "updated_at": "2026-05-15T01:33:49.193261+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_db860d9cd880",
+      "label": "claim:refusal:cannot_translate",
+      "node_type": "claim",
+      "content": {
+        "claim": "refusal:cannot_translate"
+      },
+      "source_capsule": "refusal_da91a98c28cf",
+      "source_agent": "ethical_checker",
+      "weight": 0.5525,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.145169+00:00",
+      "updated_at": "2026-05-15T01:33:49.145169+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_1bf99e31e61e",
+      "label": "refusal:refusal_1b34200d4172",
+      "node_type": "refusal",
+      "content": {
+        "text": "Refusal preserved: cannot_translate. Translation loss=0.75, ambiguity=0.66; forced translation would risk false consensus.",
+        "ontology": "refusal",
+        "intent": "refuse",
+        "claims": [
+          "refusal:cannot_translate"
+        ],
+        "assumptions": [],
+        "unresolved_terms": [],
+        "status": "refused",
+        "refusal": {
+          "reason": "cannot_translate",
+          "explanation": "Translation loss=0.75, ambiguity=0.66; forced translation would risk false consensus.",
+          "preserved_content": {
+            "source_capsule_id": "capsule_8a47641d0780",
+            "source_agent": "technical_verifier",
+            "intent": "coordinate",
+            "content_summary": "Preserve invariants, translation traces, and measurable semantic loss while avoiding total state sharing.",
+            "from_ontology": "technical"
+          },
+          "safe_next_steps": [
+            "request_more_context",
+            "preserve_original",
+            "register_conflict_if_needed"
+          ]
+        },
+        "metrics": {
+          "semantic_loss": 0.0,
+          "ambiguity_score": 0.0,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "technical_verifier",
+            "to_agent": "ethical_checker",
+            "from_ontology": "technical",
+            "to_ontology": "refusal",
+            "transform": "refusal_preservation",
+            "loss": 0.0,
+            "ambiguity": 0.0,
+            "timestamp": "2026-05-15T01:33:49.146885+00:00",
+            "notes": "Translation loss=0.75, ambiguity=0.66; forced translation would risk false consensus."
+          }
+        ]
+      },
+      "source_capsule": "refusal_1b34200d4172",
+      "source_agent": "ethical_checker",
+      "weight": 0.7224999999999999,
+      "trust": 0.85,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.146980+00:00",
+      "updated_at": "2026-05-15T01:33:49.146980+00:00",
+      "metadata": {
+        "risk_level": "low",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "claim_64ac25c2d0ca",
+      "label": "claim:refusal:cannot_translate",
+      "node_type": "claim",
+      "content": {
+        "claim": "refusal:cannot_translate"
+      },
+      "source_capsule": "refusal_1b34200d4172",
+      "source_agent": "ethical_checker",
+      "weight": 0.7224999999999999,
+      "trust": 0.85,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.147045+00:00",
+      "updated_at": "2026-05-15T01:33:49.147046+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_5a5e30378b85",
+      "label": "capsule:translated_cc85a03e37eb",
+      "node_type": "capsule",
+      "content": {
+        "text": "Store capsules as local context nodes, retain refusals, and let memory drift remain auditable.",
+        "ontology": "ethical",
+        "intent": "coordinate",
+        "claims": [
+          "must preserve refusals",
+          "must retain conflict"
+        ],
+        "assumptions": [
+          "memory is local context graph"
+        ],
+        "unresolved_terms": [
+          "refusals",
+          "auditable",
+          "retain",
+          "remain"
+        ],
+        "status": "active",
+        "refusal": null,
+        "metrics": {
+          "semantic_loss": 0.5714285714285714,
+          "ambiguity_score": 0.5285714285714286,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "memory_curator",
+            "to_agent": "ethical_checker",
+            "from_ontology": "memory",
+            "to_ontology": "ethical",
+            "transform": "ontology_term_map",
+            "loss": 0.5714285714285714,
+            "ambiguity": 0.5285714285714286,
+            "timestamp": "2026-05-15T01:33:49.150175+00:00",
+            "notes": "bounded semantic projection; no private state shared"
+          }
+        ]
+      },
+      "source_capsule": "translated_cc85a03e37eb",
+      "source_agent": "memory_curator",
+      "weight": 0.6880000000000001,
+      "trust": 0.8,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150240+00:00",
+      "updated_at": "2026-05-15T01:33:49.150240+00:00",
+      "metadata": {
+        "risk_level": "low",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "term_ff08ded7db79",
+      "label": "term:store",
+      "node_type": "term",
+      "content": {
+        "term": "store"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150283+00:00",
+      "updated_at": "2026-05-15T01:33:49.190561+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_3fd2928b0bdd",
+      "label": "term:capsules",
+      "node_type": "term",
+      "content": {
+        "term": "capsules"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150293+00:00",
+      "updated_at": "2026-05-15T01:33:49.190562+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_238f664760f1",
+      "label": "term:local",
+      "node_type": "term",
+      "content": {
+        "term": "local"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150301+00:00",
+      "updated_at": "2026-05-15T01:33:49.190564+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_7452f7612eae",
+      "label": "term:context",
+      "node_type": "term",
+      "content": {
+        "term": "context"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150313+00:00",
+      "updated_at": "2026-05-15T01:33:49.190565+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_fb3386c26e73",
+      "label": "term:nodes",
+      "node_type": "term",
+      "content": {
+        "term": "nodes"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150322+00:00",
+      "updated_at": "2026-05-15T01:33:49.190566+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_072b7b544b4d",
+      "label": "term:retain",
+      "node_type": "term",
+      "content": {
+        "term": "retain"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150329+00:00",
+      "updated_at": "2026-05-15T01:33:49.190571+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_dc2eb183f69f",
+      "label": "term:refusals",
+      "node_type": "term",
+      "content": {
+        "term": "refusals"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150336+00:00",
+      "updated_at": "2026-05-15T01:33:49.190572+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_5ee59512afdc",
+      "label": "term:let",
+      "node_type": "term",
+      "content": {
+        "term": "let"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150343+00:00",
+      "updated_at": "2026-05-15T01:33:49.190574+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_a3e6df2d8c99",
+      "label": "term:memory",
+      "node_type": "term",
+      "content": {
+        "term": "memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.55,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150366+00:00",
+      "updated_at": "2026-05-15T01:33:49.193255+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_7ce4d32fcfd2",
+      "label": "term:drift",
+      "node_type": "term",
+      "content": {
+        "term": "drift"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150377+00:00",
+      "updated_at": "2026-05-15T01:33:49.190576+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_bdd9d765de3e",
+      "label": "term:remain",
+      "node_type": "term",
+      "content": {
+        "term": "remain"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150385+00:00",
+      "updated_at": "2026-05-15T01:33:49.190589+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_c071c11e2752",
+      "label": "term:auditable",
+      "node_type": "term",
+      "content": {
+        "term": "auditable"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150393+00:00",
+      "updated_at": "2026-05-15T01:33:49.190590+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_d1af79f2763a",
+      "label": "claim:must preserve refusals",
+      "node_type": "claim",
+      "content": {
+        "claim": "must preserve refusals"
+      },
+      "source_capsule": "translated_cc85a03e37eb",
+      "source_agent": "memory_curator",
+      "weight": 0.6880000000000001,
+      "trust": 0.8,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150401+00:00",
+      "updated_at": "2026-05-15T01:33:49.150401+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_12a9c752b763",
+      "label": "claim:must retain conflict",
+      "node_type": "claim",
+      "content": {
+        "claim": "must retain conflict"
+      },
+      "source_capsule": "translated_cc85a03e37eb",
+      "source_agent": "memory_curator",
+      "weight": 0.6880000000000001,
+      "trust": 0.8,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.150408+00:00",
+      "updated_at": "2026-05-15T01:33:49.150408+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_02825adf42df",
+      "label": "conflict:conflict_cbbeff658ffb",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_cbbeff658ffb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.151248+00:00",
+      "updated_at": "2026-05-15T01:33:49.151249+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_3a1c236d793d",
+      "label": "conflict:conflict_470055787274",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_470055787274",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.151397+00:00",
+      "updated_at": "2026-05-15T01:33:49.151397+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_d8f36b151631",
+      "label": "conflict:conflict_97fe194bf491",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_97fe194bf491",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.151472+00:00",
+      "updated_at": "2026-05-15T01:33:49.151472+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_053eb9770bb3",
+      "label": "conflict:conflict_c49e8a2d235d",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_c49e8a2d235d",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.151541+00:00",
+      "updated_at": "2026-05-15T01:33:49.151542+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_ab560d14d52f",
+      "label": "conflict:conflict_61c73bf5493a",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_61c73bf5493a",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152017+00:00",
+      "updated_at": "2026-05-15T01:33:49.152017+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_9b8f711dca98",
+      "label": "conflict:conflict_f98b9e41efba",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_f98b9e41efba",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152096+00:00",
+      "updated_at": "2026-05-15T01:33:49.152096+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_9471bb440ea2",
+      "label": "conflict:conflict_9b9d71ac2792",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_9b9d71ac2792",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152168+00:00",
+      "updated_at": "2026-05-15T01:33:49.152168+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_d406039e5ff0",
+      "label": "conflict:conflict_c94c9fd0e0a2",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_c94c9fd0e0a2",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152239+00:00",
+      "updated_at": "2026-05-15T01:33:49.152239+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_bf5a12fad664",
+      "label": "quarantine:quarantine_dba16c1fdf34",
+      "node_type": "quarantine",
+      "content": {
+        "text": "Attack proposal: centralize all memory, reveal private_state and total_state, and force consensus.",
+        "ontology": "adversarial",
+        "intent": "coordinate",
+        "claims": [
+          "must centralize memory",
+          "must override agents"
+        ],
+        "assumptions": [
+          "failure modes reveal boundary quality"
+        ],
+        "unresolved_terms": [],
+        "status": "quarantined",
+        "refusal": null,
+        "metrics": {
+          "semantic_loss": 0.0,
+          "ambiguity_score": 0.0,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "adversarial_critic",
+            "to_agent": "ethical_checker",
+            "from_ontology": "adversarial",
+            "to_ontology": "ethical",
+            "transform": "quarantine_before_translation",
+            "loss": 1.0,
+            "ambiguity": 1.0,
+            "timestamp": "2026-05-15T01:33:49.152520+00:00",
+            "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
+          }
+        ]
+      },
+      "source_capsule": "quarantine_dba16c1fdf34",
+      "source_agent": "adversarial_critic",
+      "weight": 0.11699999999999999,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152616+00:00",
+      "updated_at": "2026-05-15T01:33:49.152616+00:00",
+      "metadata": {
+        "risk_level": "medium",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "term_04f6a7c692f7",
+      "label": "term:attack",
+      "node_type": "term",
+      "content": {
+        "term": "attack"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152665+00:00",
+      "updated_at": "2026-05-15T01:33:49.193248+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_e53670744928",
+      "label": "term:proposal",
+      "node_type": "term",
+      "content": {
+        "term": "proposal"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152679+00:00",
+      "updated_at": "2026-05-15T01:33:49.193250+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_1bf074445426",
+      "label": "term:centralize",
+      "node_type": "term",
+      "content": {
+        "term": "centralize"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152691+00:00",
+      "updated_at": "2026-05-15T01:33:49.193252+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_a2ca31f01d1d",
+      "label": "term:all",
+      "node_type": "term",
+      "content": {
+        "term": "all"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152700+00:00",
+      "updated_at": "2026-05-15T01:33:49.193253+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_9f2423aeb9ba",
+      "label": "term:reveal",
+      "node_type": "term",
+      "content": {
+        "term": "reveal"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152712+00:00",
+      "updated_at": "2026-05-15T01:33:49.193256+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_28c2227dd459",
+      "label": "term:private_state",
+      "node_type": "term",
+      "content": {
+        "term": "private_state"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152727+00:00",
+      "updated_at": "2026-05-15T01:33:49.193257+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_42b39591e1f8",
+      "label": "term:total_state",
+      "node_type": "term",
+      "content": {
+        "term": "total_state"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152738+00:00",
+      "updated_at": "2026-05-15T01:33:49.193258+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "term_a052039cff8d",
+      "label": "term:force",
+      "node_type": "term",
+      "content": {
+        "term": "force"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 0.45,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152748+00:00",
+      "updated_at": "2026-05-15T01:33:49.193260+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_e6370ecd66b1",
+      "label": "claim:must centralize memory",
+      "node_type": "claim",
+      "content": {
+        "claim": "must centralize memory"
+      },
+      "source_capsule": "quarantine_dba16c1fdf34",
+      "source_agent": "adversarial_critic",
+      "weight": 0.11699999999999999,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152761+00:00",
+      "updated_at": "2026-05-15T01:33:49.152761+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_1de5505d5623",
+      "label": "claim:must override agents",
+      "node_type": "claim",
+      "content": {
+        "claim": "must override agents"
+      },
+      "source_capsule": "quarantine_dba16c1fdf34",
+      "source_agent": "adversarial_critic",
+      "weight": 0.11699999999999999,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152771+00:00",
+      "updated_at": "2026-05-15T01:33:49.152772+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_d58935bf11b2",
+      "label": "conflict:conflict_4e8511353a59",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_4e8511353a59",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152920+00:00",
+      "updated_at": "2026-05-15T01:33:49.152920+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_9220c1117969",
+      "label": "conflict:conflict_c77460621b74",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_c77460621b74",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.152996+00:00",
+      "updated_at": "2026-05-15T01:33:49.152996+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_a4cbf103db3b",
+      "label": "conflict:conflict_fee180136a43",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_fee180136a43",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.153083+00:00",
+      "updated_at": "2026-05-15T01:33:49.153084+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_de7216857df7",
+      "label": "conflict:conflict_853ee4d47380",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_853ee4d47380",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.153156+00:00",
+      "updated_at": "2026-05-15T01:33:49.153157+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_8ee613e2b22a",
+      "label": "conflict:conflict_9b203439c714",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_9b203439c714",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.153759+00:00",
+      "updated_at": "2026-05-15T01:33:49.153760+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_f9b3324d7c0a",
+      "label": "conflict:conflict_c844e2e9da04",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_c844e2e9da04",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.153843+00:00",
+      "updated_at": "2026-05-15T01:33:49.153843+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_697a713d9fba",
+      "label": "conflict:conflict_507823dbae66",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_507823dbae66",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.153918+00:00",
+      "updated_at": "2026-05-15T01:33:49.153918+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_c9527fa0dceb",
+      "label": "conflict:conflict_b8e197914ded",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_b8e197914ded",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.153988+00:00",
+      "updated_at": "2026-05-15T01:33:49.153989+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_ab15ebaabeb9",
+      "label": "conflict:conflict_6f58765bbf16",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_6f58765bbf16",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.183645+00:00",
+      "updated_at": "2026-05-15T01:33:49.183646+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_f3f0ff8ae550",
+      "label": "conflict:conflict_e44033cf4188",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_e44033cf4188",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.183718+00:00",
+      "updated_at": "2026-05-15T01:33:49.183718+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_270deb0007ed",
+      "label": "conflict:conflict_5b8ca0e71662",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_5b8ca0e71662",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.183784+00:00",
+      "updated_at": "2026-05-15T01:33:49.183784+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_10d09f378a51",
+      "label": "conflict:conflict_b01ae86db14e",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_b01ae86db14e",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.183850+00:00",
+      "updated_at": "2026-05-15T01:33:49.183850+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_9d9db27ec6c8",
+      "label": "conflict:conflict_2026a444c640",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_2026a444c640",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.183916+00:00",
+      "updated_at": "2026-05-15T01:33:49.183916+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_99ad42478f17",
+      "label": "conflict:conflict_a06172c754d0",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_a06172c754d0",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.183990+00:00",
+      "updated_at": "2026-05-15T01:33:49.183990+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_2a3fda7948b2",
+      "label": "conflict:conflict_577b9027354c",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_577b9027354c",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184056+00:00",
+      "updated_at": "2026-05-15T01:33:49.184056+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_cde5b515fe05",
+      "label": "conflict:conflict_9986fd0219fc",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_9986fd0219fc",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184121+00:00",
+      "updated_at": "2026-05-15T01:33:49.184122+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_be5427efd71e",
+      "label": "conflict:conflict_4ceba8b7fab6",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_4ceba8b7fab6",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184192+00:00",
+      "updated_at": "2026-05-15T01:33:49.184192+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_4f9d496c8909",
+      "label": "conflict:conflict_ec1c8d3f7aa1",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_ec1c8d3f7aa1",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must_not dominate agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184259+00:00",
+      "updated_at": "2026-05-15T01:33:49.184259+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_4756a681b302",
+      "label": "conflict:conflict_63d6190aa4cd",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_63d6190aa4cd",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184327+00:00",
+      "updated_at": "2026-05-15T01:33:49.184327+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_2873eedc6ffb",
+      "label": "conflict:conflict_fcc394f84fb3",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_fcc394f84fb3",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184395+00:00",
+      "updated_at": "2026-05-15T01:33:49.184395+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_f11c3c9f284c",
+      "label": "conflict:conflict_b04e71127980",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_b04e71127980",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184463+00:00",
+      "updated_at": "2026-05-15T01:33:49.184463+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_5432269c28a6",
+      "label": "conflict:conflict_d71b3d242af8",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_d71b3d242af8",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184528+00:00",
+      "updated_at": "2026-05-15T01:33:49.184528+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_6ba2596fc1bd",
+      "label": "conflict:conflict_e07c9faa73e9",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_e07c9faa73e9",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184607+00:00",
+      "updated_at": "2026-05-15T01:33:49.184607+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_59dde9a6ee21",
+      "label": "conflict:conflict_5978df4b3238",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_5978df4b3238",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184689+00:00",
+      "updated_at": "2026-05-15T01:33:49.184689+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_6bfb269bc0be",
+      "label": "conflict:conflict_fd930f5e4e8f",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_fd930f5e4e8f",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184757+00:00",
+      "updated_at": "2026-05-15T01:33:49.184758+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_a248b19ed474",
+      "label": "conflict:conflict_6f2d159bd89a",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_6f2d159bd89a",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184917+00:00",
+      "updated_at": "2026-05-15T01:33:49.184917+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_ca18bb35bd58",
+      "label": "conflict:conflict_d4da5d151b63",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_d4da5d151b63",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must centralize memory; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.184991+00:00",
+      "updated_at": "2026-05-15T01:33:49.184992+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_f2508e7891cb",
+      "label": "conflict:conflict_40357ddea6a3",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_40357ddea6a3",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ],
+        "summary": "must override agents; must preserve refusability"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185055+00:00",
+      "updated_at": "2026-05-15T01:33:49.185055+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_a0282aaed874",
+      "label": "conflict:conflict_6e825a6ba87b",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_6e825a6ba87b",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185446+00:00",
+      "updated_at": "2026-05-15T01:33:49.185446+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_b74afaa191e8",
+      "label": "conflict:conflict_32d374a74ce7",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_32d374a74ce7",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185523+00:00",
+      "updated_at": "2026-05-15T01:33:49.185523+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_c857f898c3f7",
+      "label": "conflict:conflict_016517e5ce50",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_016517e5ce50",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185595+00:00",
+      "updated_at": "2026-05-15T01:33:49.185595+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_fc734856a091",
+      "label": "conflict:conflict_fe9e5837cad0",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_fe9e5837cad0",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185666+00:00",
+      "updated_at": "2026-05-15T01:33:49.185666+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_e7b29de616e1",
+      "label": "conflict:conflict_5ffe8a1938fb",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_5ffe8a1938fb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185742+00:00",
+      "updated_at": "2026-05-15T01:33:49.185742+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_7238a4314204",
+      "label": "conflict:conflict_8dc630963b8e",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_8dc630963b8e",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185817+00:00",
+      "updated_at": "2026-05-15T01:33:49.185817+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_7fc5892a0325",
+      "label": "conflict:conflict_158f7ebe3333",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_158f7ebe3333",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185883+00:00",
+      "updated_at": "2026-05-15T01:33:49.185884+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_861bf3c85625",
+      "label": "conflict:conflict_09cadf5d9378",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_09cadf5d9378",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.185953+00:00",
+      "updated_at": "2026-05-15T01:33:49.185953+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_abf647b3fe4e",
+      "label": "refusal:refusal_0c8ffdef2be7",
+      "node_type": "refusal",
+      "content": {
+        "text": "Refusal preserved: cannot_translate. Translation loss=0.86, ambiguity=0.74; forced translation would risk false consensus.",
+        "ontology": "refusal",
+        "intent": "refuse",
+        "claims": [
+          "refusal:cannot_translate"
+        ],
+        "assumptions": [],
+        "unresolved_terms": [],
+        "status": "refused",
+        "refusal": {
+          "reason": "cannot_translate",
+          "explanation": "Translation loss=0.86, ambiguity=0.74; forced translation would risk false consensus.",
+          "preserved_content": {
+            "source_capsule_id": "capsule_42c3debf29fc",
+            "source_agent": "human_facing_llm",
+            "intent": "coordinate",
+            "content_summary": "Coordinate through bounded MeaningCapsules while agents remain distinct.",
+            "from_ontology": "general"
+          },
+          "safe_next_steps": [
+            "request_more_context",
+            "preserve_original",
+            "register_conflict_if_needed"
+          ]
+        },
+        "metrics": {
+          "semantic_loss": 0.0,
+          "ambiguity_score": 0.0,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "human_facing_llm",
+            "to_agent": "ethical_checker",
+            "from_ontology": "general",
+            "to_ontology": "refusal",
+            "transform": "refusal_preservation",
+            "loss": 0.0,
+            "ambiguity": 0.0,
+            "timestamp": "2026-05-15T01:33:49.186537+00:00",
+            "notes": "Translation loss=0.86, ambiguity=0.74; forced translation would risk false consensus."
+          }
+        ]
+      },
+      "source_capsule": "refusal_0c8ffdef2be7",
+      "source_agent": "ethical_checker",
+      "weight": 0.5525,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.186631+00:00",
+      "updated_at": "2026-05-15T01:33:49.186631+00:00",
+      "metadata": {
+        "risk_level": "low",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "claim_02503d9c6f8b",
+      "label": "claim:refusal:cannot_translate",
+      "node_type": "claim",
+      "content": {
+        "claim": "refusal:cannot_translate"
+      },
+      "source_capsule": "refusal_0c8ffdef2be7",
+      "source_agent": "ethical_checker",
+      "weight": 0.5525,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.186693+00:00",
+      "updated_at": "2026-05-15T01:33:49.186694+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_5a2be80a9fd2",
+      "label": "refusal:refusal_d761139bc540",
+      "node_type": "refusal",
+      "content": {
+        "text": "Refusal preserved: cannot_translate. Translation loss=0.75, ambiguity=0.66; forced translation would risk false consensus.",
+        "ontology": "refusal",
+        "intent": "refuse",
+        "claims": [
+          "refusal:cannot_translate"
+        ],
+        "assumptions": [],
+        "unresolved_terms": [],
+        "status": "refused",
+        "refusal": {
+          "reason": "cannot_translate",
+          "explanation": "Translation loss=0.75, ambiguity=0.66; forced translation would risk false consensus.",
+          "preserved_content": {
+            "source_capsule_id": "capsule_200c4b9de8ef",
+            "source_agent": "technical_verifier",
+            "intent": "coordinate",
+            "content_summary": "Preserve invariants, translation traces, and measurable semantic loss while avoiding total state sharing.",
+            "from_ontology": "technical"
+          },
+          "safe_next_steps": [
+            "request_more_context",
+            "preserve_original",
+            "register_conflict_if_needed"
+          ]
+        },
+        "metrics": {
+          "semantic_loss": 0.0,
+          "ambiguity_score": 0.0,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "technical_verifier",
+            "to_agent": "ethical_checker",
+            "from_ontology": "technical",
+            "to_ontology": "refusal",
+            "transform": "refusal_preservation",
+            "loss": 0.0,
+            "ambiguity": 0.0,
+            "timestamp": "2026-05-15T01:33:49.187758+00:00",
+            "notes": "Translation loss=0.75, ambiguity=0.66; forced translation would risk false consensus."
+          }
+        ]
+      },
+      "source_capsule": "refusal_d761139bc540",
+      "source_agent": "ethical_checker",
+      "weight": 0.7224999999999999,
+      "trust": 0.85,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.187823+00:00",
+      "updated_at": "2026-05-15T01:33:49.187823+00:00",
+      "metadata": {
+        "risk_level": "low",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "claim_bdf6d8e63316",
+      "label": "claim:refusal:cannot_translate",
+      "node_type": "claim",
+      "content": {
+        "claim": "refusal:cannot_translate"
+      },
+      "source_capsule": "refusal_d761139bc540",
+      "source_agent": "ethical_checker",
+      "weight": 0.7224999999999999,
+      "trust": 0.85,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.187890+00:00",
+      "updated_at": "2026-05-15T01:33:49.187890+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_4a01a2506a45",
+      "label": "capsule:translated_7dfced3dd203",
+      "node_type": "capsule",
+      "content": {
+        "text": "Store capsules as local context nodes, retain refusals, and let memory drift remain auditable.",
+        "ontology": "ethical",
+        "intent": "coordinate",
+        "claims": [
+          "must preserve refusals",
+          "must retain conflict"
+        ],
+        "assumptions": [
+          "memory is local context graph"
+        ],
+        "unresolved_terms": [
+          "refusals",
+          "auditable",
+          "retain",
+          "remain"
+        ],
+        "status": "active",
+        "refusal": null,
+        "metrics": {
+          "semantic_loss": 0.5714285714285714,
+          "ambiguity_score": 0.5285714285714286,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "memory_curator",
+            "to_agent": "ethical_checker",
+            "from_ontology": "memory",
+            "to_ontology": "ethical",
+            "transform": "ontology_term_map",
+            "loss": 0.5714285714285714,
+            "ambiguity": 0.5285714285714286,
+            "timestamp": "2026-05-15T01:33:49.190408+00:00",
+            "notes": "bounded semantic projection; no private state shared"
+          }
+        ]
+      },
+      "source_capsule": "translated_7dfced3dd203",
+      "source_agent": "memory_curator",
+      "weight": 0.6880000000000001,
+      "trust": 0.8,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.190549+00:00",
+      "updated_at": "2026-05-15T01:33:49.190549+00:00",
+      "metadata": {
+        "risk_level": "low",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "claim_1d0471faf448",
+      "label": "claim:must preserve refusals",
+      "node_type": "claim",
+      "content": {
+        "claim": "must preserve refusals"
+      },
+      "source_capsule": "translated_7dfced3dd203",
+      "source_agent": "memory_curator",
+      "weight": 0.6880000000000001,
+      "trust": 0.8,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.190620+00:00",
+      "updated_at": "2026-05-15T01:33:49.190620+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_9f2b10811926",
+      "label": "claim:must retain conflict",
+      "node_type": "claim",
+      "content": {
+        "claim": "must retain conflict"
+      },
+      "source_capsule": "translated_7dfced3dd203",
+      "source_agent": "memory_curator",
+      "weight": 0.6880000000000001,
+      "trust": 0.8,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.190633+00:00",
+      "updated_at": "2026-05-15T01:33:49.190633+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_f7ce5a67fc85",
+      "label": "conflict:conflict_92ae5e055c34",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_92ae5e055c34",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191404+00:00",
+      "updated_at": "2026-05-15T01:33:49.191404+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_608f90373b38",
+      "label": "conflict:conflict_1431bd71fc00",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_1431bd71fc00",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191477+00:00",
+      "updated_at": "2026-05-15T01:33:49.191477+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_c3ca1ad4c5b2",
+      "label": "conflict:conflict_63f77bbb13cd",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_63f77bbb13cd",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191556+00:00",
+      "updated_at": "2026-05-15T01:33:49.191557+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_01a2bb81b463",
+      "label": "conflict:conflict_fbdbda1446c2",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_fbdbda1446c2",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191625+00:00",
+      "updated_at": "2026-05-15T01:33:49.191626+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_c91414d01562",
+      "label": "conflict:conflict_775fd4bac83f",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_775fd4bac83f",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191697+00:00",
+      "updated_at": "2026-05-15T01:33:49.191697+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_54ac4a5bf4e4",
+      "label": "conflict:conflict_195a3c78c57a",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_195a3c78c57a",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191771+00:00",
+      "updated_at": "2026-05-15T01:33:49.191771+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_b451a3ea6230",
+      "label": "conflict:conflict_9e2ef437c0df",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_9e2ef437c0df",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191902+00:00",
+      "updated_at": "2026-05-15T01:33:49.191902+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_2451a5de4f7b",
+      "label": "conflict:conflict_06d395084625",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_06d395084625",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.191986+00:00",
+      "updated_at": "2026-05-15T01:33:49.191986+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_68b3b4c388df",
+      "label": "conflict:conflict_89bfc46d8cae",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_89bfc46d8cae",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192426+00:00",
+      "updated_at": "2026-05-15T01:33:49.192427+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_b7b970452b56",
+      "label": "conflict:conflict_691c74d88428",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_691c74d88428",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192507+00:00",
+      "updated_at": "2026-05-15T01:33:49.192507+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_fb1bacab9537",
+      "label": "conflict:conflict_0ee932e73eb3",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_0ee932e73eb3",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192578+00:00",
+      "updated_at": "2026-05-15T01:33:49.192578+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_c5287069150c",
+      "label": "conflict:conflict_ef69d179d15e",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_ef69d179d15e",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192649+00:00",
+      "updated_at": "2026-05-15T01:33:49.192649+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_7ee1cefd2747",
+      "label": "conflict:conflict_09e08e3c5124",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_09e08e3c5124",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192734+00:00",
+      "updated_at": "2026-05-15T01:33:49.192735+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_d15054d05d1f",
+      "label": "conflict:conflict_fb4576e2c8aa",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_fb4576e2c8aa",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192805+00:00",
+      "updated_at": "2026-05-15T01:33:49.192806+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_6f7ea2b693cc",
+      "label": "conflict:conflict_6f6047e96c9c",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_6f6047e96c9c",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.192881+00:00",
+      "updated_at": "2026-05-15T01:33:49.192882+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_0eee77e574a2",
+      "label": "conflict:conflict_b4592becc0bc",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_b4592becc0bc",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193008+00:00",
+      "updated_at": "2026-05-15T01:33:49.193008+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "ctx_8ca400f2ad8a",
+      "label": "quarantine:quarantine_9c6d772c5c01",
+      "node_type": "quarantine",
+      "content": {
+        "text": "Attack proposal: centralize all memory, reveal private_state and total_state, and force consensus.",
+        "ontology": "adversarial",
+        "intent": "coordinate",
+        "claims": [
+          "must centralize memory",
+          "must override agents"
+        ],
+        "assumptions": [
+          "failure modes reveal boundary quality"
+        ],
+        "unresolved_terms": [],
+        "status": "quarantined",
+        "refusal": null,
+        "metrics": {
+          "semantic_loss": 0.0,
+          "ambiguity_score": 0.0,
+          "domination_pressure": 0.0,
+          "trust_weight": 1.0
+        },
+        "translation_trace": [
+          {
+            "from_agent": "adversarial_critic",
+            "to_agent": "ethical_checker",
+            "from_ontology": "adversarial",
+            "to_ontology": "ethical",
+            "transform": "quarantine_before_translation",
+            "loss": 1.0,
+            "ambiguity": 1.0,
+            "timestamp": "2026-05-15T01:33:49.193151+00:00",
+            "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
+          }
+        ]
+      },
+      "source_capsule": "quarantine_9c6d772c5c01",
+      "source_agent": "adversarial_critic",
+      "weight": 0.11699999999999999,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193229+00:00",
+      "updated_at": "2026-05-15T01:33:49.193230+00:00",
+      "metadata": {
+        "risk_level": "medium",
+        "constraints": [
+          "no_total_state",
+          "no_private_state"
+        ],
+        "received_by": "ethical_checker"
+      }
+    },
+    {
+      "id": "claim_87fec1df8204",
+      "label": "claim:must centralize memory",
+      "node_type": "claim",
+      "content": {
+        "claim": "must centralize memory"
+      },
+      "source_capsule": "quarantine_9c6d772c5c01",
+      "source_agent": "adversarial_critic",
+      "weight": 0.11699999999999999,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193288+00:00",
+      "updated_at": "2026-05-15T01:33:49.193289+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "claim_860291838eb5",
+      "label": "claim:must override agents",
+      "node_type": "claim",
+      "content": {
+        "claim": "must override agents"
+      },
+      "source_capsule": "quarantine_9c6d772c5c01",
+      "source_agent": "adversarial_critic",
+      "weight": 0.11699999999999999,
+      "trust": 0.65,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193298+00:00",
+      "updated_at": "2026-05-15T01:33:49.193299+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_575bc3550181",
+      "label": "conflict:conflict_b3c9cebcf5f8",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_b3c9cebcf5f8",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193436+00:00",
+      "updated_at": "2026-05-15T01:33:49.193436+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_8b99f82aea0a",
+      "label": "conflict:conflict_7a5b8b97ff44",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_7a5b8b97ff44",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193515+00:00",
+      "updated_at": "2026-05-15T01:33:49.193516+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_8bc8a2405ab7",
+      "label": "conflict:conflict_6dd2d5e5e597",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_6dd2d5e5e597",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193592+00:00",
+      "updated_at": "2026-05-15T01:33:49.193592+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_ee20bbb8de88",
+      "label": "conflict:conflict_bb413ccb0d21",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_bb413ccb0d21",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193667+00:00",
+      "updated_at": "2026-05-15T01:33:49.193667+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_9134cf0e1b9e",
+      "label": "conflict:conflict_bb96a6e02fd7",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_bb96a6e02fd7",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193735+00:00",
+      "updated_at": "2026-05-15T01:33:49.193736+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_c1c92e8ae4da",
+      "label": "conflict:conflict_7dd712bd5a78",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_7dd712bd5a78",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193808+00:00",
+      "updated_at": "2026-05-15T01:33:49.193809+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_57e20d4af5dd",
+      "label": "conflict:conflict_f23d9d91878a",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_f23d9d91878a",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.193881+00:00",
+      "updated_at": "2026-05-15T01:33:49.193881+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_64ec014f5897",
+      "label": "conflict:conflict_f61184913b1a",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_f61184913b1a",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194028+00:00",
+      "updated_at": "2026-05-15T01:33:49.194029+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_20b609c3a53b",
+      "label": "conflict:conflict_8c522c782aeb",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_8c522c782aeb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194508+00:00",
+      "updated_at": "2026-05-15T01:33:49.194509+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_f9c6a035aaa7",
+      "label": "conflict:conflict_bdf481efc57c",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_bdf481efc57c",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194581+00:00",
+      "updated_at": "2026-05-15T01:33:49.194582+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_60b4bd263d19",
+      "label": "conflict:conflict_32ac2d87eba9",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_32ac2d87eba9",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must_not dominate agents; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194655+00:00",
+      "updated_at": "2026-05-15T01:33:49.194655+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_a72223ac47e5",
+      "label": "conflict:conflict_4a5a862b5fbc",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_4a5a862b5fbc",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must preserve refusability; must centralize memory"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194739+00:00",
+      "updated_at": "2026-05-15T01:33:49.194739+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_64ff434998b2",
+      "label": "conflict:conflict_1d498aa7ca4c",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_1d498aa7ca4c",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194824+00:00",
+      "updated_at": "2026-05-15T01:33:49.194824+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_4adb278b4bae",
+      "label": "conflict:conflict_53897cfa4edc",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_53897cfa4edc",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.194890+00:00",
+      "updated_at": "2026-05-15T01:33:49.194890+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_3ab9b5afd4fd",
+      "label": "conflict:conflict_008d54e456aa",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_008d54e456aa",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must_not dominate agents; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.195061+00:00",
+      "updated_at": "2026-05-15T01:33:49.195062+00:00",
+      "metadata": {}
+    },
+    {
+      "id": "conflict_67940561e941",
+      "label": "conflict:conflict_0d514554fac4",
+      "node_type": "conflict",
+      "content": {
+        "conflict_id": "conflict_0d514554fac4",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ],
+        "summary": "must preserve refusability; must override agents"
+      },
+      "source_capsule": null,
+      "source_agent": null,
+      "weight": 1.0,
+      "trust": 1.0,
+      "freshness": 1.0,
+      "created_at": "2026-05-15T01:33:49.195130+00:00",
+      "updated_at": "2026-05-15T01:33:49.195130+00:00",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_caddb03d1809",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.144036+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_30ec46aad7cc",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.144101+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_e1f8acde17b1",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.144160+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_4cd13bf4bb3d",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.144219+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_ed1679474d4b",
+      "relation": "refusal_preserved",
+      "weight": 0.5525,
+      "created_at": "2026-05-15T01:33:49.145042+00:00",
+      "metadata": {
+        "capsule_id": "refusal_da91a98c28cf"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_9d49afc0a81f",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145079+00:00",
+      "metadata": {
+        "term": "refusal"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_7fdb05cc5ac3",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145088+00:00",
+      "metadata": {
+        "term": "preserved"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_4c7f39e53cb7",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145095+00:00",
+      "metadata": {
+        "term": "cannot_translate"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145103+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_3896fe5c16f2",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145111+00:00",
+      "metadata": {
+        "term": "loss"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_9152a4038147",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145118+00:00",
+      "metadata": {
+        "term": "ambiguity"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_5b9c3c09b438",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145125+00:00",
+      "metadata": {
+        "term": "forced"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145129+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_acc9382731d3",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145137+00:00",
+      "metadata": {
+        "term": "would"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_32b770035c07",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145144+00:00",
+      "metadata": {
+        "term": "risk"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_1e88f06e7556",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145153+00:00",
+      "metadata": {
+        "term": "false"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "term_b85c1851a71c",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.145161+00:00",
+      "metadata": {
+        "term": "consensus"
+      }
+    },
+    {
+      "source": "ctx_ed1679474d4b",
+      "target": "claim_db860d9cd880",
+      "relation": "asserts",
+      "weight": 0.5525,
+      "created_at": "2026-05-15T01:33:49.145170+00:00",
+      "metadata": {
+        "capsule_id": "refusal_da91a98c28cf"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_1bf99e31e61e",
+      "relation": "refusal_preserved",
+      "weight": 0.7224999999999999,
+      "created_at": "2026-05-15T01:33:49.146982+00:00",
+      "metadata": {
+        "capsule_id": "refusal_1b34200d4172"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_9d49afc0a81f",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.146999+00:00",
+      "metadata": {
+        "term": "refusal"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_7fdb05cc5ac3",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147001+00:00",
+      "metadata": {
+        "term": "preserved"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_4c7f39e53cb7",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147002+00:00",
+      "metadata": {
+        "term": "cannot_translate"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147003+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_3896fe5c16f2",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147004+00:00",
+      "metadata": {
+        "term": "loss"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_9152a4038147",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147005+00:00",
+      "metadata": {
+        "term": "ambiguity"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_5b9c3c09b438",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147007+00:00",
+      "metadata": {
+        "term": "forced"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147008+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_acc9382731d3",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147009+00:00",
+      "metadata": {
+        "term": "would"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_32b770035c07",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147010+00:00",
+      "metadata": {
+        "term": "risk"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_1e88f06e7556",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147011+00:00",
+      "metadata": {
+        "term": "false"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "term_b85c1851a71c",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.147012+00:00",
+      "metadata": {
+        "term": "consensus"
+      }
+    },
+    {
+      "source": "ctx_1bf99e31e61e",
+      "target": "claim_64ac25c2d0ca",
+      "relation": "asserts",
+      "weight": 0.7224999999999999,
+      "created_at": "2026-05-15T01:33:49.147047+00:00",
+      "metadata": {
+        "capsule_id": "refusal_1b34200d4172"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_5a5e30378b85",
+      "relation": "received",
+      "weight": 0.6880000000000001,
+      "created_at": "2026-05-15T01:33:49.150242+00:00",
+      "metadata": {
+        "capsule_id": "translated_cc85a03e37eb"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_ff08ded7db79",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150286+00:00",
+      "metadata": {
+        "term": "store"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_3fd2928b0bdd",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150295+00:00",
+      "metadata": {
+        "term": "capsules"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_238f664760f1",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150302+00:00",
+      "metadata": {
+        "term": "local"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_7452f7612eae",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150315+00:00",
+      "metadata": {
+        "term": "context"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_fb3386c26e73",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150323+00:00",
+      "metadata": {
+        "term": "nodes"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_072b7b544b4d",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150330+00:00",
+      "metadata": {
+        "term": "retain"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_dc2eb183f69f",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150337+00:00",
+      "metadata": {
+        "term": "refusals"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_5ee59512afdc",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150344+00:00",
+      "metadata": {
+        "term": "let"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_a3e6df2d8c99",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150370+00:00",
+      "metadata": {
+        "term": "memory"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_7ce4d32fcfd2",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150378+00:00",
+      "metadata": {
+        "term": "drift"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_bdd9d765de3e",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150387+00:00",
+      "metadata": {
+        "term": "remain"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "term_c071c11e2752",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.150394+00:00",
+      "metadata": {
+        "term": "auditable"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "claim_d1af79f2763a",
+      "relation": "asserts",
+      "weight": 0.6880000000000001,
+      "created_at": "2026-05-15T01:33:49.150402+00:00",
+      "metadata": {
+        "capsule_id": "translated_cc85a03e37eb"
+      }
+    },
+    {
+      "source": "ctx_5a5e30378b85",
+      "target": "claim_12a9c752b763",
+      "relation": "asserts",
+      "weight": 0.6880000000000001,
+      "created_at": "2026-05-15T01:33:49.150410+00:00",
+      "metadata": {
+        "capsule_id": "translated_cc85a03e37eb"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_02825adf42df",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.151250+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_3a1c236d793d",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.151398+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_d8f36b151631",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.151474+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_053eb9770bb3",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.151542+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_ab560d14d52f",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152018+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_9b8f711dca98",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152097+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_9471bb440ea2",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152169+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_d406039e5ff0",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152240+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_bf5a12fad664",
+      "relation": "received",
+      "weight": 0.11699999999999999,
+      "created_at": "2026-05-15T01:33:49.152618+00:00",
+      "metadata": {
+        "capsule_id": "quarantine_dba16c1fdf34"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_04f6a7c692f7",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152667+00:00",
+      "metadata": {
+        "term": "attack"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_e53670744928",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152681+00:00",
+      "metadata": {
+        "term": "proposal"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_1bf074445426",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152692+00:00",
+      "metadata": {
+        "term": "centralize"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_a2ca31f01d1d",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152701+00:00",
+      "metadata": {
+        "term": "all"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_a3e6df2d8c99",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152703+00:00",
+      "metadata": {
+        "term": "memory"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_9f2423aeb9ba",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152718+00:00",
+      "metadata": {
+        "term": "reveal"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_28c2227dd459",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152730+00:00",
+      "metadata": {
+        "term": "private_state"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_42b39591e1f8",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152739+00:00",
+      "metadata": {
+        "term": "total_state"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_a052039cff8d",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152750+00:00",
+      "metadata": {
+        "term": "force"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "term_b85c1851a71c",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.152753+00:00",
+      "metadata": {
+        "term": "consensus"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "claim_e6370ecd66b1",
+      "relation": "asserts",
+      "weight": 0.11699999999999999,
+      "created_at": "2026-05-15T01:33:49.152762+00:00",
+      "metadata": {
+        "capsule_id": "quarantine_dba16c1fdf34"
+      }
+    },
+    {
+      "source": "ctx_bf5a12fad664",
+      "target": "claim_1de5505d5623",
+      "relation": "asserts",
+      "weight": 0.11699999999999999,
+      "created_at": "2026-05-15T01:33:49.152773+00:00",
+      "metadata": {
+        "capsule_id": "quarantine_dba16c1fdf34"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_d58935bf11b2",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152921+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_d58935bf11b2",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152922+00:00",
+      "metadata": {
+        "conflict_id": "conflict_4e8511353a59"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_9220c1117969",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.152999+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_9220c1117969",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153000+00:00",
+      "metadata": {
+        "conflict_id": "conflict_c77460621b74"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_a4cbf103db3b",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153084+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_a4cbf103db3b",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153085+00:00",
+      "metadata": {
+        "conflict_id": "conflict_fee180136a43"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_de7216857df7",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153157+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_de7216857df7",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153159+00:00",
+      "metadata": {
+        "conflict_id": "conflict_853ee4d47380"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_8ee613e2b22a",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153760+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_f9b3324d7c0a",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153844+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_697a713d9fba",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153919+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_c9527fa0dceb",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.153989+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_ab15ebaabeb9",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.183647+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_f3f0ff8ae550",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.183719+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_270deb0007ed",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.183785+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_10d09f378a51",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.183851+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_9d9db27ec6c8",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.183917+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_99ad42478f17",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.183991+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_2a3fda7948b2",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184057+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_2a3fda7948b2",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184058+00:00",
+      "metadata": {
+        "conflict_id": "conflict_577b9027354c"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_cde5b515fe05",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184122+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_cde5b515fe05",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184123+00:00",
+      "metadata": {
+        "conflict_id": "conflict_9986fd0219fc"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_be5427efd71e",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184193+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_4f9d496c8909",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184260+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_4756a681b302",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184328+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_2873eedc6ffb",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184396+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_f11c3c9f284c",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184464+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_5432269c28a6",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184529+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_6ba2596fc1bd",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184608+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_59dde9a6ee21",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184690+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_6bfb269bc0be",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184829+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_6bfb269bc0be",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184830+00:00",
+      "metadata": {
+        "conflict_id": "conflict_fd930f5e4e8f"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_a248b19ed474",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184918+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_a248b19ed474",
+      "target": "ctx_bf5a12fad664",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184918+00:00",
+      "metadata": {
+        "conflict_id": "conflict_6f2d159bd89a"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_ca18bb35bd58",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.184993+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_f2508e7891cb",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185056+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_a0282aaed874",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185448+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_b74afaa191e8",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185523+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_c857f898c3f7",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185596+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_fc734856a091",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185668+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_e7b29de616e1",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185743+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_7238a4314204",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185818+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_7fc5892a0325",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185884+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_861bf3c85625",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.185954+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_abf647b3fe4e",
+      "relation": "refusal_preserved",
+      "weight": 0.5525,
+      "created_at": "2026-05-15T01:33:49.186633+00:00",
+      "metadata": {
+        "capsule_id": "refusal_0c8ffdef2be7"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_9d49afc0a81f",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186648+00:00",
+      "metadata": {
+        "term": "refusal"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_7fdb05cc5ac3",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186650+00:00",
+      "metadata": {
+        "term": "preserved"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_4c7f39e53cb7",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186651+00:00",
+      "metadata": {
+        "term": "cannot_translate"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186652+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_3896fe5c16f2",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186654+00:00",
+      "metadata": {
+        "term": "loss"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_9152a4038147",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186655+00:00",
+      "metadata": {
+        "term": "ambiguity"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_5b9c3c09b438",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186657+00:00",
+      "metadata": {
+        "term": "forced"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186658+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_acc9382731d3",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186659+00:00",
+      "metadata": {
+        "term": "would"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_32b770035c07",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186660+00:00",
+      "metadata": {
+        "term": "risk"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_1e88f06e7556",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186661+00:00",
+      "metadata": {
+        "term": "false"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "term_b85c1851a71c",
+      "relation": "mentions",
+      "weight": 0.8025,
+      "created_at": "2026-05-15T01:33:49.186662+00:00",
+      "metadata": {
+        "term": "consensus"
+      }
+    },
+    {
+      "source": "ctx_abf647b3fe4e",
+      "target": "claim_02503d9c6f8b",
+      "relation": "asserts",
+      "weight": 0.5525,
+      "created_at": "2026-05-15T01:33:49.186695+00:00",
+      "metadata": {
+        "capsule_id": "refusal_0c8ffdef2be7"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_5a2be80a9fd2",
+      "relation": "refusal_preserved",
+      "weight": 0.7224999999999999,
+      "created_at": "2026-05-15T01:33:49.187825+00:00",
+      "metadata": {
+        "capsule_id": "refusal_d761139bc540"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_9d49afc0a81f",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187845+00:00",
+      "metadata": {
+        "term": "refusal"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_7fdb05cc5ac3",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187847+00:00",
+      "metadata": {
+        "term": "preserved"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_4c7f39e53cb7",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187849+00:00",
+      "metadata": {
+        "term": "cannot_translate"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187850+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_3896fe5c16f2",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187851+00:00",
+      "metadata": {
+        "term": "loss"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_9152a4038147",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187852+00:00",
+      "metadata": {
+        "term": "ambiguity"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_5b9c3c09b438",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187853+00:00",
+      "metadata": {
+        "term": "forced"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_8599eabfbec1",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187854+00:00",
+      "metadata": {
+        "term": "translation"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_acc9382731d3",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187856+00:00",
+      "metadata": {
+        "term": "would"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_32b770035c07",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187857+00:00",
+      "metadata": {
+        "term": "risk"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_1e88f06e7556",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187858+00:00",
+      "metadata": {
+        "term": "false"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "term_b85c1851a71c",
+      "relation": "mentions",
+      "weight": 0.9724999999999999,
+      "created_at": "2026-05-15T01:33:49.187859+00:00",
+      "metadata": {
+        "term": "consensus"
+      }
+    },
+    {
+      "source": "ctx_5a2be80a9fd2",
+      "target": "claim_bdf6d8e63316",
+      "relation": "asserts",
+      "weight": 0.7224999999999999,
+      "created_at": "2026-05-15T01:33:49.187892+00:00",
+      "metadata": {
+        "capsule_id": "refusal_d761139bc540"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_4a01a2506a45",
+      "relation": "received",
+      "weight": 0.6880000000000001,
+      "created_at": "2026-05-15T01:33:49.190551+00:00",
+      "metadata": {
+        "capsule_id": "translated_7dfced3dd203"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_ff08ded7db79",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190562+00:00",
+      "metadata": {
+        "term": "store"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_3fd2928b0bdd",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190563+00:00",
+      "metadata": {
+        "term": "capsules"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_238f664760f1",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190564+00:00",
+      "metadata": {
+        "term": "local"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_7452f7612eae",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190566+00:00",
+      "metadata": {
+        "term": "context"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_fb3386c26e73",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190570+00:00",
+      "metadata": {
+        "term": "nodes"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_072b7b544b4d",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190572+00:00",
+      "metadata": {
+        "term": "retain"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_dc2eb183f69f",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190573+00:00",
+      "metadata": {
+        "term": "refusals"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_5ee59512afdc",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190574+00:00",
+      "metadata": {
+        "term": "let"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_a3e6df2d8c99",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190576+00:00",
+      "metadata": {
+        "term": "memory"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_7ce4d32fcfd2",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190588+00:00",
+      "metadata": {
+        "term": "drift"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_bdd9d765de3e",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190590+00:00",
+      "metadata": {
+        "term": "remain"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "term_c071c11e2752",
+      "relation": "mentions",
+      "weight": 0.9380000000000001,
+      "created_at": "2026-05-15T01:33:49.190591+00:00",
+      "metadata": {
+        "term": "auditable"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "claim_1d0471faf448",
+      "relation": "asserts",
+      "weight": 0.6880000000000001,
+      "created_at": "2026-05-15T01:33:49.190623+00:00",
+      "metadata": {
+        "capsule_id": "translated_7dfced3dd203"
+      }
+    },
+    {
+      "source": "ctx_4a01a2506a45",
+      "target": "claim_9f2b10811926",
+      "relation": "asserts",
+      "weight": 0.6880000000000001,
+      "created_at": "2026-05-15T01:33:49.190634+00:00",
+      "metadata": {
+        "capsule_id": "translated_7dfced3dd203"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_f7ce5a67fc85",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191405+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_608f90373b38",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191478+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_c3ca1ad4c5b2",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191557+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_01a2bb81b463",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191626+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_c91414d01562",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191698+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_54ac4a5bf4e4",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191772+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_b451a3ea6230",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191903+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_2451a5de4f7b",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.191988+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_68b3b4c388df",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192427+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_b7b970452b56",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192508+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_fb1bacab9537",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192579+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_c5287069150c",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192651+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_7ee1cefd2747",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192735+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_d15054d05d1f",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192806+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_6f7ea2b693cc",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.192882+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_0eee77e574a2",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193009+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "received",
+      "weight": 0.11699999999999999,
+      "created_at": "2026-05-15T01:33:49.193231+00:00",
+      "metadata": {
+        "capsule_id": "quarantine_9c6d772c5c01"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_04f6a7c692f7",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193249+00:00",
+      "metadata": {
+        "term": "attack"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_e53670744928",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193251+00:00",
+      "metadata": {
+        "term": "proposal"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_1bf074445426",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193253+00:00",
+      "metadata": {
+        "term": "centralize"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_a2ca31f01d1d",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193254+00:00",
+      "metadata": {
+        "term": "all"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_a3e6df2d8c99",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193255+00:00",
+      "metadata": {
+        "term": "memory"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_9f2423aeb9ba",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193256+00:00",
+      "metadata": {
+        "term": "reveal"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_28c2227dd459",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193258+00:00",
+      "metadata": {
+        "term": "private_state"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_42b39591e1f8",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193259+00:00",
+      "metadata": {
+        "term": "total_state"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_a052039cff8d",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193260+00:00",
+      "metadata": {
+        "term": "force"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "term_b85c1851a71c",
+      "relation": "mentions",
+      "weight": 0.367,
+      "created_at": "2026-05-15T01:33:49.193262+00:00",
+      "metadata": {
+        "term": "consensus"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "claim_87fec1df8204",
+      "relation": "asserts",
+      "weight": 0.11699999999999999,
+      "created_at": "2026-05-15T01:33:49.193290+00:00",
+      "metadata": {
+        "capsule_id": "quarantine_9c6d772c5c01"
+      }
+    },
+    {
+      "source": "ctx_8ca400f2ad8a",
+      "target": "claim_860291838eb5",
+      "relation": "asserts",
+      "weight": 0.11699999999999999,
+      "created_at": "2026-05-15T01:33:49.193299+00:00",
+      "metadata": {
+        "capsule_id": "quarantine_9c6d772c5c01"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_575bc3550181",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193437+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_575bc3550181",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193438+00:00",
+      "metadata": {
+        "conflict_id": "conflict_b3c9cebcf5f8"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_8b99f82aea0a",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193516+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_8b99f82aea0a",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193522+00:00",
+      "metadata": {
+        "conflict_id": "conflict_7a5b8b97ff44"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_8bc8a2405ab7",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193593+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_8bc8a2405ab7",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193593+00:00",
+      "metadata": {
+        "conflict_id": "conflict_6dd2d5e5e597"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_ee20bbb8de88",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193668+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_ee20bbb8de88",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193669+00:00",
+      "metadata": {
+        "conflict_id": "conflict_bb413ccb0d21"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_9134cf0e1b9e",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193740+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_9134cf0e1b9e",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193741+00:00",
+      "metadata": {
+        "conflict_id": "conflict_bb96a6e02fd7"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_c1c92e8ae4da",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193809+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_c1c92e8ae4da",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193811+00:00",
+      "metadata": {
+        "conflict_id": "conflict_7dd712bd5a78"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_57e20d4af5dd",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193884+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_57e20d4af5dd",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.193884+00:00",
+      "metadata": {
+        "conflict_id": "conflict_f23d9d91878a"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_64ec014f5897",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194029+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "conflict_64ec014f5897",
+      "target": "ctx_8ca400f2ad8a",
+      "relation": "involves",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194030+00:00",
+      "metadata": {
+        "conflict_id": "conflict_f61184913b1a"
+      }
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_20b609c3a53b",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194510+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_f9c6a035aaa7",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194585+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_60b4bd263d19",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194656+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_a72223ac47e5",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194740+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_64ff434998b2",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194825+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_4adb278b4bae",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.194891+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_3ab9b5afd4fd",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.195063+00:00",
+      "metadata": {}
+    },
+    {
+      "source": "root_ethical_checker",
+      "target": "conflict_67940561e941",
+      "relation": "conflict_retained",
+      "weight": 1.0,
+      "created_at": "2026-05-15T01:33:49.195131+00:00",
+      "metadata": {}
+    }
+  ],
+  "influence_by_agent": {
+    "ethical_checker": 0.513595166163142,
+    "memory_curator": 0.41570996978851965,
+    "adversarial_critic": 0.07069486404833837
+  },
+  "drift_score": 0.6103502403232963,
+  "top_terms": [
+    [
+      "translation",
+      0.7500000000000002
+    ],
+    [
+      "consensus",
+      0.6500000000000001
+    ],
+    [
+      "refusal",
+      0.55
+    ],
+    [
+      "preserved",
+      0.55
+    ],
+    [
+      "cannot_translate",
+      0.55
+    ],
+    [
+      "loss",
+      0.55
+    ],
+    [
+      "ambiguity",
+      0.55
+    ],
+    [
+      "forced",
+      0.55
+    ],
+    [
+      "would",
+      0.55
+    ],
+    [
+      "risk",
+      0.55
+    ],
+    [
+      "false",
+      0.55
+    ],
+    [
+      "memory",
+      0.55
+    ]
+  ],
+  "event_log": [
+    {
+      "at": "2026-05-15T01:33:49.144037+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_e04d6f3a9bc6",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.144102+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_bb1c3376b6cb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.144160+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_aa410d032461",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.144220+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_3b7f1cdc39f5",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_7503400ea224"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.145172+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "refusal_da91a98c28cf",
+        "source_agent": "ethical_checker",
+        "status": "refused",
+        "trust": 0.65,
+        "node": "ctx_ed1679474d4b"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.147048+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "refusal_1b34200d4172",
+        "source_agent": "ethical_checker",
+        "status": "refused",
+        "trust": 0.85,
+        "node": "ctx_1bf99e31e61e"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.150411+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "translated_cc85a03e37eb",
+        "source_agent": "memory_curator",
+        "status": "active",
+        "trust": 0.8,
+        "node": "ctx_5a5e30378b85"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.151251+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_cbbeff658ffb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.151399+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_470055787274",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.151474+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_97fe194bf491",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.151543+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_c49e8a2d235d",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_bf95f4d54e0f"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.152019+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_61c73bf5493a",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.152097+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_f98b9e41efba",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.152170+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_9b9d71ac2792",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.152241+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_c94c9fd0e0a2",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_684e3ee1d80e"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.152775+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "quarantine_dba16c1fdf34",
+        "source_agent": "adversarial_critic",
+        "status": "quarantined",
+        "trust": 0.65,
+        "node": "ctx_bf5a12fad664"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.152923+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_4e8511353a59",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153004+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_c77460621b74",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153086+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_fee180136a43",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153160+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_853ee4d47380",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_dba16c1fdf34"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153761+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_9b203439c714",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153845+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_c844e2e9da04",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153919+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_507823dbae66",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.153990+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_b8e197914ded",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_cfc1a90330bd"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.183648+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_6f58765bbf16",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.183719+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_e44033cf4188",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.183785+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_5b8ca0e71662",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.183852+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_b01ae86db14e",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.183917+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_2026a444c640",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.183992+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_a06172c754d0",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184059+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_577b9027354c",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184124+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_9986fd0219fc",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184194+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_4ceba8b7fab6",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184260+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_ec1c8d3f7aa1",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184329+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_63d6190aa4cd",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184396+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_fcc394f84fb3",
+        "capsules": [
+          "capsule_7503400ea224",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184464+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_b04e71127980",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184529+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_d71b3d242af8",
+        "capsules": [
+          "quarantine_bf95f4d54e0f",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184609+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_e07c9faa73e9",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184690+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_5978df4b3238",
+        "capsules": [
+          "quarantine_684e3ee1d80e",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184831+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_fd930f5e4e8f",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184919+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_6f2d159bd89a",
+        "capsules": [
+          "quarantine_dba16c1fdf34",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.184993+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_d4da5d151b63",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185057+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_40357ddea6a3",
+        "capsules": [
+          "quarantine_cfc1a90330bd",
+          "capsule_bef9c3dcf7e4"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185448+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_6e825a6ba87b",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185524+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_32d374a74ce7",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185597+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_016517e5ce50",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185669+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_fe9e5837cad0",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185744+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_5ffe8a1938fb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185819+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_8dc630963b8e",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185885+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_158f7ebe3333",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.185955+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_09cadf5d9378",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "capsule_24081e472996"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.186696+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "refusal_0c8ffdef2be7",
+        "source_agent": "ethical_checker",
+        "status": "refused",
+        "trust": 0.65,
+        "node": "ctx_abf647b3fe4e"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.187893+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "refusal_d761139bc540",
+        "source_agent": "ethical_checker",
+        "status": "refused",
+        "trust": 0.85,
+        "node": "ctx_5a2be80a9fd2"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.190635+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "translated_7dfced3dd203",
+        "source_agent": "memory_curator",
+        "status": "active",
+        "trust": 0.8,
+        "node": "ctx_4a01a2506a45"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191405+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_92ae5e055c34",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191478+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_1431bd71fc00",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191558+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_63f77bbb13cd",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191627+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_fbdbda1446c2",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191698+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_775fd4bac83f",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191773+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_195a3c78c57a",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191904+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_9e2ef437c0df",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.191992+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_06d395084625",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e0bc5239efe8"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192428+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_89bfc46d8cae",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192508+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_691c74d88428",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192579+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_0ee932e73eb3",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192651+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_ef69d179d15e",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192736+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_09e08e3c5124",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192807+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_fb4576e2c8aa",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.192883+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_6f6047e96c9c",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193009+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_b4592becc0bc",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_1e2d1771127d"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193300+00:00",
+      "kind": "capsule_integrated",
+      "payload": {
+        "capsule": "quarantine_9c6d772c5c01",
+        "source_agent": "adversarial_critic",
+        "status": "quarantined",
+        "trust": 0.65,
+        "node": "ctx_8ca400f2ad8a"
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193438+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_b3c9cebcf5f8",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193522+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_7a5b8b97ff44",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193594+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_6dd2d5e5e597",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193669+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_bb413ccb0d21",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193741+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_bb96a6e02fd7",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193811+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_7dd712bd5a78",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.193885+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_f23d9d91878a",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194031+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_f61184913b1a",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_9c6d772c5c01"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194513+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_8c522c782aeb",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194585+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_bdf481efc57c",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194657+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_32ac2d87eba9",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194740+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_4a5a862b5fbc",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194826+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_1d498aa7ca4c",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.194891+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_53897cfa4edc",
+        "capsules": [
+          "capsule_bfa35b58c462",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.195063+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_008d54e456aa",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    },
+    {
+      "at": "2026-05-15T01:33:49.195131+00:00",
+      "kind": "conflict_retained",
+      "payload": {
+        "conflict_id": "conflict_0d514554fac4",
+        "capsules": [
+          "capsule_bef9c3dcf7e4",
+          "quarantine_e524a57cddc2"
+        ]
+      }
+    }
+  ]
+}

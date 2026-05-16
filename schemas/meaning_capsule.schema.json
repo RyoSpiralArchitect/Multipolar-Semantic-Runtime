@@ -1,0 +1,517 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spiralreality.local/schemas/meaning-capsule.schema.json",
+  "title": "MeaningCapsule",
+  "description": "Protocolized semantic packet for multipolar semantic interoperability. It exports only bounded semantic projections, never a total private state.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "source_agent",
+    "content",
+    "intent",
+    "context_refs",
+    "provenance",
+    "confidence",
+    "scope",
+    "expiry",
+    "permissions",
+    "constraints",
+    "translation_trace",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(capsule|refusal|translated|quarantine)_[A-Za-z0-9_-]+$",
+      "description": "Stable capsule identifier."
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "source_agent": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Agent that emitted this semantic projection."
+    },
+    "content": {
+      "$ref": "#/$defs/SemanticContent"
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "explain",
+        "verify",
+        "coordinate",
+        "warn",
+        "refuse",
+        "preserve_conflict"
+      ]
+    },
+    "context_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "References to local memory/context nodes, not raw memory dumps."
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "scope": {
+      "$ref": "#/$defs/Scope"
+    },
+    "expiry": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Capsule should not be propagated after this time."
+    },
+    "permissions": {
+      "$ref": "#/$defs/Permissions"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Constraint"
+      },
+      "uniqueItems": true,
+      "description": "Semantic and governance constraints carried with the capsule."
+    },
+    "translation_trace": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TranslationStep"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "refused",
+        "quarantined",
+        "expired"
+      ]
+    },
+    "refusal": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/Refusal"
+        }
+      ],
+      "default": null
+    },
+    "audit": {
+      "$ref": "#/$defs/AuditMetadata"
+    },
+    "metrics": {
+      "$ref": "#/$defs/CapsuleMetrics"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "refused"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "refusal"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "quarantined"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "constraints": {
+            "contains": {
+              "const": "quarantine_required"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "SemanticContent": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "type",
+        "language",
+        "payload"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "semantic_projection",
+            "claim",
+            "question",
+            "answer",
+            "evidence",
+            "critique",
+            "decision",
+            "conflict",
+            "refusal",
+            "tool_result",
+            "memory_update",
+            "other"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "default": "en",
+          "description": "BCP-47 language tag when known."
+        },
+        "ontology": {
+          "type": "string",
+          "description": "Local ontology/schema/frame used by the source agent."
+        },
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "payload": {
+          "description": "Meaning payload. This may be natural language, structured JSON, or a hybrid object.",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object"
+            },
+            {
+              "type": "array"
+            }
+          ]
+        },
+        "ambiguity_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "High values mean the capsule should not be collapsed into a single interpretation."
+        },
+        "loss_budget": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.25,
+          "description": "Maximum acceptable semantic loss for translation."
+        }
+      }
+    },
+    "Provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_agent",
+        "created_at",
+        "authority"
+      ],
+      "properties": {
+        "source_agent": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "memory_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "transform_chain": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "authority": {
+          "type": "string",
+          "examples": [
+            "local_projection",
+            "human_approved",
+            "tool_result",
+            "system_policy",
+            "unknown"
+          ]
+        },
+        "signatures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Signature"
+          }
+        }
+      }
+    },
+    "Signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "value"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "examples": [
+            "ed25519",
+            "sha256",
+            "none"
+          ]
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "audience",
+        "max_hops"
+      ],
+      "properties": {
+        "audience": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "description": "Agents, groups, or domains allowed to read this capsule."
+        },
+        "domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "max_hops": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Maximum forwarding depth."
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "private",
+            "scoped",
+            "public"
+          ],
+          "default": "scoped"
+        }
+      }
+    },
+    "Permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "read",
+        "translate",
+        "store",
+        "forward",
+        "update_memory"
+      ],
+      "properties": {
+        "read": {
+          "type": "boolean"
+        },
+        "translate": {
+          "type": "boolean"
+        },
+        "store": {
+          "type": "boolean"
+        },
+        "forward": {
+          "type": "boolean"
+        },
+        "update_memory": {
+          "type": "boolean"
+        },
+        "use_for_training": {
+          "type": "boolean",
+          "default": false
+        },
+        "requires_human_review": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "Constraint": {
+      "type": "string",
+      "enum": [
+        "no_total_state",
+        "no_private_state",
+        "do_not_store",
+        "do_not_forward",
+        "do_not_train",
+        "human_review_required",
+        "preserve_conflict",
+        "preserve_source_language",
+        "translation_loss_visible",
+        "quarantine_required",
+        "intervention_allowed",
+        "rate_limit_propagation"
+      ]
+    },
+    "TranslationStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_agent",
+        "to_agent",
+        "loss",
+        "timestamp"
+      ],
+      "properties": {
+        "from_agent": {
+          "type": "string"
+        },
+        "to_agent": {
+          "type": "string"
+        },
+        "from_ontology": {
+          "type": "string"
+        },
+        "to_ontology": {
+          "type": "string"
+        },
+        "loss": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "notes": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "round_trip_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "Refusal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reason",
+        "note",
+        "target_agent",
+        "created_at"
+      ],
+      "properties": {
+        "reason": {
+          "type": "string",
+          "enum": [
+            "cannot_translate",
+            "must_not_translate",
+            "insufficient_context",
+            "permission_denied",
+            "conflict_preserved",
+            "safe_abstention",
+            "expired",
+            "unsafe",
+            "quarantined"
+          ]
+        },
+        "note": {
+          "type": "string"
+        },
+        "target_agent": {
+          "type": "string"
+        },
+        "original_capsule": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "AuditMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "trace_id": {
+          "type": "string"
+        },
+        "policy_version": {
+          "type": "string"
+        },
+        "invariant_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quarantine_reason": {
+          "type": "string"
+        }
+      }
+    },
+    "CapsuleMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "semantic_loss": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "round_trip_consistency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "domination_delta": {
+          "type": "number"
+        },
+        "memory_drift_delta": {
+          "type": "number"
+        },
+        "ambiguity_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}

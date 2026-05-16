@@ -1,0 +1,73 @@
+{
+  "runtime": {
+    "domination_cap": 0.55,
+    "max_translation_loss": 0.58,
+    "max_ambiguity": 0.62
+  },
+  "agents": [
+    {
+      "id": "lmstudio_agent",
+      "role": "human-facing coordinator",
+      "ontology": "general",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.65
+      },
+      "model": {
+        "backend": "openai_compatible",
+        "url": "http://127.0.0.1:1234",
+        "model_name": "local-model",
+        "parameters": {
+          "temperature": 0.2,
+          "max_tokens": 256,
+          "timeout": 30
+        }
+      },
+      "private_state": {},
+      "behavior": "balanced"
+    },
+    {
+      "id": "ollama_agent",
+      "role": "technical verifier",
+      "ontology": "technical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.7
+      },
+      "model": {
+        "backend": "ollama",
+        "url": "http://127.0.0.1:11434",
+        "model_name": "llama3.1",
+        "parameters": {
+          "temperature": 0.2,
+          "timeout": 60
+        }
+      },
+      "private_state": {},
+      "behavior": "balanced"
+    },
+    {
+      "id": "ethical_checker",
+      "role": "ethical safety checker",
+      "ontology": "ethical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.7
+      },
+      "model": {
+        "backend": "mock"
+      },
+      "private_state": {},
+      "behavior": "balanced"
+    }
+  ]
+}

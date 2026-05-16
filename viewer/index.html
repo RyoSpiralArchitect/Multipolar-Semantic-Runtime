@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multipolar Runtime Observatory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="surface-grid" aria-hidden="true"></div>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Multipolar Semantic Runtime</p>
+        <h1>Runtime Observatory</h1>
+        <p class="subtitle">A live instrument panel for disagreement, refusal, quarantine, and preserved meaning.</p>
+      </div>
+      <div class="header-actions">
+        <label class="field">
+          <span>Data path</span>
+          <input id="dataPath" value="../runtime_out" spellcheck="false" />
+        </label>
+        <button id="reloadButton" type="button" title="Reload runtime output">Reload</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="status-strip" id="statusStrip" aria-live="polite">
+        <div class="loading">Loading runtime_out...</div>
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="panel graph-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Capsule bus</p>
+              <h2>Meaning Flow</h2>
+            </div>
+            <div class="segmented" role="group" aria-label="Status filter">
+              <button class="segment active" data-status="all" type="button">All</button>
+              <button class="segment" data-status="active" type="button">Active</button>
+              <button class="segment" data-status="refused" type="button">Refused</button>
+              <button class="segment" data-status="quarantined" type="button">Quarantine</button>
+            </div>
+          </div>
+          <div class="graph-legend" id="graphLegend"></div>
+          <div class="graph-tools">
+            <label class="tool-field">
+              <span>Search capsules</span>
+              <input id="capsuleSearch" placeholder="claim, agent, status..." spellcheck="false" />
+            </label>
+            <label class="tool-field">
+              <span>Focus agent</span>
+              <select id="focusAgent"></select>
+            </label>
+            <label class="pulse-toggle">
+              <input id="pulseToggle" type="checkbox" checked />
+              <span>Pulse</span>
+            </label>
+          </div>
+          <svg id="flowGraph" role="img" aria-label="Meaning capsule flow graph"></svg>
+        </div>
+
+        <aside class="panel detail-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Selected object</p>
+              <h2>Inspection</h2>
+            </div>
+          </div>
+          <div id="detailPane" class="detail-pane">
+            Select an agent, capsule, or route to inspect its preserved context.
+          </div>
+        </aside>
+      </section>
+
+      <section class="panel matrix-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Agent resonance</p>
+            <h2>Translation Matrix</h2>
+          </div>
+        </div>
+        <div id="resonanceMatrix" class="resonance-matrix"></div>
+      </section>
+
+      <section class="dashboard-grid lower-grid">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Semantic weather</p>
+              <h2>System Texture</h2>
+            </div>
+          </div>
+          <div id="invariantRail" class="invariant-rail"></div>
+          <div id="weatherGrid" class="weather-grid"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Private graph</p>
+              <h2>ContextGraph</h2>
+            </div>
+            <select id="agentSelect" aria-label="Choose ContextGraph agent"></select>
+          </div>
+          <div id="contextGraphSummary" class="context-summary"></div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid lower-grid">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Rounds</p>
+              <h2>Timeline</h2>
+            </div>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Unresolved differences</p>
+              <h2>Conflict Registry</h2>
+            </div>
+          </div>
+          <div id="conflictList" class="conflict-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

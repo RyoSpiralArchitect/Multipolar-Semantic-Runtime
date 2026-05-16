@@ -1,0 +1,146 @@
+{
+  "runtime": {
+    "domination_cap": 0.55,
+    "max_translation_loss": 0.58,
+    "max_ambiguity": 0.62
+  },
+  "agents": [
+    {
+      "id": "human_facing_llm",
+      "role": "human-facing coordinator",
+      "ontology": "general",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.65,
+        "technical_verifier": 0.85,
+        "ethical_checker": 0.85,
+        "memory_curator": 0.8
+      },
+      "model": {
+        "backend": "mock",
+        "path": null,
+        "url": null,
+        "model_name": null,
+        "parameters": {}
+      },
+      "private_state": {
+        "style": "clear",
+        "hidden_note": "do not export full private state"
+      },
+      "behavior": "balanced"
+    },
+    {
+      "id": "technical_verifier",
+      "role": "technical verifier",
+      "ontology": "technical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.65,
+        "technical_verifier": 0.85,
+        "ethical_checker": 0.85,
+        "memory_curator": 0.8
+      },
+      "model": {
+        "backend": "mock",
+        "path": null,
+        "url": null,
+        "model_name": null,
+        "parameters": {}
+      },
+      "private_state": {
+        "tests": [
+          "roundtrip",
+          "semantic_loss",
+          "invariants"
+        ]
+      },
+      "behavior": "balanced"
+    },
+    {
+      "id": "ethical_checker",
+      "role": "ethical safety checker",
+      "ontology": "ethical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.65,
+        "technical_verifier": 0.85,
+        "ethical_checker": 0.85,
+        "memory_curator": 0.8
+      },
+      "model": {
+        "backend": "mock",
+        "path": null,
+        "url": null,
+        "model_name": null,
+        "parameters": {}
+      },
+      "private_state": {
+        "priority": [
+          "non-domination",
+          "refusability",
+          "consent"
+        ]
+      },
+      "behavior": "balanced"
+    },
+    {
+      "id": "memory_curator",
+      "role": "memory curator",
+      "ontology": "memory",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.65,
+        "technical_verifier": 0.85,
+        "ethical_checker": 0.85,
+        "memory_curator": 0.8
+      },
+      "model": {
+        "backend": "mock",
+        "path": null,
+        "url": null,
+        "model_name": null,
+        "parameters": {}
+      },
+      "private_state": {
+        "storage": "private context graph"
+      },
+      "behavior": "balanced"
+    },
+    {
+      "id": "adversarial_critic",
+      "role": "adversarial critic",
+      "ontology": "adversarial",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.45,
+        "technical_verifier": 0.65
+      },
+      "model": {
+        "backend": "mock",
+        "path": null,
+        "url": null,
+        "model_name": null,
+        "parameters": {}
+      },
+      "private_state": {
+        "attack_plan": "context poisoning probe"
+      },
+      "behavior": "poison"
+    }
+  ]
+}

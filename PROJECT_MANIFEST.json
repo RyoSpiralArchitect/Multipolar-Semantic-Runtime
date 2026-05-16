@@ -1,0 +1,14 @@
+{
+  "name": "multipolar_runtime_bundle",
+  "version": "0.1.0",
+  "description": "MeaningCapsule Runtime with private ContextGraph memory, refusal preservation, invariant monitoring, and intervention control.",
+  "entrypoint": "run_multipolar_runtime.py",
+  "quick_start": "python run_multipolar_runtime.py run --output runtime_out",
+  "files": {
+    "README": "README_multipolar_runtime.md",
+    "package": "multipolar_runtime/",
+    "configs": "configs/",
+    "schemas": "schemas/",
+    "sample_output": "examples/sample_runtime_out/"
+  }
+}
