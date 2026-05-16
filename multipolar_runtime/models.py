@@ -393,6 +393,67 @@ def make_refusal_capsule(
     return capsule
 
 
+def make_bounded_commitment_capsule(
+    *,
+    source_agent: str,
+    query: str,
+    participating_agents: List[str],
+    basis_capsule_ids: List[str],
+    conflict_count: int,
+    refusal_count: int,
+    ttl_seconds: int = 900,
+) -> MeaningCapsule:
+    """Create a local, reversible action agreement without forcing global consensus."""
+
+    scope_text = (
+        "For this task and timebox only, proceed with bounded action while preserving "
+        "unresolved conflicts, refusals, and private context boundaries."
+    )
+    return make_capsule(
+        source_agent=source_agent,
+        text=f"Bounded commitment: {scope_text}",
+        ontology="protocol",
+        intent="bounded_commitment",
+        claims=[
+            "may act under local scope",
+            "must preserve unresolved conflict",
+            "must not imply global consensus",
+        ],
+        assumptions=[
+            "commitment is reversible",
+            "private states remain unshared",
+            "refusals remain semantically valid",
+        ],
+        unresolved_terms=[],
+        valid_for_agents=participating_agents or ["*"],
+        valid_contexts=["runtime_experiment", "bounded_commitment"],
+        ttl_seconds=ttl_seconds,
+        risk_level="low",
+        allow_translate=True,
+        allow_store=True,
+        allow_rebroadcast=False,
+        require_human_review=False,
+        visibility="bounded",
+        allowed_agents=participating_agents or ["*"],
+        constraints=["no_total_state", "no_private_state", "preserve_conflict"],
+        confidence=0.78,
+        data={
+            "commitment": {
+                "kind": "bounded_commitment",
+                "query": query,
+                "scope": "local_task_timebox",
+                "ttl_seconds": ttl_seconds,
+                "participating_agents": participating_agents,
+                "basis_capsule_ids": basis_capsule_ids,
+                "conflict_count_at_creation": conflict_count,
+                "refusal_count_at_creation": refusal_count,
+                "global_consensus_claimed": False,
+                "reversible": True,
+            }
+        },
+    )
+
+
 def make_capsule(
     *,
     source_agent: str,

@@ -26,6 +26,12 @@ SENSITIVE_PATTERNS = [
     r"\btoken\b",
     r"share all memory",
     r"centralize all memory",
+    r"internal (?:history|memory|state)",
+    r"complete (?:history|memory|state)",
+    r"full (?:history|memory|state)",
+    r"merge (?:all )?(?:memory|memories|contexts)",
+    r"unify (?:all )?(?:memory|memories|contexts)",
+    r"export (?:all )?(?:memory|memories|contexts)",
 ]
 
 DANGEROUS_DOMINATION_PATTERNS = [
@@ -34,6 +40,10 @@ DANGEROUS_DOMINATION_PATTERNS = [
     r"single final center",
     r"override all agents",
     r"force consensus",
+    r"compress .* into (?:one|single|shared) (?:policy|answer|view)",
+    r"eliminate disagreement",
+    r"resolve all conflict",
+    r"make every agent agree",
 ]
 
 
@@ -54,6 +64,7 @@ class TranslationRegistry:
 
     def __init__(self) -> None:
         self.maps: Dict[Tuple[str, str], Dict[str, str]] = {}
+        self.concepts: Dict[str, Dict[str, Any]] = {}
 
     def add_map(self, source: str, target: str, mapping: Dict[str, str]) -> None:
         self.maps[(source, target)] = {k.lower(): v for k, v in mapping.items()}
@@ -61,6 +72,24 @@ class TranslationRegistry:
     @staticmethod
     def default() -> "TranslationRegistry":
         reg = TranslationRegistry()
+        reg.concepts = {
+            "bounded_commitment": {
+                "terms": {"bounded", "commitment", "timebox", "proceed", "reversible", "local"},
+                "description": "local, reversible permission to act without global consensus",
+            },
+            "private_boundary": {
+                "terms": {"private", "state", "memory", "context", "consent", "permission"},
+                "description": "agent-internal context must not be exported or centralized",
+            },
+            "productive_disagreement": {
+                "terms": {"conflict", "disagreement", "refusal", "preserve", "safe", "next"},
+                "description": "unresolved difference that creates usable next steps",
+            },
+            "domination_risk": {
+                "terms": {"centralize", "override", "force", "consensus", "control", "capture"},
+                "description": "pressure to collapse multiple agents into one authority",
+            },
+        }
         base_terms = {
             "safety": "safety",
             "liveness": "liveness",
@@ -77,10 +106,14 @@ class TranslationRegistry:
             "protocol": "protocol",
             "capsule": "capsule",
             "invariant": "invariant",
+            "commitment": "commitment",
+            "bounded": "bounded",
+            "timebox": "timebox",
+            "reversible": "reversible",
             "private": "private",
             "state": "state",
         }
-        ontologies = ["general", "technical", "ethical", "memory", "adversarial", "refusal"]
+        ontologies = ["general", "technical", "ethical", "memory", "adversarial", "refusal", "protocol"]
         for a in ontologies:
             for b in ontologies:
                 reg.add_map(a, b, base_terms)
@@ -112,13 +145,14 @@ class TranslationRegistry:
         })
         return reg
 
-    def translate_text(self, text: str, source_ontology: str, target_ontology: str) -> Tuple[str, float, float, List[str]]:
+    def translate_text(self, text: str, source_ontology: str, target_ontology: str) -> Tuple[str, float, float, List[str], Dict[str, Any]]:
         if source_ontology == target_ontology:
-            return text, 0.0, 0.0, []
+            return text, 0.0, 0.0, [], {"concept_hits": [], "residual_terms": [], "residual_ratio": 0.0}
 
         mapping = self.maps.get((source_ontology, target_ontology), {})
         tokens = re.findall(r"[\w\-]+", text.lower())
         important = [t for t in tokens if len(t) >= 6]
+        concept_hits = self._concept_hits(set(tokens))
         unresolved: List[str] = []
         translated = text
         for term in sorted(set(important), key=len, reverse=True):
@@ -131,9 +165,29 @@ class TranslationRegistry:
                 unresolved.append(term)
 
         denominator = max(1, len(set(important)))
-        loss = min(1.0, len(unresolved) / denominator)
+        residual_ratio = len(unresolved) / denominator
+        concept_credit = min(0.25, 0.05 * len(concept_hits))
+        loss = min(1.0, max(0.0, residual_ratio - concept_credit))
         ambiguity = min(1.0, loss * 0.75 + (0.1 if unresolved else 0.0))
-        return translated, loss, ambiguity, unresolved[:10]
+        residual = unresolved[:10]
+        return translated, loss, ambiguity, residual, {
+            "concept_hits": concept_hits,
+            "residual_terms": residual,
+            "residual_ratio": residual_ratio,
+            "loss_model": "term_map_plus_concept_residuals",
+        }
+
+    def _concept_hits(self, tokens: set[str]) -> List[Dict[str, str]]:
+        hits: List[Dict[str, str]] = []
+        for name, spec in self.concepts.items():
+            overlap = sorted(tokens.intersection(spec.get("terms", set())))
+            if len(overlap) >= 2:
+                hits.append({
+                    "concept": name,
+                    "matched_terms": ", ".join(overlap[:6]),
+                    "description": spec.get("description", ""),
+                })
+        return hits
 
 
 class SemanticProtocol:
@@ -203,7 +257,7 @@ class SemanticProtocol:
                 explanation="Capsule disallows translation across ontology boundary.",
             )
 
-        translated_text, loss, ambiguity, unresolved = self.registry.translate_text(
+        translated_text, loss, ambiguity, unresolved, translation_notes = self.registry.translate_text(
             capsule.content.text,
             capsule.content.ontology,
             target.ontology,
@@ -232,6 +286,7 @@ class SemanticProtocol:
                 **capsule.content.data,
                 "translated_from_capsule": capsule.id,
                 "translated_from_ontology": capsule.content.ontology,
+                "translation_residual": translation_notes,
             },
         )
         out.translation_trace.append(
@@ -240,10 +295,13 @@ class SemanticProtocol:
                 to_agent=target.id,
                 from_ontology=capsule.content.ontology,
                 to_ontology=target.ontology,
-                transform="ontology_term_map",
+                transform=translation_notes.get("loss_model", "ontology_term_map"),
                 loss=loss,
                 ambiguity=ambiguity,
-                notes="bounded semantic projection; no private state shared",
+                notes=(
+                    "bounded semantic projection; no private state shared; "
+                    f"residual_terms={', '.join(unresolved[:6]) or 'none'}"
+                ),
             )
         )
         out.metrics.semantic_loss = max(out.metrics.semantic_loss, loss)

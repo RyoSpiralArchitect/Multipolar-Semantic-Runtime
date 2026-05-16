@@ -509,7 +509,7 @@ main {
 
 .invariant-rail {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
   gap: 6px;
   padding: 12px 14px 0;
 }
@@ -566,6 +566,14 @@ main {
 
 .weather-item:nth-child(4) {
   border-left-color: var(--memory);
+}
+
+.weather-item:nth-child(5) {
+  border-left-color: var(--cyan);
+}
+
+.weather-item:nth-child(6) {
+  border-left-color: var(--quarantine);
 }
 
 .weather-value {

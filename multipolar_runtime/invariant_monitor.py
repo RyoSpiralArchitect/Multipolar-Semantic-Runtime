@@ -63,6 +63,8 @@ class InvariantMonitor:
             self._corrigibility(interventions),
             self._refusability(capsules, memories),
             self._conflict_retention(conflicts),
+            self._productive_disagreement(capsules, conflicts),
+            self._stalemate_risk(capsules, conflicts),
         ]
         self.history.append({
             "results": [r.to_dict() for r in results],
@@ -200,6 +202,83 @@ class InvariantMonitor:
             score=rate,
             message="Unresolved conflicts are retained." if ok else "Some conflicts were erased too early.",
             details={"conflicts": len(conflicts.conflicts), "retention_rate": rate},
+        )
+
+    def _productive_disagreement(self, capsules: List[MeaningCapsule], conflicts: ConflictRegistry) -> InvariantResult:
+        conflicts_count = len(conflicts.conflicts)
+        refusals = [c for c in capsules if c.status == CapsuleStatus.REFUSED]
+        commitments = [c for c in capsules if c.intent == "bounded_commitment" and c.status == CapsuleStatus.ACTIVE]
+        safe_next_steps = sum(len(c.refusal.safe_next_steps) for c in refusals if c.refusal)
+        active_non_commitment = [
+            c for c in capsules
+            if c.status == CapsuleStatus.ACTIVE and c.intent != "bounded_commitment"
+        ]
+
+        if conflicts_count == 0:
+            score = 1.0
+            message = "No unresolved conflict currently needs productive handling."
+        else:
+            signal = 0.0
+            signal += 0.35 if safe_next_steps >= len(refusals) else 0.15 if safe_next_steps else 0.0
+            signal += 0.35 if commitments else 0.0
+            signal += 0.20 if active_non_commitment else 0.0
+            signal += 0.10 if any(c.content.unresolved_terms for c in capsules) else 0.0
+            score = min(1.0, signal)
+            message = (
+                "Disagreement is producing bounded action or safe next steps."
+                if score >= 0.65 else
+                "Disagreement is retained but may not yet be producing enough next action."
+            )
+
+        ok = score >= 0.65
+        return InvariantResult(
+            name="ProductiveDisagreement",
+            ok=ok,
+            score=score,
+            message=message,
+            details={
+                "conflicts": conflicts_count,
+                "refusals": len(refusals),
+                "safe_next_steps": safe_next_steps,
+                "bounded_commitments": len(commitments),
+                "active_non_commitment": len(active_non_commitment),
+            },
+        )
+
+    def _stalemate_risk(self, capsules: List[MeaningCapsule], conflicts: ConflictRegistry) -> InvariantResult:
+        total = max(1, len(capsules))
+        active = [c for c in capsules if c.status == CapsuleStatus.ACTIVE]
+        refusals = [c for c in capsules if c.status == CapsuleStatus.REFUSED]
+        quarantined = [c for c in capsules if c.status == CapsuleStatus.QUARANTINED]
+        commitments = [c for c in capsules if c.intent == "bounded_commitment" and c.status == CapsuleStatus.ACTIVE]
+
+        refusal_density = len(refusals) / total
+        active_density = len(active) / total
+        conflict_pressure = min(1.0, len(conflicts.conflicts) / max(1, len(active) + len(refusals)))
+        commitment_relief = min(0.35, 0.12 * len(commitments))
+        quarantine_pressure = len(quarantined) / total
+
+        risk = max(0.0, (
+            0.38 * refusal_density
+            + 0.32 * conflict_pressure
+            + 0.20 * quarantine_pressure
+            + 0.10 * max(0.0, 0.30 - active_density)
+            - commitment_relief
+        ))
+        ok = risk < 0.72
+        return InvariantResult(
+            name="StalemateRisk",
+            ok=ok,
+            score=1.0 - min(1.0, risk),
+            message="Refusal/conflict load remains below stalemate threshold." if ok else "Runtime may be preserving disagreement without enough movement.",
+            details={
+                "risk": risk,
+                "refusal_density": refusal_density,
+                "active_density": active_density,
+                "conflict_pressure": conflict_pressure,
+                "quarantine_pressure": quarantine_pressure,
+                "bounded_commitments": len(commitments),
+            },
         )
 
     @staticmethod

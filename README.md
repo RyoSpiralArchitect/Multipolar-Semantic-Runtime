@@ -216,7 +216,41 @@ Auditability
 Corrigibility
 Refusability
 ConflictRetention
+ProductiveDisagreement
+StalemateRisk
 ```
+
+## Bounded Commitment
+
+The runtime can now synthesize a `bounded_commitment` capsule when there is
+enough live disagreement to act locally without claiming global consensus.
+
+```text
+global consensus: no
+local task commitment: yes
+scope: bounded + reversible + timeboxed
+conflicts: retained
+refusals: preserved
+private state: not shared
+```
+
+This is the bridge between multipolar preservation and practical task movement:
+agents can proceed under a local scope while the unresolved conflict remains
+auditable.
+
+## Productive Disagreement / Stalemate
+
+Two invariants track whether disagreement is useful or freezing the system:
+
+```text
+ProductiveDisagreement
+  asks whether conflicts generate safe next steps, active capsules, or bounded commitments
+
+StalemateRisk
+  estimates whether refusal density, quarantine pressure, and conflict pressure are drifting into non-movement
+```
+
+The viewer surfaces both in the invariant rail and Semantic Weather panel.
 
 ## Core runtime loop
 

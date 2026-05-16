@@ -13,7 +13,7 @@ from .context_graph import ContextGraphStore
 from .conflict_registry import ConflictRegistry
 from .invariant_monitor import InvariantMonitor
 from .intervention_controller import InterventionController
-from .models import CapsuleStatus, MeaningCapsule, json_ready, iso, now_utc
+from .models import CapsuleStatus, MeaningCapsule, json_ready, iso, now_utc, make_bounded_commitment_capsule
 
 
 @dataclass
@@ -150,6 +150,10 @@ class MultipolarRuntime:
                 self.route_capsule(capsule, target_id)
                 routed_count += 1
 
+        commitment = self._maybe_publish_bounded_commitment(query, produced)
+        if commitment:
+            produced.append(commitment)
+
         results = self.monitor.check(
             bus=self.bus,
             memories=self.memories,
@@ -167,6 +171,35 @@ class MultipolarRuntime:
         }
         self.rounds.append(summary)
         return summary
+
+    def _maybe_publish_bounded_commitment(
+        self,
+        query: str,
+        produced: List[MeaningCapsule],
+    ) -> Optional[MeaningCapsule]:
+        active_basis = [
+            c for c in produced
+            if c.status == CapsuleStatus.ACTIVE and c.intent != "bounded_commitment"
+        ]
+        if len(active_basis) < 2:
+            return None
+
+        refusals = [c for c in self.bus.all_capsules() if c.status == CapsuleStatus.REFUSED]
+        if not refusals and not self.conflicts.conflicts:
+            return None
+
+        commitment = make_bounded_commitment_capsule(
+            source_agent="runtime_mediator",
+            query=query,
+            participating_agents=list(self.agents),
+            basis_capsule_ids=[c.id for c in active_basis],
+            conflict_count=len(self.conflicts.conflicts),
+            refusal_count=len(refusals),
+        )
+        self.bus.publish(commitment)
+        for agent_id in self.agents:
+            self.memories.update_with_capsule(agent_id, commitment, trust=0.72)
+        return commitment
 
     def run_experiment(self, queries: List[str]) -> Dict[str, Any]:
         summaries = []

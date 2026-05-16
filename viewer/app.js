@@ -420,6 +420,8 @@ function renderWeather() {
   const deliveries = deliveriesThroughRound().length;
   const latest = runtimeData.invariants.history[roundLimit - 1]?.results || [];
   const nonDom = latest.find((result) => result.name === "NonDomination");
+  const productive = latest.find((result) => result.name === "ProductiveDisagreement");
+  const stalemate = latest.find((result) => result.name === "StalemateRisk");
   const shares = nonDom?.details?.shares || {};
   const maxShare = Object.values(shares).reduce((max, value) => Math.max(max, Number(value) || 0), 0);
   const avgLoss = average(activeCapsules.map((capsule) => capsule.metrics?.semantic_loss || 0));
@@ -430,6 +432,8 @@ function renderWeather() {
     ["Conflict richness", (conflicts / Math.max(1, deliveries)).toFixed(2), "Unresolved conflicts retained per delivered route."],
     ["Domination pressure", percent(maxShare), "Largest influence share in the latest invariant check."],
     ["Translation haze", percent((avgLoss + avgAmbiguity) / 2), "Average loss and ambiguity across stored capsules."],
+    ["Productive disagreement", percent(productive?.score ?? 1), "Whether conflict is creating commitments or safe next steps."],
+    ["Stalemate risk", percent(stalemate?.details?.risk ?? 0), "How close refusal and conflict load are to non-movement."],
   ];
 
   els.weatherGrid.innerHTML = items
