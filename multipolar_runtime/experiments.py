@@ -90,6 +90,7 @@ def write_default_config(path: str | Path) -> None:
                     "path": a.model.path,
                     "url": a.model.url,
                     "model_name": a.model.model_name,
+                    "api_key_env": a.model.api_key_env,
                     "parameters": a.model.parameters,
                 },
                 "private_state": a.private_state,

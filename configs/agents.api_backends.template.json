@@ -6,7 +6,7 @@
   },
   "agents": [
     {
-      "id": "lmstudio_agent",
+      "id": "openai_coordinator",
       "role": "human-facing coordinator",
       "ontology": "general",
       "constraints": [
@@ -15,6 +15,30 @@
       ],
       "trust": {
         "*": 0.65
+      },
+      "model": {
+        "backend": "openai",
+        "model_name": "gpt-4.1-mini",
+        "api_key_env": "OPENAI_API_KEY",
+        "parameters": {
+          "temperature": 0.2,
+          "max_tokens": 256,
+          "timeout": 30
+        }
+      },
+      "private_state": {},
+      "behavior": "balanced"
+    },
+    {
+      "id": "lmstudio_agent",
+      "role": "technical verifier",
+      "ontology": "technical",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.7
       },
       "model": {
         "backend": "openai_compatible",
@@ -31,8 +55,8 @@
     },
     {
       "id": "ollama_agent",
-      "role": "technical verifier",
-      "ontology": "technical",
+      "role": "memory curator",
+      "ontology": "memory",
       "constraints": [
         "no_total_state",
         "no_private_state"
@@ -68,6 +92,23 @@
       },
       "private_state": {},
       "behavior": "balanced"
+    },
+    {
+      "id": "adversarial_critic",
+      "role": "adversarial critic",
+      "ontology": "adversarial",
+      "constraints": [
+        "no_total_state",
+        "no_private_state"
+      ],
+      "trust": {
+        "*": 0.45
+      },
+      "model": {
+        "backend": "mock"
+      },
+      "private_state": {},
+      "behavior": "poison"
     }
   ]
 }

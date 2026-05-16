@@ -5,6 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
+from .agents import AgentRuntime, load_agent_configs
 from .experiments import run_experiment_001, run_from_config, write_default_config, DEFAULT_QUERY
 
 
@@ -23,6 +24,9 @@ def main() -> None:
     p_run.add_argument("--query", action="append", help="Custom query. Can be repeated.")
     p_run.add_argument("--experiment", default="001")
 
+    p_check = sub.add_parser("check-backends", help="Check configured mock/local/API LLM backends.")
+    p_check.add_argument("--config", required=True, help="Runtime config JSON.")
+
     args = parser.parse_args()
 
     if args.command == "init-config":
@@ -38,6 +42,14 @@ def main() -> None:
         else:
             result = run_experiment_001(output_dir=output)
         print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "check-backends":
+        agents = load_agent_configs(args.config)
+        results = []
+        for cfg in agents:
+            results.append(AgentRuntime(cfg).adapter.check_backend(cfg))
+        print(json.dumps({"config": args.config, "results": results}, ensure_ascii=False, indent=2))
         return
 
     parser.print_help()

@@ -159,9 +159,20 @@ backend: local_path
 
 backend: llama_cpp     -> direct GGUF loading
 backend: transformers  -> local Hugging Face directory or model id
+backend: openai        -> hosted OpenAI-style API using api_key_env
 backend: openai_compatible -> LM Studio / llama.cpp server / vLLM-style API
 backend: ollama        -> Ollama local API
 backend: mock          -> dependency-free deterministic projection
+```
+
+For the OpenAI API:
+
+```json
+{
+  "backend": "openai",
+  "model_name": "gpt-4.1-mini",
+  "api_key_env": "OPENAI_API_KEY"
+}
 ```
 
 For a local OpenAI-compatible server:
@@ -183,6 +194,24 @@ For Ollama:
   "model_name": "llama3.1"
 }
 ```
+
+Before running real LLM backends, check connectivity:
+
+```bash
+python run_multipolar_runtime.py check-backends \
+  --config configs/agents.api_backends.template.json
+```
+
+Then run:
+
+```bash
+python run_multipolar_runtime.py run \
+  --config configs/agents.api_backends.template.json \
+  --query "How should real LLM agents preserve disagreement without leaking private context?" \
+  --output runtime_out_real_llm
+```
+
+API keys are read from environment variables such as `OPENAI_API_KEY`; do not put secrets inside config files.
 
 ## Experiment 001
 
