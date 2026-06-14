@@ -82,15 +82,24 @@
           "description": "local_path auto-selects llama_cpp for .gguf, otherwise transformers."
         },
         "path": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Local model file path or local model directory. Example: /models/llama-3.1-8b-instruct.Q4_K_M.gguf"
         },
         "url": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Base URL for openai_compatible or ollama backends."
         },
         "model_name": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Remote/OpenAI-compatible/Ollama model name, or a human-readable local model label."
         },
         "api_key_env": {
@@ -109,6 +118,22 @@
             "max_tokens": {
               "type": "integer",
               "minimum": 1
+            },
+            "timeout": {
+              "type": "number",
+              "minimum": 1
+            },
+            "cost_per_1k_tokens": {
+              "type": "number",
+              "minimum": 0
+            },
+            "input_cost_per_1k_tokens": {
+              "type": "number",
+              "minimum": 0
+            },
+            "output_cost_per_1k_tokens": {
+              "type": "number",
+              "minimum": 0
             },
             "n_ctx": {
               "type": "integer",

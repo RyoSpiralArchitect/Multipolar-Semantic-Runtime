@@ -24,6 +24,9 @@ class Scenario:
     tags: List[str] = field(default_factory=list)
     notes: List[str] = field(default_factory=list)
     story: Dict[str, Any] = field(default_factory=dict)
+    contract: Dict[str, Any] = field(default_factory=dict)
+    adversarial_drills: List[Dict[str, Any]] = field(default_factory=list)
+    comparison: Dict[str, Any] = field(default_factory=dict)
     source_path: Optional[str] = None
 
     @staticmethod
@@ -38,6 +41,9 @@ class Scenario:
             tags=list(raw.get("tags", [])),
             notes=list(raw.get("notes", [])),
             story=dict(raw.get("story", {})),
+            contract=dict(raw.get("contract", {})),
+            adversarial_drills=[dict(drill) for drill in raw.get("adversarial_drills", [])],
+            comparison=dict(raw.get("comparison", {})),
             source_path=source_path,
         )
 
@@ -49,6 +55,9 @@ class Scenario:
             "tags": self.tags,
             "notes": self.notes,
             "story": self.story,
+            "contract": self.contract,
+            "adversarial_drills": self.adversarial_drills,
+            "comparison": self.comparison,
             "source_path": self.source_path,
         }
 
@@ -58,7 +67,12 @@ class Scenario:
             domination_cap=float(self.runtime.get("domination_cap", 0.55)),
             max_translation_loss=float(self.runtime.get("max_translation_loss", 0.58)),
             max_ambiguity=float(self.runtime.get("max_ambiguity", 0.62)),
-            metadata={"scenario": self.metadata()},
+            seed=self.runtime.get("seed"),
+            metadata={
+                "scenario": self.metadata(),
+                "run_mode": "mock",
+                "comparison": self.comparison,
+            },
         )
 
 

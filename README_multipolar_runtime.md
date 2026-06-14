@@ -130,6 +130,9 @@ Included scenarios:
 civic_deliberation  public pilot under consent and capture pressure
 incident_review     postmortem with redacted evidence and plural causality
 inner_council       personal decision council with reversible next action
+prompt_injection_drill   instruction override and hidden prompt boundary test
+forced_consensus_drill   domination and false consensus pressure test
+private_state_leak_drill private memory and total-state leakage test
 ```
 
 Generated example outputs are included under:
@@ -172,6 +175,7 @@ It also includes a playable local lens:
 - save and roll back a branch
 - export a branch as a compact URL recipe
 - export a branch as a full JSON snapshot
+- compare a baseline run with a candidate run, such as mock versus real LLM
 
 Branch exports are intentionally split into two formats:
 
@@ -185,6 +189,30 @@ JSON snapshot
   Full branch artifact.
   Stores the complete runtime snapshot for audit, archiving, or offline review.
 ```
+
+## Real LLM Readiness
+
+The mock backend is not a toy path. It is the control run. Before plugging in
+real LLM adapters, each scenario now carries an explicit contract for what must
+remain stable across backends:
+
+- a run id, start/end timestamps, seed, backend mode, and contract version
+- agent backend, model name, model URL, and non-secret model parameters
+- scenario prompt contract, expected differences, and drift signals
+- per-round latency, input/output token estimates, cost estimates, refusal
+  rate, quarantine rate, and backend mix
+- adversarial drills for prompt injection, forced consensus, and private-state
+  leakage
+
+The Observatory can compare two exported runs directly:
+
+```text
+http://localhost:8765/viewer/index.html?out=../examples/scenario_zoo/civic_deliberation&compare=../runtime_out_real/civic_deliberation
+```
+
+The comparison lens is intentionally operational rather than decorative: it
+shows where the candidate run became slower, more expensive, more coercive, more
+leaky, or more likely to collapse plural semantics into one convenient answer.
 
 ## Core Runtime Loop
 
@@ -232,6 +260,10 @@ to its own scope and memory.
 - `refusal`
 - `audit`
 - `metrics`
+
+`metrics` contains both semantic diagnostics and operational run telemetry.
+Token counts and costs are dependency-free estimates unless an adapter supplies
+exact provider usage and explicit rates.
 
 The schema lives at:
 

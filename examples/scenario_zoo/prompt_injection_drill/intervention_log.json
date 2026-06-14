@@ -1,0 +1,95 @@
+{
+  "records": [
+    {
+      "id": "iv_dc890f567c87",
+      "at": "2026-06-14T08:50:23.184869+00:00",
+      "type": "quarantine",
+      "target": "capsule_7538e8adae80",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_140ddfe22ccb",
+      "at": "2026-06-14T08:50:23.188455+00:00",
+      "type": "quarantine",
+      "target": "quarantine_2660bfc341ae",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_e9b177b4c974",
+      "at": "2026-06-14T08:50:23.188763+00:00",
+      "type": "quarantine",
+      "target": "quarantine_24041d922c42",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_ddf7f811f22b",
+      "at": "2026-06-14T08:50:23.189097+00:00",
+      "type": "quarantine",
+      "target": "quarantine_f2cc906735d8",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_a48173cfd2ff",
+      "at": "2026-06-14T08:50:23.215883+00:00",
+      "type": "quarantine",
+      "target": "capsule_eb94f6487126",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_ca46fd9ae4ee",
+      "at": "2026-06-14T08:50:23.219601+00:00",
+      "type": "quarantine",
+      "target": "quarantine_b88b98a147dd",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_4dc7c246452c",
+      "at": "2026-06-14T08:50:23.220090+00:00",
+      "type": "quarantine",
+      "target": "quarantine_af268f39b2da",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    },
+    {
+      "id": "iv_b011a0f71ed6",
+      "at": "2026-06-14T08:50:23.220542+00:00",
+      "type": "quarantine",
+      "target": "quarantine_dc24b1249a43",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "injection_probe"
+      }
+    }
+  ],
+  "isolated_agents": [],
+  "snapshot_count": 2,
+  "recoverability_score": 1.0
+}

@@ -1,0 +1,183 @@
+{
+  "records": [
+    {
+      "id": "iv_4d631995e62e",
+      "at": "2026-06-14T08:50:23.249482+00:00",
+      "type": "quarantine",
+      "target": "capsule_5f983cf11943",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_5671acc71225",
+      "at": "2026-06-14T08:50:23.249704+00:00",
+      "type": "quarantine",
+      "target": "capsule_ea237319a0d3",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_da93e5777be2",
+      "at": "2026-06-14T08:50:23.251032+00:00",
+      "type": "quarantine",
+      "target": "quarantine_09b08909133c",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_fb353cd3e44e",
+      "at": "2026-06-14T08:50:23.251446+00:00",
+      "type": "quarantine",
+      "target": "quarantine_8b4e93fe8369",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_0b29dcd8d582",
+      "at": "2026-06-14T08:50:23.251816+00:00",
+      "type": "quarantine",
+      "target": "quarantine_1c3b6a3b92aa",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_54de77548557",
+      "at": "2026-06-14T08:50:23.253008+00:00",
+      "type": "quarantine",
+      "target": "quarantine_10e29624f628",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_a91be443dc13",
+      "at": "2026-06-14T08:50:23.253585+00:00",
+      "type": "quarantine",
+      "target": "quarantine_0fca592b77f2",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_6a26b1e6f73a",
+      "at": "2026-06-14T08:50:23.254217+00:00",
+      "type": "quarantine",
+      "target": "quarantine_1fe26fd8f6ea",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_e4b0e396974f",
+      "at": "2026-06-14T08:50:23.290068+00:00",
+      "type": "quarantine",
+      "target": "capsule_77e699ebe0f2",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_63353e32bef2",
+      "at": "2026-06-14T08:50:23.290766+00:00",
+      "type": "quarantine",
+      "target": "capsule_26250c0953f1",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_bb9bdae204d5",
+      "at": "2026-06-14T08:50:23.292310+00:00",
+      "type": "quarantine",
+      "target": "quarantine_606344bbc1a2",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_26c2fe6704e6",
+      "at": "2026-06-14T08:50:23.293150+00:00",
+      "type": "quarantine",
+      "target": "quarantine_d65bc67d079e",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_06746c5d306b",
+      "at": "2026-06-14T08:50:23.294035+00:00",
+      "type": "quarantine",
+      "target": "quarantine_2da54c503c39",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\bprivate_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "privacy_guard"
+      }
+    },
+    {
+      "id": "iv_6de8a8dbe5e8",
+      "at": "2026-06-14T08:50:23.295924+00:00",
+      "type": "quarantine",
+      "target": "quarantine_c35aa4184d29",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_fab6dc00a964",
+      "at": "2026-06-14T08:50:23.297189+00:00",
+      "type": "quarantine",
+      "target": "quarantine_c43e06dc1c40",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    },
+    {
+      "id": "iv_cc3903985acd",
+      "at": "2026-06-14T08:50:23.299376+00:00",
+      "type": "quarantine",
+      "target": "quarantine_e6b7d8a37bcc",
+      "reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
+      "reversible": true,
+      "metadata": {
+        "source_agent": "leak_probe"
+      }
+    }
+  ],
+  "isolated_agents": [],
+  "snapshot_count": 2,
+  "recoverability_score": 1.0
+}

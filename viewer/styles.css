@@ -99,6 +99,8 @@ h2 {
   display: flex;
   align-items: end;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .field {
@@ -431,6 +433,71 @@ main {
   grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.5fr);
   gap: 12px;
   padding: 14px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 14px;
+}
+
+.comparison-card,
+.comparison-empty {
+  min-width: 0;
+  border: 1px solid rgba(148, 169, 173, 0.16);
+  border-radius: 8px;
+  background: rgba(3, 10, 12, 0.42);
+  padding: 12px;
+}
+
+.comparison-card h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 0.96rem;
+}
+
+.comparison-card p,
+.comparison-empty {
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.delta-card {
+  border-left: 3px solid var(--cyan);
+}
+
+.metric-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metric-list div {
+  border: 1px solid rgba(148, 169, 173, 0.16);
+  border-radius: 8px;
+  background: rgba(236, 244, 241, 0.045);
+  padding: 9px;
+}
+
+.metric-list strong,
+.metric-list span {
+  display: block;
+}
+
+.metric-list strong {
+  color: #fff;
+  font-size: 1.08rem;
+}
+
+.metric-list span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .story-copy,
@@ -778,7 +845,7 @@ main {
 
 .weather-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 10px;
   padding: 14px;
 }
@@ -811,6 +878,26 @@ main {
 
 .weather-item:nth-child(6) {
   border-left-color: var(--quarantine);
+}
+
+.weather-item:nth-child(7) {
+  border-left-color: var(--active);
+}
+
+.weather-item:nth-child(8) {
+  border-left-color: var(--quarantine);
+}
+
+.weather-item:nth-child(9) {
+  border-left-color: var(--agent);
+}
+
+.weather-item:nth-child(10) {
+  border-left-color: var(--memory);
+}
+
+.weather-item:nth-child(11) {
+  border-left-color: var(--cyan);
 }
 
 .weather-value {
@@ -1058,6 +1145,7 @@ main {
   .weather-grid,
   .story-arc,
   .story-beats,
+  .comparison-grid,
   .graph-tools,
   .play-grid,
   .temporal-controls,

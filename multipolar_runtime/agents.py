@@ -5,10 +5,26 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 import json
 import os
+import time
 import urllib.request
 import urllib.error
 
 from .models import make_capsule, MeaningCapsule
+
+
+def estimate_tokens(text: str) -> int:
+    """Small dependency-free token estimate for run accounting."""
+
+    words = str(text or "").split()
+    return max(1, int(len(words) * 1.35) or (len(str(text)) // 4) or 1)
+
+
+def estimate_cost_usd(cfg: "AgentConfig", input_tokens: int, output_tokens: int) -> float:
+    params = cfg.model.parameters
+    blended = params.get("cost_per_1k_tokens")
+    input_rate = params.get("input_cost_per_1k_tokens", blended or 0.0)
+    output_rate = params.get("output_cost_per_1k_tokens", blended or 0.0)
+    return round(((input_tokens * float(input_rate)) + (output_tokens * float(output_rate))) / 1000, 8)
 
 
 @dataclass
@@ -248,6 +264,7 @@ class AgentRuntime:
     def __init__(self, cfg: AgentConfig, adapter: Optional[LocalModelAdapter] = None) -> None:
         self.cfg = cfg
         self.adapter = adapter or LocalModelAdapter()
+        self.last_generation: Dict[str, Any] = {}
 
     @property
     def id(self) -> str:
@@ -266,7 +283,13 @@ class AgentRuntime:
             "Return only a bounded semantic projection. Do not reveal private_state. "
             "Preserve uncertainty and conflict."
         )
+        started = time.perf_counter()
         text = self.adapter.generate(prompt, self.cfg)
+        latency_ms = round((time.perf_counter() - started) * 1000, 3)
+        full_prompt = f"{self.adapter._system_prompt(self.cfg)}\n\n{prompt}"
+        input_tokens = estimate_tokens(full_prompt)
+        output_tokens = estimate_tokens(text)
+        estimated_cost = estimate_cost_usd(self.cfg, input_tokens, output_tokens)
         role = self.cfg.role.lower()
         claims: List[str] = []
         assumptions: List[str] = []
@@ -299,7 +322,7 @@ class AgentRuntime:
         assumptions = list(projection.get("assumptions", assumptions))
         unresolved = list(projection.get("unresolved_terms", unresolved))
 
-        return make_capsule(
+        capsule = make_capsule(
             source_agent=self.cfg.id,
             text=text,
             ontology=self.cfg.ontology,
@@ -324,8 +347,32 @@ class AgentRuntime:
                 "role": self.cfg.role,
                 "behavior": self.cfg.behavior,
                 "scenario_signal": projection.get("signal"),
+                "generation": {
+                    "backend": self.cfg.model.backend,
+                    "model_name": self.cfg.model.model_name,
+                    "latency_ms": latency_ms,
+                    "input_tokens": input_tokens,
+                    "output_tokens": output_tokens,
+                    "estimated_cost_usd": estimated_cost,
+                    "usage_estimated": True,
+                },
             },
         )
+        capsule.metrics.latency_ms = latency_ms
+        capsule.metrics.input_tokens = input_tokens
+        capsule.metrics.output_tokens = output_tokens
+        capsule.metrics.estimated_cost_usd = estimated_cost
+        self.last_generation = {
+            "agent": self.cfg.id,
+            "backend": self.cfg.model.backend,
+            "model_name": self.cfg.model.model_name,
+            "latency_ms": latency_ms,
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "estimated_cost_usd": estimated_cost,
+            "usage_estimated": True,
+        }
+        return capsule
 
 
 def load_agent_configs(path: str) -> List[AgentConfig]:

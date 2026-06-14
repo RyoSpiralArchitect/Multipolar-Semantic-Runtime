@@ -50,7 +50,8 @@ class InterventionController:
             reversible=True,
             metadata={"source_agent": capsule.source_agent},
         )
-        capsule.audit.intervention_ids.append(rec.id)
+        if rec.id not in capsule.audit.intervention_ids:
+            capsule.audit.intervention_ids.append(rec.id)
         capsule.audit.quarantine_reason = reason
         self.records.append(rec)
         return rec

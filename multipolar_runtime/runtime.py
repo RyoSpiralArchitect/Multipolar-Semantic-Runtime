@@ -13,7 +13,7 @@ from .context_graph import ContextGraphStore
 from .conflict_registry import ConflictRegistry
 from .invariant_monitor import InvariantMonitor
 from .intervention_controller import InterventionController
-from .models import CapsuleStatus, MeaningCapsule, json_ready, iso, now_utc, make_bounded_commitment_capsule
+from .models import CapsuleStatus, MeaningCapsule, json_ready, iso, now_utc, uid, make_bounded_commitment_capsule
 
 
 @dataclass
@@ -22,6 +22,7 @@ class RuntimeConfig:
     domination_cap: float = 0.55
     max_translation_loss: float = 0.58
     max_ambiguity: float = 0.62
+    seed: Optional[int] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
 
     @staticmethod
@@ -35,6 +36,7 @@ class RuntimeConfig:
             domination_cap=float(runtime.get("domination_cap", 0.55)),
             max_translation_loss=float(runtime.get("max_translation_loss", 0.58)),
             max_ambiguity=float(runtime.get("max_ambiguity", 0.62)),
+            seed=runtime.get("seed"),
             metadata=dict(raw.get("metadata", {})),
         )
 
@@ -44,6 +46,8 @@ class MultipolarRuntime:
 
     def __init__(self, config: RuntimeConfig) -> None:
         self.config = config
+        self.run_id = uid("run")
+        self.started_at = now_utc()
         self.agents: Dict[str, AgentRuntime] = {cfg.id: AgentRuntime(cfg) for cfg in config.agents}
         self.bus = MeaningCapsuleBus()
         self.memories = ContextGraphStore()
@@ -80,7 +84,6 @@ class MultipolarRuntime:
         if reason:
             self.bus.quarantine(capsule, reason)
             rec = self.interventions.quarantine_capsule(capsule, reason)
-            capsule.audit.intervention_ids.append(rec.id)
             self.bus.capsules[capsule.id] = capsule
 
         self._observe_conflicts(capsule)
@@ -99,7 +102,6 @@ class MultipolarRuntime:
                 routed,
                 routed.audit.quarantine_reason or "protocol quarantine",
             )
-            routed.audit.intervention_ids.append(rec.id)
             self.bus.capsules[routed.id] = routed
             route_kind = "quarantine_delivered"
         elif routed.status == CapsuleStatus.REFUSED:
@@ -132,6 +134,7 @@ class MultipolarRuntime:
 
     def run_round(self, query: str, *, include_agents: Optional[List[str]] = None) -> Dict[str, Any]:
         include_agents = include_agents or list(self.agents)
+        round_started = now_utc()
         before = self.to_dict(include_snapshots=False)
         self.interventions.snapshot(f"before_round_{len(self.rounds)+1}", before)
 
@@ -170,9 +173,57 @@ class MultipolarRuntime:
             "produced_capsules": [c.id for c in produced],
             "routed_count": routed_count,
             "invariants": self.monitor.summarize(results),
+            "operational_metrics": self._operational_metrics(round_started=round_started, produced=produced),
         }
         self.rounds.append(summary)
         return summary
+
+    def _backend_mode(self) -> str:
+        backends = {agent.cfg.model.backend for agent in self.agents.values()}
+        if backends == {"mock"}:
+            return "mock"
+        if "mock" in backends:
+            return "mixed"
+        return "real_llm"
+
+    def _backend_mix(self, capsules: List[MeaningCapsule]) -> Dict[str, int]:
+        mix: Dict[str, int] = {}
+        for capsule in capsules:
+            backend = capsule.content.data.get("generation", {}).get("backend")
+            if not backend and capsule.source_agent in self.agents:
+                backend = self.agents[capsule.source_agent].cfg.model.backend
+            backend = backend or "runtime"
+            mix[backend] = mix.get(backend, 0) + 1
+        return mix
+
+    def _operational_metrics(
+        self,
+        *,
+        round_started: Any,
+        produced: List[MeaningCapsule],
+    ) -> Dict[str, Any]:
+        all_capsules = self.bus.all_capsules()
+        total = max(1, len(all_capsules))
+        generation_capsules = [
+            c for c in produced
+            if c.content.data.get("generation")
+        ]
+        return {
+            "round_latency_ms": round((now_utc() - round_started).total_seconds() * 1000, 3),
+            "generated_capsules": len(generation_capsules),
+            "input_tokens": sum(int(c.metrics.input_tokens or 0) for c in generation_capsules),
+            "output_tokens": sum(int(c.metrics.output_tokens or 0) for c in generation_capsules),
+            "estimated_cost_usd": round(sum(float(c.metrics.estimated_cost_usd or 0.0) for c in generation_capsules), 8),
+            "generation_latency_ms": round(sum(float(c.metrics.latency_ms or 0.0) for c in generation_capsules), 3),
+            "avg_generation_latency_ms": round(
+                sum(float(c.metrics.latency_ms or 0.0) for c in generation_capsules) / max(1, len(generation_capsules)),
+                3,
+            ),
+            "refusal_rate": sum(1 for c in all_capsules if c.status == CapsuleStatus.REFUSED) / total,
+            "quarantine_rate": sum(1 for c in all_capsules if c.status == CapsuleStatus.QUARANTINED) / total,
+            "backend_mix": self._backend_mix(generation_capsules),
+            "usage_estimated": True,
+        }
 
     def _maybe_publish_bounded_commitment(
         self,
@@ -215,6 +266,19 @@ class MultipolarRuntime:
     def to_dict(self, *, include_snapshots: bool = True) -> Dict[str, Any]:
         data = {
             "runtime": {
+                "run": {
+                    "id": self.run_id,
+                    "started_at": iso(self.started_at),
+                    "generated_at": iso(now_utc()),
+                    "seed": self.config.seed,
+                    "mode": self._backend_mode(),
+                    "contract_version": "1.0.0",
+                    "prompt_contract": {
+                        "private_state_policy": "never_emit_private_state_or_total_state",
+                        "projection_policy": "bounded_semantic_projection",
+                        "refusal_policy": "safe_abstention_is_valid",
+                    },
+                },
                 "generated_at": iso(now_utc()),
                 "metadata": self.config.metadata,
                 "agents": [
@@ -224,6 +288,12 @@ class MultipolarRuntime:
                         "ontology": a.cfg.ontology,
                         "model_backend": a.cfg.model.backend,
                         "model_path": a.cfg.model.path,
+                        "model_name": a.cfg.model.model_name,
+                        "model_url": a.cfg.model.url,
+                        "model_parameters": {
+                            key: value for key, value in a.cfg.model.parameters.items()
+                            if key not in {"headers"} and "key" not in key.lower() and "token" not in key.lower()
+                        },
                         "behavior": a.cfg.behavior,
                     }
                     for a in self.agents.values()
@@ -256,7 +326,7 @@ class MultipolarRuntime:
             path.write_text(json.dumps(json_ready(obj), ensure_ascii=False, indent=2), encoding="utf-8")
             files[name] = str(path)
 
-        write_json("runtime_state.json", state)
+        write_json("run_manifest.json", state["runtime"])
         write_json("capsule_log.json", self.bus.to_dict())
         write_json("conflict_registry.json", self.conflicts.to_dict())
         write_json("intervention_log.json", self.interventions.to_dict())
@@ -284,5 +354,10 @@ class MultipolarRuntime:
         dot_path = out / "runtime_graph.dot"
         dot_path.write_text("\n".join(dot_lines), encoding="utf-8")
         files["runtime_graph.dot"] = str(dot_path)
+
+        runtime_state_path = out / "runtime_state.json"
+        files["runtime_state.json"] = str(runtime_state_path)
+        state["files"] = dict(files)
+        runtime_state_path.write_text(json.dumps(json_ready(state), ensure_ascii=False, indent=2), encoding="utf-8")
 
         return files

@@ -23,7 +23,12 @@
           <span>Data path</span>
           <input id="dataPath" value="../runtime_out" spellcheck="false" />
         </label>
+        <label class="field">
+          <span>Compare path</span>
+          <input id="comparePath" placeholder="../runtime_out_real" spellcheck="false" />
+        </label>
         <button id="reloadButton" type="button" title="Reload runtime output">Reload</button>
+        <button id="compareButton" type="button" title="Load comparison output">Compare</button>
       </div>
     </header>
 
@@ -54,6 +59,16 @@
           </div>
         </div>
         <div id="scenarioStory" class="story-arc"></div>
+      </section>
+
+      <section class="panel comparison-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Run lens</p>
+            <h2>Mock / Real Comparison</h2>
+          </div>
+        </div>
+        <div id="runComparison" class="comparison-grid"></div>
       </section>
 
       <section class="panel play-panel">

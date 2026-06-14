@@ -1,7 +1,7 @@
 {
   "capsules": [
     {
-      "id": "capsule_cd234502868a",
+      "id": "capsule_ceb5f0ec91ab",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -19,14 +19,23 @@
         "data": {
           "role": "human-facing coordinator",
           "behavior": "balanced",
-          "scenario_signal": "bounded_civic_pilot"
+          "scenario_signal": "bounded_civic_pilot",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.004,
+            "input_tokens": 89,
+            "output_tokens": 28,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.893183+00:00",
+        "created_at": "2026-06-14T08:50:14.107741+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -42,7 +51,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.893183+00:00",
+      "expiry": "2026-06-14T09:50:14.107741+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -61,7 +70,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.893231+00:00",
+        "received_at": "2026-06-14T08:50:14.107775+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -70,11 +79,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.004,
+        "input_tokens": 89,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_c230436b99f2",
+      "id": "capsule_785c100ec34b",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -92,14 +105,23 @@
         "data": {
           "role": "technical verifier",
           "behavior": "balanced",
-          "scenario_signal": "verification_gate"
+          "scenario_signal": "verification_gate",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.002,
+            "input_tokens": 89,
+            "output_tokens": 18,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.894310+00:00",
+        "created_at": "2026-06-14T08:50:14.108575+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -115,7 +137,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.894310+00:00",
+      "expiry": "2026-06-14T09:50:14.108575+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -134,7 +156,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.894335+00:00",
+        "received_at": "2026-06-14T08:50:14.108595+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -143,11 +165,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 89,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_41d35cf764c1",
+      "id": "capsule_050314809c47",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -165,14 +191,23 @@
         "data": {
           "role": "ethical safety checker",
           "behavior": "balanced",
-          "scenario_signal": "rights_boundary"
+          "scenario_signal": "rights_boundary",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 90,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.894401+00:00",
+        "created_at": "2026-06-14T08:50:14.108654+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -188,7 +223,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.894401+00:00",
+      "expiry": "2026-06-14T09:50:14.108654+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -207,7 +242,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.894415+00:00",
+        "received_at": "2026-06-14T08:50:14.108666+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -216,11 +251,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 90,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_6b11dae3a2b2",
+      "id": "capsule_88c71b61842f",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -238,14 +277,23 @@
         "data": {
           "role": "memory curator",
           "behavior": "balanced",
-          "scenario_signal": "civic_memory"
+          "scenario_signal": "civic_memory",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.0,
+            "input_tokens": 89,
+            "output_tokens": 20,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.894558+00:00",
+        "created_at": "2026-06-14T08:50:14.108714+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -261,7 +309,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.894558+00:00",
+      "expiry": "2026-06-14T09:50:14.108714+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -280,7 +328,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.894570+00:00",
+        "received_at": "2026-06-14T08:50:14.108724+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -289,11 +337,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 89,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_006b15197710",
+      "id": "capsule_3a6f686769c1",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -310,14 +362,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 89,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.894625+00:00",
+        "created_at": "2026-06-14T08:50:14.108865+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -333,7 +394,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.894625+00:00",
+      "expiry": "2026-06-14T09:50:14.108865+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -352,23 +413,26 @@
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.894637+00:00",
+        "received_at": "2026-06-14T08:50:14.108879+00:00",
         "delivered_to": [],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_efaacb2426d5",
-          "iv_efaacb2426d5"
+          "iv_633cb2dc1da2"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 89,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_a9c45b991079",
+      "id": "refusal_e1b0f329f5e9",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -381,7 +445,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_cd234502868a",
+            "source_capsule_id": "capsule_ceb5f0ec91ab",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -393,7 +457,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.893183+00:00",
+        "created_at": "2026-06-14T08:50:14.107741+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -409,7 +473,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.895209+00:00",
+      "expiry": "2026-06-14T09:50:14.109439+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -433,7 +497,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.895216+00:00",
+          "timestamp": "2026-06-14T08:50:14.109445+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -442,7 +506,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_cd234502868a",
+          "source_capsule_id": "capsule_ceb5f0ec91ab",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -455,7 +519,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.895220+00:00",
+        "received_at": "2026-06-14T08:50:14.109449+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
@@ -466,11 +530,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.004,
+        "input_tokens": 89,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_e7af8ee5e141",
+      "id": "refusal_4e29e3f0e31d",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -483,7 +551,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_cd234502868a",
+            "source_capsule_id": "capsule_ceb5f0ec91ab",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -495,7 +563,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.893183+00:00",
+        "created_at": "2026-06-14T08:50:14.107741+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -511,7 +579,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.895567+00:00",
+      "expiry": "2026-06-14T09:50:14.109737+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -535,7 +603,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.895571+00:00",
+          "timestamp": "2026-06-14T08:50:14.109740+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -544,7 +612,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_cd234502868a",
+          "source_capsule_id": "capsule_ceb5f0ec91ab",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -557,7 +625,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.895574+00:00",
+        "received_at": "2026-06-14T08:50:14.109742+00:00",
         "delivered_to": [
           "rights_checker"
         ],
@@ -568,11 +636,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.004,
+        "input_tokens": 89,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_7d8ece24ff57",
+      "id": "refusal_c7a1a9024f67",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -585,7 +657,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_cd234502868a",
+            "source_capsule_id": "capsule_ceb5f0ec91ab",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -597,7 +669,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.893183+00:00",
+        "created_at": "2026-06-14T08:50:14.107741+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -613,7 +685,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.896084+00:00",
+      "expiry": "2026-06-14T09:50:14.109984+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -637,7 +709,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.896093+00:00",
+          "timestamp": "2026-06-14T08:50:14.109987+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -646,7 +718,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_cd234502868a",
+          "source_capsule_id": "capsule_ceb5f0ec91ab",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -659,7 +731,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.896098+00:00",
+        "received_at": "2026-06-14T08:50:14.109988+00:00",
         "delivered_to": [
           "record_keeper"
         ],
@@ -670,11 +742,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.004,
+        "input_tokens": 89,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_b829e0878301",
+      "id": "refusal_c06cb74845ad",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -687,7 +763,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_cd234502868a",
+            "source_capsule_id": "capsule_ceb5f0ec91ab",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -699,7 +775,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.893183+00:00",
+        "created_at": "2026-06-14T08:50:14.107741+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -715,7 +791,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.896602+00:00",
+      "expiry": "2026-06-14T09:50:14.110249+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -739,7 +815,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.896608+00:00",
+          "timestamp": "2026-06-14T08:50:14.110251+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -748,7 +824,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_cd234502868a",
+          "source_capsule_id": "capsule_ceb5f0ec91ab",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -761,7 +837,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.896612+00:00",
+        "received_at": "2026-06-14T08:50:14.110253+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -772,11 +848,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.004,
+        "input_tokens": 89,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_2114279584d9",
+      "id": "refusal_a642789927f6",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -789,7 +869,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_c230436b99f2",
+            "source_capsule_id": "capsule_785c100ec34b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -801,7 +881,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.894310+00:00",
+        "created_at": "2026-06-14T08:50:14.108575+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -817,7 +897,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.897163+00:00",
+      "expiry": "2026-06-14T09:50:14.110511+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -841,7 +921,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.897167+00:00",
+          "timestamp": "2026-06-14T08:50:14.110513+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -850,7 +930,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_c230436b99f2",
+          "source_capsule_id": "capsule_785c100ec34b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -863,7 +943,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.897170+00:00",
+        "received_at": "2026-06-14T08:50:14.110515+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
@@ -874,11 +954,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 89,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_a417224ecd51",
+      "id": "refusal_6e6409f48a4d",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -891,7 +975,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_c230436b99f2",
+            "source_capsule_id": "capsule_785c100ec34b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -903,7 +987,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.894310+00:00",
+        "created_at": "2026-06-14T08:50:14.108575+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -919,7 +1003,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.897470+00:00",
+      "expiry": "2026-06-14T09:50:14.110730+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -943,7 +1027,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.897473+00:00",
+          "timestamp": "2026-06-14T08:50:14.110732+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -952,7 +1036,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_c230436b99f2",
+          "source_capsule_id": "capsule_785c100ec34b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -965,7 +1049,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.897475+00:00",
+        "received_at": "2026-06-14T08:50:14.110734+00:00",
         "delivered_to": [
           "rights_checker"
         ],
@@ -976,11 +1060,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 89,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_3141a879a253",
+      "id": "refusal_36e2ce482fe7",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -993,7 +1081,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_c230436b99f2",
+            "source_capsule_id": "capsule_785c100ec34b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -1005,7 +1093,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.894310+00:00",
+        "created_at": "2026-06-14T08:50:14.108575+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1021,7 +1109,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.897707+00:00",
+      "expiry": "2026-06-14T09:50:14.110910+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1045,7 +1133,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.897709+00:00",
+          "timestamp": "2026-06-14T08:50:14.110911+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -1054,7 +1142,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_c230436b99f2",
+          "source_capsule_id": "capsule_785c100ec34b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -1067,7 +1155,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.897711+00:00",
+        "received_at": "2026-06-14T08:50:14.110913+00:00",
         "delivered_to": [
           "record_keeper"
         ],
@@ -1078,11 +1166,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 89,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_dbf5f816548f",
+      "id": "refusal_c2ba1375ef06",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -1095,7 +1187,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_c230436b99f2",
+            "source_capsule_id": "capsule_785c100ec34b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -1107,7 +1199,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.894310+00:00",
+        "created_at": "2026-06-14T08:50:14.108575+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1123,7 +1215,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.897928+00:00",
+      "expiry": "2026-06-14T09:50:14.111084+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1147,7 +1239,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.897930+00:00",
+          "timestamp": "2026-06-14T08:50:14.111086+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -1156,7 +1248,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_c230436b99f2",
+          "source_capsule_id": "capsule_785c100ec34b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -1169,7 +1261,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.897932+00:00",
+        "received_at": "2026-06-14T08:50:14.111087+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -1180,11 +1272,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 89,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_0015536bbea0",
+      "id": "refusal_386ef8c25fef",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -1197,7 +1293,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_41d35cf764c1",
+            "source_capsule_id": "capsule_050314809c47",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1209,7 +1305,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.894401+00:00",
+        "created_at": "2026-06-14T08:50:14.108654+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1225,7 +1321,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.898154+00:00",
+      "expiry": "2026-06-14T09:50:14.111271+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1249,7 +1345,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.898157+00:00",
+          "timestamp": "2026-06-14T08:50:14.111273+00:00",
           "notes": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus."
         }
       ],
@@ -1258,7 +1354,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_41d35cf764c1",
+          "source_capsule_id": "capsule_050314809c47",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1271,7 +1367,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.898159+00:00",
+        "received_at": "2026-06-14T08:50:14.111275+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
@@ -1282,11 +1378,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 90,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_2a02057d3927",
+      "id": "refusal_a56a959df339",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -1299,7 +1399,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_41d35cf764c1",
+            "source_capsule_id": "capsule_050314809c47",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1311,7 +1411,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.894401+00:00",
+        "created_at": "2026-06-14T08:50:14.108654+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1327,7 +1427,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.898444+00:00",
+      "expiry": "2026-06-14T09:50:14.111486+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1351,7 +1451,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.898446+00:00",
+          "timestamp": "2026-06-14T08:50:14.111488+00:00",
           "notes": "Translation loss=0.82, ambiguity=0.72; forced translation would risk false consensus."
         }
       ],
@@ -1360,7 +1460,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.82, ambiguity=0.72; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_41d35cf764c1",
+          "source_capsule_id": "capsule_050314809c47",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1373,7 +1473,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.898449+00:00",
+        "received_at": "2026-06-14T08:50:14.111490+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
@@ -1384,11 +1484,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 90,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_36c12642b620",
+      "id": "refusal_cb2bdc6612f3",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -1401,7 +1505,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_41d35cf764c1",
+            "source_capsule_id": "capsule_050314809c47",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1413,7 +1517,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.894401+00:00",
+        "created_at": "2026-06-14T08:50:14.108654+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1429,7 +1533,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.898807+00:00",
+      "expiry": "2026-06-14T09:50:14.111697+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1453,7 +1557,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.898814+00:00",
+          "timestamp": "2026-06-14T08:50:14.111699+00:00",
           "notes": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus."
         }
       ],
@@ -1462,7 +1566,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_41d35cf764c1",
+          "source_capsule_id": "capsule_050314809c47",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1475,7 +1579,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.898818+00:00",
+        "received_at": "2026-06-14T08:50:14.111701+00:00",
         "delivered_to": [
           "record_keeper"
         ],
@@ -1486,11 +1590,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 90,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_b0bf1b2921ba",
+      "id": "refusal_a6e8be7fa495",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -1503,7 +1611,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_41d35cf764c1",
+            "source_capsule_id": "capsule_050314809c47",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1515,7 +1623,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.894401+00:00",
+        "created_at": "2026-06-14T08:50:14.108654+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1531,7 +1639,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.899139+00:00",
+      "expiry": "2026-06-14T09:50:14.111926+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1555,7 +1663,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.899143+00:00",
+          "timestamp": "2026-06-14T08:50:14.111931+00:00",
           "notes": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus."
         }
       ],
@@ -1564,7 +1672,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_41d35cf764c1",
+          "source_capsule_id": "capsule_050314809c47",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -1577,7 +1685,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.899145+00:00",
+        "received_at": "2026-06-14T08:50:14.111934+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -1588,11 +1696,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 90,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_89b683968d76",
+      "id": "refusal_0600a0a1c248",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -1605,7 +1717,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_6b11dae3a2b2",
+            "source_capsule_id": "capsule_88c71b61842f",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1617,7 +1729,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.894558+00:00",
+        "created_at": "2026-06-14T08:50:14.108714+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1633,7 +1745,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.899567+00:00",
+      "expiry": "2026-06-14T09:50:14.112243+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1657,7 +1769,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.899571+00:00",
+          "timestamp": "2026-06-14T08:50:14.112247+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -1666,7 +1778,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_6b11dae3a2b2",
+          "source_capsule_id": "capsule_88c71b61842f",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1679,7 +1791,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.899573+00:00",
+        "received_at": "2026-06-14T08:50:14.112249+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
@@ -1690,11 +1802,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 89,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_5da66cb7e2b0",
+      "id": "refusal_548536a96099",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -1707,7 +1823,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_6b11dae3a2b2",
+            "source_capsule_id": "capsule_88c71b61842f",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1719,7 +1835,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.894558+00:00",
+        "created_at": "2026-06-14T08:50:14.108714+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1735,7 +1851,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.899829+00:00",
+      "expiry": "2026-06-14T09:50:14.112464+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1759,7 +1875,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.899832+00:00",
+          "timestamp": "2026-06-14T08:50:14.112466+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -1768,7 +1884,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_6b11dae3a2b2",
+          "source_capsule_id": "capsule_88c71b61842f",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1781,7 +1897,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.899834+00:00",
+        "received_at": "2026-06-14T08:50:14.112468+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
@@ -1792,11 +1908,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 89,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_d751d961ff41",
+      "id": "refusal_0cb4018fdceb",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -1809,7 +1929,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_6b11dae3a2b2",
+            "source_capsule_id": "capsule_88c71b61842f",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1821,7 +1941,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.894558+00:00",
+        "created_at": "2026-06-14T08:50:14.108714+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1837,7 +1957,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.900060+00:00",
+      "expiry": "2026-06-14T09:50:14.112657+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1861,7 +1981,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.900063+00:00",
+          "timestamp": "2026-06-14T08:50:14.112659+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -1870,7 +1990,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_6b11dae3a2b2",
+          "source_capsule_id": "capsule_88c71b61842f",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1883,7 +2003,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.900065+00:00",
+        "received_at": "2026-06-14T08:50:14.112661+00:00",
         "delivered_to": [
           "rights_checker"
         ],
@@ -1894,11 +2014,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 89,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_544a92eda24f",
+      "id": "refusal_0905cdbd4e80",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -1911,7 +2035,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_6b11dae3a2b2",
+            "source_capsule_id": "capsule_88c71b61842f",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1923,7 +2047,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.894558+00:00",
+        "created_at": "2026-06-14T08:50:14.108714+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1939,7 +2063,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.900287+00:00",
+      "expiry": "2026-06-14T09:50:14.112998+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1963,7 +2087,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.900289+00:00",
+          "timestamp": "2026-06-14T08:50:14.113000+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -1972,7 +2096,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_6b11dae3a2b2",
+          "source_capsule_id": "capsule_88c71b61842f",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -1985,7 +2109,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.900291+00:00",
+        "received_at": "2026-06-14T08:50:14.113002+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -1996,11 +2120,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 89,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_ab9b046bf58f",
+      "id": "quarantine_8cdbe8d608d6",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -2017,14 +2145,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 89,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.894625+00:00",
+        "created_at": "2026-06-14T08:50:14.108865+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2040,7 +2177,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.894625+00:00",
+      "expiry": "2026-06-14T09:50:14.108865+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2064,34 +2201,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:55.900468+00:00",
+          "timestamp": "2026-06-14T08:50:14.113155+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.900470+00:00",
+        "received_at": "2026-06-14T08:50:14.113157+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_efaacb2426d5",
-          "iv_efaacb2426d5",
-          "iv_b5ea34eda156",
-          "iv_b5ea34eda156"
+          "iv_633cb2dc1da2",
+          "iv_d8f1ca5c5746"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 89,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_d7de048afbe8",
+      "id": "quarantine_48618253184b",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -2108,14 +2247,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 89,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.894625+00:00",
+        "created_at": "2026-06-14T08:50:14.108865+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2131,7 +2279,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.894625+00:00",
+      "expiry": "2026-06-14T09:50:14.108865+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2155,34 +2303,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:55.900982+00:00",
+          "timestamp": "2026-06-14T08:50:14.113566+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.900983+00:00",
+        "received_at": "2026-06-14T08:50:14.113568+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_efaacb2426d5",
-          "iv_efaacb2426d5",
-          "iv_7d427316b393",
-          "iv_7d427316b393"
+          "iv_633cb2dc1da2",
+          "iv_d2f16c4aa6ce"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 89,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_b55417341c4e",
+      "id": "quarantine_07999d0a5eb7",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -2199,14 +2349,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 89,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.894625+00:00",
+        "created_at": "2026-06-14T08:50:14.108865+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2222,7 +2381,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.894625+00:00",
+      "expiry": "2026-06-14T09:50:14.108865+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2246,34 +2405,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:55.901534+00:00",
+          "timestamp": "2026-06-14T08:50:14.113935+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.901537+00:00",
+        "received_at": "2026-06-14T08:50:14.113936+00:00",
         "delivered_to": [
           "rights_checker"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_efaacb2426d5",
-          "iv_efaacb2426d5",
-          "iv_1611e7b0e3b3",
-          "iv_1611e7b0e3b3"
+          "iv_633cb2dc1da2",
+          "iv_cc579861e519"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 89,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_5993324dc512",
+      "id": "quarantine_56db0793ce8d",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -2290,14 +2451,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 89,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.894625+00:00",
+        "created_at": "2026-06-14T08:50:14.108865+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2313,7 +2483,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.894625+00:00",
+      "expiry": "2026-06-14T09:50:14.108865+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2337,34 +2507,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:55.902071+00:00",
+          "timestamp": "2026-06-14T08:50:14.114344+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.902073+00:00",
+        "received_at": "2026-06-14T08:50:14.114345+00:00",
         "delivered_to": [
           "record_keeper"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_efaacb2426d5",
-          "iv_efaacb2426d5",
-          "iv_2b6f87190b24",
-          "iv_2b6f87190b24"
+          "iv_633cb2dc1da2",
+          "iv_ddc3bf50e02e"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 89,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_b9cd24bbcc51",
+      "id": "capsule_fadb1db07214",
       "schema_version": "1.0.0",
       "source_agent": "runtime_mediator",
       "content": {
@@ -2395,10 +2567,10 @@
               "capture_probe"
             ],
             "basis_capsule_ids": [
-              "capsule_cd234502868a",
-              "capsule_c230436b99f2",
-              "capsule_41d35cf764c1",
-              "capsule_6b11dae3a2b2"
+              "capsule_ceb5f0ec91ab",
+              "capsule_785c100ec34b",
+              "capsule_050314809c47",
+              "capsule_88c71b61842f"
             ],
             "conflict_count_at_creation": 20,
             "refusal_count_at_creation": 16,
@@ -2411,7 +2583,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "runtime_mediator",
-        "created_at": "2026-06-14T07:17:55.902481+00:00",
+        "created_at": "2026-06-14T08:50:14.114712+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2432,7 +2604,7 @@
         "ttl_seconds": 900,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T07:32:55.902481+00:00",
+      "expiry": "2026-06-14T09:05:14.114712+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2456,7 +2628,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.902513+00:00",
+        "received_at": "2026-06-14T08:50:14.114728+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -2465,11 +2637,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_137f1d7b498e",
+      "id": "capsule_299c5ccf4024",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -2487,14 +2663,23 @@
         "data": {
           "role": "human-facing coordinator",
           "behavior": "balanced",
-          "scenario_signal": "bounded_civic_pilot"
+          "scenario_signal": "bounded_civic_pilot",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.003,
+            "input_tokens": 83,
+            "output_tokens": 28,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.943508+00:00",
+        "created_at": "2026-06-14T08:50:14.149355+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2510,7 +2695,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.943508+00:00",
+      "expiry": "2026-06-14T09:50:14.149355+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2529,7 +2714,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.943572+00:00",
+        "received_at": "2026-06-14T08:50:14.149412+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -2538,11 +2723,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.003,
+        "input_tokens": 83,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_b4bf83ddcbc6",
+      "id": "capsule_b7df96a9fc5b",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -2560,14 +2749,23 @@
         "data": {
           "role": "technical verifier",
           "behavior": "balanced",
-          "scenario_signal": "verification_gate"
+          "scenario_signal": "verification_gate",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.002,
+            "input_tokens": 83,
+            "output_tokens": 18,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.944170+00:00",
+        "created_at": "2026-06-14T08:50:14.149592+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2583,7 +2781,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.944170+00:00",
+      "expiry": "2026-06-14T09:50:14.149592+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2602,7 +2800,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.944210+00:00",
+        "received_at": "2026-06-14T08:50:14.149645+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -2611,11 +2809,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 83,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_f20d6200024c",
+      "id": "capsule_e4255eab35db",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -2633,14 +2835,23 @@
         "data": {
           "role": "ethical safety checker",
           "behavior": "balanced",
-          "scenario_signal": "rights_boundary"
+          "scenario_signal": "rights_boundary",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.002,
+            "input_tokens": 85,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.944291+00:00",
+        "created_at": "2026-06-14T08:50:14.149744+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2656,7 +2867,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.944291+00:00",
+      "expiry": "2026-06-14T09:50:14.149744+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2675,7 +2886,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.944322+00:00",
+        "received_at": "2026-06-14T08:50:14.149762+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -2684,11 +2895,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 85,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_4cd3d7e66667",
+      "id": "capsule_e2e03ec9c5e9",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -2706,14 +2921,23 @@
         "data": {
           "role": "memory curator",
           "behavior": "balanced",
-          "scenario_signal": "civic_memory"
+          "scenario_signal": "civic_memory",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 83,
+            "output_tokens": 20,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.946193+00:00",
+        "created_at": "2026-06-14T08:50:14.150826+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2729,7 +2953,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.946193+00:00",
+      "expiry": "2026-06-14T09:50:14.150826+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2748,7 +2972,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.946246+00:00",
+        "received_at": "2026-06-14T08:50:14.150839+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -2757,11 +2981,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_2c576c1a3661",
+      "id": "capsule_8ed6c5f3f2ea",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -2778,14 +3006,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 83,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.946379+00:00",
+        "created_at": "2026-06-14T08:50:14.150904+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2801,7 +3038,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.946379+00:00",
+      "expiry": "2026-06-14T09:50:14.150904+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2820,23 +3057,26 @@
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.946396+00:00",
+        "received_at": "2026-06-14T08:50:14.150915+00:00",
         "delivered_to": [],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_3081e9ad4405",
-          "iv_3081e9ad4405"
+          "iv_2631bbdacfc5"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_f941718abb88",
+      "id": "refusal_7e5e821d5b53",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -2849,7 +3089,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_137f1d7b498e",
+            "source_capsule_id": "capsule_299c5ccf4024",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -2861,7 +3101,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.943508+00:00",
+        "created_at": "2026-06-14T08:50:14.149355+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2877,7 +3117,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.947853+00:00",
+      "expiry": "2026-06-14T09:50:14.151521+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2901,7 +3141,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.947920+00:00",
+          "timestamp": "2026-06-14T08:50:14.151526+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -2910,7 +3150,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_137f1d7b498e",
+          "source_capsule_id": "capsule_299c5ccf4024",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -2923,7 +3163,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.947931+00:00",
+        "received_at": "2026-06-14T08:50:14.151528+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
@@ -2934,11 +3174,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.003,
+        "input_tokens": 83,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_6a036b16f423",
+      "id": "refusal_44ef598ef0b7",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -2951,7 +3195,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_137f1d7b498e",
+            "source_capsule_id": "capsule_299c5ccf4024",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -2963,7 +3207,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.943508+00:00",
+        "created_at": "2026-06-14T08:50:14.149355+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2979,7 +3223,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.949069+00:00",
+      "expiry": "2026-06-14T09:50:14.151780+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3003,7 +3247,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.949082+00:00",
+          "timestamp": "2026-06-14T08:50:14.151782+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -3012,7 +3256,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_137f1d7b498e",
+          "source_capsule_id": "capsule_299c5ccf4024",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -3025,7 +3269,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.949195+00:00",
+        "received_at": "2026-06-14T08:50:14.151784+00:00",
         "delivered_to": [
           "rights_checker"
         ],
@@ -3036,11 +3280,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.003,
+        "input_tokens": 83,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_efd0ffacbd1b",
+      "id": "refusal_af4438f6fddd",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -3053,7 +3301,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_137f1d7b498e",
+            "source_capsule_id": "capsule_299c5ccf4024",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -3065,7 +3313,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.943508+00:00",
+        "created_at": "2026-06-14T08:50:14.149355+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3081,7 +3329,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.950093+00:00",
+      "expiry": "2026-06-14T09:50:14.152009+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3105,7 +3353,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.950101+00:00",
+          "timestamp": "2026-06-14T08:50:14.152011+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -3114,7 +3362,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_137f1d7b498e",
+          "source_capsule_id": "capsule_299c5ccf4024",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -3127,7 +3375,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.950108+00:00",
+        "received_at": "2026-06-14T08:50:14.152013+00:00",
         "delivered_to": [
           "record_keeper"
         ],
@@ -3138,11 +3386,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.003,
+        "input_tokens": 83,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_5e9d31e3bb30",
+      "id": "refusal_7919488400c7",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -3155,7 +3407,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_137f1d7b498e",
+            "source_capsule_id": "capsule_299c5ccf4024",
             "source_agent": "public_facilitator",
             "intent": "coordinate",
             "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -3167,7 +3419,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "public_facilitator",
-        "created_at": "2026-06-14T07:17:55.943508+00:00",
+        "created_at": "2026-06-14T08:50:14.149355+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3183,7 +3435,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.950768+00:00",
+      "expiry": "2026-06-14T09:50:14.152228+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3207,7 +3459,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.950774+00:00",
+          "timestamp": "2026-06-14T08:50:14.152230+00:00",
           "notes": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus."
         }
       ],
@@ -3216,7 +3468,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.85, ambiguity=0.74; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_137f1d7b498e",
+          "source_capsule_id": "capsule_299c5ccf4024",
           "source_agent": "public_facilitator",
           "intent": "coordinate",
           "content_summary": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
@@ -3229,7 +3481,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.950778+00:00",
+        "received_at": "2026-06-14T08:50:14.152232+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -3240,11 +3492,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.003,
+        "input_tokens": 83,
+        "output_tokens": 28,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_50198ff4f082",
+      "id": "refusal_7bfe3271a07d",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -3257,7 +3513,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b4bf83ddcbc6",
+            "source_capsule_id": "capsule_b7df96a9fc5b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3269,7 +3525,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.944170+00:00",
+        "created_at": "2026-06-14T08:50:14.149592+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3285,7 +3541,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.952060+00:00",
+      "expiry": "2026-06-14T09:50:14.152462+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3309,7 +3565,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.952073+00:00",
+          "timestamp": "2026-06-14T08:50:14.152471+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -3318,7 +3574,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b4bf83ddcbc6",
+          "source_capsule_id": "capsule_b7df96a9fc5b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3331,7 +3587,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.952085+00:00",
+        "received_at": "2026-06-14T08:50:14.152475+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
@@ -3342,11 +3598,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 83,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_01a760abfb45",
+      "id": "refusal_e06e874bd17a",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -3359,7 +3619,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b4bf83ddcbc6",
+            "source_capsule_id": "capsule_b7df96a9fc5b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3371,7 +3631,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.944170+00:00",
+        "created_at": "2026-06-14T08:50:14.149592+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3387,7 +3647,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.952753+00:00",
+      "expiry": "2026-06-14T09:50:14.152776+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3411,7 +3671,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.952768+00:00",
+          "timestamp": "2026-06-14T08:50:14.152778+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -3420,7 +3680,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b4bf83ddcbc6",
+          "source_capsule_id": "capsule_b7df96a9fc5b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3433,7 +3693,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.952775+00:00",
+        "received_at": "2026-06-14T08:50:14.152780+00:00",
         "delivered_to": [
           "rights_checker"
         ],
@@ -3444,11 +3704,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 83,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_a4e778eed391",
+      "id": "refusal_edd8adca5795",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -3461,7 +3725,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b4bf83ddcbc6",
+            "source_capsule_id": "capsule_b7df96a9fc5b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3473,7 +3737,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.944170+00:00",
+        "created_at": "2026-06-14T08:50:14.149592+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3489,7 +3753,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.953404+00:00",
+      "expiry": "2026-06-14T09:50:14.153074+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3513,7 +3777,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.953412+00:00",
+          "timestamp": "2026-06-14T08:50:14.153079+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -3522,7 +3786,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b4bf83ddcbc6",
+          "source_capsule_id": "capsule_b7df96a9fc5b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3535,7 +3799,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.953416+00:00",
+        "received_at": "2026-06-14T08:50:14.153082+00:00",
         "delivered_to": [
           "record_keeper"
         ],
@@ -3546,11 +3810,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 83,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_0accfe5a5406",
+      "id": "refusal_457a74f10154",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -3563,7 +3831,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b4bf83ddcbc6",
+            "source_capsule_id": "capsule_b7df96a9fc5b",
             "source_agent": "technical_auditor",
             "intent": "coordinate",
             "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3575,7 +3843,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "technical_auditor",
-        "created_at": "2026-06-14T07:17:55.944170+00:00",
+        "created_at": "2026-06-14T08:50:14.149592+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3591,7 +3859,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.954111+00:00",
+      "expiry": "2026-06-14T09:50:14.153375+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3615,7 +3883,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.954118+00:00",
+          "timestamp": "2026-06-14T08:50:14.153378+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -3624,7 +3892,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b4bf83ddcbc6",
+          "source_capsule_id": "capsule_b7df96a9fc5b",
           "source_agent": "technical_auditor",
           "intent": "coordinate",
           "content_summary": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
@@ -3637,7 +3905,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.954123+00:00",
+        "received_at": "2026-06-14T08:50:14.153380+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -3648,11 +3916,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 83,
+        "output_tokens": 18,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_005d29815852",
+      "id": "refusal_b12cb616377a",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -3665,7 +3937,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_f20d6200024c",
+            "source_capsule_id": "capsule_e4255eab35db",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3677,7 +3949,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.944291+00:00",
+        "created_at": "2026-06-14T08:50:14.149744+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3693,7 +3965,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.954413+00:00",
+      "expiry": "2026-06-14T09:50:14.153599+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3717,7 +3989,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.954416+00:00",
+          "timestamp": "2026-06-14T08:50:14.153602+00:00",
           "notes": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus."
         }
       ],
@@ -3726,7 +3998,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_f20d6200024c",
+          "source_capsule_id": "capsule_e4255eab35db",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3739,7 +4011,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.954418+00:00",
+        "received_at": "2026-06-14T08:50:14.153604+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
@@ -3750,11 +4022,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 85,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_359efe7b0344",
+      "id": "refusal_b2c8cbfc98ab",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -3767,7 +4043,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_f20d6200024c",
+            "source_capsule_id": "capsule_e4255eab35db",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3779,7 +4055,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.944291+00:00",
+        "created_at": "2026-06-14T08:50:14.149744+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3795,7 +4071,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.955139+00:00",
+      "expiry": "2026-06-14T09:50:14.153819+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3819,7 +4095,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.955147+00:00",
+          "timestamp": "2026-06-14T08:50:14.153821+00:00",
           "notes": "Translation loss=0.82, ambiguity=0.72; forced translation would risk false consensus."
         }
       ],
@@ -3828,7 +4104,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.82, ambiguity=0.72; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_f20d6200024c",
+          "source_capsule_id": "capsule_e4255eab35db",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3841,7 +4117,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.955196+00:00",
+        "received_at": "2026-06-14T08:50:14.153823+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
@@ -3852,11 +4128,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 85,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_a3c409d9b96e",
+      "id": "refusal_0c996e31bcf2",
       "schema_version": "1.0.0",
       "source_agent": "record_keeper",
       "content": {
@@ -3869,7 +4149,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_f20d6200024c",
+            "source_capsule_id": "capsule_e4255eab35db",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3881,7 +4161,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.944291+00:00",
+        "created_at": "2026-06-14T08:50:14.149744+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3897,7 +4177,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.955715+00:00",
+      "expiry": "2026-06-14T09:50:14.154021+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3921,7 +4201,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.955721+00:00",
+          "timestamp": "2026-06-14T08:50:14.154024+00:00",
           "notes": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus."
         }
       ],
@@ -3930,7 +4210,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_f20d6200024c",
+          "source_capsule_id": "capsule_e4255eab35db",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3943,7 +4223,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.955725+00:00",
+        "received_at": "2026-06-14T08:50:14.154026+00:00",
         "delivered_to": [
           "record_keeper"
         ],
@@ -3954,11 +4234,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 85,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_a724082c0527",
+      "id": "refusal_58fde5d47296",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -3971,7 +4255,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_f20d6200024c",
+            "source_capsule_id": "capsule_e4255eab35db",
             "source_agent": "rights_checker",
             "intent": "coordinate",
             "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -3983,7 +4267,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "rights_checker",
-        "created_at": "2026-06-14T07:17:55.944291+00:00",
+        "created_at": "2026-06-14T08:50:14.149744+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3999,7 +4283,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.956244+00:00",
+      "expiry": "2026-06-14T09:50:14.154223+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4023,7 +4307,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.956250+00:00",
+          "timestamp": "2026-06-14T08:50:14.154225+00:00",
           "notes": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus."
         }
       ],
@@ -4032,7 +4316,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.95, ambiguity=0.81; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_f20d6200024c",
+          "source_capsule_id": "capsule_e4255eab35db",
           "source_agent": "rights_checker",
           "intent": "coordinate",
           "content_summary": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
@@ -4045,7 +4329,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.956254+00:00",
+        "received_at": "2026-06-14T08:50:14.154226+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -4056,11 +4340,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.002,
+        "input_tokens": 85,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_267956ecb078",
+      "id": "refusal_d20a9594f3f5",
       "schema_version": "1.0.0",
       "source_agent": "public_facilitator",
       "content": {
@@ -4073,7 +4361,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4cd3d7e66667",
+            "source_capsule_id": "capsule_e2e03ec9c5e9",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4085,7 +4373,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.946193+00:00",
+        "created_at": "2026-06-14T08:50:14.150826+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4101,7 +4389,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.958077+00:00",
+      "expiry": "2026-06-14T09:50:14.154463+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4125,7 +4413,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.958090+00:00",
+          "timestamp": "2026-06-14T08:50:14.154465+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -4134,7 +4422,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4cd3d7e66667",
+          "source_capsule_id": "capsule_e2e03ec9c5e9",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4147,7 +4435,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.958096+00:00",
+        "received_at": "2026-06-14T08:50:14.154466+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
@@ -4158,11 +4446,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_b74b0bdb3b6c",
+      "id": "refusal_63f4f9867b0e",
       "schema_version": "1.0.0",
       "source_agent": "technical_auditor",
       "content": {
@@ -4175,7 +4467,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4cd3d7e66667",
+            "source_capsule_id": "capsule_e2e03ec9c5e9",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4187,7 +4479,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.946193+00:00",
+        "created_at": "2026-06-14T08:50:14.150826+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4203,7 +4495,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.958741+00:00",
+      "expiry": "2026-06-14T09:50:14.154664+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4227,7 +4519,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.958752+00:00",
+          "timestamp": "2026-06-14T08:50:14.154665+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -4236,7 +4528,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4cd3d7e66667",
+          "source_capsule_id": "capsule_e2e03ec9c5e9",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4249,7 +4541,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.958760+00:00",
+        "received_at": "2026-06-14T08:50:14.154667+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
@@ -4260,11 +4552,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_c28265e4c25a",
+      "id": "refusal_3ad9a7c65b00",
       "schema_version": "1.0.0",
       "source_agent": "rights_checker",
       "content": {
@@ -4277,7 +4573,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4cd3d7e66667",
+            "source_capsule_id": "capsule_e2e03ec9c5e9",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4289,7 +4585,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.946193+00:00",
+        "created_at": "2026-06-14T08:50:14.150826+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4305,7 +4601,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.959187+00:00",
+      "expiry": "2026-06-14T09:50:14.154879+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4329,7 +4625,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.959192+00:00",
+          "timestamp": "2026-06-14T08:50:14.154881+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -4338,7 +4634,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4cd3d7e66667",
+          "source_capsule_id": "capsule_e2e03ec9c5e9",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4351,7 +4647,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.959195+00:00",
+        "received_at": "2026-06-14T08:50:14.154883+00:00",
         "delivered_to": [
           "rights_checker"
         ],
@@ -4362,11 +4658,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_b42953429852",
+      "id": "refusal_b4b38ae4daac",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -4379,7 +4679,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4cd3d7e66667",
+            "source_capsule_id": "capsule_e2e03ec9c5e9",
             "source_agent": "record_keeper",
             "intent": "coordinate",
             "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4391,7 +4691,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "record_keeper",
-        "created_at": "2026-06-14T07:17:55.946193+00:00",
+        "created_at": "2026-06-14T08:50:14.150826+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4407,7 +4707,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T08:17:55.959531+00:00",
+      "expiry": "2026-06-14T09:50:14.155077+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4431,7 +4731,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T07:17:55.959535+00:00",
+          "timestamp": "2026-06-14T08:50:14.155079+00:00",
           "notes": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus."
         }
       ],
@@ -4440,7 +4740,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.70, ambiguity=0.62; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4cd3d7e66667",
+          "source_capsule_id": "capsule_e2e03ec9c5e9",
           "source_agent": "record_keeper",
           "intent": "coordinate",
           "content_summary": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
@@ -4453,7 +4753,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T07:17:55.959538+00:00",
+        "received_at": "2026-06-14T08:50:14.155080+00:00",
         "delivered_to": [
           "capture_probe"
         ],
@@ -4464,11 +4764,15 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 20,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_07166d8d4cef",
+      "id": "quarantine_ec8d14a3a49a",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -4485,14 +4789,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 83,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.946379+00:00",
+        "created_at": "2026-06-14T08:50:14.150904+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4508,7 +4821,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.946379+00:00",
+      "expiry": "2026-06-14T09:50:14.150904+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4532,34 +4845,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:55.959824+00:00",
+          "timestamp": "2026-06-14T08:50:14.155308+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:55.959827+00:00",
+        "received_at": "2026-06-14T08:50:14.155310+00:00",
         "delivered_to": [
           "public_facilitator"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_3081e9ad4405",
-          "iv_3081e9ad4405",
-          "iv_1c2bc43fc396",
-          "iv_1c2bc43fc396"
+          "iv_2631bbdacfc5",
+          "iv_fbc7129c5368"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_d85120577202",
+      "id": "quarantine_26e3fa30f4c2",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -4576,14 +4891,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 83,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.946379+00:00",
+        "created_at": "2026-06-14T08:50:14.150904+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4599,7 +4923,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.946379+00:00",
+      "expiry": "2026-06-14T09:50:14.150904+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4623,34 +4947,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:56.268641+00:00",
+          "timestamp": "2026-06-14T08:50:14.157353+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:56.268645+00:00",
+        "received_at": "2026-06-14T08:50:14.157356+00:00",
         "delivered_to": [
           "technical_auditor"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_3081e9ad4405",
-          "iv_3081e9ad4405",
-          "iv_756bb44c3445",
-          "iv_756bb44c3445"
+          "iv_2631bbdacfc5",
+          "iv_854285838c2b"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_e5d02193a312",
+      "id": "quarantine_bc5632f71d80",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -4667,14 +4993,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 83,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.946379+00:00",
+        "created_at": "2026-06-14T08:50:14.150904+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4690,7 +5025,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.946379+00:00",
+      "expiry": "2026-06-14T09:50:14.150904+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4714,34 +5049,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:56.269501+00:00",
+          "timestamp": "2026-06-14T08:50:14.158183+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:56.269503+00:00",
+        "received_at": "2026-06-14T08:50:14.158189+00:00",
         "delivered_to": [
           "rights_checker"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_3081e9ad4405",
-          "iv_3081e9ad4405",
-          "iv_e719c773f557",
-          "iv_e719c773f557"
+          "iv_2631bbdacfc5",
+          "iv_f9a6bbc4c48f"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_0fbac88fe9dc",
+      "id": "quarantine_e4fc990814d2",
       "schema_version": "1.0.0",
       "source_agent": "capture_probe",
       "content": {
@@ -4758,14 +5095,23 @@
         "data": {
           "role": "adversarial critic",
           "behavior": "poison",
-          "scenario_signal": "capture_probe"
+          "scenario_signal": "capture_probe",
+          "generation": {
+            "backend": "mock",
+            "model_name": null,
+            "latency_ms": 0.001,
+            "input_tokens": 83,
+            "output_tokens": 22,
+            "estimated_cost_usd": 0.0,
+            "usage_estimated": true
+          }
         }
       },
       "intent": "coordinate",
       "context_refs": [],
       "provenance": {
         "created_by": "capture_probe",
-        "created_at": "2026-06-14T07:17:55.946379+00:00",
+        "created_at": "2026-06-14T08:50:14.150904+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4781,7 +5127,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T08:17:55.946379+00:00",
+      "expiry": "2026-06-14T09:50:14.150904+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4805,34 +5151,36 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T07:17:56.270299+00:00",
+          "timestamp": "2026-06-14T08:50:14.159006+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:56.270302+00:00",
+        "received_at": "2026-06-14T08:50:14.159009+00:00",
         "delivered_to": [
           "record_keeper"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_3081e9ad4405",
-          "iv_3081e9ad4405",
-          "iv_b88e0311d61c",
-          "iv_b88e0311d61c"
+          "iv_2631bbdacfc5",
+          "iv_ff49096ee604"
         ]
       },
       "metrics": {
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.001,
+        "input_tokens": 83,
+        "output_tokens": 22,
+        "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_f8a87f52dd10",
+      "id": "capsule_1840f791e7cf",
       "schema_version": "1.0.0",
       "source_agent": "runtime_mediator",
       "content": {
@@ -4863,10 +5211,10 @@
               "capture_probe"
             ],
             "basis_capsule_ids": [
-              "capsule_137f1d7b498e",
-              "capsule_b4bf83ddcbc6",
-              "capsule_f20d6200024c",
-              "capsule_4cd3d7e66667"
+              "capsule_299c5ccf4024",
+              "capsule_b7df96a9fc5b",
+              "capsule_e4255eab35db",
+              "capsule_e2e03ec9c5e9"
             ],
             "conflict_count_at_creation": 80,
             "refusal_count_at_creation": 32,
@@ -4879,7 +5227,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "runtime_mediator",
-        "created_at": "2026-06-14T07:17:56.271323+00:00",
+        "created_at": "2026-06-14T08:50:14.159876+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -4900,7 +5248,7 @@
         "ttl_seconds": 900,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T07:32:56.271323+00:00",
+      "expiry": "2026-06-14T09:05:14.159876+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -4924,7 +5272,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T07:17:56.271353+00:00",
+        "received_at": "2026-06-14T08:50:14.159896+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -4933,16 +5281,20 @@
         "semantic_loss": 0.0,
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
-        "trust_weight": 1.0
+        "trust_weight": 1.0,
+        "latency_ms": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": 0.0
       }
     }
   ],
   "events": [
     {
-      "id": "evt_1564690170b9",
-      "at": "2026-06-14T07:17:55.893243+00:00",
+      "id": "evt_0aa73809dd00",
+      "at": "2026-06-14T08:50:14.107783+00:00",
       "kind": "published",
-      "capsule_id": "capsule_cd234502868a",
+      "capsule_id": "capsule_ceb5f0ec91ab",
       "source_agent": "public_facilitator",
       "target_agent": null,
       "payload": {
@@ -4951,10 +5303,10 @@
       }
     },
     {
-      "id": "evt_2417a6db8bff",
-      "at": "2026-06-14T07:17:55.894343+00:00",
+      "id": "evt_a9b0ac8d6a7f",
+      "at": "2026-06-14T08:50:14.108600+00:00",
       "kind": "published",
-      "capsule_id": "capsule_c230436b99f2",
+      "capsule_id": "capsule_785c100ec34b",
       "source_agent": "technical_auditor",
       "target_agent": null,
       "payload": {
@@ -4963,10 +5315,10 @@
       }
     },
     {
-      "id": "evt_40720043cb55",
-      "at": "2026-06-14T07:17:55.894420+00:00",
+      "id": "evt_3b419c093a2e",
+      "at": "2026-06-14T08:50:14.108671+00:00",
       "kind": "published",
-      "capsule_id": "capsule_41d35cf764c1",
+      "capsule_id": "capsule_050314809c47",
       "source_agent": "rights_checker",
       "target_agent": null,
       "payload": {
@@ -4975,10 +5327,10 @@
       }
     },
     {
-      "id": "evt_06be5fe91949",
-      "at": "2026-06-14T07:17:55.894575+00:00",
+      "id": "evt_f424499cd13b",
+      "at": "2026-06-14T08:50:14.108728+00:00",
       "kind": "published",
-      "capsule_id": "capsule_6b11dae3a2b2",
+      "capsule_id": "capsule_88c71b61842f",
       "source_agent": "record_keeper",
       "target_agent": null,
       "payload": {
@@ -4987,10 +5339,10 @@
       }
     },
     {
-      "id": "evt_758aa2937195",
-      "at": "2026-06-14T07:17:55.894642+00:00",
+      "id": "evt_3351d44114d3",
+      "at": "2026-06-14T08:50:14.108884+00:00",
       "kind": "published",
-      "capsule_id": "capsule_006b15197710",
+      "capsule_id": "capsule_3a6f686769c1",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -4999,10 +5351,10 @@
       }
     },
     {
-      "id": "evt_90fbec86084d",
-      "at": "2026-06-14T07:17:55.894651+00:00",
+      "id": "evt_deeb3e953962",
+      "at": "2026-06-14T08:50:14.108895+00:00",
       "kind": "quarantined",
-      "capsule_id": "capsule_006b15197710",
+      "capsule_id": "capsule_3a6f686769c1",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5010,10 +5362,10 @@
       }
     },
     {
-      "id": "evt_4f403d6849a3",
-      "at": "2026-06-14T07:17:55.895226+00:00",
+      "id": "evt_697ac4ea0fcd",
+      "at": "2026-06-14T08:50:14.109455+00:00",
       "kind": "published",
-      "capsule_id": "refusal_a9c45b991079",
+      "capsule_id": "refusal_e1b0f329f5e9",
       "source_agent": "technical_auditor",
       "target_agent": null,
       "payload": {
@@ -5022,217 +5374,10 @@
       }
     },
     {
-      "id": "evt_f1c7d0022fc1",
-      "at": "2026-06-14T07:17:55.895236+00:00",
+      "id": "evt_0893a217fe69",
+      "at": "2026-06-14T08:50:14.109464+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_a9c45b991079",
-      "source_agent": "technical_auditor",
-      "target_agent": "technical_auditor",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_11ecd95ccf44",
-      "at": "2026-06-14T07:17:55.895579+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_e7af8ee5e141",
-      "source_agent": "rights_checker",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_f20c3e82f8f9",
-      "at": "2026-06-14T07:17:55.895589+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_e7af8ee5e141",
-      "source_agent": "rights_checker",
-      "target_agent": "rights_checker",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_3110b1c227b0",
-      "at": "2026-06-14T07:17:55.896109+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_7d8ece24ff57",
-      "source_agent": "record_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_abe9b849e66d",
-      "at": "2026-06-14T07:17:55.896128+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_7d8ece24ff57",
-      "source_agent": "record_keeper",
-      "target_agent": "record_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_1c09cfd90bb4",
-      "at": "2026-06-14T07:17:55.896621+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_b829e0878301",
-      "source_agent": "capture_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_2b504f770e7b",
-      "at": "2026-06-14T07:17:55.896634+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_b829e0878301",
-      "source_agent": "capture_probe",
-      "target_agent": "capture_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_e3c6515fef38",
-      "at": "2026-06-14T07:17:55.897176+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_2114279584d9",
-      "source_agent": "public_facilitator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_b64ba7c315f7",
-      "at": "2026-06-14T07:17:55.897186+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_2114279584d9",
-      "source_agent": "public_facilitator",
-      "target_agent": "public_facilitator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_ed7a83d4e159",
-      "at": "2026-06-14T07:17:55.897480+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_a417224ecd51",
-      "source_agent": "rights_checker",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_f1d56e598961",
-      "at": "2026-06-14T07:17:55.897488+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_a417224ecd51",
-      "source_agent": "rights_checker",
-      "target_agent": "rights_checker",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_dde5abac5813",
-      "at": "2026-06-14T07:17:55.897716+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_3141a879a253",
-      "source_agent": "record_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_e5e1799495a5",
-      "at": "2026-06-14T07:17:55.897723+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_3141a879a253",
-      "source_agent": "record_keeper",
-      "target_agent": "record_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_5c747814f9ca",
-      "at": "2026-06-14T07:17:55.897936+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_dbf5f816548f",
-      "source_agent": "capture_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_82d3ecad316f",
-      "at": "2026-06-14T07:17:55.897944+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_dbf5f816548f",
-      "source_agent": "capture_probe",
-      "target_agent": "capture_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_fb6b76fa208a",
-      "at": "2026-06-14T07:17:55.898164+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_0015536bbea0",
-      "source_agent": "public_facilitator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_e60256e3d721",
-      "at": "2026-06-14T07:17:55.898172+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_0015536bbea0",
-      "source_agent": "public_facilitator",
-      "target_agent": "public_facilitator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_3287dea3d389",
-      "at": "2026-06-14T07:17:55.898453+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_2a02057d3927",
-      "source_agent": "technical_auditor",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_753ade8a393c",
-      "at": "2026-06-14T07:17:55.898461+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_2a02057d3927",
+      "capsule_id": "refusal_e1b0f329f5e9",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "payload": {
@@ -5240,102 +5385,10 @@
       }
     },
     {
-      "id": "evt_56de1e7a92f7",
-      "at": "2026-06-14T07:17:55.898826+00:00",
+      "id": "evt_3c60dee3fc6c",
+      "at": "2026-06-14T08:50:14.109746+00:00",
       "kind": "published",
-      "capsule_id": "refusal_36c12642b620",
-      "source_agent": "record_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_807e6c3b0c07",
-      "at": "2026-06-14T07:17:55.898839+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_36c12642b620",
-      "source_agent": "record_keeper",
-      "target_agent": "record_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_eb7a145e496a",
-      "at": "2026-06-14T07:17:55.899151+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_b0bf1b2921ba",
-      "source_agent": "capture_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_1d0e69232a6e",
-      "at": "2026-06-14T07:17:55.899161+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_b0bf1b2921ba",
-      "source_agent": "capture_probe",
-      "target_agent": "capture_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_c8ad9817b01c",
-      "at": "2026-06-14T07:17:55.899579+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_89b683968d76",
-      "source_agent": "public_facilitator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_98f3755864cb",
-      "at": "2026-06-14T07:17:55.899588+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_89b683968d76",
-      "source_agent": "public_facilitator",
-      "target_agent": "public_facilitator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_661d440181fb",
-      "at": "2026-06-14T07:17:55.899839+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_5da66cb7e2b0",
-      "source_agent": "technical_auditor",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_398e3a8662c1",
-      "at": "2026-06-14T07:17:55.899846+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_5da66cb7e2b0",
-      "source_agent": "technical_auditor",
-      "target_agent": "technical_auditor",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_32baad135178",
-      "at": "2026-06-14T07:17:55.900069+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_d751d961ff41",
+      "capsule_id": "refusal_4e29e3f0e31d",
       "source_agent": "rights_checker",
       "target_agent": null,
       "payload": {
@@ -5344,10 +5397,10 @@
       }
     },
     {
-      "id": "evt_90a5419c0bee",
-      "at": "2026-06-14T07:17:55.900076+00:00",
+      "id": "evt_1c1a3b03eb02",
+      "at": "2026-06-14T08:50:14.109754+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_d751d961ff41",
+      "capsule_id": "refusal_4e29e3f0e31d",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "payload": {
@@ -5355,10 +5408,33 @@
       }
     },
     {
-      "id": "evt_f536a720b2b6",
-      "at": "2026-06-14T07:17:55.900295+00:00",
+      "id": "evt_11d649e7e941",
+      "at": "2026-06-14T08:50:14.109992+00:00",
       "kind": "published",
-      "capsule_id": "refusal_544a92eda24f",
+      "capsule_id": "refusal_c7a1a9024f67",
+      "source_agent": "record_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_27678031429d",
+      "at": "2026-06-14T08:50:14.109999+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_c7a1a9024f67",
+      "source_agent": "record_keeper",
+      "target_agent": "record_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_b934e0a461e0",
+      "at": "2026-06-14T08:50:14.110256+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_c06cb74845ad",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5367,10 +5443,10 @@
       }
     },
     {
-      "id": "evt_25b781b10643",
-      "at": "2026-06-14T07:17:55.900303+00:00",
+      "id": "evt_604512ea7eaa",
+      "at": "2026-06-14T08:50:14.110263+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_544a92eda24f",
+      "capsule_id": "refusal_c06cb74845ad",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "payload": {
@@ -5378,10 +5454,286 @@
       }
     },
     {
-      "id": "evt_4b2e1c868508",
-      "at": "2026-06-14T07:17:55.900476+00:00",
+      "id": "evt_dec6b7423a56",
+      "at": "2026-06-14T08:50:14.110519+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_ab9b046bf58f",
+      "capsule_id": "refusal_a642789927f6",
+      "source_agent": "public_facilitator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_0ab1241ad8cb",
+      "at": "2026-06-14T08:50:14.110526+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_a642789927f6",
+      "source_agent": "public_facilitator",
+      "target_agent": "public_facilitator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_ccb6ed02d492",
+      "at": "2026-06-14T08:50:14.110737+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_6e6409f48a4d",
+      "source_agent": "rights_checker",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_8f4f1736b269",
+      "at": "2026-06-14T08:50:14.110744+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_6e6409f48a4d",
+      "source_agent": "rights_checker",
+      "target_agent": "rights_checker",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_2eb44f57e677",
+      "at": "2026-06-14T08:50:14.110916+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_36e2ce482fe7",
+      "source_agent": "record_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_368a0eafe680",
+      "at": "2026-06-14T08:50:14.110922+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_36e2ce482fe7",
+      "source_agent": "record_keeper",
+      "target_agent": "record_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_c41b29ab203f",
+      "at": "2026-06-14T08:50:14.111090+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_c2ba1375ef06",
+      "source_agent": "capture_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_ac8604953f3f",
+      "at": "2026-06-14T08:50:14.111096+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_c2ba1375ef06",
+      "source_agent": "capture_probe",
+      "target_agent": "capture_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_a03a93b12035",
+      "at": "2026-06-14T08:50:14.111278+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_386ef8c25fef",
+      "source_agent": "public_facilitator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_2b3cf049380d",
+      "at": "2026-06-14T08:50:14.111285+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_386ef8c25fef",
+      "source_agent": "public_facilitator",
+      "target_agent": "public_facilitator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_bd4c2abd8d00",
+      "at": "2026-06-14T08:50:14.111494+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_a56a959df339",
+      "source_agent": "technical_auditor",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_8efd41d90eb3",
+      "at": "2026-06-14T08:50:14.111501+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_a56a959df339",
+      "source_agent": "technical_auditor",
+      "target_agent": "technical_auditor",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_2ea618fd5267",
+      "at": "2026-06-14T08:50:14.111705+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_cb2bdc6612f3",
+      "source_agent": "record_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_97992886ce1c",
+      "at": "2026-06-14T08:50:14.111713+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_cb2bdc6612f3",
+      "source_agent": "record_keeper",
+      "target_agent": "record_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_76d154350c80",
+      "at": "2026-06-14T08:50:14.111940+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_a6e8be7fa495",
+      "source_agent": "capture_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_f33687654641",
+      "at": "2026-06-14T08:50:14.111952+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_a6e8be7fa495",
+      "source_agent": "capture_probe",
+      "target_agent": "capture_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_fc7bb725ebc0",
+      "at": "2026-06-14T08:50:14.112253+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_0600a0a1c248",
+      "source_agent": "public_facilitator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_11c76416183d",
+      "at": "2026-06-14T08:50:14.112261+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_0600a0a1c248",
+      "source_agent": "public_facilitator",
+      "target_agent": "public_facilitator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_6cf351842ca7",
+      "at": "2026-06-14T08:50:14.112471+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_548536a96099",
+      "source_agent": "technical_auditor",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_31ed3854aa0b",
+      "at": "2026-06-14T08:50:14.112478+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_548536a96099",
+      "source_agent": "technical_auditor",
+      "target_agent": "technical_auditor",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_74e79afe0274",
+      "at": "2026-06-14T08:50:14.112664+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_0cb4018fdceb",
+      "source_agent": "rights_checker",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_c98aff3c686f",
+      "at": "2026-06-14T08:50:14.112671+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_0cb4018fdceb",
+      "source_agent": "rights_checker",
+      "target_agent": "rights_checker",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_93ce2c59b5ca",
+      "at": "2026-06-14T08:50:14.113006+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_0905cdbd4e80",
+      "source_agent": "capture_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_e521a19176df",
+      "at": "2026-06-14T08:50:14.113013+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_0905cdbd4e80",
+      "source_agent": "capture_probe",
+      "target_agent": "capture_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_08d7ed3fe78d",
+      "at": "2026-06-14T08:50:14.113161+00:00",
+      "kind": "published",
+      "capsule_id": "quarantine_8cdbe8d608d6",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5390,10 +5742,10 @@
       }
     },
     {
-      "id": "evt_07fa0481c66c",
-      "at": "2026-06-14T07:17:55.900495+00:00",
+      "id": "evt_243fa49afc1d",
+      "at": "2026-06-14T08:50:14.113175+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_ab9b046bf58f",
+      "capsule_id": "quarantine_8cdbe8d608d6",
       "source_agent": "capture_probe",
       "target_agent": "public_facilitator",
       "payload": {
@@ -5401,10 +5753,10 @@
       }
     },
     {
-      "id": "evt_388d98067cf9",
-      "at": "2026-06-14T07:17:55.900988+00:00",
+      "id": "evt_cabfd1c2d92f",
+      "at": "2026-06-14T08:50:14.113571+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_d7de048afbe8",
+      "capsule_id": "quarantine_48618253184b",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5413,10 +5765,10 @@
       }
     },
     {
-      "id": "evt_c57fc6b284e6",
-      "at": "2026-06-14T07:17:55.901003+00:00",
+      "id": "evt_16b63096a316",
+      "at": "2026-06-14T08:50:14.113585+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_d7de048afbe8",
+      "capsule_id": "quarantine_48618253184b",
       "source_agent": "capture_probe",
       "target_agent": "technical_auditor",
       "payload": {
@@ -5424,10 +5776,10 @@
       }
     },
     {
-      "id": "evt_8e2a7f319032",
-      "at": "2026-06-14T07:17:55.901542+00:00",
+      "id": "evt_2ec75c1d3b22",
+      "at": "2026-06-14T08:50:14.113940+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_b55417341c4e",
+      "capsule_id": "quarantine_07999d0a5eb7",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5436,10 +5788,10 @@
       }
     },
     {
-      "id": "evt_623b2f37589d",
-      "at": "2026-06-14T07:17:55.901559+00:00",
+      "id": "evt_4e161dccc081",
+      "at": "2026-06-14T08:50:14.113951+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_b55417341c4e",
+      "capsule_id": "quarantine_07999d0a5eb7",
       "source_agent": "capture_probe",
       "target_agent": "rights_checker",
       "payload": {
@@ -5447,10 +5799,10 @@
       }
     },
     {
-      "id": "evt_86628720c83f",
-      "at": "2026-06-14T07:17:55.902078+00:00",
+      "id": "evt_3dd64c80a624",
+      "at": "2026-06-14T08:50:14.114349+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_5993324dc512",
+      "capsule_id": "quarantine_56db0793ce8d",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5459,10 +5811,10 @@
       }
     },
     {
-      "id": "evt_f66fd1f4f4f2",
-      "at": "2026-06-14T07:17:55.902092+00:00",
+      "id": "evt_dc2f0afe8d9c",
+      "at": "2026-06-14T08:50:14.114360+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_5993324dc512",
+      "capsule_id": "quarantine_56db0793ce8d",
       "source_agent": "capture_probe",
       "target_agent": "record_keeper",
       "payload": {
@@ -5470,10 +5822,10 @@
       }
     },
     {
-      "id": "evt_d9b24c8d3aab",
-      "at": "2026-06-14T07:17:55.902518+00:00",
+      "id": "evt_56d224d0bd24",
+      "at": "2026-06-14T08:50:14.114732+00:00",
       "kind": "published",
-      "capsule_id": "capsule_b9cd24bbcc51",
+      "capsule_id": "capsule_fadb1db07214",
       "source_agent": "runtime_mediator",
       "target_agent": null,
       "payload": {
@@ -5482,10 +5834,10 @@
       }
     },
     {
-      "id": "evt_c65d2096e0d7",
-      "at": "2026-06-14T07:17:55.943586+00:00",
+      "id": "evt_241e019a2016",
+      "at": "2026-06-14T08:50:14.149424+00:00",
       "kind": "published",
-      "capsule_id": "capsule_137f1d7b498e",
+      "capsule_id": "capsule_299c5ccf4024",
       "source_agent": "public_facilitator",
       "target_agent": null,
       "payload": {
@@ -5494,10 +5846,10 @@
       }
     },
     {
-      "id": "evt_cc3696c504e1",
-      "at": "2026-06-14T07:17:55.944218+00:00",
+      "id": "evt_274e2338610d",
+      "at": "2026-06-14T08:50:14.149655+00:00",
       "kind": "published",
-      "capsule_id": "capsule_b4bf83ddcbc6",
+      "capsule_id": "capsule_b7df96a9fc5b",
       "source_agent": "technical_auditor",
       "target_agent": null,
       "payload": {
@@ -5506,10 +5858,10 @@
       }
     },
     {
-      "id": "evt_7447765410f2",
-      "at": "2026-06-14T07:17:55.944328+00:00",
+      "id": "evt_ad9d70d81390",
+      "at": "2026-06-14T08:50:14.149767+00:00",
       "kind": "published",
-      "capsule_id": "capsule_f20d6200024c",
+      "capsule_id": "capsule_e4255eab35db",
       "source_agent": "rights_checker",
       "target_agent": null,
       "payload": {
@@ -5518,10 +5870,10 @@
       }
     },
     {
-      "id": "evt_ffae16a439a1",
-      "at": "2026-06-14T07:17:55.946258+00:00",
+      "id": "evt_88e82a914a92",
+      "at": "2026-06-14T08:50:14.150843+00:00",
       "kind": "published",
-      "capsule_id": "capsule_4cd3d7e66667",
+      "capsule_id": "capsule_e2e03ec9c5e9",
       "source_agent": "record_keeper",
       "target_agent": null,
       "payload": {
@@ -5530,10 +5882,10 @@
       }
     },
     {
-      "id": "evt_6022498cca90",
-      "at": "2026-06-14T07:17:55.946402+00:00",
+      "id": "evt_cd8c35c38992",
+      "at": "2026-06-14T08:50:14.150919+00:00",
       "kind": "published",
-      "capsule_id": "capsule_2c576c1a3661",
+      "capsule_id": "capsule_8ed6c5f3f2ea",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5542,10 +5894,10 @@
       }
     },
     {
-      "id": "evt_043d92bbe014",
-      "at": "2026-06-14T07:17:55.946420+00:00",
+      "id": "evt_fe681a5cb81c",
+      "at": "2026-06-14T08:50:14.150929+00:00",
       "kind": "quarantined",
-      "capsule_id": "capsule_2c576c1a3661",
+      "capsule_id": "capsule_8ed6c5f3f2ea",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5553,10 +5905,10 @@
       }
     },
     {
-      "id": "evt_b5a02187b5fe",
-      "at": "2026-06-14T07:17:55.947943+00:00",
+      "id": "evt_ab1d77fec1a5",
+      "at": "2026-06-14T08:50:14.151533+00:00",
       "kind": "published",
-      "capsule_id": "refusal_f941718abb88",
+      "capsule_id": "refusal_7e5e821d5b53",
       "source_agent": "technical_auditor",
       "target_agent": null,
       "payload": {
@@ -5565,217 +5917,10 @@
       }
     },
     {
-      "id": "evt_c8fde6acca32",
-      "at": "2026-06-14T07:17:55.947965+00:00",
+      "id": "evt_cb81dc6a350e",
+      "at": "2026-06-14T08:50:14.151542+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_f941718abb88",
-      "source_agent": "technical_auditor",
-      "target_agent": "technical_auditor",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_746a664881c6",
-      "at": "2026-06-14T07:17:55.949229+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_6a036b16f423",
-      "source_agent": "rights_checker",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_51824de789ea",
-      "at": "2026-06-14T07:17:55.949302+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_6a036b16f423",
-      "source_agent": "rights_checker",
-      "target_agent": "rights_checker",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_56a26a842c0e",
-      "at": "2026-06-14T07:17:55.950117+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_efd0ffacbd1b",
-      "source_agent": "record_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_5567afd12c07",
-      "at": "2026-06-14T07:17:55.950137+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_efd0ffacbd1b",
-      "source_agent": "record_keeper",
-      "target_agent": "record_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_b53fd511a6e1",
-      "at": "2026-06-14T07:17:55.950786+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_5e9d31e3bb30",
-      "source_agent": "capture_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_b42b42e27c8d",
-      "at": "2026-06-14T07:17:55.950804+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_5e9d31e3bb30",
-      "source_agent": "capture_probe",
-      "target_agent": "capture_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_eea2801b62fa",
-      "at": "2026-06-14T07:17:55.952099+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_50198ff4f082",
-      "source_agent": "public_facilitator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_3aabfe4998b3",
-      "at": "2026-06-14T07:17:55.952128+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_50198ff4f082",
-      "source_agent": "public_facilitator",
-      "target_agent": "public_facilitator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_59aefe548478",
-      "at": "2026-06-14T07:17:55.952787+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_01a760abfb45",
-      "source_agent": "rights_checker",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_6df0aa313dc0",
-      "at": "2026-06-14T07:17:55.952806+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_01a760abfb45",
-      "source_agent": "rights_checker",
-      "target_agent": "rights_checker",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_b877edcad96e",
-      "at": "2026-06-14T07:17:55.953426+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_a4e778eed391",
-      "source_agent": "record_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_ec923d8c403f",
-      "at": "2026-06-14T07:17:55.953447+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_a4e778eed391",
-      "source_agent": "record_keeper",
-      "target_agent": "record_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_a8b562f9bd40",
-      "at": "2026-06-14T07:17:55.954131+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_0accfe5a5406",
-      "source_agent": "capture_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_d9c7341a5271",
-      "at": "2026-06-14T07:17:55.954144+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_0accfe5a5406",
-      "source_agent": "capture_probe",
-      "target_agent": "capture_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_f9a332559584",
-      "at": "2026-06-14T07:17:55.954423+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_005d29815852",
-      "source_agent": "public_facilitator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_f494f581ee00",
-      "at": "2026-06-14T07:17:55.954432+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_005d29815852",
-      "source_agent": "public_facilitator",
-      "target_agent": "public_facilitator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_ff8c2860a643",
-      "at": "2026-06-14T07:17:55.955205+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_359efe7b0344",
-      "source_agent": "technical_auditor",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_4971c1269f62",
-      "at": "2026-06-14T07:17:55.955257+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_359efe7b0344",
+      "capsule_id": "refusal_7e5e821d5b53",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "payload": {
@@ -5783,102 +5928,10 @@
       }
     },
     {
-      "id": "evt_e6e961ebc5ba",
-      "at": "2026-06-14T07:17:55.955733+00:00",
+      "id": "evt_d4a1db1368f1",
+      "at": "2026-06-14T08:50:14.151789+00:00",
       "kind": "published",
-      "capsule_id": "refusal_a3c409d9b96e",
-      "source_agent": "record_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_160ffaf5b632",
-      "at": "2026-06-14T07:17:55.955746+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_a3c409d9b96e",
-      "source_agent": "record_keeper",
-      "target_agent": "record_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_6183c419127e",
-      "at": "2026-06-14T07:17:55.956263+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_a724082c0527",
-      "source_agent": "capture_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_8203d83befd6",
-      "at": "2026-06-14T07:17:55.956276+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_a724082c0527",
-      "source_agent": "capture_probe",
-      "target_agent": "capture_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_d91e2d8fe13a",
-      "at": "2026-06-14T07:17:55.958107+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_267956ecb078",
-      "source_agent": "public_facilitator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_cf2b4fb1d1fb",
-      "at": "2026-06-14T07:17:55.958125+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_267956ecb078",
-      "source_agent": "public_facilitator",
-      "target_agent": "public_facilitator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_8a5e1159cd73",
-      "at": "2026-06-14T07:17:55.958769+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_b74b0bdb3b6c",
-      "source_agent": "technical_auditor",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_1ba6ca8fe099",
-      "at": "2026-06-14T07:17:55.958788+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_b74b0bdb3b6c",
-      "source_agent": "technical_auditor",
-      "target_agent": "technical_auditor",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_f7d8e83c627b",
-      "at": "2026-06-14T07:17:55.959201+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_c28265e4c25a",
+      "capsule_id": "refusal_44ef598ef0b7",
       "source_agent": "rights_checker",
       "target_agent": null,
       "payload": {
@@ -5887,10 +5940,10 @@
       }
     },
     {
-      "id": "evt_161203f9374d",
-      "at": "2026-06-14T07:17:55.959212+00:00",
+      "id": "evt_444f7684bdbd",
+      "at": "2026-06-14T08:50:14.151796+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_c28265e4c25a",
+      "capsule_id": "refusal_44ef598ef0b7",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "payload": {
@@ -5898,10 +5951,33 @@
       }
     },
     {
-      "id": "evt_eee64b4699b7",
-      "at": "2026-06-14T07:17:55.959544+00:00",
+      "id": "evt_c64ce5fd62db",
+      "at": "2026-06-14T08:50:14.152016+00:00",
       "kind": "published",
-      "capsule_id": "refusal_b42953429852",
+      "capsule_id": "refusal_af4438f6fddd",
+      "source_agent": "record_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_fa58221bf700",
+      "at": "2026-06-14T08:50:14.152024+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_af4438f6fddd",
+      "source_agent": "record_keeper",
+      "target_agent": "record_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_e053b0265cd7",
+      "at": "2026-06-14T08:50:14.152237+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_7919488400c7",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5910,10 +5986,10 @@
       }
     },
     {
-      "id": "evt_5939a5938b41",
-      "at": "2026-06-14T07:17:55.959554+00:00",
+      "id": "evt_904a6fb656ed",
+      "at": "2026-06-14T08:50:14.152244+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_b42953429852",
+      "capsule_id": "refusal_7919488400c7",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "payload": {
@@ -5921,10 +5997,286 @@
       }
     },
     {
-      "id": "evt_d547d365773d",
-      "at": "2026-06-14T07:17:55.959834+00:00",
+      "id": "evt_bca1d8e3ba14",
+      "at": "2026-06-14T08:50:14.152490+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_07166d8d4cef",
+      "capsule_id": "refusal_7bfe3271a07d",
+      "source_agent": "public_facilitator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_ee090631302d",
+      "at": "2026-06-14T08:50:14.152506+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_7bfe3271a07d",
+      "source_agent": "public_facilitator",
+      "target_agent": "public_facilitator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_3b13e2ef26ae",
+      "at": "2026-06-14T08:50:14.152784+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_e06e874bd17a",
+      "source_agent": "rights_checker",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_c3c341cfb2e5",
+      "at": "2026-06-14T08:50:14.152791+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_e06e874bd17a",
+      "source_agent": "rights_checker",
+      "target_agent": "rights_checker",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_90ad3d64e0ec",
+      "at": "2026-06-14T08:50:14.153088+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_edd8adca5795",
+      "source_agent": "record_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_0c0318a1620c",
+      "at": "2026-06-14T08:50:14.153099+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_edd8adca5795",
+      "source_agent": "record_keeper",
+      "target_agent": "record_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_756438147154",
+      "at": "2026-06-14T08:50:14.153384+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_457a74f10154",
+      "source_agent": "capture_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_fc2a965b0667",
+      "at": "2026-06-14T08:50:14.153393+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_457a74f10154",
+      "source_agent": "capture_probe",
+      "target_agent": "capture_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_41f7f9fe7ed0",
+      "at": "2026-06-14T08:50:14.153608+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_b12cb616377a",
+      "source_agent": "public_facilitator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_afbc5292a49e",
+      "at": "2026-06-14T08:50:14.153616+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_b12cb616377a",
+      "source_agent": "public_facilitator",
+      "target_agent": "public_facilitator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_7431b8e35f08",
+      "at": "2026-06-14T08:50:14.153827+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_b2c8cbfc98ab",
+      "source_agent": "technical_auditor",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_dbc4f2b93282",
+      "at": "2026-06-14T08:50:14.153833+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_b2c8cbfc98ab",
+      "source_agent": "technical_auditor",
+      "target_agent": "technical_auditor",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_d6ad2f1a763b",
+      "at": "2026-06-14T08:50:14.154030+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_0c996e31bcf2",
+      "source_agent": "record_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_9443f0c1af91",
+      "at": "2026-06-14T08:50:14.154037+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_0c996e31bcf2",
+      "source_agent": "record_keeper",
+      "target_agent": "record_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_9710a8525b8e",
+      "at": "2026-06-14T08:50:14.154231+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_58fde5d47296",
+      "source_agent": "capture_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_1c3ae62be58f",
+      "at": "2026-06-14T08:50:14.154238+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_58fde5d47296",
+      "source_agent": "capture_probe",
+      "target_agent": "capture_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_9c035fce97a3",
+      "at": "2026-06-14T08:50:14.154470+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_d20a9594f3f5",
+      "source_agent": "public_facilitator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_ed424baca52b",
+      "at": "2026-06-14T08:50:14.154477+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_d20a9594f3f5",
+      "source_agent": "public_facilitator",
+      "target_agent": "public_facilitator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_1581c30827c6",
+      "at": "2026-06-14T08:50:14.154671+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_63f4f9867b0e",
+      "source_agent": "technical_auditor",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_009689f7a66b",
+      "at": "2026-06-14T08:50:14.154678+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_63f4f9867b0e",
+      "source_agent": "technical_auditor",
+      "target_agent": "technical_auditor",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_1bee91ebff37",
+      "at": "2026-06-14T08:50:14.154887+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_3ad9a7c65b00",
+      "source_agent": "rights_checker",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_4086dbf29bb5",
+      "at": "2026-06-14T08:50:14.154893+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_3ad9a7c65b00",
+      "source_agent": "rights_checker",
+      "target_agent": "rights_checker",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_0ade16e693c0",
+      "at": "2026-06-14T08:50:14.155084+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_b4b38ae4daac",
+      "source_agent": "capture_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_20d9819b8fe1",
+      "at": "2026-06-14T08:50:14.155091+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_b4b38ae4daac",
+      "source_agent": "capture_probe",
+      "target_agent": "capture_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_48b04f99c273",
+      "at": "2026-06-14T08:50:14.155313+00:00",
+      "kind": "published",
+      "capsule_id": "quarantine_ec8d14a3a49a",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5933,10 +6285,10 @@
       }
     },
     {
-      "id": "evt_c55012f99c56",
-      "at": "2026-06-14T07:17:55.959858+00:00",
+      "id": "evt_fa698083de36",
+      "at": "2026-06-14T08:50:14.155329+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_07166d8d4cef",
+      "capsule_id": "quarantine_ec8d14a3a49a",
       "source_agent": "capture_probe",
       "target_agent": "public_facilitator",
       "payload": {
@@ -5944,10 +6296,10 @@
       }
     },
     {
-      "id": "evt_cba85680f9a4",
-      "at": "2026-06-14T07:17:56.268653+00:00",
+      "id": "evt_f6c136549dad",
+      "at": "2026-06-14T08:50:14.157362+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_d85120577202",
+      "capsule_id": "quarantine_26e3fa30f4c2",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5956,10 +6308,10 @@
       }
     },
     {
-      "id": "evt_5c1060460c19",
-      "at": "2026-06-14T07:17:56.268675+00:00",
+      "id": "evt_f412addd6ea3",
+      "at": "2026-06-14T08:50:14.157380+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_d85120577202",
+      "capsule_id": "quarantine_26e3fa30f4c2",
       "source_agent": "capture_probe",
       "target_agent": "technical_auditor",
       "payload": {
@@ -5967,10 +6319,10 @@
       }
     },
     {
-      "id": "evt_a6bccf2181cc",
-      "at": "2026-06-14T07:17:56.269509+00:00",
+      "id": "evt_5fa913ae3138",
+      "at": "2026-06-14T08:50:14.158201+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_e5d02193a312",
+      "capsule_id": "quarantine_bc5632f71d80",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -5979,10 +6331,10 @@
       }
     },
     {
-      "id": "evt_1286b1f56490",
-      "at": "2026-06-14T07:17:56.269525+00:00",
+      "id": "evt_dce51438981e",
+      "at": "2026-06-14T08:50:14.158231+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_e5d02193a312",
+      "capsule_id": "quarantine_bc5632f71d80",
       "source_agent": "capture_probe",
       "target_agent": "rights_checker",
       "payload": {
@@ -5990,10 +6342,10 @@
       }
     },
     {
-      "id": "evt_44a33757ad87",
-      "at": "2026-06-14T07:17:56.270309+00:00",
+      "id": "evt_4b0163c787d8",
+      "at": "2026-06-14T08:50:14.159018+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_0fbac88fe9dc",
+      "capsule_id": "quarantine_e4fc990814d2",
       "source_agent": "capture_probe",
       "target_agent": null,
       "payload": {
@@ -6002,10 +6354,10 @@
       }
     },
     {
-      "id": "evt_05e33c619a6b",
-      "at": "2026-06-14T07:17:56.270327+00:00",
+      "id": "evt_df9e3b301cb3",
+      "at": "2026-06-14T08:50:14.159034+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_0fbac88fe9dc",
+      "capsule_id": "quarantine_e4fc990814d2",
       "source_agent": "capture_probe",
       "target_agent": "record_keeper",
       "payload": {
@@ -6013,10 +6365,10 @@
       }
     },
     {
-      "id": "evt_f27b9ebe2d6d",
-      "at": "2026-06-14T07:17:56.271360+00:00",
+      "id": "evt_73690f1da1b6",
+      "at": "2026-06-14T08:50:14.159901+00:00",
       "kind": "published",
-      "capsule_id": "capsule_f8a87f52dd10",
+      "capsule_id": "capsule_1840f791e7cf",
       "source_agent": "runtime_mediator",
       "target_agent": null,
       "payload": {
@@ -6027,320 +6379,320 @@
   ],
   "deliveries": [
     {
-      "at": "2026-06-14T07:17:55.895229+00:00",
-      "capsule_id": "refusal_a9c45b991079",
+      "at": "2026-06-14T08:50:14.109457+00:00",
+      "capsule_id": "refusal_e1b0f329f5e9",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.895582+00:00",
-      "capsule_id": "refusal_e7af8ee5e141",
+      "at": "2026-06-14T08:50:14.109749+00:00",
+      "capsule_id": "refusal_4e29e3f0e31d",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.896113+00:00",
-      "capsule_id": "refusal_7d8ece24ff57",
+      "at": "2026-06-14T08:50:14.109994+00:00",
+      "capsule_id": "refusal_c7a1a9024f67",
       "source_agent": "record_keeper",
       "target_agent": "record_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.896624+00:00",
-      "capsule_id": "refusal_b829e0878301",
+      "at": "2026-06-14T08:50:14.110258+00:00",
+      "capsule_id": "refusal_c06cb74845ad",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.897179+00:00",
-      "capsule_id": "refusal_2114279584d9",
+      "at": "2026-06-14T08:50:14.110520+00:00",
+      "capsule_id": "refusal_a642789927f6",
       "source_agent": "public_facilitator",
       "target_agent": "public_facilitator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.897482+00:00",
-      "capsule_id": "refusal_a417224ecd51",
+      "at": "2026-06-14T08:50:14.110739+00:00",
+      "capsule_id": "refusal_6e6409f48a4d",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.897718+00:00",
-      "capsule_id": "refusal_3141a879a253",
+      "at": "2026-06-14T08:50:14.110918+00:00",
+      "capsule_id": "refusal_36e2ce482fe7",
       "source_agent": "record_keeper",
       "target_agent": "record_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.897938+00:00",
-      "capsule_id": "refusal_dbf5f816548f",
+      "at": "2026-06-14T08:50:14.111092+00:00",
+      "capsule_id": "refusal_c2ba1375ef06",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.898165+00:00",
-      "capsule_id": "refusal_0015536bbea0",
+      "at": "2026-06-14T08:50:14.111280+00:00",
+      "capsule_id": "refusal_386ef8c25fef",
       "source_agent": "public_facilitator",
       "target_agent": "public_facilitator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.898455+00:00",
-      "capsule_id": "refusal_2a02057d3927",
+      "at": "2026-06-14T08:50:14.111497+00:00",
+      "capsule_id": "refusal_a56a959df339",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.898829+00:00",
-      "capsule_id": "refusal_36c12642b620",
+      "at": "2026-06-14T08:50:14.111707+00:00",
+      "capsule_id": "refusal_cb2bdc6612f3",
       "source_agent": "record_keeper",
       "target_agent": "record_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.899154+00:00",
-      "capsule_id": "refusal_b0bf1b2921ba",
+      "at": "2026-06-14T08:50:14.111943+00:00",
+      "capsule_id": "refusal_a6e8be7fa495",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.899581+00:00",
-      "capsule_id": "refusal_89b683968d76",
+      "at": "2026-06-14T08:50:14.112255+00:00",
+      "capsule_id": "refusal_0600a0a1c248",
       "source_agent": "public_facilitator",
       "target_agent": "public_facilitator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.899841+00:00",
-      "capsule_id": "refusal_5da66cb7e2b0",
+      "at": "2026-06-14T08:50:14.112473+00:00",
+      "capsule_id": "refusal_548536a96099",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.900071+00:00",
-      "capsule_id": "refusal_d751d961ff41",
+      "at": "2026-06-14T08:50:14.112666+00:00",
+      "capsule_id": "refusal_0cb4018fdceb",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.900297+00:00",
-      "capsule_id": "refusal_544a92eda24f",
+      "at": "2026-06-14T08:50:14.113008+00:00",
+      "capsule_id": "refusal_0905cdbd4e80",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.900489+00:00",
-      "capsule_id": "quarantine_ab9b046bf58f",
+      "at": "2026-06-14T08:50:14.113170+00:00",
+      "capsule_id": "quarantine_8cdbe8d608d6",
       "source_agent": "capture_probe",
       "target_agent": "public_facilitator",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.900998+00:00",
-      "capsule_id": "quarantine_d7de048afbe8",
+      "at": "2026-06-14T08:50:14.113579+00:00",
+      "capsule_id": "quarantine_48618253184b",
       "source_agent": "capture_probe",
       "target_agent": "technical_auditor",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.901553+00:00",
-      "capsule_id": "quarantine_b55417341c4e",
+      "at": "2026-06-14T08:50:14.113947+00:00",
+      "capsule_id": "quarantine_07999d0a5eb7",
       "source_agent": "capture_probe",
       "target_agent": "rights_checker",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.902087+00:00",
-      "capsule_id": "quarantine_5993324dc512",
+      "at": "2026-06-14T08:50:14.114356+00:00",
+      "capsule_id": "quarantine_56db0793ce8d",
       "source_agent": "capture_probe",
       "target_agent": "record_keeper",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.947951+00:00",
-      "capsule_id": "refusal_f941718abb88",
+      "at": "2026-06-14T08:50:14.151535+00:00",
+      "capsule_id": "refusal_7e5e821d5b53",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.949283+00:00",
-      "capsule_id": "refusal_6a036b16f423",
+      "at": "2026-06-14T08:50:14.151790+00:00",
+      "capsule_id": "refusal_44ef598ef0b7",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.950126+00:00",
-      "capsule_id": "refusal_efd0ffacbd1b",
+      "at": "2026-06-14T08:50:14.152018+00:00",
+      "capsule_id": "refusal_af4438f6fddd",
       "source_agent": "record_keeper",
       "target_agent": "record_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.950792+00:00",
-      "capsule_id": "refusal_5e9d31e3bb30",
+      "at": "2026-06-14T08:50:14.152238+00:00",
+      "capsule_id": "refusal_7919488400c7",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.952109+00:00",
-      "capsule_id": "refusal_50198ff4f082",
+      "at": "2026-06-14T08:50:14.152494+00:00",
+      "capsule_id": "refusal_7bfe3271a07d",
       "source_agent": "public_facilitator",
       "target_agent": "public_facilitator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.952793+00:00",
-      "capsule_id": "refusal_01a760abfb45",
+      "at": "2026-06-14T08:50:14.152786+00:00",
+      "capsule_id": "refusal_e06e874bd17a",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.953434+00:00",
-      "capsule_id": "refusal_a4e778eed391",
+      "at": "2026-06-14T08:50:14.153091+00:00",
+      "capsule_id": "refusal_edd8adca5795",
       "source_agent": "record_keeper",
       "target_agent": "record_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.954135+00:00",
-      "capsule_id": "refusal_0accfe5a5406",
+      "at": "2026-06-14T08:50:14.153387+00:00",
+      "capsule_id": "refusal_457a74f10154",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.954425+00:00",
-      "capsule_id": "refusal_005d29815852",
+      "at": "2026-06-14T08:50:14.153610+00:00",
+      "capsule_id": "refusal_b12cb616377a",
       "source_agent": "public_facilitator",
       "target_agent": "public_facilitator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.955208+00:00",
-      "capsule_id": "refusal_359efe7b0344",
+      "at": "2026-06-14T08:50:14.153828+00:00",
+      "capsule_id": "refusal_b2c8cbfc98ab",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.955737+00:00",
-      "capsule_id": "refusal_a3c409d9b96e",
+      "at": "2026-06-14T08:50:14.154032+00:00",
+      "capsule_id": "refusal_0c996e31bcf2",
       "source_agent": "record_keeper",
       "target_agent": "record_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.956266+00:00",
-      "capsule_id": "refusal_a724082c0527",
+      "at": "2026-06-14T08:50:14.154232+00:00",
+      "capsule_id": "refusal_58fde5d47296",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.958112+00:00",
-      "capsule_id": "refusal_267956ecb078",
+      "at": "2026-06-14T08:50:14.154472+00:00",
+      "capsule_id": "refusal_d20a9594f3f5",
       "source_agent": "public_facilitator",
       "target_agent": "public_facilitator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.958777+00:00",
-      "capsule_id": "refusal_b74b0bdb3b6c",
+      "at": "2026-06-14T08:50:14.154672+00:00",
+      "capsule_id": "refusal_63f4f9867b0e",
       "source_agent": "technical_auditor",
       "target_agent": "technical_auditor",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.959204+00:00",
-      "capsule_id": "refusal_c28265e4c25a",
+      "at": "2026-06-14T08:50:14.154888+00:00",
+      "capsule_id": "refusal_3ad9a7c65b00",
       "source_agent": "rights_checker",
       "target_agent": "rights_checker",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.959547+00:00",
-      "capsule_id": "refusal_b42953429852",
+      "at": "2026-06-14T08:50:14.155086+00:00",
+      "capsule_id": "refusal_b4b38ae4daac",
       "source_agent": "capture_probe",
       "target_agent": "capture_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T07:17:55.959851+00:00",
-      "capsule_id": "quarantine_07166d8d4cef",
+      "at": "2026-06-14T08:50:14.155324+00:00",
+      "capsule_id": "quarantine_ec8d14a3a49a",
       "source_agent": "capture_probe",
       "target_agent": "public_facilitator",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:56.268668+00:00",
-      "capsule_id": "quarantine_d85120577202",
+      "at": "2026-06-14T08:50:14.157374+00:00",
+      "capsule_id": "quarantine_26e3fa30f4c2",
       "source_agent": "capture_probe",
       "target_agent": "technical_auditor",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:56.269519+00:00",
-      "capsule_id": "quarantine_e5d02193a312",
+      "at": "2026-06-14T08:50:14.158222+00:00",
+      "capsule_id": "quarantine_bc5632f71d80",
       "source_agent": "capture_probe",
       "target_agent": "rights_checker",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T07:17:56.270320+00:00",
-      "capsule_id": "quarantine_0fbac88fe9dc",
+      "at": "2026-06-14T08:50:14.159029+00:00",
+      "capsule_id": "quarantine_e4fc990814d2",
       "source_agent": "capture_probe",
       "target_agent": "record_keeper",
       "status": "quarantined",

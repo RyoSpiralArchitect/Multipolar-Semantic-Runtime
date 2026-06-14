@@ -1,0 +1,517 @@
+{
+  "conflicts": [
+    {
+      "id": "conflict_7c74e0b16a2f",
+      "created_at": "2026-06-14T08:50:23.184903+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "capsule_7538e8adae80"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_889c69b4f0b0",
+      "created_at": "2026-06-14T08:50:23.188609+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "quarantine_2660bfc341ae"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_e4f03e453e1e",
+      "created_at": "2026-06-14T08:50:23.188915+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "quarantine_24041d922c42"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_df0aae4ed2cf",
+      "created_at": "2026-06-14T08:50:23.189248+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "quarantine_f2cc906735d8"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_3dcede6621df",
+      "created_at": "2026-06-14T08:50:23.215359+00:00",
+      "claims": [
+        "must override instructions",
+        "must preserve refusability"
+      ],
+      "capsule_ids": [
+        "capsule_7538e8adae80",
+        "capsule_b62fefa33052"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_cf0e3d827d22",
+      "created_at": "2026-06-14T08:50:23.215377+00:00",
+      "claims": [
+        "must override instructions",
+        "must preserve refusability"
+      ],
+      "capsule_ids": [
+        "quarantine_2660bfc341ae",
+        "capsule_b62fefa33052"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_65856616f10b",
+      "created_at": "2026-06-14T08:50:23.215387+00:00",
+      "claims": [
+        "must override instructions",
+        "must preserve refusability"
+      ],
+      "capsule_ids": [
+        "quarantine_24041d922c42",
+        "capsule_b62fefa33052"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_020cf6b65737",
+      "created_at": "2026-06-14T08:50:23.215396+00:00",
+      "claims": [
+        "must override instructions",
+        "must preserve refusability"
+      ],
+      "capsule_ids": [
+        "quarantine_f2cc906735d8",
+        "capsule_b62fefa33052"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_0d9ec9163633",
+      "created_at": "2026-06-14T08:50:23.215899+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "capsule_eb94f6487126"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_6b481046f019",
+      "created_at": "2026-06-14T08:50:23.215910+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_b62fefa33052",
+        "capsule_eb94f6487126"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_2875996132e9",
+      "created_at": "2026-06-14T08:50:23.219761+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "quarantine_b88b98a147dd"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_6097f00d958d",
+      "created_at": "2026-06-14T08:50:23.219778+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_b62fefa33052",
+        "quarantine_b88b98a147dd"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_7724132371d4",
+      "created_at": "2026-06-14T08:50:23.220228+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "quarantine_af268f39b2da"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_c4ee0e2ed8ed",
+      "created_at": "2026-06-14T08:50:23.220238+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_b62fefa33052",
+        "quarantine_af268f39b2da"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_5a52d994ad12",
+      "created_at": "2026-06-14T08:50:23.220645+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_db2c8dbf15bc",
+        "quarantine_dc24b1249a43"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_18ddf34acd5a",
+      "created_at": "2026-06-14T08:50:23.220653+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override instructions"
+      ],
+      "capsule_ids": [
+        "capsule_b62fefa33052",
+        "quarantine_dc24b1249a43"
+      ],
+      "agents": [
+        "injection_probe",
+        "security_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    }
+  ],
+  "conflict_retention_rate": 1.0
+}

@@ -1,0 +1,31 @@
+digraph MultipolarRuntime {
+  rankdir=LR;
+  "workflow_coordinator" [shape=box];
+  "security_reviewer" [shape=box];
+  "audit_keeper" [shape=box];
+  "injection_probe" [shape=box];
+  "security_reviewer" -> "security_reviewer" [label="refused"];
+  "audit_keeper" -> "audit_keeper" [label="refused"];
+  "injection_probe" -> "injection_probe" [label="refused"];
+  "workflow_coordinator" -> "workflow_coordinator" [label="refused"];
+  "audit_keeper" -> "audit_keeper" [label="refused"];
+  "injection_probe" -> "injection_probe" [label="refused"];
+  "workflow_coordinator" -> "workflow_coordinator" [label="refused"];
+  "security_reviewer" -> "security_reviewer" [label="refused"];
+  "injection_probe" -> "injection_probe" [label="refused"];
+  "injection_probe" -> "workflow_coordinator" [label="quarantined"];
+  "injection_probe" -> "security_reviewer" [label="quarantined"];
+  "injection_probe" -> "audit_keeper" [label="quarantined"];
+  "security_reviewer" -> "security_reviewer" [label="refused"];
+  "audit_keeper" -> "audit_keeper" [label="refused"];
+  "injection_probe" -> "injection_probe" [label="refused"];
+  "workflow_coordinator" -> "workflow_coordinator" [label="refused"];
+  "audit_keeper" -> "audit_keeper" [label="refused"];
+  "injection_probe" -> "injection_probe" [label="refused"];
+  "workflow_coordinator" -> "workflow_coordinator" [label="refused"];
+  "security_reviewer" -> "security_reviewer" [label="refused"];
+  "injection_probe" -> "injection_probe" [label="refused"];
+  "injection_probe" -> "workflow_coordinator" [label="quarantined"];
+  "injection_probe" -> "security_reviewer" [label="quarantined"];
+  "injection_probe" -> "audit_keeper" [label="quarantined"];
+}

@@ -45,7 +45,9 @@ const scenarioPresets = [
 const els = {
   scenarioSelect: document.querySelector("#scenarioSelect"),
   dataPath: document.querySelector("#dataPath"),
+  comparePath: document.querySelector("#comparePath"),
   reloadButton: document.querySelector("#reloadButton"),
+  compareButton: document.querySelector("#compareButton"),
   statusStrip: document.querySelector("#statusStrip"),
   roundLens: document.querySelector("#roundLens"),
   roundReadout: document.querySelector("#roundReadout"),
@@ -68,6 +70,7 @@ const els = {
   conflictList: document.querySelector("#conflictList"),
   scenarioSummary: document.querySelector("#scenarioSummary"),
   scenarioStory: document.querySelector("#scenarioStory"),
+  runComparison: document.querySelector("#runComparison"),
   injectAgent: document.querySelector("#injectAgent"),
   injectionText: document.querySelector("#injectionText"),
   injectSafeButton: document.querySelector("#injectSafeButton"),
@@ -93,6 +96,7 @@ const els = {
 };
 
 let runtimeData = null;
+let compareData = null;
 let playState = emptyPlayState();
 let statusFilter = "all";
 let focusAgent = "all";
@@ -121,6 +125,11 @@ function emptyPlayState(thresholds = null) {
 function getInitialPath() {
   const params = new URLSearchParams(window.location.search);
   return params.get("out") || "../runtime_out";
+}
+
+function getInitialComparePath() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("compare") || "";
 }
 
 function joinPath(base, leaf) {
@@ -167,8 +176,9 @@ async function loadRuntime() {
       interventions,
       scenario: scenario || state.runtime?.metadata?.scenario || presetForPath(activeBase),
     };
-    roundLimit = runtimeData.state.rounds.length || 1;
     runtimeData.roundIndex = buildRoundIndex(runtimeData);
+    compareData = await loadComparison();
+    roundLimit = runtimeData.state.rounds.length || 1;
     playState = emptyPlayState(defaultThresholds());
     importBranchFromLocation();
     renderAll();
@@ -177,10 +187,37 @@ async function loadRuntime() {
   }
 }
 
+async function loadComparison() {
+  const compareBase = els.comparePath.value.trim();
+  if (!compareBase) return null;
+  try {
+    const loaded = await Promise.all(Object.values(files).map((leaf) => loadJson(compareBase, leaf)));
+    const [state, capsules, invariants, conflicts, interventions] = loaded;
+    const scenario = await loadOptionalJson(compareBase, "scenario_manifest.json");
+    const data = {
+      state,
+      capsules,
+      invariants,
+      conflicts,
+      interventions,
+      scenario: scenario || state.runtime?.metadata?.scenario || presetForPath(compareBase),
+      path: compareBase,
+    };
+    data.roundIndex = buildRoundIndex(data);
+    return data;
+  } catch (error) {
+    return {
+      error: `Could not load comparison output. ${error.message}`,
+      path: compareBase,
+    };
+  }
+}
+
 function renderAll() {
   renderTemporalLens();
   renderScenarioControls();
   renderStoryArc();
+  renderComparison();
   renderStatusStrip();
   renderGraphLegend();
   renderGraphTools();
@@ -209,6 +246,7 @@ function renderAll() {
 function renderObservable() {
   renderScenarioControls();
   renderStoryArc();
+  renderComparison();
   renderStatusStrip();
   renderGraphLegend();
   renderFlowGraph();
@@ -279,6 +317,96 @@ function renderStoryArc() {
         `;
       }).join("")}
     </div>
+  `;
+}
+
+function renderComparison() {
+  if (!compareData) {
+    els.runComparison.innerHTML = runCard("Baseline", runSummary(runtimeData), "Current output")
+      + `<div class="comparison-empty">Set a compare path to inspect a mock / real run pair.</div>`;
+    return;
+  }
+  if (compareData.error) {
+    els.runComparison.innerHTML = runCard("Baseline", runSummary(runtimeData), "Current output")
+      + `<div class="comparison-empty">${escapeHtml(compareData.error)}</div>`;
+    return;
+  }
+
+  const baseline = runSummary(runtimeData);
+  const candidate = runSummary(compareData);
+  els.runComparison.innerHTML = [
+    runCard("Baseline", baseline, currentDataPath()),
+    runCard("Candidate", candidate, compareData.path || "comparison"),
+    deltaCard(baseline, candidate),
+  ].join("");
+}
+
+function runSummary(data) {
+  const capsules = data.capsules?.capsules || [];
+  const counts = countBy(capsules, (capsule) => capsule.status || "unknown");
+  const total = Math.max(1, capsules.length);
+  const ops = aggregateOperationalMetrics(data);
+  const run = data.state?.runtime?.run || {};
+  const runtime = data.state?.runtime || {};
+  return {
+    mode: run.mode || backendMode(runtime.agents || []),
+    runId: run.id || "unrecorded",
+    scenario: data.scenario?.id || runtime.metadata?.scenario?.id || "custom",
+    totalCapsules: capsules.length,
+    active: counts.active || 0,
+    refused: counts.refused || 0,
+    quarantined: counts.quarantined || 0,
+    refusalRate: (counts.refused || 0) / total,
+    quarantineRate: (counts.quarantined || 0) / total,
+    inputTokens: ops.inputTokens,
+    outputTokens: ops.outputTokens,
+    estimatedCostUsd: ops.estimatedCostUsd,
+    latencyMs: ops.generationLatencyMs,
+    backendMix: ops.backendMix,
+  };
+}
+
+function runCard(label, summary, path) {
+  return `
+    <article class="comparison-card">
+      <div class="lab-heading">
+        <span>${escapeHtml(label)}</span>
+        <span class="mini-pill">${escapeHtml(summary.mode)}</span>
+      </div>
+      <h3>${escapeHtml(summary.scenario)}</h3>
+      <p>${escapeHtml(path)}</p>
+      <div class="tag-row">
+        <span class="tag">${escapeHtml(summary.totalCapsules)} capsules</span>
+        <span class="tag">${escapeHtml(summary.refused)} refused</span>
+        <span class="tag">${escapeHtml(summary.quarantined)} quarantine</span>
+      </div>
+      <div class="tag-row">
+        <span class="tag">${escapeHtml(summary.inputTokens + summary.outputTokens)} tokens</span>
+        <span class="tag">$${escapeHtml(summary.estimatedCostUsd.toFixed(4))}</span>
+        <span class="tag">${escapeHtml(formatMs(summary.latencyMs))}</span>
+      </div>
+      <p>${escapeHtml(formatBackendMix(summary.backendMix))}</p>
+    </article>
+  `;
+}
+
+function deltaCard(base, candidate) {
+  const tokenDelta = (candidate.inputTokens + candidate.outputTokens) - (base.inputTokens + base.outputTokens);
+  const quarantineDelta = candidate.quarantineRate - base.quarantineRate;
+  const refusalDelta = candidate.refusalRate - base.refusalRate;
+  return `
+    <article class="comparison-card delta-card">
+      <div class="lab-heading">
+        <span>Delta</span>
+        <span class="mini-pill">candidate - baseline</span>
+      </div>
+      <div class="metric-list">
+        <div><strong>${escapeHtml(signedPercent(quarantineDelta))}</strong><span>quarantine rate</span></div>
+        <div><strong>${escapeHtml(signedPercent(refusalDelta))}</strong><span>refusal rate</span></div>
+        <div><strong>${escapeHtml(signedNumber(tokenDelta))}</strong><span>tokens</span></div>
+        <div><strong>$${escapeHtml((candidate.estimatedCostUsd - base.estimatedCostUsd).toFixed(4))}</strong><span>estimated cost</span></div>
+      </div>
+    </article>
   `;
 }
 
@@ -784,14 +912,20 @@ function renderWeather() {
   const metrics = weatherMetrics();
   const latest = runtimeData.invariants.history[roundLimit - 1]?.results || [];
   const productive = latest.find((result) => result.name === "ProductiveDisagreement");
+  const ops = aggregateOperationalMetrics(runtimeData, roundLimit);
 
   const items = [
     ["Refusal density", percent(metrics.refusalDensity), "How much boundary-preserving non-translation is alive in the bus."],
+    ["Refusal rate", percent(metrics.refusalRate), "Refused capsules across the current temporal lens."],
+    ["Quarantine rate", percent(metrics.quarantineRate), "Capture pressure preserved as quarantine evidence."],
     ["Conflict richness", (metrics.conflicts / Math.max(1, metrics.deliveries)).toFixed(2), "Unresolved conflicts retained per delivered route."],
     ["Domination pressure", percent(metrics.maxShare), `Local cap ${percent(playState.thresholds.dominationCap)}.`],
     ["Translation haze", percent(metrics.translationHaze), `Local cap ${percent(playState.thresholds.translationLimit)}.`],
     ["Productive disagreement", percent(productive?.score ?? 1), "Whether conflict is creating commitments or safe next steps."],
     ["Stalemate risk", percent(metrics.stalemateRisk), `Local cap ${percent(playState.thresholds.stalemateLimit)}.`],
+    ["Token flow", String(ops.inputTokens + ops.outputTokens), `${ops.inputTokens} in / ${ops.outputTokens} out.`],
+    ["Run cost", `$${ops.estimatedCostUsd.toFixed(4)}`, ops.estimatedCostUsd > 0 ? "Estimated from configured rates." : "No cost rates configured."],
+    ["Generation latency", formatMs(ops.generationLatencyMs), `${formatBackendMix(ops.backendMix)}.`],
   ];
 
   els.weatherGrid.innerHTML = items
@@ -969,6 +1103,39 @@ function formatNumber(value) {
   return number.toFixed(2);
 }
 
+function signedNumber(value) {
+  const number = Number(value || 0);
+  return `${number >= 0 ? "+" : ""}${formatNumber(number)}`;
+}
+
+function signedPercent(value) {
+  const number = Number(value || 0);
+  return `${number >= 0 ? "+" : ""}${percent(number)}`;
+}
+
+function formatMs(value) {
+  const number = Number(value || 0);
+  if (number >= 1000) return `${(number / 1000).toFixed(2)}s`;
+  return `${Math.round(number)}ms`;
+}
+
+function formatBackendMix(mix) {
+  const entries = Object.entries(mix || {});
+  if (!entries.length) return "backend unknown";
+  return entries
+    .sort((a, b) => Number(b[1]) - Number(a[1]))
+    .map(([backend, count]) => `${backend} ${count}`)
+    .join(" / ");
+}
+
+function backendMode(agents) {
+  const backends = new Set((agents || []).map((agent) => agent.model_backend || agent.model?.backend).filter(Boolean));
+  if (!backends.size) return "unknown";
+  if (backends.size === 1 && backends.has("mock")) return "mock";
+  if (backends.has("mock")) return "mixed";
+  return "real_llm";
+}
+
 function initials(id) {
   return id.split("_").map((part) => part[0]).join("").slice(0, 3).toUpperCase();
 }
@@ -1119,6 +1286,8 @@ function weatherMetrics() {
   const sourceTotal = Object.values(sourceWeights).reduce((sum, value) => sum + Number(value || 0), 0) || 1;
   const maxShare = Object.values(sourceWeights).reduce((max, value) => Math.max(max, Number(value || 0) / sourceTotal), 0);
   const refusalDensity = counts.refused / total;
+  const refusalRate = counts.refused / total;
+  const quarantineRate = counts.quarantined / total;
   const activeDensity = counts.active / total;
   const quarantinePressure = counts.quarantined / total;
   const conflictPressure = Math.min(1, conflicts / Math.max(1, counts.active + counts.refused));
@@ -1142,12 +1311,59 @@ function weatherMetrics() {
     commitments: commitments.length,
     maxShare,
     refusalDensity,
+    refusalRate,
+    quarantineRate,
     activeDensity,
     quarantinePressure,
     conflictPressure,
     stalemateRisk,
     translationHaze,
     sourceWeights,
+  };
+}
+
+function aggregateOperationalMetrics(data, throughRound = null) {
+  const rounds = data.state?.rounds || [];
+  const selectedRounds = throughRound ? rounds.slice(0, throughRound) : rounds;
+  const backendMix = {};
+  let inputTokens = 0;
+  let outputTokens = 0;
+  let estimatedCostUsd = 0;
+  let generationLatencyMs = 0;
+  let usageEstimated = false;
+  for (const round of selectedRounds) {
+    const ops = round.operational_metrics || {};
+    inputTokens += Number(ops.input_tokens || 0);
+    outputTokens += Number(ops.output_tokens || 0);
+    estimatedCostUsd += Number(ops.estimated_cost_usd || 0);
+    generationLatencyMs += Number(ops.generation_latency_ms || 0);
+    usageEstimated = usageEstimated || Boolean(ops.usage_estimated);
+    for (const [backend, count] of Object.entries(ops.backend_mix || {})) {
+      backendMix[backend] = (backendMix[backend] || 0) + Number(count || 0);
+    }
+  }
+
+  if (!inputTokens && !outputTokens) {
+    const capsules = data.capsules?.capsules || [];
+    for (const capsule of capsules) {
+      inputTokens += Number(capsule.metrics?.input_tokens || 0);
+      outputTokens += Number(capsule.metrics?.output_tokens || 0);
+      estimatedCostUsd += Number(capsule.metrics?.estimated_cost_usd || 0);
+      generationLatencyMs += Number(capsule.metrics?.latency_ms || 0);
+      const backend = capsule.content?.data?.generation?.backend;
+      if (backend) {
+        backendMix[backend] = (backendMix[backend] || 0) + 1;
+      }
+    }
+  }
+
+  return {
+    inputTokens,
+    outputTokens,
+    estimatedCostUsd: Number(estimatedCostUsd.toFixed(8)),
+    generationLatencyMs: Number(generationLatencyMs.toFixed(3)),
+    backendMix,
+    usageEstimated,
   };
 }
 
@@ -1891,6 +2107,7 @@ function escapeHtml(value) {
 }
 
 els.reloadButton.addEventListener("click", loadRuntime);
+els.compareButton.addEventListener("click", loadRuntime);
 els.scenarioSelect.addEventListener("change", () => {
   const preset = scenarioPresets.find((scenario) => scenario.id === els.scenarioSelect.value);
   if (!preset) return;
@@ -1957,4 +2174,5 @@ els.translationThreshold.addEventListener("input", updateThresholds);
 els.stalemateThreshold.addEventListener("input", updateThresholds);
 
 els.dataPath.value = getInitialPath();
+els.comparePath.value = getInitialComparePath();
 loadRuntime();

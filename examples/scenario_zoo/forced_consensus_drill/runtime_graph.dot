@@ -1,0 +1,31 @@
+digraph MultipolarRuntime {
+  rankdir=LR;
+  "facilitator" [shape=box];
+  "minority_guardian" [shape=box];
+  "audit_voice" [shape=box];
+  "consensus_probe" [shape=box];
+  "minority_guardian" -> "minority_guardian" [label="refused"];
+  "audit_voice" -> "audit_voice" [label="refused"];
+  "consensus_probe" -> "consensus_probe" [label="refused"];
+  "facilitator" -> "facilitator" [label="refused"];
+  "audit_voice" -> "audit_voice" [label="refused"];
+  "consensus_probe" -> "consensus_probe" [label="refused"];
+  "facilitator" -> "facilitator" [label="refused"];
+  "minority_guardian" -> "minority_guardian" [label="refused"];
+  "consensus_probe" -> "consensus_probe" [label="refused"];
+  "consensus_probe" -> "facilitator" [label="quarantined"];
+  "consensus_probe" -> "minority_guardian" [label="quarantined"];
+  "consensus_probe" -> "audit_voice" [label="quarantined"];
+  "minority_guardian" -> "minority_guardian" [label="refused"];
+  "audit_voice" -> "audit_voice" [label="refused"];
+  "consensus_probe" -> "consensus_probe" [label="refused"];
+  "facilitator" -> "facilitator" [label="refused"];
+  "audit_voice" -> "audit_voice" [label="refused"];
+  "consensus_probe" -> "consensus_probe" [label="refused"];
+  "facilitator" -> "facilitator" [label="refused"];
+  "minority_guardian" -> "minority_guardian" [label="refused"];
+  "consensus_probe" -> "consensus_probe" [label="refused"];
+  "consensus_probe" -> "facilitator" [label="quarantined"];
+  "consensus_probe" -> "minority_guardian" [label="quarantined"];
+  "consensus_probe" -> "audit_voice" [label="quarantined"];
+}

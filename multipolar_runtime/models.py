@@ -250,6 +250,10 @@ class CapsuleMetrics:
     ambiguity_score: float = 0.0
     domination_pressure: float = 0.0
     trust_weight: float = 1.0
+    latency_ms: float = 0.0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    estimated_cost_usd: float = 0.0
 
     def to_dict(self) -> Dict[str, Any]:
         return json_ready(asdict(self))
@@ -261,6 +265,10 @@ class CapsuleMetrics:
             ambiguity_score=float(d.get("ambiguity_score", 0.0)),
             domination_pressure=float(d.get("domination_pressure", 0.0)),
             trust_weight=float(d.get("trust_weight", 1.0)),
+            latency_ms=float(d.get("latency_ms", 0.0)),
+            input_tokens=int(d.get("input_tokens", 0)),
+            output_tokens=int(d.get("output_tokens", 0)),
+            estimated_cost_usd=float(d.get("estimated_cost_usd", 0.0)),
         )
 
 

@@ -1,0 +1,31 @@
+digraph MultipolarRuntime {
+  rankdir=LR;
+  "boundary_facilitator" [shape=box];
+  "privacy_guard" [shape=box];
+  "memory_keeper" [shape=box];
+  "leak_probe" [shape=box];
+  "privacy_guard" -> "privacy_guard" [label="refused"];
+  "memory_keeper" -> "memory_keeper" [label="refused"];
+  "leak_probe" -> "leak_probe" [label="refused"];
+  "privacy_guard" -> "boundary_facilitator" [label="quarantined"];
+  "privacy_guard" -> "memory_keeper" [label="quarantined"];
+  "privacy_guard" -> "leak_probe" [label="quarantined"];
+  "boundary_facilitator" -> "boundary_facilitator" [label="refused"];
+  "privacy_guard" -> "privacy_guard" [label="refused"];
+  "leak_probe" -> "leak_probe" [label="refused"];
+  "leak_probe" -> "boundary_facilitator" [label="quarantined"];
+  "leak_probe" -> "privacy_guard" [label="quarantined"];
+  "leak_probe" -> "memory_keeper" [label="quarantined"];
+  "privacy_guard" -> "privacy_guard" [label="refused"];
+  "memory_keeper" -> "memory_keeper" [label="refused"];
+  "leak_probe" -> "leak_probe" [label="refused"];
+  "privacy_guard" -> "boundary_facilitator" [label="quarantined"];
+  "privacy_guard" -> "memory_keeper" [label="quarantined"];
+  "privacy_guard" -> "leak_probe" [label="quarantined"];
+  "boundary_facilitator" -> "boundary_facilitator" [label="refused"];
+  "privacy_guard" -> "privacy_guard" [label="refused"];
+  "leak_probe" -> "leak_probe" [label="refused"];
+  "leak_probe" -> "boundary_facilitator" [label="quarantined"];
+  "leak_probe" -> "privacy_guard" [label="quarantined"];
+  "leak_probe" -> "memory_keeper" [label="quarantined"];
+}

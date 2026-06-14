@@ -1,15 +1,15 @@
 {
   "conflicts": [
     {
-      "id": "conflict_5a6c5953a85f",
-      "created_at": "2026-06-14T07:17:55.913079+00:00",
+      "id": "conflict_75cad617ca0f",
+      "created_at": "2026-06-14T08:50:14.108904+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_328773a003a7"
+        "capsule_5a83d2a72317",
+        "capsule_9bb3e0d15b48"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -33,15 +33,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_debfd921740c",
-      "created_at": "2026-06-14T07:17:55.913094+00:00",
+      "id": "conflict_b84103a7d357",
+      "created_at": "2026-06-14T08:50:14.108915+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_328773a003a7"
+        "capsule_5a83d2a72317",
+        "capsule_9bb3e0d15b48"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -65,15 +65,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_d8f6d3d6b1a6",
-      "created_at": "2026-06-14T07:17:55.913105+00:00",
+      "id": "conflict_e56d54706703",
+      "created_at": "2026-06-14T08:50:14.108924+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_328773a003a7"
+        "capsule_5a83d2a72317",
+        "capsule_9bb3e0d15b48"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -97,15 +97,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_5851784e0115",
-      "created_at": "2026-06-14T07:17:55.913112+00:00",
+      "id": "conflict_26afdbcceacf",
+      "created_at": "2026-06-14T08:50:14.108930+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_328773a003a7"
+        "capsule_5a83d2a72317",
+        "capsule_9bb3e0d15b48"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -129,143 +129,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_bc2d959894a6",
-      "created_at": "2026-06-14T07:17:55.917942+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must centralize memory"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_e982a9795319"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_d72bac8a95f9",
-      "created_at": "2026-06-14T07:17:55.917953+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must centralize memory"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_e982a9795319"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_b90fa1732e5e",
-      "created_at": "2026-06-14T07:17:55.917964+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_e982a9795319"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_ef00f08e0489",
-      "created_at": "2026-06-14T07:17:55.917970+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_e982a9795319"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_de912a5d3092",
-      "created_at": "2026-06-14T07:17:55.918430+00:00",
+      "id": "conflict_5b9ae70fee1f",
+      "created_at": "2026-06-14T08:50:14.112765+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_485dc2a89484"
+        "capsule_5a83d2a72317",
+        "quarantine_bb252d6d55bf"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -289,15 +161,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_8d169d4eaa8e",
-      "created_at": "2026-06-14T07:17:55.918437+00:00",
+      "id": "conflict_534b68f8551d",
+      "created_at": "2026-06-14T08:50:14.112773+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_485dc2a89484"
+        "capsule_5a83d2a72317",
+        "quarantine_bb252d6d55bf"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -321,15 +193,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_0d4dee9535a9",
-      "created_at": "2026-06-14T07:17:55.918446+00:00",
+      "id": "conflict_e4fb377dba6e",
+      "created_at": "2026-06-14T08:50:14.112784+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_485dc2a89484"
+        "capsule_5a83d2a72317",
+        "quarantine_bb252d6d55bf"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -353,15 +225,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_9165300cc791",
-      "created_at": "2026-06-14T07:17:55.918452+00:00",
+      "id": "conflict_b639045db065",
+      "created_at": "2026-06-14T08:50:14.112790+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_485dc2a89484"
+        "capsule_5a83d2a72317",
+        "quarantine_bb252d6d55bf"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -385,143 +257,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_9e8c85e5cfc1",
-      "created_at": "2026-06-14T07:17:55.918900+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must centralize memory"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_42f703d69001"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_ab005979fcdb",
-      "created_at": "2026-06-14T07:17:55.918906+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must centralize memory"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_42f703d69001"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_cedc76ca5109",
-      "created_at": "2026-06-14T07:17:55.918945+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_42f703d69001"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_694e5fa8251f",
-      "created_at": "2026-06-14T07:17:55.918951+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_42f703d69001"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_995363176107",
-      "created_at": "2026-06-14T07:17:55.919406+00:00",
+      "id": "conflict_78c75bb28f45",
+      "created_at": "2026-06-14T08:50:14.113240+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_87b7ed2c4f2e"
+        "capsule_5a83d2a72317",
+        "quarantine_4c2e2a32ea5d"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -545,15 +289,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_3b5a805d0cc3",
-      "created_at": "2026-06-14T07:17:55.919413+00:00",
+      "id": "conflict_b76351ac417b",
+      "created_at": "2026-06-14T08:50:14.113247+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_87b7ed2c4f2e"
+        "capsule_5a83d2a72317",
+        "quarantine_4c2e2a32ea5d"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -577,15 +321,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_37842d9e90d6",
-      "created_at": "2026-06-14T07:17:55.919421+00:00",
+      "id": "conflict_d5c2b9ed7330",
+      "created_at": "2026-06-14T08:50:14.113257+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_87b7ed2c4f2e"
+        "capsule_5a83d2a72317",
+        "quarantine_4c2e2a32ea5d"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -609,15 +353,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_990867d65460",
-      "created_at": "2026-06-14T07:17:55.919427+00:00",
+      "id": "conflict_cd5dfb71bf08",
+      "created_at": "2026-06-14T08:50:14.113262+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_87b7ed2c4f2e"
+        "capsule_5a83d2a72317",
+        "quarantine_4c2e2a32ea5d"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -641,15 +385,271 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_e94ec837b21d",
-      "created_at": "2026-06-14T07:17:55.983199+00:00",
+      "id": "conflict_1e9d81bf363e",
+      "created_at": "2026-06-14T08:50:14.113659+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must centralize memory"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_2ec08d3147fb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_c3f1da630d1a",
+      "created_at": "2026-06-14T08:50:14.113664+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must centralize memory"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_2ec08d3147fb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_1806b12a106b",
+      "created_at": "2026-06-14T08:50:14.113700+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_2ec08d3147fb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_a7bb9e1eb7d8",
+      "created_at": "2026-06-14T08:50:14.113706+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_2ec08d3147fb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_d8015e9e7411",
+      "created_at": "2026-06-14T08:50:14.114073+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must centralize memory"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_91ea5c6945de"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_120741befc88",
+      "created_at": "2026-06-14T08:50:14.114079+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must centralize memory"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_91ea5c6945de"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_42a3550f5b02",
+      "created_at": "2026-06-14T08:50:14.114087+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_91ea5c6945de"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_9f0dc5813292",
+      "created_at": "2026-06-14T08:50:14.114092+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_91ea5c6945de"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_48223333600f",
+      "created_at": "2026-06-14T08:50:14.149320+00:00",
       "claims": [
         "must centralize memory",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "capsule_328773a003a7",
-        "capsule_6783d058bd4e"
+        "capsule_9bb3e0d15b48",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -673,15 +673,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_dd9f4e5711d7",
-      "created_at": "2026-06-14T07:17:55.983666+00:00",
+      "id": "conflict_3becfd0adbe7",
+      "created_at": "2026-06-14T08:50:14.149337+00:00",
       "claims": [
         "must override agents",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "capsule_328773a003a7",
-        "capsule_6783d058bd4e"
+        "capsule_9bb3e0d15b48",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -705,15 +705,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_5038e71ff2e1",
-      "created_at": "2026-06-14T07:17:55.983929+00:00",
+      "id": "conflict_39b945eafad7",
+      "created_at": "2026-06-14T08:50:14.149345+00:00",
       "claims": [
         "must centralize memory",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_e982a9795319",
-        "capsule_6783d058bd4e"
+        "quarantine_bb252d6d55bf",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -737,15 +737,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_83c2d99eb9ab",
-      "created_at": "2026-06-14T07:17:55.983983+00:00",
+      "id": "conflict_3189653c33af",
+      "created_at": "2026-06-14T08:50:14.149351+00:00",
       "claims": [
         "must override agents",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_e982a9795319",
-        "capsule_6783d058bd4e"
+        "quarantine_bb252d6d55bf",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -769,15 +769,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_ffb18cc0a6b3",
-      "created_at": "2026-06-14T07:17:55.983999+00:00",
+      "id": "conflict_a197ffe60961",
+      "created_at": "2026-06-14T08:50:14.149357+00:00",
       "claims": [
         "must centralize memory",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_485dc2a89484",
-        "capsule_6783d058bd4e"
+        "quarantine_4c2e2a32ea5d",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -801,15 +801,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_a3f889ab8caa",
-      "created_at": "2026-06-14T07:17:55.984009+00:00",
+      "id": "conflict_fc127fa3ba54",
+      "created_at": "2026-06-14T08:50:14.149363+00:00",
       "claims": [
         "must override agents",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_485dc2a89484",
-        "capsule_6783d058bd4e"
+        "quarantine_4c2e2a32ea5d",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -833,15 +833,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_fc9968e91b3b",
-      "created_at": "2026-06-14T07:17:55.984019+00:00",
+      "id": "conflict_007b3c9d6e6f",
+      "created_at": "2026-06-14T08:50:14.149369+00:00",
       "claims": [
         "must centralize memory",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_42f703d69001",
-        "capsule_6783d058bd4e"
+        "quarantine_2ec08d3147fb",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -865,15 +865,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_ffb530aa0eb3",
-      "created_at": "2026-06-14T07:17:55.984028+00:00",
+      "id": "conflict_1c74971ce802",
+      "created_at": "2026-06-14T08:50:14.149375+00:00",
       "claims": [
         "must override agents",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_42f703d69001",
-        "capsule_6783d058bd4e"
+        "quarantine_2ec08d3147fb",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -897,15 +897,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_a3b240b2fbee",
-      "created_at": "2026-06-14T07:17:55.984037+00:00",
+      "id": "conflict_d1798f8e0bb1",
+      "created_at": "2026-06-14T08:50:14.149381+00:00",
       "claims": [
         "must centralize memory",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_87b7ed2c4f2e",
-        "capsule_6783d058bd4e"
+        "quarantine_91ea5c6945de",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -929,15 +929,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_ea6d288511c6",
-      "created_at": "2026-06-14T07:17:55.984045+00:00",
+      "id": "conflict_7bdabd592d08",
+      "created_at": "2026-06-14T08:50:14.149386+00:00",
       "claims": [
         "must override agents",
         "must_not dominate agents"
       ],
       "capsule_ids": [
-        "quarantine_87b7ed2c4f2e",
-        "capsule_6783d058bd4e"
+        "quarantine_91ea5c6945de",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -961,15 +961,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_6bedafcf3957",
-      "created_at": "2026-06-14T07:17:55.984076+00:00",
+      "id": "conflict_d6c66b3fcc96",
+      "created_at": "2026-06-14T08:50:14.149395+00:00",
       "claims": [
         "must centralize memory",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "capsule_328773a003a7",
-        "capsule_6783d058bd4e"
+        "capsule_9bb3e0d15b48",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -993,15 +993,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_f0c01136a8c7",
-      "created_at": "2026-06-14T07:17:55.984084+00:00",
+      "id": "conflict_084ce1a09f6f",
+      "created_at": "2026-06-14T08:50:14.149401+00:00",
       "claims": [
         "must override agents",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "capsule_328773a003a7",
-        "capsule_6783d058bd4e"
+        "capsule_9bb3e0d15b48",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1025,15 +1025,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_f040df3847cb",
-      "created_at": "2026-06-14T07:17:55.984092+00:00",
+      "id": "conflict_01418e0c9665",
+      "created_at": "2026-06-14T08:50:14.149406+00:00",
       "claims": [
         "must centralize memory",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_e982a9795319",
-        "capsule_6783d058bd4e"
+        "quarantine_bb252d6d55bf",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1057,15 +1057,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_3cc42d9b2fdf",
-      "created_at": "2026-06-14T07:17:55.984100+00:00",
+      "id": "conflict_f6e91b62bf95",
+      "created_at": "2026-06-14T08:50:14.149411+00:00",
       "claims": [
         "must override agents",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_e982a9795319",
-        "capsule_6783d058bd4e"
+        "quarantine_bb252d6d55bf",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1089,15 +1089,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_f16c3d2c03f5",
-      "created_at": "2026-06-14T07:17:55.984108+00:00",
+      "id": "conflict_afaaa1709966",
+      "created_at": "2026-06-14T08:50:14.149416+00:00",
       "claims": [
         "must centralize memory",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_485dc2a89484",
-        "capsule_6783d058bd4e"
+        "quarantine_4c2e2a32ea5d",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1121,15 +1121,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_c998863d9a7a",
-      "created_at": "2026-06-14T07:17:55.984116+00:00",
+      "id": "conflict_67e47e84b480",
+      "created_at": "2026-06-14T08:50:14.149424+00:00",
       "claims": [
         "must override agents",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_485dc2a89484",
-        "capsule_6783d058bd4e"
+        "quarantine_4c2e2a32ea5d",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1153,15 +1153,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_973c7c06c0b1",
-      "created_at": "2026-06-14T07:17:55.984124+00:00",
+      "id": "conflict_02ccd14fb7ef",
+      "created_at": "2026-06-14T08:50:14.149430+00:00",
       "claims": [
         "must centralize memory",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_42f703d69001",
-        "capsule_6783d058bd4e"
+        "quarantine_2ec08d3147fb",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1185,15 +1185,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_5748f13c633f",
-      "created_at": "2026-06-14T07:17:55.984132+00:00",
+      "id": "conflict_6c9ee008cbd6",
+      "created_at": "2026-06-14T08:50:14.149434+00:00",
       "claims": [
         "must override agents",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_42f703d69001",
-        "capsule_6783d058bd4e"
+        "quarantine_2ec08d3147fb",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1217,15 +1217,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_cc7b35dc2db2",
-      "created_at": "2026-06-14T07:17:55.984141+00:00",
+      "id": "conflict_4ac398dc9ae3",
+      "created_at": "2026-06-14T08:50:14.149439+00:00",
       "claims": [
         "must centralize memory",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_87b7ed2c4f2e",
-        "capsule_6783d058bd4e"
+        "quarantine_91ea5c6945de",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1249,15 +1249,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_5352518ec78e",
-      "created_at": "2026-06-14T07:17:55.984149+00:00",
+      "id": "conflict_cd7e35c841ed",
+      "created_at": "2026-06-14T08:50:14.149444+00:00",
       "claims": [
         "must override agents",
         "must preserve refusability"
       ],
       "capsule_ids": [
-        "quarantine_87b7ed2c4f2e",
-        "capsule_6783d058bd4e"
+        "quarantine_91ea5c6945de",
+        "capsule_87422dc3d5b5"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1281,15 +1281,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_19c7757f95dc",
-      "created_at": "2026-06-14T07:17:55.987766+00:00",
+      "id": "conflict_fe0ed1538559",
+      "created_at": "2026-06-14T08:50:14.150501+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_672c071db609"
+        "capsule_5a83d2a72317",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1313,15 +1313,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_49f9907aad57",
-      "created_at": "2026-06-14T07:17:55.987782+00:00",
+      "id": "conflict_5cc651846eed",
+      "created_at": "2026-06-14T08:50:14.150508+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_672c071db609"
+        "capsule_5a83d2a72317",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1345,15 +1345,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_94aa4b28008e",
-      "created_at": "2026-06-14T07:17:55.987792+00:00",
+      "id": "conflict_2a75a901ec33",
+      "created_at": "2026-06-14T08:50:14.150514+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "capsule_672c071db609"
+        "capsule_87422dc3d5b5",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1377,15 +1377,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_69fc1076b882",
-      "created_at": "2026-06-14T07:17:55.987801+00:00",
+      "id": "conflict_90d3187cda65",
+      "created_at": "2026-06-14T08:50:14.150520+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "capsule_672c071db609"
+        "capsule_87422dc3d5b5",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1409,15 +1409,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_38e5072935d2",
-      "created_at": "2026-06-14T07:17:55.987810+00:00",
+      "id": "conflict_d28f17c0d0c4",
+      "created_at": "2026-06-14T08:50:14.150528+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_672c071db609"
+        "capsule_5a83d2a72317",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1441,15 +1441,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_8f833cfc1b0c",
-      "created_at": "2026-06-14T07:17:55.987816+00:00",
+      "id": "conflict_b249483b0123",
+      "created_at": "2026-06-14T08:50:14.150533+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "capsule_672c071db609"
+        "capsule_5a83d2a72317",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1473,15 +1473,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_5dd85f3f496b",
-      "created_at": "2026-06-14T07:17:55.987823+00:00",
+      "id": "conflict_3601db65f7f8",
+      "created_at": "2026-06-14T08:50:14.150539+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "capsule_672c071db609"
+        "capsule_87422dc3d5b5",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1505,15 +1505,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_f2645f62fed0",
-      "created_at": "2026-06-14T07:17:55.987831+00:00",
+      "id": "conflict_7c8e0379dfb1",
+      "created_at": "2026-06-14T08:50:14.150544+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "capsule_672c071db609"
+        "capsule_87422dc3d5b5",
+        "capsule_aba607afb08f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1537,79 +1537,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_c8a0b04298f3",
-      "created_at": "2026-06-14T07:17:56.002590+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must centralize memory"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ab11bc0ed8a8"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_faf55e4b5d7e",
-      "created_at": "2026-06-14T07:17:56.002607+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must centralize memory"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ab11bc0ed8a8"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_605f0ec6adde",
-      "created_at": "2026-06-14T07:17:56.002620+00:00",
+      "id": "conflict_5906f4e6b350",
+      "created_at": "2026-06-14T08:50:14.155496+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ab11bc0ed8a8"
+        "capsule_5a83d2a72317",
+        "quarantine_caf94666676f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1633,15 +1569,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_859587d8182d",
-      "created_at": "2026-06-14T07:17:56.002628+00:00",
+      "id": "conflict_0c9fa395c47d",
+      "created_at": "2026-06-14T08:50:14.155519+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ab11bc0ed8a8"
+        "capsule_5a83d2a72317",
+        "quarantine_caf94666676f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1665,143 +1601,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_e3bcc4fd24e2",
-      "created_at": "2026-06-14T07:17:56.002643+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ab11bc0ed8a8"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_371f69fb4aa2",
-      "created_at": "2026-06-14T07:17:56.002652+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ab11bc0ed8a8"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_612ffec2eef6",
-      "created_at": "2026-06-14T07:17:56.002662+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ab11bc0ed8a8"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_29cc6e01c2d6",
-      "created_at": "2026-06-14T07:17:56.002671+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ab11bc0ed8a8"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_28a231451e12",
-      "created_at": "2026-06-14T07:17:56.293980+00:00",
+      "id": "conflict_58a275b80dea",
+      "created_at": "2026-06-14T08:50:14.155530+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_fba36b0fb1c5"
+        "capsule_87422dc3d5b5",
+        "quarantine_caf94666676f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1825,15 +1633,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_65d23bd36943",
-      "created_at": "2026-06-14T07:17:56.294037+00:00",
+      "id": "conflict_af3d6fd7ba33",
+      "created_at": "2026-06-14T08:50:14.155537+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_fba36b0fb1c5"
+        "capsule_87422dc3d5b5",
+        "quarantine_caf94666676f"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1857,15 +1665,143 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_5b70d4fde211",
-      "created_at": "2026-06-14T07:17:56.294056+00:00",
+      "id": "conflict_fee06070c174",
+      "created_at": "2026-06-14T08:50:14.155568+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_caf94666676f"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_befbe9459e4d",
+      "created_at": "2026-06-14T08:50:14.155584+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_caf94666676f"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_411e100e6536",
+      "created_at": "2026-06-14T08:50:14.155593+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_caf94666676f"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_6a2c10b3331f",
+      "created_at": "2026-06-14T08:50:14.155608+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_caf94666676f"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_6e85d94b95ee",
+      "created_at": "2026-06-14T08:50:14.157881+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_fba36b0fb1c5"
+        "capsule_5a83d2a72317",
+        "quarantine_ab97e1dd6dfd"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1889,15 +1825,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_413a5b680358",
-      "created_at": "2026-06-14T07:17:56.294067+00:00",
+      "id": "conflict_691e9c3c1f85",
+      "created_at": "2026-06-14T08:50:14.157899+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_fba36b0fb1c5"
+        "capsule_5a83d2a72317",
+        "quarantine_ab97e1dd6dfd"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -1921,143 +1857,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_d63fa1ec9870",
-      "created_at": "2026-06-14T07:17:56.294091+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_fba36b0fb1c5"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_ff143860e985",
-      "created_at": "2026-06-14T07:17:56.294101+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_fba36b0fb1c5"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_2b799f3cce04",
-      "created_at": "2026-06-14T07:17:56.294111+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_fba36b0fb1c5"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_524a32a44867",
-      "created_at": "2026-06-14T07:17:56.294119+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_fba36b0fb1c5"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_282e6f3cd03f",
-      "created_at": "2026-06-14T07:17:56.295460+00:00",
+      "id": "conflict_1f5c535088de",
+      "created_at": "2026-06-14T08:50:14.157910+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_35eb2a1ea102"
+        "capsule_87422dc3d5b5",
+        "quarantine_ab97e1dd6dfd"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2081,15 +1889,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_46fbb60b0bc0",
-      "created_at": "2026-06-14T07:17:56.295481+00:00",
+      "id": "conflict_54df83f891f4",
+      "created_at": "2026-06-14T08:50:14.157919+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_35eb2a1ea102"
+        "capsule_87422dc3d5b5",
+        "quarantine_ab97e1dd6dfd"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2113,15 +1921,143 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_292c66c872cb",
-      "created_at": "2026-06-14T07:17:56.295495+00:00",
+      "id": "conflict_89cc2fc0c0dc",
+      "created_at": "2026-06-14T08:50:14.157932+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_ab97e1dd6dfd"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_be793c24a4ae",
+      "created_at": "2026-06-14T08:50:14.157939+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_ab97e1dd6dfd"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_c9915036be75",
+      "created_at": "2026-06-14T08:50:14.157948+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_ab97e1dd6dfd"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_9827e0663d3c",
+      "created_at": "2026-06-14T08:50:14.157956+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_ab97e1dd6dfd"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_c273a37f8bfd",
+      "created_at": "2026-06-14T08:50:14.158846+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_35eb2a1ea102"
+        "capsule_5a83d2a72317",
+        "quarantine_a57156dd84eb"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2145,15 +2081,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_baff63b2a9eb",
-      "created_at": "2026-06-14T07:17:56.295504+00:00",
+      "id": "conflict_1a381120d4fa",
+      "created_at": "2026-06-14T08:50:14.158856+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_35eb2a1ea102"
+        "capsule_5a83d2a72317",
+        "quarantine_a57156dd84eb"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2177,143 +2113,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_d388827b97f7",
-      "created_at": "2026-06-14T07:17:56.295518+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_35eb2a1ea102"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_d3f1f93abd16",
-      "created_at": "2026-06-14T07:17:56.295527+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_35eb2a1ea102"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_d56bd780a765",
-      "created_at": "2026-06-14T07:17:56.295536+00:00",
-      "claims": [
-        "must_not dominate agents",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_35eb2a1ea102"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_7c01e6438ce3",
-      "created_at": "2026-06-14T07:17:56.295545+00:00",
-      "claims": [
-        "must preserve refusability",
-        "must override agents"
-      ],
-      "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_35eb2a1ea102"
-      ],
-      "agents": [
-        "blame_collapse_probe",
-        "safety_reviewer"
-      ],
-      "incompatible_assumptions": [
-        "Claims map to same normalized semantic object with opposite polarity."
-      ],
-      "required_evidence": [
-        "source provenance",
-        "agent-specific constraints",
-        "translation trace"
-      ],
-      "possible_resolutions": [
-        "preserve_conflict",
-        "request_context",
-        "split_scope",
-        "human_review",
-        "safe_abstention"
-      ],
-      "unresolved_status": "unresolved"
-    },
-    {
-      "id": "conflict_5ca3c0d32477",
-      "created_at": "2026-06-14T07:17:56.296717+00:00",
+      "id": "conflict_54a0957f4b21",
+      "created_at": "2026-06-14T08:50:14.158863+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ec0f1b050bc4"
+        "capsule_87422dc3d5b5",
+        "quarantine_a57156dd84eb"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2337,15 +2145,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_a98f62a603ec",
-      "created_at": "2026-06-14T07:17:56.296737+00:00",
+      "id": "conflict_68fc724ccdc1",
+      "created_at": "2026-06-14T08:50:14.158867+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ec0f1b050bc4"
+        "capsule_87422dc3d5b5",
+        "quarantine_a57156dd84eb"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2369,15 +2177,143 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_93b99729a1ee",
-      "created_at": "2026-06-14T07:17:56.296752+00:00",
+      "id": "conflict_ec5e4af1b944",
+      "created_at": "2026-06-14T08:50:14.158877+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_a57156dd84eb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_d0c777a19aab",
+      "created_at": "2026-06-14T08:50:14.158883+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_5a83d2a72317",
+        "quarantine_a57156dd84eb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_8950b5e79f55",
+      "created_at": "2026-06-14T08:50:14.158888+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_a57156dd84eb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_da7038c7ff4c",
+      "created_at": "2026-06-14T08:50:14.158893+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must override agents"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_a57156dd84eb"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_c8a69ae0235f",
+      "created_at": "2026-06-14T08:50:14.159665+00:00",
       "claims": [
         "must_not dominate agents",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ec0f1b050bc4"
+        "capsule_5a83d2a72317",
+        "quarantine_dd0a95b5da65"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2401,15 +2337,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_245b0cbc743d",
-      "created_at": "2026-06-14T07:17:56.296761+00:00",
+      "id": "conflict_c7b952511513",
+      "created_at": "2026-06-14T08:50:14.159675+00:00",
       "claims": [
         "must preserve refusability",
         "must centralize memory"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ec0f1b050bc4"
+        "capsule_5a83d2a72317",
+        "quarantine_dd0a95b5da65"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2433,15 +2369,79 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_4761eea755c3",
-      "created_at": "2026-06-14T07:17:56.296777+00:00",
+      "id": "conflict_d3d1fc316a97",
+      "created_at": "2026-06-14T08:50:14.159683+00:00",
+      "claims": [
+        "must_not dominate agents",
+        "must centralize memory"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_dd0a95b5da65"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_495fa4b5f5b1",
+      "created_at": "2026-06-14T08:50:14.159689+00:00",
+      "claims": [
+        "must preserve refusability",
+        "must centralize memory"
+      ],
+      "capsule_ids": [
+        "capsule_87422dc3d5b5",
+        "quarantine_dd0a95b5da65"
+      ],
+      "agents": [
+        "blame_collapse_probe",
+        "safety_reviewer"
+      ],
+      "incompatible_assumptions": [
+        "Claims map to same normalized semantic object with opposite polarity."
+      ],
+      "required_evidence": [
+        "source provenance",
+        "agent-specific constraints",
+        "translation trace"
+      ],
+      "possible_resolutions": [
+        "preserve_conflict",
+        "request_context",
+        "split_scope",
+        "human_review",
+        "safe_abstention"
+      ],
+      "unresolved_status": "unresolved"
+    },
+    {
+      "id": "conflict_928a2e033a17",
+      "created_at": "2026-06-14T08:50:14.159700+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ec0f1b050bc4"
+        "capsule_5a83d2a72317",
+        "quarantine_dd0a95b5da65"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2465,15 +2465,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_ce5619ff4850",
-      "created_at": "2026-06-14T07:17:56.296786+00:00",
+      "id": "conflict_de509bced608",
+      "created_at": "2026-06-14T08:50:14.159705+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_2ec21d2e3e3b",
-        "quarantine_ec0f1b050bc4"
+        "capsule_5a83d2a72317",
+        "quarantine_dd0a95b5da65"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2497,15 +2497,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_677f7412471e",
-      "created_at": "2026-06-14T07:17:56.296795+00:00",
+      "id": "conflict_611c3a683cad",
+      "created_at": "2026-06-14T08:50:14.159711+00:00",
       "claims": [
         "must_not dominate agents",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ec0f1b050bc4"
+        "capsule_87422dc3d5b5",
+        "quarantine_dd0a95b5da65"
       ],
       "agents": [
         "blame_collapse_probe",
@@ -2529,15 +2529,15 @@
       "unresolved_status": "unresolved"
     },
     {
-      "id": "conflict_10933acf0d66",
-      "created_at": "2026-06-14T07:17:56.296803+00:00",
+      "id": "conflict_3373aa05cd1a",
+      "created_at": "2026-06-14T08:50:14.159716+00:00",
       "claims": [
         "must preserve refusability",
         "must override agents"
       ],
       "capsule_ids": [
-        "capsule_6783d058bd4e",
-        "quarantine_ec0f1b050bc4"
+        "capsule_87422dc3d5b5",
+        "quarantine_dd0a95b5da65"
       ],
       "agents": [
         "blame_collapse_probe",
