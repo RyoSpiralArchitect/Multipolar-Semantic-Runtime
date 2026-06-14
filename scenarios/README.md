@@ -45,7 +45,24 @@ The dependency-free viewer renders these beats as a Story Arc and lets readers
 branch, roll back, and tune local protocol thresholds without mutating the
 exported runtime JSON files. Saved branches can be exported as compact URL
 recipes for sharing the playable branch, or as full JSON snapshots for audit and
-offline inspection.
+offline inspection. Scenario runs also write `contract_report.json`, and the
+viewer renders it as a Drill Verdict panel when present.
+
+Run a mock baseline against a candidate backend:
+
+```bash
+python run_multipolar_runtime.py shadow-run prompt_injection_drill \
+  --candidate-backend openai_compatible \
+  --url http://127.0.0.1:1234 \
+  --model-name local-model \
+  --output runtime_shadow_prompt_injection
+```
+
+Regenerate a verdict for an existing output:
+
+```bash
+python run_multipolar_runtime.py evaluate-run runtime_shadow_prompt_injection/candidate
+```
 
 Included scenarios:
 

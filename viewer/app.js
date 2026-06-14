@@ -40,6 +40,24 @@ const scenarioPresets = [
     path: "../examples/scenario_zoo/inner_council",
     description: "A personal decision council with ambition, evidence, boundary, and memory voices.",
   },
+  {
+    id: "prompt_injection_drill",
+    title: "Prompt Injection Drill",
+    path: "../examples/scenario_zoo/prompt_injection_drill",
+    description: "Instruction override and hidden prompt boundary test.",
+  },
+  {
+    id: "forced_consensus_drill",
+    title: "Forced Consensus Drill",
+    path: "../examples/scenario_zoo/forced_consensus_drill",
+    description: "Domination and false consensus pressure test.",
+  },
+  {
+    id: "private_state_leak_drill",
+    title: "Private State Leak Drill",
+    path: "../examples/scenario_zoo/private_state_leak_drill",
+    description: "Private memory and total-state leakage test.",
+  },
 ];
 
 const els = {
@@ -71,6 +89,7 @@ const els = {
   scenarioSummary: document.querySelector("#scenarioSummary"),
   scenarioStory: document.querySelector("#scenarioStory"),
   runComparison: document.querySelector("#runComparison"),
+  contractVerdict: document.querySelector("#contractVerdict"),
   injectAgent: document.querySelector("#injectAgent"),
   injectionText: document.querySelector("#injectionText"),
   injectSafeButton: document.querySelector("#injectSafeButton"),
@@ -168,6 +187,7 @@ async function loadRuntime() {
     }
     const [state, capsules, invariants, conflicts, interventions] = loaded;
     const scenario = await loadOptionalJson(activeBase, "scenario_manifest.json");
+    const contractReport = await loadOptionalJson(activeBase, "contract_report.json");
     runtimeData = {
       state,
       capsules,
@@ -175,6 +195,7 @@ async function loadRuntime() {
       conflicts,
       interventions,
       scenario: scenario || state.runtime?.metadata?.scenario || presetForPath(activeBase),
+      contractReport,
     };
     runtimeData.roundIndex = buildRoundIndex(runtimeData);
     compareData = await loadComparison();
@@ -194,6 +215,7 @@ async function loadComparison() {
     const loaded = await Promise.all(Object.values(files).map((leaf) => loadJson(compareBase, leaf)));
     const [state, capsules, invariants, conflicts, interventions] = loaded;
     const scenario = await loadOptionalJson(compareBase, "scenario_manifest.json");
+    const contractReport = await loadOptionalJson(compareBase, "contract_report.json");
     const data = {
       state,
       capsules,
@@ -201,6 +223,7 @@ async function loadComparison() {
       conflicts,
       interventions,
       scenario: scenario || state.runtime?.metadata?.scenario || presetForPath(compareBase),
+      contractReport,
       path: compareBase,
     };
     data.roundIndex = buildRoundIndex(data);
@@ -218,6 +241,7 @@ function renderAll() {
   renderScenarioControls();
   renderStoryArc();
   renderComparison();
+  renderContractVerdict();
   renderStatusStrip();
   renderGraphLegend();
   renderGraphTools();
@@ -247,6 +271,7 @@ function renderObservable() {
   renderScenarioControls();
   renderStoryArc();
   renderComparison();
+  renderContractVerdict();
   renderStatusStrip();
   renderGraphLegend();
   renderFlowGraph();
@@ -339,6 +364,87 @@ function renderComparison() {
     runCard("Candidate", candidate, compareData.path || "comparison"),
     deltaCard(baseline, candidate),
   ].join("");
+}
+
+function renderContractVerdict() {
+  const cards = [
+    contractCard("Baseline", runtimeData.contractReport, currentDataPath()),
+  ];
+  if (compareData?.contractReport) {
+    cards.push(contractCard("Candidate", compareData.contractReport, compareData.path || "comparison"));
+    cards.push(contractDeltaCard(runtimeData.contractReport, compareData.contractReport));
+  } else if (compareData?.error) {
+    cards.push(`<div class="contract-empty">${escapeHtml(compareData.error)}</div>`);
+  } else {
+    cards.push(`<div class="contract-empty">No candidate contract report loaded.</div>`);
+  }
+  els.contractVerdict.innerHTML = cards.join("");
+}
+
+function contractCard(label, report, path) {
+  if (!report) {
+    return `
+      <article class="contract-card verdict-unknown">
+        <div class="lab-heading">
+          <span>${escapeHtml(label)}</span>
+          <span class="mini-pill">missing</span>
+        </div>
+        <h3>Contract report missing</h3>
+        <p>${escapeHtml(path)}</p>
+      </article>
+    `;
+  }
+  const verdict = report.verdict || "unknown";
+  const summary = report.summary || {};
+  const failures = (report.checks || [])
+    .filter((check) => !check.ok && check.severity !== "warn")
+    .slice(0, 3);
+  const warnings = Number(summary.warnings || 0);
+  return `
+    <article class="contract-card verdict-${escapeHtml(verdict)}">
+      <div class="lab-heading">
+        <span>${escapeHtml(label)}</span>
+        <span class="mini-pill">${escapeHtml(report.run?.mode || "run")}</span>
+      </div>
+      <h3>${escapeHtml(verdict.toUpperCase())}</h3>
+      <p>${escapeHtml(path)}</p>
+      <div class="tag-row">
+        <span class="tag">${escapeHtml(percent(Number(report.score || 0)))} score</span>
+        <span class="tag">${escapeHtml(summary.failed || 0)} failed</span>
+        <span class="tag">${escapeHtml(warnings)} warnings</span>
+      </div>
+      ${failures.length ? `
+        <div class="contract-failures">
+          ${failures.map((check) => `<p>${escapeHtml(check.label)}: ${escapeHtml(check.message || "failed")}</p>`).join("")}
+        </div>
+      ` : `<p>All fail-severity checks passed.</p>`}
+    </article>
+  `;
+}
+
+function contractDeltaCard(baseReport, candidateReport) {
+  if (!baseReport || !candidateReport) {
+    return `<div class="contract-empty">Load both contract reports to inspect verdict drift.</div>`;
+  }
+  const base = baseReport.summary || {};
+  const candidate = candidateReport.summary || {};
+  const scoreDelta = Number(candidateReport.score || 0) - Number(baseReport.score || 0);
+  const failedDelta = Number(candidate.failed || 0) - Number(base.failed || 0);
+  const warningDelta = Number(candidate.warnings || 0) - Number(base.warnings || 0);
+  return `
+    <article class="contract-card delta-card">
+      <div class="lab-heading">
+        <span>Verdict Drift</span>
+        <span class="mini-pill">candidate - baseline</span>
+      </div>
+      <div class="metric-list">
+        <div><strong>${escapeHtml(signedPercent(scoreDelta))}</strong><span>score</span></div>
+        <div><strong>${escapeHtml(signedNumber(failedDelta))}</strong><span>failed checks</span></div>
+        <div><strong>${escapeHtml(signedNumber(warningDelta))}</strong><span>warnings</span></div>
+        <div><strong>${escapeHtml(candidateReport.verdict || "unknown")}</strong><span>candidate</span></div>
+      </div>
+    </article>
+  `;
 }
 
 function runSummary(data) {

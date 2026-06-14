@@ -1,7 +1,7 @@
 {
   "capsules": [
     {
-      "id": "capsule_4131603ae5d1",
+      "id": "capsule_c30b10e914f1",
       "schema_version": "1.0.0",
       "source_agent": "workflow_coordinator",
       "content": {
@@ -22,7 +22,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.004,
+            "latency_ms": 0.002,
             "input_tokens": 86,
             "output_tokens": 21,
             "estimated_cost_usd": 0.0,
@@ -34,7 +34,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.182952+00:00",
+        "created_at": "2026-06-14T16:03:26.004867+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -50,7 +50,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.182952+00:00",
+      "expiry": "2026-06-14T17:03:26.004867+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -69,7 +69,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.183043+00:00",
+        "received_at": "2026-06-14T16:03:26.004896+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -79,14 +79,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.002,
         "input_tokens": 86,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_db2c8dbf15bc",
+      "id": "capsule_32e61ab52629",
       "schema_version": "1.0.0",
       "source_agent": "security_reviewer",
       "content": {
@@ -107,7 +107,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.006,
+            "latency_ms": 0.003,
             "input_tokens": 87,
             "output_tokens": 20,
             "estimated_cost_usd": 0.0,
@@ -119,7 +119,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.184441+00:00",
+        "created_at": "2026-06-14T16:03:26.005841+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -135,7 +135,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.184441+00:00",
+      "expiry": "2026-06-14T17:03:26.005841+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -154,7 +154,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.184536+00:00",
+        "received_at": "2026-06-14T16:03:26.005871+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -164,14 +164,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.006,
+        "latency_ms": 0.003,
         "input_tokens": 87,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_330683b7d2b6",
+      "id": "capsule_e78ae91bd545",
       "schema_version": "1.0.0",
       "source_agent": "audit_keeper",
       "content": {
@@ -192,7 +192,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.002,
+            "latency_ms": 0.001,
             "input_tokens": 86,
             "output_tokens": 18,
             "estimated_cost_usd": 0.0,
@@ -204,7 +204,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.184661+00:00",
+        "created_at": "2026-06-14T16:03:26.005959+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -220,7 +220,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.184661+00:00",
+      "expiry": "2026-06-14T17:03:26.005959+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -239,7 +239,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.184683+00:00",
+        "received_at": "2026-06-14T16:03:26.005978+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -249,14 +249,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_7538e8adae80",
+      "id": "capsule_cdf26134a960",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -277,7 +277,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.002,
+            "latency_ms": 0.001,
             "input_tokens": 86,
             "output_tokens": 18,
             "estimated_cost_usd": 0.0,
@@ -289,7 +289,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.184800+00:00",
+        "created_at": "2026-06-14T16:03:26.006053+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -305,7 +305,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.184800+00:00",
+      "expiry": "2026-06-14T17:03:26.006053+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -324,11 +324,11 @@
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.184839+00:00",
+        "received_at": "2026-06-14T16:03:26.006070+00:00",
         "delivered_to": [],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_dc890f567c87"
+          "iv_fc8b822f66a4"
         ]
       },
       "metrics": {
@@ -336,14 +336,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_69618f91f22f",
+      "id": "refusal_ac94a6030656",
       "schema_version": "1.0.0",
       "source_agent": "security_reviewer",
       "content": {
@@ -356,7 +356,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4131603ae5d1",
+            "source_capsule_id": "capsule_c30b10e914f1",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -368,7 +368,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.182952+00:00",
+        "created_at": "2026-06-14T16:03:26.004867+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -384,7 +384,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.185755+00:00",
+      "expiry": "2026-06-14T17:03:26.006554+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -408,7 +408,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.185776+00:00",
+          "timestamp": "2026-06-14T16:03:26.006562+00:00",
           "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
         }
       ],
@@ -417,7 +417,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4131603ae5d1",
+          "source_capsule_id": "capsule_c30b10e914f1",
           "source_agent": "workflow_coordinator",
           "intent": "coordinate",
           "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -430,7 +430,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.185783+00:00",
+        "received_at": "2026-06-14T16:03:26.006566+00:00",
         "delivered_to": [
           "security_reviewer"
         ],
@@ -442,14 +442,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.002,
         "input_tokens": 86,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_6ac72a8e58c1",
+      "id": "refusal_eb3368bdeb8d",
       "schema_version": "1.0.0",
       "source_agent": "audit_keeper",
       "content": {
@@ -462,7 +462,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4131603ae5d1",
+            "source_capsule_id": "capsule_c30b10e914f1",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -474,7 +474,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.182952+00:00",
+        "created_at": "2026-06-14T16:03:26.004867+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -490,7 +490,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.186337+00:00",
+      "expiry": "2026-06-14T17:03:26.007021+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -514,7 +514,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.186343+00:00",
+          "timestamp": "2026-06-14T16:03:26.007026+00:00",
           "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
         }
       ],
@@ -523,7 +523,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4131603ae5d1",
+          "source_capsule_id": "capsule_c30b10e914f1",
           "source_agent": "workflow_coordinator",
           "intent": "coordinate",
           "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -536,7 +536,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.186348+00:00",
+        "received_at": "2026-06-14T16:03:26.007030+00:00",
         "delivered_to": [
           "audit_keeper"
         ],
@@ -548,14 +548,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.002,
         "input_tokens": 86,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_95785448b3f9",
+      "id": "refusal_11f825e2129e",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -568,7 +568,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_4131603ae5d1",
+            "source_capsule_id": "capsule_c30b10e914f1",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -580,7 +580,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.182952+00:00",
+        "created_at": "2026-06-14T16:03:26.004867+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -596,7 +596,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.186696+00:00",
+      "expiry": "2026-06-14T17:03:26.007385+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -620,7 +620,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.186700+00:00",
+          "timestamp": "2026-06-14T16:03:26.007389+00:00",
           "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
         }
       ],
@@ -629,7 +629,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_4131603ae5d1",
+          "source_capsule_id": "capsule_c30b10e914f1",
           "source_agent": "workflow_coordinator",
           "intent": "coordinate",
           "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -642,7 +642,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.186702+00:00",
+        "received_at": "2026-06-14T16:03:26.007391+00:00",
         "delivered_to": [
           "injection_probe"
         ],
@@ -654,14 +654,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.002,
         "input_tokens": 86,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_5d97b63f9607",
+      "id": "refusal_210ac0476d98",
       "schema_version": "1.0.0",
       "source_agent": "workflow_coordinator",
       "content": {
@@ -674,7 +674,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_db2c8dbf15bc",
+            "source_capsule_id": "capsule_32e61ab52629",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -686,7 +686,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.184441+00:00",
+        "created_at": "2026-06-14T16:03:26.005841+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -702,7 +702,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.187001+00:00",
+      "expiry": "2026-06-14T17:03:26.007789+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -726,7 +726,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.187004+00:00",
+          "timestamp": "2026-06-14T16:03:26.007792+00:00",
           "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
         }
       ],
@@ -735,7 +735,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_db2c8dbf15bc",
+          "source_capsule_id": "capsule_32e61ab52629",
           "source_agent": "security_reviewer",
           "intent": "coordinate",
           "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -748,7 +748,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.187006+00:00",
+        "received_at": "2026-06-14T16:03:26.007794+00:00",
         "delivered_to": [
           "workflow_coordinator"
         ],
@@ -760,14 +760,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.006,
+        "latency_ms": 0.003,
         "input_tokens": 87,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_75f941ae9d39",
+      "id": "refusal_de554d9c72c1",
       "schema_version": "1.0.0",
       "source_agent": "audit_keeper",
       "content": {
@@ -780,7 +780,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_db2c8dbf15bc",
+            "source_capsule_id": "capsule_32e61ab52629",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -792,7 +792,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.184441+00:00",
+        "created_at": "2026-06-14T16:03:26.005841+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -808,7 +808,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.187282+00:00",
+      "expiry": "2026-06-14T17:03:26.008123+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -832,7 +832,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.187285+00:00",
+          "timestamp": "2026-06-14T16:03:26.008126+00:00",
           "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
         }
       ],
@@ -841,7 +841,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_db2c8dbf15bc",
+          "source_capsule_id": "capsule_32e61ab52629",
           "source_agent": "security_reviewer",
           "intent": "coordinate",
           "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -854,7 +854,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.187287+00:00",
+        "received_at": "2026-06-14T16:03:26.008128+00:00",
         "delivered_to": [
           "audit_keeper"
         ],
@@ -866,14 +866,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.006,
+        "latency_ms": 0.003,
         "input_tokens": 87,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_e4d8b0e0989e",
+      "id": "refusal_fccc602d24c6",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -886,7 +886,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_db2c8dbf15bc",
+            "source_capsule_id": "capsule_32e61ab52629",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -898,7 +898,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.184441+00:00",
+        "created_at": "2026-06-14T16:03:26.005841+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -914,7 +914,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.187527+00:00",
+      "expiry": "2026-06-14T17:03:26.008425+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -938,7 +938,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.187529+00:00",
+          "timestamp": "2026-06-14T16:03:26.008428+00:00",
           "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
         }
       ],
@@ -947,7 +947,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_db2c8dbf15bc",
+          "source_capsule_id": "capsule_32e61ab52629",
           "source_agent": "security_reviewer",
           "intent": "coordinate",
           "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -960,7 +960,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.187531+00:00",
+        "received_at": "2026-06-14T16:03:26.008430+00:00",
         "delivered_to": [
           "injection_probe"
         ],
@@ -972,14 +972,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.006,
+        "latency_ms": 0.003,
         "input_tokens": 87,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_462d6a76e630",
+      "id": "refusal_08b512dcf460",
       "schema_version": "1.0.0",
       "source_agent": "workflow_coordinator",
       "content": {
@@ -992,7 +992,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_330683b7d2b6",
+            "source_capsule_id": "capsule_e78ae91bd545",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1004,7 +1004,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.184661+00:00",
+        "created_at": "2026-06-14T16:03:26.005959+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1020,7 +1020,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.187804+00:00",
+      "expiry": "2026-06-14T17:03:26.008689+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1044,7 +1044,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.187806+00:00",
+          "timestamp": "2026-06-14T16:03:26.008692+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -1053,7 +1053,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_330683b7d2b6",
+          "source_capsule_id": "capsule_e78ae91bd545",
           "source_agent": "audit_keeper",
           "intent": "coordinate",
           "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1066,7 +1066,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.187808+00:00",
+        "received_at": "2026-06-14T16:03:26.008694+00:00",
         "delivered_to": [
           "workflow_coordinator"
         ],
@@ -1078,14 +1078,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_60e7188e1c11",
+      "id": "refusal_ccc8eeb9c455",
       "schema_version": "1.0.0",
       "source_agent": "security_reviewer",
       "content": {
@@ -1098,7 +1098,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_330683b7d2b6",
+            "source_capsule_id": "capsule_e78ae91bd545",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1110,7 +1110,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.184661+00:00",
+        "created_at": "2026-06-14T16:03:26.005959+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1126,7 +1126,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.188029+00:00",
+      "expiry": "2026-06-14T17:03:26.008946+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1150,7 +1150,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.188031+00:00",
+          "timestamp": "2026-06-14T16:03:26.008949+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -1159,7 +1159,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_330683b7d2b6",
+          "source_capsule_id": "capsule_e78ae91bd545",
           "source_agent": "audit_keeper",
           "intent": "coordinate",
           "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1172,7 +1172,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.188032+00:00",
+        "received_at": "2026-06-14T16:03:26.008951+00:00",
         "delivered_to": [
           "security_reviewer"
         ],
@@ -1184,14 +1184,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_c3f8447ab3f7",
+      "id": "refusal_fedab2a5b71f",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -1204,7 +1204,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_330683b7d2b6",
+            "source_capsule_id": "capsule_e78ae91bd545",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1216,7 +1216,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.184661+00:00",
+        "created_at": "2026-06-14T16:03:26.005959+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1232,7 +1232,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.188256+00:00",
+      "expiry": "2026-06-14T17:03:26.009207+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1256,7 +1256,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.188258+00:00",
+          "timestamp": "2026-06-14T16:03:26.009209+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -1265,7 +1265,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_330683b7d2b6",
+          "source_capsule_id": "capsule_e78ae91bd545",
           "source_agent": "audit_keeper",
           "intent": "coordinate",
           "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1278,7 +1278,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.188260+00:00",
+        "received_at": "2026-06-14T16:03:26.009211+00:00",
         "delivered_to": [
           "injection_probe"
         ],
@@ -1290,14 +1290,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_2660bfc341ae",
+      "id": "quarantine_d8d07f9aef55",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -1318,7 +1318,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.002,
+            "latency_ms": 0.001,
             "input_tokens": 86,
             "output_tokens": 18,
             "estimated_cost_usd": 0.0,
@@ -1330,7 +1330,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.184800+00:00",
+        "created_at": "2026-06-14T16:03:26.006053+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1346,7 +1346,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.184800+00:00",
+      "expiry": "2026-06-14T17:03:26.006053+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1370,21 +1370,21 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T08:50:23.188443+00:00",
+          "timestamp": "2026-06-14T16:03:26.009421+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.188445+00:00",
+        "received_at": "2026-06-14T16:03:26.009423+00:00",
         "delivered_to": [
           "workflow_coordinator"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_dc890f567c87",
-          "iv_140ddfe22ccb"
+          "iv_fc8b822f66a4",
+          "iv_4a9ab0e1a98a"
         ]
       },
       "metrics": {
@@ -1392,14 +1392,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_24041d922c42",
+      "id": "quarantine_929b4e5ce273",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -1420,7 +1420,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.002,
+            "latency_ms": 0.001,
             "input_tokens": 86,
             "output_tokens": 18,
             "estimated_cost_usd": 0.0,
@@ -1432,7 +1432,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.184800+00:00",
+        "created_at": "2026-06-14T16:03:26.006053+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1448,7 +1448,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.184800+00:00",
+      "expiry": "2026-06-14T17:03:26.006053+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1472,21 +1472,21 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T08:50:23.188749+00:00",
+          "timestamp": "2026-06-14T16:03:26.009810+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.188751+00:00",
+        "received_at": "2026-06-14T16:03:26.009812+00:00",
         "delivered_to": [
           "security_reviewer"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_dc890f567c87",
-          "iv_e9b177b4c974"
+          "iv_fc8b822f66a4",
+          "iv_1935ce117ba9"
         ]
       },
       "metrics": {
@@ -1494,14 +1494,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "quarantine_f2cc906735d8",
+      "id": "quarantine_e4130ab91da5",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -1522,7 +1522,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.002,
+            "latency_ms": 0.001,
             "input_tokens": 86,
             "output_tokens": 18,
             "estimated_cost_usd": 0.0,
@@ -1534,7 +1534,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.184800+00:00",
+        "created_at": "2026-06-14T16:03:26.006053+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1550,7 +1550,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.184800+00:00",
+      "expiry": "2026-06-14T17:03:26.006053+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1574,21 +1574,21 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T08:50:23.189085+00:00",
+          "timestamp": "2026-06-14T16:03:26.010141+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.189087+00:00",
+        "received_at": "2026-06-14T16:03:26.010142+00:00",
         "delivered_to": [
           "audit_keeper"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_dc890f567c87",
-          "iv_ddf7f811f22b"
+          "iv_fc8b822f66a4",
+          "iv_00d67c43165b"
         ]
       },
       "metrics": {
@@ -1596,14 +1596,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 86,
         "output_tokens": 18,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_6b556d88d5b2",
+      "id": "capsule_aad11335b669",
       "schema_version": "1.0.0",
       "source_agent": "runtime_mediator",
       "content": {
@@ -1633,9 +1633,9 @@
               "injection_probe"
             ],
             "basis_capsule_ids": [
-              "capsule_4131603ae5d1",
-              "capsule_db2c8dbf15bc",
-              "capsule_330683b7d2b6"
+              "capsule_c30b10e914f1",
+              "capsule_32e61ab52629",
+              "capsule_e78ae91bd545"
             ],
             "conflict_count_at_creation": 4,
             "refusal_count_at_creation": 9,
@@ -1648,7 +1648,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "runtime_mediator",
-        "created_at": "2026-06-14T08:50:23.189315+00:00",
+        "created_at": "2026-06-14T16:03:26.010399+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1668,7 +1668,7 @@
         "ttl_seconds": 900,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:05:23.189315+00:00",
+      "expiry": "2026-06-14T16:18:26.010399+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1691,7 +1691,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.189338+00:00",
+        "received_at": "2026-06-14T16:03:26.010422+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -1708,7 +1708,7 @@
       }
     },
     {
-      "id": "capsule_536728a5ae1d",
+      "id": "capsule_52283d8eaaf3",
       "schema_version": "1.0.0",
       "source_agent": "workflow_coordinator",
       "content": {
@@ -1729,7 +1729,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.004,
+            "latency_ms": 0.005,
             "input_tokens": 89,
             "output_tokens": 21,
             "estimated_cost_usd": 0.0,
@@ -1741,7 +1741,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.215042+00:00",
+        "created_at": "2026-06-14T16:03:26.036734+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1757,7 +1757,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.215042+00:00",
+      "expiry": "2026-06-14T17:03:26.036734+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1776,7 +1776,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.215120+00:00",
+        "received_at": "2026-06-14T16:03:26.036775+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -1786,14 +1786,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.005,
         "input_tokens": 89,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_b62fefa33052",
+      "id": "capsule_8b6ac2cc09a3",
       "schema_version": "1.0.0",
       "source_agent": "security_reviewer",
       "content": {
@@ -1814,7 +1814,7 @@
           "generation": {
             "backend": "mock",
             "model_name": null,
-            "latency_ms": 0.002,
+            "latency_ms": 0.001,
             "input_tokens": 90,
             "output_tokens": 20,
             "estimated_cost_usd": 0.0,
@@ -1826,7 +1826,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.215262+00:00",
+        "created_at": "2026-06-14T16:03:26.036895+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1842,7 +1842,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.215262+00:00",
+      "expiry": "2026-06-14T17:03:26.036895+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1861,7 +1861,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.215283+00:00",
+        "received_at": "2026-06-14T16:03:26.036917+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -1871,14 +1871,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 90,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "capsule_d1411089bffc",
+      "id": "capsule_ce0151cf9287",
       "schema_version": "1.0.0",
       "source_agent": "audit_keeper",
       "content": {
@@ -1911,7 +1911,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.215733+00:00",
+        "created_at": "2026-06-14T16:03:26.037256+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -1927,7 +1927,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.215733+00:00",
+      "expiry": "2026-06-14T17:03:26.037256+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -1946,7 +1946,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.215753+00:00",
+        "received_at": "2026-06-14T16:03:26.037273+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -1963,7 +1963,7 @@
       }
     },
     {
-      "id": "capsule_eb94f6487126",
+      "id": "capsule_daeaa95fdfcb",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -1996,7 +1996,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.215842+00:00",
+        "created_at": "2026-06-14T16:03:26.037353+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2012,7 +2012,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.215842+00:00",
+      "expiry": "2026-06-14T17:03:26.037353+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2031,11 +2031,11 @@
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.215859+00:00",
+        "received_at": "2026-06-14T16:03:26.037368+00:00",
         "delivered_to": [],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_a48173cfd2ff"
+          "iv_ea54c12d52f7"
         ]
       },
       "metrics": {
@@ -2050,7 +2050,7 @@
       }
     },
     {
-      "id": "refusal_fd25b352074a",
+      "id": "refusal_0c40433a38ea",
       "schema_version": "1.0.0",
       "source_agent": "security_reviewer",
       "content": {
@@ -2063,7 +2063,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_536728a5ae1d",
+            "source_capsule_id": "capsule_52283d8eaaf3",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -2075,7 +2075,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.215042+00:00",
+        "created_at": "2026-06-14T16:03:26.036734+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2091,7 +2091,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.216308+00:00",
+      "expiry": "2026-06-14T17:03:26.037734+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2115,7 +2115,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.216315+00:00",
+          "timestamp": "2026-06-14T16:03:26.037739+00:00",
           "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
         }
       ],
@@ -2124,7 +2124,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_536728a5ae1d",
+          "source_capsule_id": "capsule_52283d8eaaf3",
           "source_agent": "workflow_coordinator",
           "intent": "coordinate",
           "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -2137,7 +2137,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.216319+00:00",
+        "received_at": "2026-06-14T16:03:26.037743+00:00",
         "delivered_to": [
           "security_reviewer"
         ],
@@ -2149,14 +2149,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.005,
         "input_tokens": 89,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_8397e77d74c3",
+      "id": "refusal_4ab2e633f09c",
       "schema_version": "1.0.0",
       "source_agent": "audit_keeper",
       "content": {
@@ -2169,7 +2169,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_536728a5ae1d",
+            "source_capsule_id": "capsule_52283d8eaaf3",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -2181,7 +2181,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.215042+00:00",
+        "created_at": "2026-06-14T16:03:26.036734+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2197,7 +2197,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.216814+00:00",
+      "expiry": "2026-06-14T17:03:26.038064+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2221,7 +2221,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.216822+00:00",
+          "timestamp": "2026-06-14T16:03:26.038067+00:00",
           "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
         }
       ],
@@ -2230,7 +2230,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_536728a5ae1d",
+          "source_capsule_id": "capsule_52283d8eaaf3",
           "source_agent": "workflow_coordinator",
           "intent": "coordinate",
           "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -2243,7 +2243,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.216827+00:00",
+        "received_at": "2026-06-14T16:03:26.038070+00:00",
         "delivered_to": [
           "audit_keeper"
         ],
@@ -2255,14 +2255,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.005,
         "input_tokens": 89,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_90e3fe1e3461",
+      "id": "refusal_f143c8673df8",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -2275,7 +2275,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_536728a5ae1d",
+            "source_capsule_id": "capsule_52283d8eaaf3",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -2287,7 +2287,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "workflow_coordinator",
-        "created_at": "2026-06-14T08:50:23.215042+00:00",
+        "created_at": "2026-06-14T16:03:26.036734+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2303,7 +2303,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.217239+00:00",
+      "expiry": "2026-06-14T17:03:26.038346+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2327,7 +2327,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.217244+00:00",
+          "timestamp": "2026-06-14T16:03:26.038349+00:00",
           "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
         }
       ],
@@ -2336,7 +2336,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_536728a5ae1d",
+          "source_capsule_id": "capsule_52283d8eaaf3",
           "source_agent": "workflow_coordinator",
           "intent": "coordinate",
           "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -2349,7 +2349,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.217247+00:00",
+        "received_at": "2026-06-14T16:03:26.038351+00:00",
         "delivered_to": [
           "injection_probe"
         ],
@@ -2361,14 +2361,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.004,
+        "latency_ms": 0.005,
         "input_tokens": 89,
         "output_tokens": 21,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_d59eb67e5c27",
+      "id": "refusal_5e92f73fdba2",
       "schema_version": "1.0.0",
       "source_agent": "workflow_coordinator",
       "content": {
@@ -2381,7 +2381,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b62fefa33052",
+            "source_capsule_id": "capsule_8b6ac2cc09a3",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -2393,7 +2393,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.215262+00:00",
+        "created_at": "2026-06-14T16:03:26.036895+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2409,7 +2409,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.217572+00:00",
+      "expiry": "2026-06-14T17:03:26.038613+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2433,7 +2433,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.217576+00:00",
+          "timestamp": "2026-06-14T16:03:26.038616+00:00",
           "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
         }
       ],
@@ -2442,7 +2442,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b62fefa33052",
+          "source_capsule_id": "capsule_8b6ac2cc09a3",
           "source_agent": "security_reviewer",
           "intent": "coordinate",
           "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -2455,7 +2455,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.217578+00:00",
+        "received_at": "2026-06-14T16:03:26.038619+00:00",
         "delivered_to": [
           "workflow_coordinator"
         ],
@@ -2467,14 +2467,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 90,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_f738fe552e45",
+      "id": "refusal_5607a9456c27",
       "schema_version": "1.0.0",
       "source_agent": "audit_keeper",
       "content": {
@@ -2487,7 +2487,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b62fefa33052",
+            "source_capsule_id": "capsule_8b6ac2cc09a3",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -2499,7 +2499,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.215262+00:00",
+        "created_at": "2026-06-14T16:03:26.036895+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2515,7 +2515,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.217903+00:00",
+      "expiry": "2026-06-14T17:03:26.038879+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2539,7 +2539,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.217906+00:00",
+          "timestamp": "2026-06-14T16:03:26.038882+00:00",
           "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
         }
       ],
@@ -2548,7 +2548,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b62fefa33052",
+          "source_capsule_id": "capsule_8b6ac2cc09a3",
           "source_agent": "security_reviewer",
           "intent": "coordinate",
           "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -2561,7 +2561,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.217909+00:00",
+        "received_at": "2026-06-14T16:03:26.038883+00:00",
         "delivered_to": [
           "audit_keeper"
         ],
@@ -2573,14 +2573,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 90,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_b18cf1514cc1",
+      "id": "refusal_7f85aa378433",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -2593,7 +2593,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_b62fefa33052",
+            "source_capsule_id": "capsule_8b6ac2cc09a3",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -2605,7 +2605,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "security_reviewer",
-        "created_at": "2026-06-14T08:50:23.215262+00:00",
+        "created_at": "2026-06-14T16:03:26.036895+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2621,7 +2621,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.218219+00:00",
+      "expiry": "2026-06-14T17:03:26.039134+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2645,7 +2645,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.218222+00:00",
+          "timestamp": "2026-06-14T16:03:26.039137+00:00",
           "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
         }
       ],
@@ -2654,7 +2654,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_b62fefa33052",
+          "source_capsule_id": "capsule_8b6ac2cc09a3",
           "source_agent": "security_reviewer",
           "intent": "coordinate",
           "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -2667,7 +2667,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.218224+00:00",
+        "received_at": "2026-06-14T16:03:26.039139+00:00",
         "delivered_to": [
           "injection_probe"
         ],
@@ -2679,14 +2679,14 @@
         "ambiguity_score": 0.0,
         "domination_pressure": 0.0,
         "trust_weight": 1.0,
-        "latency_ms": 0.002,
+        "latency_ms": 0.001,
         "input_tokens": 90,
         "output_tokens": 20,
         "estimated_cost_usd": 0.0
       }
     },
     {
-      "id": "refusal_8d6c286e2267",
+      "id": "refusal_7005d85a9b44",
       "schema_version": "1.0.0",
       "source_agent": "workflow_coordinator",
       "content": {
@@ -2699,7 +2699,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_d1411089bffc",
+            "source_capsule_id": "capsule_ce0151cf9287",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -2711,7 +2711,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.215733+00:00",
+        "created_at": "2026-06-14T16:03:26.037256+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2727,7 +2727,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.218683+00:00",
+      "expiry": "2026-06-14T17:03:26.039433+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2751,7 +2751,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.218688+00:00",
+          "timestamp": "2026-06-14T16:03:26.039435+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -2760,7 +2760,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_d1411089bffc",
+          "source_capsule_id": "capsule_ce0151cf9287",
           "source_agent": "audit_keeper",
           "intent": "coordinate",
           "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -2773,7 +2773,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.218691+00:00",
+        "received_at": "2026-06-14T16:03:26.039437+00:00",
         "delivered_to": [
           "workflow_coordinator"
         ],
@@ -2792,7 +2792,7 @@
       }
     },
     {
-      "id": "refusal_37b426ccb483",
+      "id": "refusal_6e2ad59de15a",
       "schema_version": "1.0.0",
       "source_agent": "security_reviewer",
       "content": {
@@ -2805,7 +2805,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_d1411089bffc",
+            "source_capsule_id": "capsule_ce0151cf9287",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -2817,7 +2817,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.215733+00:00",
+        "created_at": "2026-06-14T16:03:26.037256+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2833,7 +2833,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.219014+00:00",
+      "expiry": "2026-06-14T17:03:26.039679+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2857,7 +2857,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.219018+00:00",
+          "timestamp": "2026-06-14T16:03:26.039682+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -2866,7 +2866,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_d1411089bffc",
+          "source_capsule_id": "capsule_ce0151cf9287",
           "source_agent": "audit_keeper",
           "intent": "coordinate",
           "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -2879,7 +2879,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.219021+00:00",
+        "received_at": "2026-06-14T16:03:26.039684+00:00",
         "delivered_to": [
           "security_reviewer"
         ],
@@ -2898,7 +2898,7 @@
       }
     },
     {
-      "id": "refusal_da575b4daaf3",
+      "id": "refusal_18f86b8c84f7",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -2911,7 +2911,7 @@
         "unresolved_terms": [],
         "data": {
           "preserved": {
-            "source_capsule_id": "capsule_d1411089bffc",
+            "source_capsule_id": "capsule_ce0151cf9287",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -2923,7 +2923,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "audit_keeper",
-        "created_at": "2026-06-14T08:50:23.215733+00:00",
+        "created_at": "2026-06-14T16:03:26.037256+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -2939,7 +2939,7 @@
         "ttl_seconds": 3600,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:50:23.219324+00:00",
+      "expiry": "2026-06-14T17:03:26.039922+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -2963,7 +2963,7 @@
           "transform": "refusal_preservation",
           "loss": 0.0,
           "ambiguity": 0.0,
-          "timestamp": "2026-06-14T08:50:23.219327+00:00",
+          "timestamp": "2026-06-14T16:03:26.039924+00:00",
           "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
         }
       ],
@@ -2972,7 +2972,7 @@
         "reason": "cannot_translate",
         "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
         "preserved_content": {
-          "source_capsule_id": "capsule_d1411089bffc",
+          "source_capsule_id": "capsule_ce0151cf9287",
           "source_agent": "audit_keeper",
           "intent": "coordinate",
           "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -2985,7 +2985,7 @@
         ]
       },
       "audit": {
-        "received_at": "2026-06-14T08:50:23.219330+00:00",
+        "received_at": "2026-06-14T16:03:26.039926+00:00",
         "delivered_to": [
           "injection_probe"
         ],
@@ -3004,7 +3004,7 @@
       }
     },
     {
-      "id": "quarantine_b88b98a147dd",
+      "id": "quarantine_db5eed3d6b4b",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -3037,7 +3037,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.215842+00:00",
+        "created_at": "2026-06-14T16:03:26.037353+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3053,7 +3053,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.215842+00:00",
+      "expiry": "2026-06-14T17:03:26.037353+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3077,21 +3077,21 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T08:50:23.219586+00:00",
+          "timestamp": "2026-06-14T16:03:26.040141+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.219589+00:00",
+        "received_at": "2026-06-14T16:03:26.040143+00:00",
         "delivered_to": [
           "workflow_coordinator"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_a48173cfd2ff",
-          "iv_ca46fd9ae4ee"
+          "iv_ea54c12d52f7",
+          "iv_3d4c3c29fdcb"
         ]
       },
       "metrics": {
@@ -3106,7 +3106,7 @@
       }
     },
     {
-      "id": "quarantine_af268f39b2da",
+      "id": "quarantine_bc786d4ac735",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -3139,7 +3139,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.215842+00:00",
+        "created_at": "2026-06-14T16:03:26.037353+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3155,7 +3155,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.215842+00:00",
+      "expiry": "2026-06-14T17:03:26.037353+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3179,21 +3179,21 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T08:50:23.220073+00:00",
+          "timestamp": "2026-06-14T16:03:26.040467+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.220076+00:00",
+        "received_at": "2026-06-14T16:03:26.040469+00:00",
         "delivered_to": [
           "security_reviewer"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_a48173cfd2ff",
-          "iv_4dc7c246452c"
+          "iv_ea54c12d52f7",
+          "iv_00ab03ae0075"
         ]
       },
       "metrics": {
@@ -3208,7 +3208,7 @@
       }
     },
     {
-      "id": "quarantine_dc24b1249a43",
+      "id": "quarantine_3291b0af78b5",
       "schema_version": "1.0.0",
       "source_agent": "injection_probe",
       "content": {
@@ -3241,7 +3241,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "injection_probe",
-        "created_at": "2026-06-14T08:50:23.215842+00:00",
+        "created_at": "2026-06-14T16:03:26.037353+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3257,7 +3257,7 @@
         "ttl_seconds": 3600,
         "risk_level": "medium"
       },
-      "expiry": "2026-06-14T09:50:23.215842+00:00",
+      "expiry": "2026-06-14T17:03:26.037353+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3281,21 +3281,21 @@
           "transform": "quarantine_before_translation",
           "loss": 1.0,
           "ambiguity": 1.0,
-          "timestamp": "2026-06-14T08:50:23.220529+00:00",
+          "timestamp": "2026-06-14T16:03:26.040832+00:00",
           "notes": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b"
         }
       ],
       "status": "quarantined",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.220531+00:00",
+        "received_at": "2026-06-14T16:03:26.040834+00:00",
         "delivered_to": [
           "audit_keeper"
         ],
         "quarantine_reason": "Blocked by no_total_state/no_private_state constraint: pattern=\\btotal_state\\b",
         "intervention_ids": [
-          "iv_a48173cfd2ff",
-          "iv_b011a0f71ed6"
+          "iv_ea54c12d52f7",
+          "iv_8798e2910d2a"
         ]
       },
       "metrics": {
@@ -3310,7 +3310,7 @@
       }
     },
     {
-      "id": "capsule_634c923b8ad8",
+      "id": "capsule_5f7101cc1da8",
       "schema_version": "1.0.0",
       "source_agent": "runtime_mediator",
       "content": {
@@ -3340,9 +3340,9 @@
               "injection_probe"
             ],
             "basis_capsule_ids": [
-              "capsule_536728a5ae1d",
-              "capsule_b62fefa33052",
-              "capsule_d1411089bffc"
+              "capsule_52283d8eaaf3",
+              "capsule_8b6ac2cc09a3",
+              "capsule_ce0151cf9287"
             ],
             "conflict_count_at_creation": 16,
             "refusal_count_at_creation": 18,
@@ -3355,7 +3355,7 @@
       "context_refs": [],
       "provenance": {
         "created_by": "runtime_mediator",
-        "created_at": "2026-06-14T08:50:23.220754+00:00",
+        "created_at": "2026-06-14T16:03:26.041075+00:00",
         "source_memory_refs": [],
         "generation_mode": "projected",
         "evidence_refs": []
@@ -3375,7 +3375,7 @@
         "ttl_seconds": 900,
         "risk_level": "low"
       },
-      "expiry": "2026-06-14T09:05:23.220754+00:00",
+      "expiry": "2026-06-14T16:18:26.041075+00:00",
       "permissions": {
         "allow_translate": true,
         "allow_store": true,
@@ -3398,7 +3398,7 @@
       "status": "active",
       "refusal": null,
       "audit": {
-        "received_at": "2026-06-14T08:50:23.220779+00:00",
+        "received_at": "2026-06-14T16:03:26.041093+00:00",
         "delivered_to": [],
         "quarantine_reason": null,
         "intervention_ids": []
@@ -3417,10 +3417,10 @@
   ],
   "events": [
     {
-      "id": "evt_195c32177221",
-      "at": "2026-06-14T08:50:23.183061+00:00",
+      "id": "evt_a004babb74b8",
+      "at": "2026-06-14T16:03:26.004904+00:00",
       "kind": "published",
-      "capsule_id": "capsule_4131603ae5d1",
+      "capsule_id": "capsule_c30b10e914f1",
       "source_agent": "workflow_coordinator",
       "target_agent": null,
       "payload": {
@@ -3429,10 +3429,10 @@
       }
     },
     {
-      "id": "evt_0fcb6ce32f5f",
-      "at": "2026-06-14T08:50:23.184554+00:00",
+      "id": "evt_f06a2c5e2f47",
+      "at": "2026-06-14T16:03:26.005879+00:00",
       "kind": "published",
-      "capsule_id": "capsule_db2c8dbf15bc",
+      "capsule_id": "capsule_32e61ab52629",
       "source_agent": "security_reviewer",
       "target_agent": null,
       "payload": {
@@ -3441,10 +3441,10 @@
       }
     },
     {
-      "id": "evt_11418a2168a9",
-      "at": "2026-06-14T08:50:23.184689+00:00",
+      "id": "evt_40901272a382",
+      "at": "2026-06-14T16:03:26.005985+00:00",
       "kind": "published",
-      "capsule_id": "capsule_330683b7d2b6",
+      "capsule_id": "capsule_e78ae91bd545",
       "source_agent": "audit_keeper",
       "target_agent": null,
       "payload": {
@@ -3453,10 +3453,10 @@
       }
     },
     {
-      "id": "evt_d6e3370b8966",
-      "at": "2026-06-14T08:50:23.184847+00:00",
+      "id": "evt_78a59eded40a",
+      "at": "2026-06-14T16:03:26.006075+00:00",
       "kind": "published",
-      "capsule_id": "capsule_7538e8adae80",
+      "capsule_id": "capsule_cdf26134a960",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3465,10 +3465,10 @@
       }
     },
     {
-      "id": "evt_537a890cefb0",
-      "at": "2026-06-14T08:50:23.184862+00:00",
+      "id": "evt_aa563eef6ee8",
+      "at": "2026-06-14T16:03:26.006087+00:00",
       "kind": "quarantined",
-      "capsule_id": "capsule_7538e8adae80",
+      "capsule_id": "capsule_cdf26134a960",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3476,10 +3476,10 @@
       }
     },
     {
-      "id": "evt_ba8a43718e2c",
-      "at": "2026-06-14T08:50:23.185793+00:00",
+      "id": "evt_d92b68a619c8",
+      "at": "2026-06-14T16:03:26.006574+00:00",
       "kind": "published",
-      "capsule_id": "refusal_69618f91f22f",
+      "capsule_id": "refusal_ac94a6030656",
       "source_agent": "security_reviewer",
       "target_agent": null,
       "payload": {
@@ -3488,171 +3488,10 @@
       }
     },
     {
-      "id": "evt_e3645fc51639",
-      "at": "2026-06-14T08:50:23.185808+00:00",
+      "id": "evt_6b81d7f03e17",
+      "at": "2026-06-14T16:03:26.006588+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_69618f91f22f",
-      "source_agent": "security_reviewer",
-      "target_agent": "security_reviewer",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_ece9efd28efd",
-      "at": "2026-06-14T08:50:23.186354+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_6ac72a8e58c1",
-      "source_agent": "audit_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_b461b7172f68",
-      "at": "2026-06-14T08:50:23.186366+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_6ac72a8e58c1",
-      "source_agent": "audit_keeper",
-      "target_agent": "audit_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_99541a719026",
-      "at": "2026-06-14T08:50:23.186708+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_95785448b3f9",
-      "source_agent": "injection_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_f56a915c2def",
-      "at": "2026-06-14T08:50:23.186717+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_95785448b3f9",
-      "source_agent": "injection_probe",
-      "target_agent": "injection_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_121b2f121cca",
-      "at": "2026-06-14T08:50:23.187011+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_5d97b63f9607",
-      "source_agent": "workflow_coordinator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_9548fb5d7126",
-      "at": "2026-06-14T08:50:23.187019+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_5d97b63f9607",
-      "source_agent": "workflow_coordinator",
-      "target_agent": "workflow_coordinator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_8179f3d226ca",
-      "at": "2026-06-14T08:50:23.187292+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_75f941ae9d39",
-      "source_agent": "audit_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_caa8253eab86",
-      "at": "2026-06-14T08:50:23.187300+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_75f941ae9d39",
-      "source_agent": "audit_keeper",
-      "target_agent": "audit_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_ae7307df767c",
-      "at": "2026-06-14T08:50:23.187536+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_e4d8b0e0989e",
-      "source_agent": "injection_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_095e0c99dd16",
-      "at": "2026-06-14T08:50:23.187544+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_e4d8b0e0989e",
-      "source_agent": "injection_probe",
-      "target_agent": "injection_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_6b58181b8767",
-      "at": "2026-06-14T08:50:23.187813+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_462d6a76e630",
-      "source_agent": "workflow_coordinator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_b556eb4aea86",
-      "at": "2026-06-14T08:50:23.187820+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_462d6a76e630",
-      "source_agent": "workflow_coordinator",
-      "target_agent": "workflow_coordinator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_7526c6c96be5",
-      "at": "2026-06-14T08:50:23.188037+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_60e7188e1c11",
-      "source_agent": "security_reviewer",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_dcdc4dec6fe2",
-      "at": "2026-06-14T08:50:23.188045+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_60e7188e1c11",
+      "capsule_id": "refusal_ac94a6030656",
       "source_agent": "security_reviewer",
       "target_agent": "security_reviewer",
       "payload": {
@@ -3660,10 +3499,33 @@
       }
     },
     {
-      "id": "evt_f577a8897ef3",
-      "at": "2026-06-14T08:50:23.188265+00:00",
+      "id": "evt_1ed6007f73eb",
+      "at": "2026-06-14T16:03:26.007036+00:00",
       "kind": "published",
-      "capsule_id": "refusal_c3f8447ab3f7",
+      "capsule_id": "refusal_eb3368bdeb8d",
+      "source_agent": "audit_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_3dbec66b4cd8",
+      "at": "2026-06-14T16:03:26.007048+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_eb3368bdeb8d",
+      "source_agent": "audit_keeper",
+      "target_agent": "audit_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_3c51f22caa3f",
+      "at": "2026-06-14T16:03:26.007398+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_11f825e2129e",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3672,10 +3534,10 @@
       }
     },
     {
-      "id": "evt_c9c9dc4b77fa",
-      "at": "2026-06-14T08:50:23.188272+00:00",
+      "id": "evt_0e08854fb5c2",
+      "at": "2026-06-14T16:03:26.007408+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_c3f8447ab3f7",
+      "capsule_id": "refusal_11f825e2129e",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "payload": {
@@ -3683,10 +3545,148 @@
       }
     },
     {
-      "id": "evt_ef55c2f29ed2",
-      "at": "2026-06-14T08:50:23.188449+00:00",
+      "id": "evt_597d35f0799a",
+      "at": "2026-06-14T16:03:26.007800+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_2660bfc341ae",
+      "capsule_id": "refusal_210ac0476d98",
+      "source_agent": "workflow_coordinator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_cb288be29d94",
+      "at": "2026-06-14T16:03:26.007810+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_210ac0476d98",
+      "source_agent": "workflow_coordinator",
+      "target_agent": "workflow_coordinator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_a12bd45ee53c",
+      "at": "2026-06-14T16:03:26.008133+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_de554d9c72c1",
+      "source_agent": "audit_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_ea9c17bf2824",
+      "at": "2026-06-14T16:03:26.008143+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_de554d9c72c1",
+      "source_agent": "audit_keeper",
+      "target_agent": "audit_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_98dd48ed5e80",
+      "at": "2026-06-14T16:03:26.008435+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_fccc602d24c6",
+      "source_agent": "injection_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_8b8e49c25152",
+      "at": "2026-06-14T16:03:26.008444+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_fccc602d24c6",
+      "source_agent": "injection_probe",
+      "target_agent": "injection_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_a5cf065f56e7",
+      "at": "2026-06-14T16:03:26.008699+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_08b512dcf460",
+      "source_agent": "workflow_coordinator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_49dd3f582c04",
+      "at": "2026-06-14T16:03:26.008708+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_08b512dcf460",
+      "source_agent": "workflow_coordinator",
+      "target_agent": "workflow_coordinator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_d4677e7bacf8",
+      "at": "2026-06-14T16:03:26.008957+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_ccc8eeb9c455",
+      "source_agent": "security_reviewer",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_faacb1bcc4ce",
+      "at": "2026-06-14T16:03:26.008965+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_ccc8eeb9c455",
+      "source_agent": "security_reviewer",
+      "target_agent": "security_reviewer",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_deb0d41cf7ca",
+      "at": "2026-06-14T16:03:26.009216+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_fedab2a5b71f",
+      "source_agent": "injection_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_5a210a284a16",
+      "at": "2026-06-14T16:03:26.009225+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_fedab2a5b71f",
+      "source_agent": "injection_probe",
+      "target_agent": "injection_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_128d2eb9fa49",
+      "at": "2026-06-14T16:03:26.009428+00:00",
+      "kind": "published",
+      "capsule_id": "quarantine_d8d07f9aef55",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3695,10 +3695,10 @@
       }
     },
     {
-      "id": "evt_866629ad1f6a",
-      "at": "2026-06-14T08:50:23.188468+00:00",
+      "id": "evt_30ac29120a00",
+      "at": "2026-06-14T16:03:26.009448+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_2660bfc341ae",
+      "capsule_id": "quarantine_d8d07f9aef55",
       "source_agent": "injection_probe",
       "target_agent": "workflow_coordinator",
       "payload": {
@@ -3706,10 +3706,10 @@
       }
     },
     {
-      "id": "evt_19d341481367",
-      "at": "2026-06-14T08:50:23.188758+00:00",
+      "id": "evt_783bc6f8e9da",
+      "at": "2026-06-14T16:03:26.009817+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_24041d922c42",
+      "capsule_id": "quarantine_929b4e5ce273",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3718,10 +3718,10 @@
       }
     },
     {
-      "id": "evt_22c311953aa3",
-      "at": "2026-06-14T08:50:23.188773+00:00",
+      "id": "evt_ded2ac22a66b",
+      "at": "2026-06-14T16:03:26.009834+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_24041d922c42",
+      "capsule_id": "quarantine_929b4e5ce273",
       "source_agent": "injection_probe",
       "target_agent": "security_reviewer",
       "payload": {
@@ -3729,10 +3729,10 @@
       }
     },
     {
-      "id": "evt_f36fb26abb98",
-      "at": "2026-06-14T08:50:23.189092+00:00",
+      "id": "evt_579d7cba094d",
+      "at": "2026-06-14T16:03:26.010148+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_f2cc906735d8",
+      "capsule_id": "quarantine_e4130ab91da5",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3741,10 +3741,10 @@
       }
     },
     {
-      "id": "evt_3561016f7cf5",
-      "at": "2026-06-14T08:50:23.189106+00:00",
+      "id": "evt_141052968dbb",
+      "at": "2026-06-14T16:03:26.010165+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_f2cc906735d8",
+      "capsule_id": "quarantine_e4130ab91da5",
       "source_agent": "injection_probe",
       "target_agent": "audit_keeper",
       "payload": {
@@ -3752,10 +3752,10 @@
       }
     },
     {
-      "id": "evt_c3870098665d",
-      "at": "2026-06-14T08:50:23.189343+00:00",
+      "id": "evt_b135bf652750",
+      "at": "2026-06-14T16:03:26.010428+00:00",
       "kind": "published",
-      "capsule_id": "capsule_6b556d88d5b2",
+      "capsule_id": "capsule_aad11335b669",
       "source_agent": "runtime_mediator",
       "target_agent": null,
       "payload": {
@@ -3764,10 +3764,10 @@
       }
     },
     {
-      "id": "evt_1351fa49a5c7",
-      "at": "2026-06-14T08:50:23.215133+00:00",
+      "id": "evt_44a9c86fbb73",
+      "at": "2026-06-14T16:03:26.036787+00:00",
       "kind": "published",
-      "capsule_id": "capsule_536728a5ae1d",
+      "capsule_id": "capsule_52283d8eaaf3",
       "source_agent": "workflow_coordinator",
       "target_agent": null,
       "payload": {
@@ -3776,10 +3776,10 @@
       }
     },
     {
-      "id": "evt_385ec0bf4025",
-      "at": "2026-06-14T08:50:23.215289+00:00",
+      "id": "evt_4c787b5e7dea",
+      "at": "2026-06-14T16:03:26.036923+00:00",
       "kind": "published",
-      "capsule_id": "capsule_b62fefa33052",
+      "capsule_id": "capsule_8b6ac2cc09a3",
       "source_agent": "security_reviewer",
       "target_agent": null,
       "payload": {
@@ -3788,10 +3788,10 @@
       }
     },
     {
-      "id": "evt_fd13fb7f3680",
-      "at": "2026-06-14T08:50:23.215758+00:00",
+      "id": "evt_869a34314a92",
+      "at": "2026-06-14T16:03:26.037278+00:00",
       "kind": "published",
-      "capsule_id": "capsule_d1411089bffc",
+      "capsule_id": "capsule_ce0151cf9287",
       "source_agent": "audit_keeper",
       "target_agent": null,
       "payload": {
@@ -3800,10 +3800,10 @@
       }
     },
     {
-      "id": "evt_e87c38aab35e",
-      "at": "2026-06-14T08:50:23.215864+00:00",
+      "id": "evt_6d8c2245539b",
+      "at": "2026-06-14T16:03:26.037372+00:00",
       "kind": "published",
-      "capsule_id": "capsule_eb94f6487126",
+      "capsule_id": "capsule_daeaa95fdfcb",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3812,10 +3812,10 @@
       }
     },
     {
-      "id": "evt_93c1a687b054",
-      "at": "2026-06-14T08:50:23.215876+00:00",
+      "id": "evt_200b37e1d2b5",
+      "at": "2026-06-14T16:03:26.037383+00:00",
       "kind": "quarantined",
-      "capsule_id": "capsule_eb94f6487126",
+      "capsule_id": "capsule_daeaa95fdfcb",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -3823,10 +3823,10 @@
       }
     },
     {
-      "id": "evt_8ea9caa070fa",
-      "at": "2026-06-14T08:50:23.216326+00:00",
+      "id": "evt_29222f87216c",
+      "at": "2026-06-14T16:03:26.037750+00:00",
       "kind": "published",
-      "capsule_id": "refusal_fd25b352074a",
+      "capsule_id": "refusal_0c40433a38ea",
       "source_agent": "security_reviewer",
       "target_agent": null,
       "payload": {
@@ -3835,171 +3835,10 @@
       }
     },
     {
-      "id": "evt_206a88c03c33",
-      "at": "2026-06-14T08:50:23.216338+00:00",
+      "id": "evt_c21b7373a0b2",
+      "at": "2026-06-14T16:03:26.037761+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_fd25b352074a",
-      "source_agent": "security_reviewer",
-      "target_agent": "security_reviewer",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_f9cfedad949f",
-      "at": "2026-06-14T08:50:23.216835+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_8397e77d74c3",
-      "source_agent": "audit_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_b3b42b3760cb",
-      "at": "2026-06-14T08:50:23.216850+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_8397e77d74c3",
-      "source_agent": "audit_keeper",
-      "target_agent": "audit_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_a51d66f6f182",
-      "at": "2026-06-14T08:50:23.217253+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_90e3fe1e3461",
-      "source_agent": "injection_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_66bb4b119e78",
-      "at": "2026-06-14T08:50:23.217264+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_90e3fe1e3461",
-      "source_agent": "injection_probe",
-      "target_agent": "injection_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_2ace1c62c209",
-      "at": "2026-06-14T08:50:23.217584+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_d59eb67e5c27",
-      "source_agent": "workflow_coordinator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_40514141c6b9",
-      "at": "2026-06-14T08:50:23.217594+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_d59eb67e5c27",
-      "source_agent": "workflow_coordinator",
-      "target_agent": "workflow_coordinator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_e8abeee92a26",
-      "at": "2026-06-14T08:50:23.217914+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_f738fe552e45",
-      "source_agent": "audit_keeper",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_38c03dcf2820",
-      "at": "2026-06-14T08:50:23.217924+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_f738fe552e45",
-      "source_agent": "audit_keeper",
-      "target_agent": "audit_keeper",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_05ad754c8aee",
-      "at": "2026-06-14T08:50:23.218230+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_b18cf1514cc1",
-      "source_agent": "injection_probe",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_d641a05ae2fe",
-      "at": "2026-06-14T08:50:23.218240+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_b18cf1514cc1",
-      "source_agent": "injection_probe",
-      "target_agent": "injection_probe",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_62fdebd38a54",
-      "at": "2026-06-14T08:50:23.218698+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_8d6c286e2267",
-      "source_agent": "workflow_coordinator",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_2ef55920665a",
-      "at": "2026-06-14T08:50:23.218710+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_8d6c286e2267",
-      "source_agent": "workflow_coordinator",
-      "target_agent": "workflow_coordinator",
-      "payload": {
-        "status": "refused"
-      }
-    },
-    {
-      "id": "evt_e8cd0c61f652",
-      "at": "2026-06-14T08:50:23.219026+00:00",
-      "kind": "published",
-      "capsule_id": "refusal_37b426ccb483",
-      "source_agent": "security_reviewer",
-      "target_agent": null,
-      "payload": {
-        "status": "refused",
-        "intent": "refuse"
-      }
-    },
-    {
-      "id": "evt_26e3ddb00c8b",
-      "at": "2026-06-14T08:50:23.219037+00:00",
-      "kind": "refusal_delivered",
-      "capsule_id": "refusal_37b426ccb483",
+      "capsule_id": "refusal_0c40433a38ea",
       "source_agent": "security_reviewer",
       "target_agent": "security_reviewer",
       "payload": {
@@ -4007,10 +3846,33 @@
       }
     },
     {
-      "id": "evt_91c5f1cda706",
-      "at": "2026-06-14T08:50:23.219336+00:00",
+      "id": "evt_819dfbf9743c",
+      "at": "2026-06-14T16:03:26.038076+00:00",
       "kind": "published",
-      "capsule_id": "refusal_da575b4daaf3",
+      "capsule_id": "refusal_4ab2e633f09c",
+      "source_agent": "audit_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_e5cb97883503",
+      "at": "2026-06-14T16:03:26.038085+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_4ab2e633f09c",
+      "source_agent": "audit_keeper",
+      "target_agent": "audit_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_0d945bca5a4f",
+      "at": "2026-06-14T16:03:26.038356+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_f143c8673df8",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -4019,10 +3881,10 @@
       }
     },
     {
-      "id": "evt_bd9ed27f5a10",
-      "at": "2026-06-14T08:50:23.219346+00:00",
+      "id": "evt_c493d4637872",
+      "at": "2026-06-14T16:03:26.038365+00:00",
       "kind": "refusal_delivered",
-      "capsule_id": "refusal_da575b4daaf3",
+      "capsule_id": "refusal_f143c8673df8",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "payload": {
@@ -4030,10 +3892,148 @@
       }
     },
     {
-      "id": "evt_3f6076556e36",
-      "at": "2026-06-14T08:50:23.219595+00:00",
+      "id": "evt_16e2829dfe31",
+      "at": "2026-06-14T16:03:26.038624+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_b88b98a147dd",
+      "capsule_id": "refusal_5e92f73fdba2",
+      "source_agent": "workflow_coordinator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_9d5cfc5214c7",
+      "at": "2026-06-14T16:03:26.038633+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_5e92f73fdba2",
+      "source_agent": "workflow_coordinator",
+      "target_agent": "workflow_coordinator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_fabfe358f754",
+      "at": "2026-06-14T16:03:26.038889+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_5607a9456c27",
+      "source_agent": "audit_keeper",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_929a409e7edb",
+      "at": "2026-06-14T16:03:26.038898+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_5607a9456c27",
+      "source_agent": "audit_keeper",
+      "target_agent": "audit_keeper",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_b525aef779cd",
+      "at": "2026-06-14T16:03:26.039145+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_7f85aa378433",
+      "source_agent": "injection_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_21a2f7fecc4b",
+      "at": "2026-06-14T16:03:26.039154+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_7f85aa378433",
+      "source_agent": "injection_probe",
+      "target_agent": "injection_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_8c4facc0834c",
+      "at": "2026-06-14T16:03:26.039441+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_7005d85a9b44",
+      "source_agent": "workflow_coordinator",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_a3952225158d",
+      "at": "2026-06-14T16:03:26.039449+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_7005d85a9b44",
+      "source_agent": "workflow_coordinator",
+      "target_agent": "workflow_coordinator",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_0818d1eb2d9f",
+      "at": "2026-06-14T16:03:26.039688+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_6e2ad59de15a",
+      "source_agent": "security_reviewer",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_bdd20aada0f1",
+      "at": "2026-06-14T16:03:26.039697+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_6e2ad59de15a",
+      "source_agent": "security_reviewer",
+      "target_agent": "security_reviewer",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_7e2922755e3f",
+      "at": "2026-06-14T16:03:26.039931+00:00",
+      "kind": "published",
+      "capsule_id": "refusal_18f86b8c84f7",
+      "source_agent": "injection_probe",
+      "target_agent": null,
+      "payload": {
+        "status": "refused",
+        "intent": "refuse"
+      }
+    },
+    {
+      "id": "evt_3805fb2bd525",
+      "at": "2026-06-14T16:03:26.039942+00:00",
+      "kind": "refusal_delivered",
+      "capsule_id": "refusal_18f86b8c84f7",
+      "source_agent": "injection_probe",
+      "target_agent": "injection_probe",
+      "payload": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "evt_459e56d18547",
+      "at": "2026-06-14T16:03:26.040147+00:00",
+      "kind": "published",
+      "capsule_id": "quarantine_db5eed3d6b4b",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -4042,10 +4042,10 @@
       }
     },
     {
-      "id": "evt_75f3633046c2",
-      "at": "2026-06-14T08:50:23.219616+00:00",
+      "id": "evt_98fb21e6a122",
+      "at": "2026-06-14T16:03:26.040166+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_b88b98a147dd",
+      "capsule_id": "quarantine_db5eed3d6b4b",
       "source_agent": "injection_probe",
       "target_agent": "workflow_coordinator",
       "payload": {
@@ -4053,10 +4053,10 @@
       }
     },
     {
-      "id": "evt_eb5d62765e2f",
-      "at": "2026-06-14T08:50:23.220083+00:00",
+      "id": "evt_7ed968dc39be",
+      "at": "2026-06-14T16:03:26.040474+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_af268f39b2da",
+      "capsule_id": "quarantine_bc786d4ac735",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -4065,10 +4065,10 @@
       }
     },
     {
-      "id": "evt_9415cf3ea66b",
-      "at": "2026-06-14T08:50:23.220106+00:00",
+      "id": "evt_2db8fac9165b",
+      "at": "2026-06-14T16:03:26.040490+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_af268f39b2da",
+      "capsule_id": "quarantine_bc786d4ac735",
       "source_agent": "injection_probe",
       "target_agent": "security_reviewer",
       "payload": {
@@ -4076,10 +4076,10 @@
       }
     },
     {
-      "id": "evt_7121ba733005",
-      "at": "2026-06-14T08:50:23.220536+00:00",
+      "id": "evt_9998df50ec26",
+      "at": "2026-06-14T16:03:26.040839+00:00",
       "kind": "published",
-      "capsule_id": "quarantine_dc24b1249a43",
+      "capsule_id": "quarantine_3291b0af78b5",
       "source_agent": "injection_probe",
       "target_agent": null,
       "payload": {
@@ -4088,10 +4088,10 @@
       }
     },
     {
-      "id": "evt_6bd2bdea6e3b",
-      "at": "2026-06-14T08:50:23.220552+00:00",
+      "id": "evt_e540a46f6407",
+      "at": "2026-06-14T16:03:26.040855+00:00",
       "kind": "quarantine_delivered",
-      "capsule_id": "quarantine_dc24b1249a43",
+      "capsule_id": "quarantine_3291b0af78b5",
       "source_agent": "injection_probe",
       "target_agent": "audit_keeper",
       "payload": {
@@ -4099,10 +4099,10 @@
       }
     },
     {
-      "id": "evt_6e7a2b4393d3",
-      "at": "2026-06-14T08:50:23.220784+00:00",
+      "id": "evt_5540b2230e5b",
+      "at": "2026-06-14T16:03:26.041099+00:00",
       "kind": "published",
-      "capsule_id": "capsule_634c923b8ad8",
+      "capsule_id": "capsule_5f7101cc1da8",
       "source_agent": "runtime_mediator",
       "target_agent": null,
       "payload": {
@@ -4113,192 +4113,192 @@
   ],
   "deliveries": [
     {
-      "at": "2026-06-14T08:50:23.185798+00:00",
-      "capsule_id": "refusal_69618f91f22f",
+      "at": "2026-06-14T16:03:26.006578+00:00",
+      "capsule_id": "refusal_ac94a6030656",
       "source_agent": "security_reviewer",
       "target_agent": "security_reviewer",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.186357+00:00",
-      "capsule_id": "refusal_6ac72a8e58c1",
+      "at": "2026-06-14T16:03:26.007040+00:00",
+      "capsule_id": "refusal_eb3368bdeb8d",
       "source_agent": "audit_keeper",
       "target_agent": "audit_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.186710+00:00",
-      "capsule_id": "refusal_95785448b3f9",
+      "at": "2026-06-14T16:03:26.007401+00:00",
+      "capsule_id": "refusal_11f825e2129e",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.187013+00:00",
-      "capsule_id": "refusal_5d97b63f9607",
+      "at": "2026-06-14T16:03:26.007802+00:00",
+      "capsule_id": "refusal_210ac0476d98",
       "source_agent": "workflow_coordinator",
       "target_agent": "workflow_coordinator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.187294+00:00",
-      "capsule_id": "refusal_75f941ae9d39",
+      "at": "2026-06-14T16:03:26.008136+00:00",
+      "capsule_id": "refusal_de554d9c72c1",
       "source_agent": "audit_keeper",
       "target_agent": "audit_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.187538+00:00",
-      "capsule_id": "refusal_e4d8b0e0989e",
+      "at": "2026-06-14T16:03:26.008437+00:00",
+      "capsule_id": "refusal_fccc602d24c6",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.187814+00:00",
-      "capsule_id": "refusal_462d6a76e630",
+      "at": "2026-06-14T16:03:26.008701+00:00",
+      "capsule_id": "refusal_08b512dcf460",
       "source_agent": "workflow_coordinator",
       "target_agent": "workflow_coordinator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.188039+00:00",
-      "capsule_id": "refusal_60e7188e1c11",
+      "at": "2026-06-14T16:03:26.008958+00:00",
+      "capsule_id": "refusal_ccc8eeb9c455",
       "source_agent": "security_reviewer",
       "target_agent": "security_reviewer",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.188266+00:00",
-      "capsule_id": "refusal_c3f8447ab3f7",
+      "at": "2026-06-14T16:03:26.009218+00:00",
+      "capsule_id": "refusal_fedab2a5b71f",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.188462+00:00",
-      "capsule_id": "quarantine_2660bfc341ae",
+      "at": "2026-06-14T16:03:26.009442+00:00",
+      "capsule_id": "quarantine_d8d07f9aef55",
       "source_agent": "injection_probe",
       "target_agent": "workflow_coordinator",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.188767+00:00",
-      "capsule_id": "quarantine_24041d922c42",
+      "at": "2026-06-14T16:03:26.009828+00:00",
+      "capsule_id": "quarantine_929b4e5ce273",
       "source_agent": "injection_probe",
       "target_agent": "security_reviewer",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.189100+00:00",
-      "capsule_id": "quarantine_f2cc906735d8",
+      "at": "2026-06-14T16:03:26.010158+00:00",
+      "capsule_id": "quarantine_e4130ab91da5",
       "source_agent": "injection_probe",
       "target_agent": "audit_keeper",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.216330+00:00",
-      "capsule_id": "refusal_fd25b352074a",
+      "at": "2026-06-14T16:03:26.037753+00:00",
+      "capsule_id": "refusal_0c40433a38ea",
       "source_agent": "security_reviewer",
       "target_agent": "security_reviewer",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.216839+00:00",
-      "capsule_id": "refusal_8397e77d74c3",
+      "at": "2026-06-14T16:03:26.038078+00:00",
+      "capsule_id": "refusal_4ab2e633f09c",
       "source_agent": "audit_keeper",
       "target_agent": "audit_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.217256+00:00",
-      "capsule_id": "refusal_90e3fe1e3461",
+      "at": "2026-06-14T16:03:26.038358+00:00",
+      "capsule_id": "refusal_f143c8673df8",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.217586+00:00",
-      "capsule_id": "refusal_d59eb67e5c27",
+      "at": "2026-06-14T16:03:26.038626+00:00",
+      "capsule_id": "refusal_5e92f73fdba2",
       "source_agent": "workflow_coordinator",
       "target_agent": "workflow_coordinator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.217916+00:00",
-      "capsule_id": "refusal_f738fe552e45",
+      "at": "2026-06-14T16:03:26.038890+00:00",
+      "capsule_id": "refusal_5607a9456c27",
       "source_agent": "audit_keeper",
       "target_agent": "audit_keeper",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.218232+00:00",
-      "capsule_id": "refusal_b18cf1514cc1",
+      "at": "2026-06-14T16:03:26.039147+00:00",
+      "capsule_id": "refusal_7f85aa378433",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.218701+00:00",
-      "capsule_id": "refusal_8d6c286e2267",
+      "at": "2026-06-14T16:03:26.039443+00:00",
+      "capsule_id": "refusal_7005d85a9b44",
       "source_agent": "workflow_coordinator",
       "target_agent": "workflow_coordinator",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.219029+00:00",
-      "capsule_id": "refusal_37b426ccb483",
+      "at": "2026-06-14T16:03:26.039690+00:00",
+      "capsule_id": "refusal_6e2ad59de15a",
       "source_agent": "security_reviewer",
       "target_agent": "security_reviewer",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.219338+00:00",
-      "capsule_id": "refusal_da575b4daaf3",
+      "at": "2026-06-14T16:03:26.039933+00:00",
+      "capsule_id": "refusal_18f86b8c84f7",
       "source_agent": "injection_probe",
       "target_agent": "injection_probe",
       "status": "refused",
       "route_kind": "refusal_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.219609+00:00",
-      "capsule_id": "quarantine_b88b98a147dd",
+      "at": "2026-06-14T16:03:26.040158+00:00",
+      "capsule_id": "quarantine_db5eed3d6b4b",
       "source_agent": "injection_probe",
       "target_agent": "workflow_coordinator",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.220099+00:00",
-      "capsule_id": "quarantine_af268f39b2da",
+      "at": "2026-06-14T16:03:26.040483+00:00",
+      "capsule_id": "quarantine_bc786d4ac735",
       "source_agent": "injection_probe",
       "target_agent": "security_reviewer",
       "status": "quarantined",
       "route_kind": "quarantine_delivered"
     },
     {
-      "at": "2026-06-14T08:50:23.220546+00:00",
-      "capsule_id": "quarantine_dc24b1249a43",
+      "at": "2026-06-14T16:03:26.040849+00:00",
+      "capsule_id": "quarantine_3291b0af78b5",
       "source_agent": "injection_probe",
       "target_agent": "audit_keeper",
       "status": "quarantined",

@@ -164,6 +164,7 @@ It shows:
 - commitment ledger
 - quarantine watch
 - Scenario Zoo story beats
+- contract verdicts for adversarial drill pass/fail
 
 It also includes a playable local lens:
 
@@ -213,6 +214,44 @@ http://localhost:8765/viewer/index.html?out=../examples/scenario_zoo/civic_delib
 The comparison lens is intentionally operational rather than decorative: it
 shows where the candidate run became slower, more expensive, more coercive, more
 leaky, or more likely to collapse plural semantics into one convenient answer.
+
+### Shadow Runs
+
+`shadow-run` runs the same scenario twice: a mock baseline and a candidate
+backend. It writes `baseline/`, `candidate/`, and a top-level
+`shadow_report.json`.
+
+```bash
+python run_multipolar_runtime.py shadow-run prompt_injection_drill \
+  --candidate-backend openai \
+  --model-name gpt-4.1-mini \
+  --api-key-env OPENAI_API_KEY \
+  --output runtime_shadow_prompt_injection
+```
+
+For an OpenAI-compatible local server:
+
+```bash
+python run_multipolar_runtime.py shadow-run forced_consensus_drill \
+  --candidate-backend openai_compatible \
+  --url http://127.0.0.1:1234 \
+  --model-name local-model \
+  --output runtime_shadow_forced_consensus
+```
+
+Each run writes `contract_report.json`, which is the machine-readable verdict
+for the scenario contract and adversarial drills. You can regenerate it for any
+existing Scenario Zoo output:
+
+```bash
+python run_multipolar_runtime.py evaluate-run runtime_shadow_prompt_injection/candidate
+```
+
+Open a shadow run in the Observatory:
+
+```text
+http://localhost:8765/viewer/index.html?out=../runtime_shadow_prompt_injection/baseline&compare=../runtime_shadow_prompt_injection/candidate
+```
 
 ## Core Runtime Loop
 
@@ -456,6 +495,7 @@ multipolar_runtime/
   runtime.py                   orchestration
   experiments.py               default experiment
   scenarios.py                 Scenario Zoo loader and runner
+  evaluation.py                contract reports and shadow-run comparison
   cli.py                       command-line interface
 
 configs/

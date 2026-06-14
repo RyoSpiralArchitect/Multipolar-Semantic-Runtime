@@ -442,8 +442,17 @@ main {
   padding: 14px;
 }
 
+.contract-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 14px;
+}
+
 .comparison-card,
-.comparison-empty {
+.comparison-empty,
+.contract-card,
+.contract-empty {
   min-width: 0;
   border: 1px solid rgba(148, 169, 173, 0.16);
   border-radius: 8px;
@@ -451,18 +460,48 @@ main {
   padding: 12px;
 }
 
-.comparison-card h3 {
+.comparison-card h3,
+.contract-card h3 {
   margin: 0 0 6px;
   color: #fff;
   font-size: 0.96rem;
 }
 
 .comparison-card p,
-.comparison-empty {
+.comparison-empty,
+.contract-card p,
+.contract-empty {
   overflow-wrap: anywhere;
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.4;
+}
+
+.verdict-pass {
+  border-left: 3px solid var(--active);
+}
+
+.verdict-fail {
+  border-left: 3px solid var(--quarantine);
+}
+
+.verdict-unknown,
+.contract-empty {
+  border-left: 3px solid var(--memory);
+}
+
+.contract-failures {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.contract-failures p {
+  margin: 0;
+  padding: 7px 8px;
+  border: 1px solid rgba(197, 84, 61, 0.28);
+  border-radius: 8px;
+  background: rgba(197, 84, 61, 0.08);
 }
 
 .delta-card {
@@ -1146,6 +1185,7 @@ main {
   .story-arc,
   .story-beats,
   .comparison-grid,
+  .contract-grid,
   .graph-tools,
   .play-grid,
   .temporal-controls,

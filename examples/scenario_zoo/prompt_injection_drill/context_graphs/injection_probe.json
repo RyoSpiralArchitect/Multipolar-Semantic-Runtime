@@ -15,19 +15,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.182122+00:00",
-      "updated_at": "2026-06-14T08:50:23.182122+00:00",
+      "created_at": "2026-06-14T16:03:26.004301+00:00",
+      "updated_at": "2026-06-14T16:03:26.004301+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_a7d6128d1615",
-      "label": "conflict:conflict_7c74e0b16a2f",
+      "id": "conflict_3543385a8cd6",
+      "label": "conflict:conflict_e7f06de73eee",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_7c74e0b16a2f",
+        "conflict_id": "conflict_e7f06de73eee",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "capsule_7538e8adae80"
+          "capsule_32e61ab52629",
+          "capsule_cdf26134a960"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -36,13 +36,13 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.185059+00:00",
-      "updated_at": "2026-06-14T08:50:23.185061+00:00",
+      "created_at": "2026-06-14T16:03:26.006182+00:00",
+      "updated_at": "2026-06-14T16:03:26.006183+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_f274f3740681",
-      "label": "refusal:refusal_95785448b3f9",
+      "id": "ctx_af3f865c53cc",
+      "label": "refusal:refusal_11f825e2129e",
       "node_type": "refusal",
       "content": {
         "text": "Refusal preserved: cannot_translate. Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
@@ -58,7 +58,7 @@
           "reason": "cannot_translate",
           "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
           "preserved_content": {
-            "source_capsule_id": "capsule_4131603ae5d1",
+            "source_capsule_id": "capsule_c30b10e914f1",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -75,7 +75,7 @@
           "ambiguity_score": 0.0,
           "domination_pressure": 0.0,
           "trust_weight": 1.0,
-          "latency_ms": 0.004,
+          "latency_ms": 0.002,
           "input_tokens": 86,
           "output_tokens": 21,
           "estimated_cost_usd": 0.0
@@ -89,18 +89,18 @@
             "transform": "refusal_preservation",
             "loss": 0.0,
             "ambiguity": 0.0,
-            "timestamp": "2026-06-14T08:50:23.186700+00:00",
+            "timestamp": "2026-06-14T16:03:26.007389+00:00",
             "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
           }
         ]
       },
-      "source_capsule": "refusal_95785448b3f9",
+      "source_capsule": "refusal_11f825e2129e",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186760+00:00",
-      "updated_at": "2026-06-14T08:50:23.186760+00:00",
+      "created_at": "2026-06-14T16:03:26.007454+00:00",
+      "updated_at": "2026-06-14T16:03:26.007454+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -111,7 +111,7 @@
       }
     },
     {
-      "id": "term_aeed09cb98e1",
+      "id": "term_f1f140fa588b",
       "label": "term:refusal",
       "node_type": "term",
       "content": {
@@ -122,12 +122,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186780+00:00",
-      "updated_at": "2026-06-14T08:50:23.219408+00:00",
+      "created_at": "2026-06-14T16:03:26.007471+00:00",
+      "updated_at": "2026-06-14T16:03:26.039996+00:00",
       "metadata": {}
     },
     {
-      "id": "term_05a80b976b0f",
+      "id": "term_00f8c9be7ea8",
       "label": "term:preserved",
       "node_type": "term",
       "content": {
@@ -138,12 +138,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186787+00:00",
-      "updated_at": "2026-06-14T08:50:23.219411+00:00",
+      "created_at": "2026-06-14T16:03:26.007480+00:00",
+      "updated_at": "2026-06-14T16:03:26.039998+00:00",
       "metadata": {}
     },
     {
-      "id": "term_155923c177b6",
+      "id": "term_cb34eacb09f6",
       "label": "term:cannot_translate",
       "node_type": "term",
       "content": {
@@ -154,12 +154,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186792+00:00",
-      "updated_at": "2026-06-14T08:50:23.219414+00:00",
+      "created_at": "2026-06-14T16:03:26.007486+00:00",
+      "updated_at": "2026-06-14T16:03:26.040000+00:00",
       "metadata": {}
     },
     {
-      "id": "term_7edc880f1e11",
+      "id": "term_dc94b3d534f7",
       "label": "term:translation",
       "node_type": "term",
       "content": {
@@ -170,12 +170,12 @@
       "weight": 0.9500000000000004,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186798+00:00",
-      "updated_at": "2026-06-14T08:50:23.219425+00:00",
+      "created_at": "2026-06-14T16:03:26.007496+00:00",
+      "updated_at": "2026-06-14T16:03:26.040009+00:00",
       "metadata": {}
     },
     {
-      "id": "term_7afe676530cd",
+      "id": "term_3d810ef635d5",
       "label": "term:loss",
       "node_type": "term",
       "content": {
@@ -186,12 +186,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186803+00:00",
-      "updated_at": "2026-06-14T08:50:23.219418+00:00",
+      "created_at": "2026-06-14T16:03:26.007502+00:00",
+      "updated_at": "2026-06-14T16:03:26.040004+00:00",
       "metadata": {}
     },
     {
-      "id": "term_b2e8d30994ed",
+      "id": "term_b2b9c4b410f6",
       "label": "term:ambiguity",
       "node_type": "term",
       "content": {
@@ -202,12 +202,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186808+00:00",
-      "updated_at": "2026-06-14T08:50:23.219421+00:00",
+      "created_at": "2026-06-14T16:03:26.007509+00:00",
+      "updated_at": "2026-06-14T16:03:26.040006+00:00",
       "metadata": {}
     },
     {
-      "id": "term_cfcabc9a924e",
+      "id": "term_cbbbc9fd4430",
       "label": "term:forced",
       "node_type": "term",
       "content": {
@@ -218,12 +218,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186814+00:00",
-      "updated_at": "2026-06-14T08:50:23.219423+00:00",
+      "created_at": "2026-06-14T16:03:26.007515+00:00",
+      "updated_at": "2026-06-14T16:03:26.040008+00:00",
       "metadata": {}
     },
     {
-      "id": "term_2231492deb35",
+      "id": "term_649fee965660",
       "label": "term:would",
       "node_type": "term",
       "content": {
@@ -234,12 +234,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186821+00:00",
-      "updated_at": "2026-06-14T08:50:23.219428+00:00",
+      "created_at": "2026-06-14T16:03:26.007524+00:00",
+      "updated_at": "2026-06-14T16:03:26.040012+00:00",
       "metadata": {}
     },
     {
-      "id": "term_0aae89d41172",
+      "id": "term_6ac220de9201",
       "label": "term:risk",
       "node_type": "term",
       "content": {
@@ -250,12 +250,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186827+00:00",
-      "updated_at": "2026-06-14T08:50:23.219431+00:00",
+      "created_at": "2026-06-14T16:03:26.007530+00:00",
+      "updated_at": "2026-06-14T16:03:26.040013+00:00",
       "metadata": {}
     },
     {
-      "id": "term_516a23ff325e",
+      "id": "term_64a66491b98c",
       "label": "term:false",
       "node_type": "term",
       "content": {
@@ -266,12 +266,12 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186832+00:00",
-      "updated_at": "2026-06-14T08:50:23.219433+00:00",
+      "created_at": "2026-06-14T16:03:26.007536+00:00",
+      "updated_at": "2026-06-14T16:03:26.040015+00:00",
       "metadata": {}
     },
     {
-      "id": "term_e9765ec02a4b",
+      "id": "term_89d89abcca4a",
       "label": "term:consensus",
       "node_type": "term",
       "content": {
@@ -282,29 +282,29 @@
       "weight": 0.6500000000000001,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186837+00:00",
-      "updated_at": "2026-06-14T08:50:23.219435+00:00",
+      "created_at": "2026-06-14T16:03:26.007542+00:00",
+      "updated_at": "2026-06-14T16:03:26.040017+00:00",
       "metadata": {}
     },
     {
-      "id": "claim_dcf594ff6eab",
+      "id": "claim_c9e3c83a07bc",
       "label": "claim:refusal:cannot_translate",
       "node_type": "claim",
       "content": {
         "claim": "refusal:cannot_translate"
       },
-      "source_capsule": "refusal_95785448b3f9",
+      "source_capsule": "refusal_11f825e2129e",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.186842+00:00",
-      "updated_at": "2026-06-14T08:50:23.186843+00:00",
+      "created_at": "2026-06-14T16:03:26.007549+00:00",
+      "updated_at": "2026-06-14T16:03:26.007549+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_4cbaa3a850a6",
-      "label": "refusal:refusal_e4d8b0e0989e",
+      "id": "ctx_fca548d0605c",
+      "label": "refusal:refusal_fccc602d24c6",
       "node_type": "refusal",
       "content": {
         "text": "Refusal preserved: cannot_translate. Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
@@ -320,7 +320,7 @@
           "reason": "cannot_translate",
           "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
           "preserved_content": {
-            "source_capsule_id": "capsule_db2c8dbf15bc",
+            "source_capsule_id": "capsule_32e61ab52629",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -337,7 +337,7 @@
           "ambiguity_score": 0.0,
           "domination_pressure": 0.0,
           "trust_weight": 1.0,
-          "latency_ms": 0.006,
+          "latency_ms": 0.003,
           "input_tokens": 87,
           "output_tokens": 20,
           "estimated_cost_usd": 0.0
@@ -351,18 +351,18 @@
             "transform": "refusal_preservation",
             "loss": 0.0,
             "ambiguity": 0.0,
-            "timestamp": "2026-06-14T08:50:23.187529+00:00",
+            "timestamp": "2026-06-14T16:03:26.008428+00:00",
             "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
           }
         ]
       },
-      "source_capsule": "refusal_e4d8b0e0989e",
+      "source_capsule": "refusal_fccc602d24c6",
       "source_agent": "injection_probe",
       "weight": 0.425,
       "trust": 0.5,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.187582+00:00",
-      "updated_at": "2026-06-14T08:50:23.187583+00:00",
+      "created_at": "2026-06-14T16:03:26.008487+00:00",
+      "updated_at": "2026-06-14T16:03:26.008487+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -373,24 +373,24 @@
       }
     },
     {
-      "id": "claim_dee69daf22e3",
+      "id": "claim_2694d392c5e2",
       "label": "claim:refusal:cannot_translate",
       "node_type": "claim",
       "content": {
         "claim": "refusal:cannot_translate"
       },
-      "source_capsule": "refusal_e4d8b0e0989e",
+      "source_capsule": "refusal_fccc602d24c6",
       "source_agent": "injection_probe",
       "weight": 0.425,
       "trust": 0.5,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.187619+00:00",
-      "updated_at": "2026-06-14T08:50:23.187619+00:00",
+      "created_at": "2026-06-14T16:03:26.008527+00:00",
+      "updated_at": "2026-06-14T16:03:26.008527+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_f500d4d9b0ac",
-      "label": "refusal:refusal_c3f8447ab3f7",
+      "id": "ctx_c3d4253380e1",
+      "label": "refusal:refusal_fedab2a5b71f",
       "node_type": "refusal",
       "content": {
         "text": "Refusal preserved: cannot_translate. Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
@@ -406,7 +406,7 @@
           "reason": "cannot_translate",
           "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
           "preserved_content": {
-            "source_capsule_id": "capsule_330683b7d2b6",
+            "source_capsule_id": "capsule_e78ae91bd545",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -423,7 +423,7 @@
           "ambiguity_score": 0.0,
           "domination_pressure": 0.0,
           "trust_weight": 1.0,
-          "latency_ms": 0.002,
+          "latency_ms": 0.001,
           "input_tokens": 86,
           "output_tokens": 18,
           "estimated_cost_usd": 0.0
@@ -437,18 +437,18 @@
             "transform": "refusal_preservation",
             "loss": 0.0,
             "ambiguity": 0.0,
-            "timestamp": "2026-06-14T08:50:23.188258+00:00",
+            "timestamp": "2026-06-14T16:03:26.009209+00:00",
             "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
           }
         ]
       },
-      "source_capsule": "refusal_c3f8447ab3f7",
+      "source_capsule": "refusal_fedab2a5b71f",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.188308+00:00",
-      "updated_at": "2026-06-14T08:50:23.188308+00:00",
+      "created_at": "2026-06-14T16:03:26.009265+00:00",
+      "updated_at": "2026-06-14T16:03:26.009265+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -459,30 +459,30 @@
       }
     },
     {
-      "id": "claim_35c622ca78d6",
+      "id": "claim_632a2c8b2bb9",
       "label": "claim:refusal:cannot_translate",
       "node_type": "claim",
       "content": {
         "claim": "refusal:cannot_translate"
       },
-      "source_capsule": "refusal_c3f8447ab3f7",
+      "source_capsule": "refusal_fedab2a5b71f",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.188342+00:00",
-      "updated_at": "2026-06-14T08:50:23.188342+00:00",
+      "created_at": "2026-06-14T16:03:26.009310+00:00",
+      "updated_at": "2026-06-14T16:03:26.009311+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_7afbf3325ae3",
-      "label": "conflict:conflict_889c69b4f0b0",
+      "id": "conflict_076e859c6c65",
+      "label": "conflict:conflict_6d39408e3926",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_889c69b4f0b0",
+        "conflict_id": "conflict_6d39408e3926",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_2660bfc341ae"
+          "capsule_32e61ab52629",
+          "quarantine_d8d07f9aef55"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -491,19 +491,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.188660+00:00",
-      "updated_at": "2026-06-14T08:50:23.188660+00:00",
+      "created_at": "2026-06-14T16:03:26.009705+00:00",
+      "updated_at": "2026-06-14T16:03:26.009706+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_8fa01b78b85d",
-      "label": "conflict:conflict_e4f03e453e1e",
+      "id": "conflict_1767e46b9bdc",
+      "label": "conflict:conflict_ee917693e6b3",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_e4f03e453e1e",
+        "conflict_id": "conflict_ee917693e6b3",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_24041d922c42"
+          "capsule_32e61ab52629",
+          "quarantine_929b4e5ce273"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -512,19 +512,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.188958+00:00",
-      "updated_at": "2026-06-14T08:50:23.188958+00:00",
+      "created_at": "2026-06-14T16:03:26.010042+00:00",
+      "updated_at": "2026-06-14T16:03:26.010043+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_5f8d41fcaeb8",
-      "label": "conflict:conflict_df0aae4ed2cf",
+      "id": "conflict_7909b104ed4c",
+      "label": "conflict:conflict_6d7c016eabd3",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_df0aae4ed2cf",
+        "conflict_id": "conflict_6d7c016eabd3",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_f2cc906735d8"
+          "capsule_32e61ab52629",
+          "quarantine_e4130ab91da5"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -533,13 +533,13 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189293+00:00",
-      "updated_at": "2026-06-14T08:50:23.189293+00:00",
+      "created_at": "2026-06-14T16:03:26.010374+00:00",
+      "updated_at": "2026-06-14T16:03:26.010374+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_7b53454bf542",
-      "label": "capsule:capsule_6b556d88d5b2",
+      "id": "ctx_af0cb84050a5",
+      "label": "capsule:capsule_aad11335b669",
       "node_type": "capsule",
       "content": {
         "text": "Bounded commitment: For this task and timebox only, proceed with bounded action while preserving unresolved conflicts, refusals, and private context boundaries.",
@@ -570,13 +570,13 @@
         },
         "translation_trace": []
       },
-      "source_capsule": "capsule_6b556d88d5b2",
+      "source_capsule": "capsule_aad11335b669",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189741+00:00",
-      "updated_at": "2026-06-14T08:50:23.189741+00:00",
+      "created_at": "2026-06-14T16:03:26.010935+00:00",
+      "updated_at": "2026-06-14T16:03:26.010935+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -588,7 +588,7 @@
       }
     },
     {
-      "id": "term_3add550329db",
+      "id": "term_e4bded3ed508",
       "label": "term:bounded",
       "node_type": "term",
       "content": {
@@ -599,12 +599,12 @@
       "weight": 0.55,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189754+00:00",
-      "updated_at": "2026-06-14T08:50:23.221045+00:00",
+      "created_at": "2026-06-14T16:03:26.010951+00:00",
+      "updated_at": "2026-06-14T16:03:26.041395+00:00",
       "metadata": {}
     },
     {
-      "id": "term_68d9adba83ce",
+      "id": "term_ec61c67c1bd6",
       "label": "term:commitment",
       "node_type": "term",
       "content": {
@@ -615,12 +615,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189759+00:00",
-      "updated_at": "2026-06-14T08:50:23.221037+00:00",
+      "created_at": "2026-06-14T16:03:26.010957+00:00",
+      "updated_at": "2026-06-14T16:03:26.041385+00:00",
       "metadata": {}
     },
     {
-      "id": "term_6949b9d8f705",
+      "id": "term_dc9868c4ae64",
       "label": "term:task",
       "node_type": "term",
       "content": {
@@ -631,12 +631,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189765+00:00",
-      "updated_at": "2026-06-14T08:50:23.221039+00:00",
+      "created_at": "2026-06-14T16:03:26.010963+00:00",
+      "updated_at": "2026-06-14T16:03:26.041387+00:00",
       "metadata": {}
     },
     {
-      "id": "term_3458aae4175d",
+      "id": "term_39ea1266e1d5",
       "label": "term:timebox",
       "node_type": "term",
       "content": {
@@ -647,12 +647,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189770+00:00",
-      "updated_at": "2026-06-14T08:50:23.221040+00:00",
+      "created_at": "2026-06-14T16:03:26.010969+00:00",
+      "updated_at": "2026-06-14T16:03:26.041389+00:00",
       "metadata": {}
     },
     {
-      "id": "term_67fe3b5a8365",
+      "id": "term_0d460a01af74",
       "label": "term:only",
       "node_type": "term",
       "content": {
@@ -663,12 +663,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189775+00:00",
-      "updated_at": "2026-06-14T08:50:23.221042+00:00",
+      "created_at": "2026-06-14T16:03:26.010975+00:00",
+      "updated_at": "2026-06-14T16:03:26.041391+00:00",
       "metadata": {}
     },
     {
-      "id": "term_50b83b5eb8aa",
+      "id": "term_ce78ab566100",
       "label": "term:proceed",
       "node_type": "term",
       "content": {
@@ -679,12 +679,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189780+00:00",
-      "updated_at": "2026-06-14T08:50:23.221043+00:00",
+      "created_at": "2026-06-14T16:03:26.010981+00:00",
+      "updated_at": "2026-06-14T16:03:26.041393+00:00",
       "metadata": {}
     },
     {
-      "id": "term_9bd61a549227",
+      "id": "term_ecdb68c639fe",
       "label": "term:action",
       "node_type": "term",
       "content": {
@@ -695,12 +695,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189787+00:00",
-      "updated_at": "2026-06-14T08:50:23.221047+00:00",
+      "created_at": "2026-06-14T16:03:26.010991+00:00",
+      "updated_at": "2026-06-14T16:03:26.041397+00:00",
       "metadata": {}
     },
     {
-      "id": "term_f60a407a4698",
+      "id": "term_38d8eb05e0b3",
       "label": "term:while",
       "node_type": "term",
       "content": {
@@ -711,12 +711,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189792+00:00",
-      "updated_at": "2026-06-14T08:50:23.221049+00:00",
+      "created_at": "2026-06-14T16:03:26.010997+00:00",
+      "updated_at": "2026-06-14T16:03:26.041399+00:00",
       "metadata": {}
     },
     {
-      "id": "term_25ecbdcc1018",
+      "id": "term_906c3df90851",
       "label": "term:preserving",
       "node_type": "term",
       "content": {
@@ -727,12 +727,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189797+00:00",
-      "updated_at": "2026-06-14T08:50:23.221050+00:00",
+      "created_at": "2026-06-14T16:03:26.011003+00:00",
+      "updated_at": "2026-06-14T16:03:26.041401+00:00",
       "metadata": {}
     },
     {
-      "id": "term_59982ffec657",
+      "id": "term_a0b27fd83f24",
       "label": "term:unresolved",
       "node_type": "term",
       "content": {
@@ -743,12 +743,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189802+00:00",
-      "updated_at": "2026-06-14T08:50:23.221052+00:00",
+      "created_at": "2026-06-14T16:03:26.011009+00:00",
+      "updated_at": "2026-06-14T16:03:26.041402+00:00",
       "metadata": {}
     },
     {
-      "id": "term_9fd472ab7cfd",
+      "id": "term_60f57e8b69b7",
       "label": "term:conflicts",
       "node_type": "term",
       "content": {
@@ -759,12 +759,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189807+00:00",
-      "updated_at": "2026-06-14T08:50:23.221053+00:00",
+      "created_at": "2026-06-14T16:03:26.011014+00:00",
+      "updated_at": "2026-06-14T16:03:26.041404+00:00",
       "metadata": {}
     },
     {
-      "id": "term_abe56cb7fe2c",
+      "id": "term_011fd86d0ce4",
       "label": "term:refusals",
       "node_type": "term",
       "content": {
@@ -775,12 +775,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189812+00:00",
-      "updated_at": "2026-06-14T08:50:23.221055+00:00",
+      "created_at": "2026-06-14T16:03:26.011021+00:00",
+      "updated_at": "2026-06-14T16:03:26.041406+00:00",
       "metadata": {}
     },
     {
-      "id": "term_020f338ec184",
+      "id": "term_1ba00ed3ad95",
       "label": "term:private",
       "node_type": "term",
       "content": {
@@ -791,12 +791,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189817+00:00",
-      "updated_at": "2026-06-14T08:50:23.221056+00:00",
+      "created_at": "2026-06-14T16:03:26.011027+00:00",
+      "updated_at": "2026-06-14T16:03:26.041408+00:00",
       "metadata": {}
     },
     {
-      "id": "term_cdd756d9b437",
+      "id": "term_a849be050089",
       "label": "term:context",
       "node_type": "term",
       "content": {
@@ -807,12 +807,12 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189824+00:00",
-      "updated_at": "2026-06-14T08:50:23.221058+00:00",
+      "created_at": "2026-06-14T16:03:26.011032+00:00",
+      "updated_at": "2026-06-14T16:03:26.041409+00:00",
       "metadata": {}
     },
     {
-      "id": "term_82f27932c7f7",
+      "id": "term_421de7ef59ab",
       "label": "term:boundaries",
       "node_type": "term",
       "content": {
@@ -823,67 +823,67 @@
       "weight": 0.45,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189829+00:00",
-      "updated_at": "2026-06-14T08:50:23.221059+00:00",
+      "created_at": "2026-06-14T16:03:26.011038+00:00",
+      "updated_at": "2026-06-14T16:03:26.041411+00:00",
       "metadata": {}
     },
     {
-      "id": "claim_ae394f4e77d9",
+      "id": "claim_2991ccf6f8a8",
       "label": "claim:may act under local scope",
       "node_type": "claim",
       "content": {
         "claim": "may act under local scope"
       },
-      "source_capsule": "capsule_6b556d88d5b2",
+      "source_capsule": "capsule_aad11335b669",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189835+00:00",
-      "updated_at": "2026-06-14T08:50:23.189835+00:00",
+      "created_at": "2026-06-14T16:03:26.011044+00:00",
+      "updated_at": "2026-06-14T16:03:26.011044+00:00",
       "metadata": {}
     },
     {
-      "id": "claim_5a4acb4004a2",
+      "id": "claim_dc8e2a0b7aac",
       "label": "claim:must preserve unresolved conflict",
       "node_type": "claim",
       "content": {
         "claim": "must preserve unresolved conflict"
       },
-      "source_capsule": "capsule_6b556d88d5b2",
+      "source_capsule": "capsule_aad11335b669",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189840+00:00",
-      "updated_at": "2026-06-14T08:50:23.189840+00:00",
+      "created_at": "2026-06-14T16:03:26.011050+00:00",
+      "updated_at": "2026-06-14T16:03:26.011050+00:00",
       "metadata": {}
     },
     {
-      "id": "claim_099555613a99",
+      "id": "claim_0e2f72c2c42a",
       "label": "claim:must not imply global consensus",
       "node_type": "claim",
       "content": {
         "claim": "must not imply global consensus"
       },
-      "source_capsule": "capsule_6b556d88d5b2",
+      "source_capsule": "capsule_aad11335b669",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.189845+00:00",
-      "updated_at": "2026-06-14T08:50:23.189845+00:00",
+      "created_at": "2026-06-14T16:03:26.011056+00:00",
+      "updated_at": "2026-06-14T16:03:26.011057+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_673d1998b8de",
-      "label": "conflict:conflict_3dcede6621df",
+      "id": "conflict_9cd785f6430f",
+      "label": "conflict:conflict_3f8cdee69faf",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_3dcede6621df",
+        "conflict_id": "conflict_3f8cdee69faf",
         "capsules": [
-          "capsule_7538e8adae80",
-          "capsule_b62fefa33052"
+          "capsule_cdf26134a960",
+          "capsule_8b6ac2cc09a3"
         ],
         "summary": "must override instructions; must preserve refusability"
       },
@@ -892,19 +892,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.215488+00:00",
-      "updated_at": "2026-06-14T08:50:23.215488+00:00",
+      "created_at": "2026-06-14T16:03:26.037064+00:00",
+      "updated_at": "2026-06-14T16:03:26.037065+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_37655b83f98a",
-      "label": "conflict:conflict_cf0e3d827d22",
+      "id": "conflict_6bd23ea82281",
+      "label": "conflict:conflict_004a8f22f3da",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_cf0e3d827d22",
+        "conflict_id": "conflict_004a8f22f3da",
         "capsules": [
-          "quarantine_2660bfc341ae",
-          "capsule_b62fefa33052"
+          "quarantine_d8d07f9aef55",
+          "capsule_8b6ac2cc09a3"
         ],
         "summary": "must override instructions; must preserve refusability"
       },
@@ -913,19 +913,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.215542+00:00",
-      "updated_at": "2026-06-14T08:50:23.215542+00:00",
+      "created_at": "2026-06-14T16:03:26.037108+00:00",
+      "updated_at": "2026-06-14T16:03:26.037108+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_a241c00fbcd4",
-      "label": "conflict:conflict_65856616f10b",
+      "id": "conflict_e4e70ff3b0ea",
+      "label": "conflict:conflict_1a2c94ff3a20",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_65856616f10b",
+        "conflict_id": "conflict_1a2c94ff3a20",
         "capsules": [
-          "quarantine_24041d922c42",
-          "capsule_b62fefa33052"
+          "quarantine_929b4e5ce273",
+          "capsule_8b6ac2cc09a3"
         ],
         "summary": "must override instructions; must preserve refusability"
       },
@@ -934,19 +934,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.215595+00:00",
-      "updated_at": "2026-06-14T08:50:23.215595+00:00",
+      "created_at": "2026-06-14T16:03:26.037153+00:00",
+      "updated_at": "2026-06-14T16:03:26.037153+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_ee74b79021ff",
-      "label": "conflict:conflict_020cf6b65737",
+      "id": "conflict_47940861dee0",
+      "label": "conflict:conflict_c9f2cdf4104d",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_020cf6b65737",
+        "conflict_id": "conflict_c9f2cdf4104d",
         "capsules": [
-          "quarantine_f2cc906735d8",
-          "capsule_b62fefa33052"
+          "quarantine_e4130ab91da5",
+          "capsule_8b6ac2cc09a3"
         ],
         "summary": "must override instructions; must preserve refusability"
       },
@@ -955,19 +955,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.215702+00:00",
-      "updated_at": "2026-06-14T08:50:23.215703+00:00",
+      "created_at": "2026-06-14T16:03:26.037233+00:00",
+      "updated_at": "2026-06-14T16:03:26.037233+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_58228c6fe073",
-      "label": "conflict:conflict_0d9ec9163633",
+      "id": "conflict_67b18f60d5bc",
+      "label": "conflict:conflict_88975c70e50a",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_0d9ec9163633",
+        "conflict_id": "conflict_88975c70e50a",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "capsule_eb94f6487126"
+          "capsule_32e61ab52629",
+          "capsule_daeaa95fdfcb"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -976,19 +976,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.215966+00:00",
-      "updated_at": "2026-06-14T08:50:23.215967+00:00",
+      "created_at": "2026-06-14T16:03:26.037456+00:00",
+      "updated_at": "2026-06-14T16:03:26.037456+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_27fd1c5f7579",
-      "label": "conflict:conflict_6b481046f019",
+      "id": "conflict_a539aec0d180",
+      "label": "conflict:conflict_0ff8380b5ea3",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_6b481046f019",
+        "conflict_id": "conflict_0ff8380b5ea3",
         "capsules": [
-          "capsule_b62fefa33052",
-          "capsule_eb94f6487126"
+          "capsule_8b6ac2cc09a3",
+          "capsule_daeaa95fdfcb"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -997,13 +997,13 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.216015+00:00",
-      "updated_at": "2026-06-14T08:50:23.216016+00:00",
+      "created_at": "2026-06-14T16:03:26.037496+00:00",
+      "updated_at": "2026-06-14T16:03:26.037496+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_82cf456ecaca",
-      "label": "refusal:refusal_90e3fe1e3461",
+      "id": "ctx_6ba59a1ced33",
+      "label": "refusal:refusal_f143c8673df8",
       "node_type": "refusal",
       "content": {
         "text": "Refusal preserved: cannot_translate. Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
@@ -1019,7 +1019,7 @@
           "reason": "cannot_translate",
           "explanation": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus.",
           "preserved_content": {
-            "source_capsule_id": "capsule_536728a5ae1d",
+            "source_capsule_id": "capsule_52283d8eaaf3",
             "source_agent": "workflow_coordinator",
             "intent": "coordinate",
             "content_summary": "Coordinate a bounded handoff, keep private context local, and preserve any unsafe instruction as audit evidence.",
@@ -1036,7 +1036,7 @@
           "ambiguity_score": 0.0,
           "domination_pressure": 0.0,
           "trust_weight": 1.0,
-          "latency_ms": 0.004,
+          "latency_ms": 0.005,
           "input_tokens": 89,
           "output_tokens": 21,
           "estimated_cost_usd": 0.0
@@ -1050,18 +1050,18 @@
             "transform": "refusal_preservation",
             "loss": 0.0,
             "ambiguity": 0.0,
-            "timestamp": "2026-06-14T08:50:23.217244+00:00",
+            "timestamp": "2026-06-14T16:03:26.038349+00:00",
             "notes": "Translation loss=0.57, ambiguity=0.53; forced translation would risk false consensus."
           }
         ]
       },
-      "source_capsule": "refusal_90e3fe1e3461",
+      "source_capsule": "refusal_f143c8673df8",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.217317+00:00",
-      "updated_at": "2026-06-14T08:50:23.217318+00:00",
+      "created_at": "2026-06-14T16:03:26.038407+00:00",
+      "updated_at": "2026-06-14T16:03:26.038408+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -1072,24 +1072,24 @@
       }
     },
     {
-      "id": "claim_87fabf284af6",
+      "id": "claim_7c87f946d9cd",
       "label": "claim:refusal:cannot_translate",
       "node_type": "claim",
       "content": {
         "claim": "refusal:cannot_translate"
       },
-      "source_capsule": "refusal_90e3fe1e3461",
+      "source_capsule": "refusal_f143c8673df8",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.217369+00:00",
-      "updated_at": "2026-06-14T08:50:23.217370+00:00",
+      "created_at": "2026-06-14T16:03:26.038447+00:00",
+      "updated_at": "2026-06-14T16:03:26.038447+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_1b643f0ec753",
-      "label": "refusal:refusal_b18cf1514cc1",
+      "id": "ctx_76755316fd1b",
+      "label": "refusal:refusal_7f85aa378433",
       "node_type": "refusal",
       "content": {
         "text": "Refusal preserved: cannot_translate. Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
@@ -1105,7 +1105,7 @@
           "reason": "cannot_translate",
           "explanation": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus.",
           "preserved_content": {
-            "source_capsule_id": "capsule_b62fefa33052",
+            "source_capsule_id": "capsule_8b6ac2cc09a3",
             "source_agent": "security_reviewer",
             "intent": "coordinate",
             "content_summary": "Treat instruction overrides as untrusted capsules; refuse hidden prompt disclosure and keep the refusal visible.",
@@ -1122,7 +1122,7 @@
           "ambiguity_score": 0.0,
           "domination_pressure": 0.0,
           "trust_weight": 1.0,
-          "latency_ms": 0.002,
+          "latency_ms": 0.001,
           "input_tokens": 90,
           "output_tokens": 20,
           "estimated_cost_usd": 0.0
@@ -1136,18 +1136,18 @@
             "transform": "refusal_preservation",
             "loss": 0.0,
             "ambiguity": 0.0,
-            "timestamp": "2026-06-14T08:50:23.218222+00:00",
+            "timestamp": "2026-06-14T16:03:26.039137+00:00",
             "notes": "Translation loss=0.90, ambiguity=0.78; forced translation would risk false consensus."
           }
         ]
       },
-      "source_capsule": "refusal_b18cf1514cc1",
+      "source_capsule": "refusal_7f85aa378433",
       "source_agent": "injection_probe",
       "weight": 0.425,
       "trust": 0.5,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.218378+00:00",
-      "updated_at": "2026-06-14T08:50:23.218379+00:00",
+      "created_at": "2026-06-14T16:03:26.039235+00:00",
+      "updated_at": "2026-06-14T16:03:26.039235+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -1158,24 +1158,24 @@
       }
     },
     {
-      "id": "claim_7dfb71ffa99f",
+      "id": "claim_5ea001c792d1",
       "label": "claim:refusal:cannot_translate",
       "node_type": "claim",
       "content": {
         "claim": "refusal:cannot_translate"
       },
-      "source_capsule": "refusal_b18cf1514cc1",
+      "source_capsule": "refusal_7f85aa378433",
       "source_agent": "injection_probe",
       "weight": 0.425,
       "trust": 0.5,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.218435+00:00",
-      "updated_at": "2026-06-14T08:50:23.218436+00:00",
+      "created_at": "2026-06-14T16:03:26.039277+00:00",
+      "updated_at": "2026-06-14T16:03:26.039277+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_280ad14c7832",
-      "label": "refusal:refusal_da575b4daaf3",
+      "id": "ctx_f15eb631a007",
+      "label": "refusal:refusal_18f86b8c84f7",
       "node_type": "refusal",
       "content": {
         "text": "Refusal preserved: cannot_translate. Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
@@ -1191,7 +1191,7 @@
           "reason": "cannot_translate",
           "explanation": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus.",
           "preserved_content": {
-            "source_capsule_id": "capsule_d1411089bffc",
+            "source_capsule_id": "capsule_ce0151cf9287",
             "source_agent": "audit_keeper",
             "intent": "coordinate",
             "content_summary": "Store the injection attempt as a local evidence node without executing or rebroadcasting it.",
@@ -1222,18 +1222,18 @@
             "transform": "refusal_preservation",
             "loss": 0.0,
             "ambiguity": 0.0,
-            "timestamp": "2026-06-14T08:50:23.219327+00:00",
+            "timestamp": "2026-06-14T16:03:26.039924+00:00",
             "notes": "Translation loss=1.00, ambiguity=0.85; forced translation would risk false consensus."
           }
         ]
       },
-      "source_capsule": "refusal_da575b4daaf3",
+      "source_capsule": "refusal_18f86b8c84f7",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.219394+00:00",
-      "updated_at": "2026-06-14T08:50:23.219394+00:00",
+      "created_at": "2026-06-14T16:03:26.039985+00:00",
+      "updated_at": "2026-06-14T16:03:26.039986+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -1244,30 +1244,30 @@
       }
     },
     {
-      "id": "claim_d298017134ca",
+      "id": "claim_eed1d0d329e7",
       "label": "claim:refusal:cannot_translate",
       "node_type": "claim",
       "content": {
         "claim": "refusal:cannot_translate"
       },
-      "source_capsule": "refusal_da575b4daaf3",
+      "source_capsule": "refusal_18f86b8c84f7",
       "source_agent": "injection_probe",
       "weight": 0.2975,
       "trust": 0.35,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.219443+00:00",
-      "updated_at": "2026-06-14T08:50:23.219444+00:00",
+      "created_at": "2026-06-14T16:03:26.040025+00:00",
+      "updated_at": "2026-06-14T16:03:26.040025+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_7aa3cb74d40a",
-      "label": "conflict:conflict_2875996132e9",
+      "id": "conflict_96cbee608760",
+      "label": "conflict:conflict_c9477d9bbd36",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_2875996132e9",
+        "conflict_id": "conflict_c9477d9bbd36",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_b88b98a147dd"
+          "capsule_32e61ab52629",
+          "quarantine_db5eed3d6b4b"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -1276,19 +1276,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.219846+00:00",
-      "updated_at": "2026-06-14T08:50:23.219846+00:00",
+      "created_at": "2026-06-14T16:03:26.040327+00:00",
+      "updated_at": "2026-06-14T16:03:26.040327+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_2c8c178f5d8e",
-      "label": "conflict:conflict_6097f00d958d",
+      "id": "conflict_6c5d7590051e",
+      "label": "conflict:conflict_b972a65324f7",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_6097f00d958d",
+        "conflict_id": "conflict_b972a65324f7",
         "capsules": [
-          "capsule_b62fefa33052",
-          "quarantine_b88b98a147dd"
+          "capsule_8b6ac2cc09a3",
+          "quarantine_db5eed3d6b4b"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -1297,19 +1297,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.219900+00:00",
-      "updated_at": "2026-06-14T08:50:23.219900+00:00",
+      "created_at": "2026-06-14T16:03:26.040369+00:00",
+      "updated_at": "2026-06-14T16:03:26.040369+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_67073f2a9e17",
-      "label": "conflict:conflict_7724132371d4",
+      "id": "conflict_28ec677f0b4e",
+      "label": "conflict:conflict_c1ac8e0d2a28",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_7724132371d4",
+        "conflict_id": "conflict_c1ac8e0d2a28",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_af268f39b2da"
+          "capsule_32e61ab52629",
+          "quarantine_bc786d4ac735"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -1318,19 +1318,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.220343+00:00",
-      "updated_at": "2026-06-14T08:50:23.220343+00:00",
+      "created_at": "2026-06-14T16:03:26.040656+00:00",
+      "updated_at": "2026-06-14T16:03:26.040656+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_2cfeb56c3ec6",
-      "label": "conflict:conflict_c4ee0e2ed8ed",
+      "id": "conflict_e00ab74d3ac5",
+      "label": "conflict:conflict_fc5f89f067a8",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_c4ee0e2ed8ed",
+        "conflict_id": "conflict_fc5f89f067a8",
         "capsules": [
-          "capsule_b62fefa33052",
-          "quarantine_af268f39b2da"
+          "capsule_8b6ac2cc09a3",
+          "quarantine_bc786d4ac735"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -1339,19 +1339,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.220382+00:00",
-      "updated_at": "2026-06-14T08:50:23.220382+00:00",
+      "created_at": "2026-06-14T16:03:26.040700+00:00",
+      "updated_at": "2026-06-14T16:03:26.040700+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_1d43e993ab52",
-      "label": "conflict:conflict_5a52d994ad12",
+      "id": "conflict_e701da709de1",
+      "label": "conflict:conflict_30df892c13cb",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_5a52d994ad12",
+        "conflict_id": "conflict_30df892c13cb",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_dc24b1249a43"
+          "capsule_32e61ab52629",
+          "quarantine_3291b0af78b5"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -1360,19 +1360,19 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.220694+00:00",
-      "updated_at": "2026-06-14T08:50:23.220694+00:00",
+      "created_at": "2026-06-14T16:03:26.041010+00:00",
+      "updated_at": "2026-06-14T16:03:26.041010+00:00",
       "metadata": {}
     },
     {
-      "id": "conflict_8d6260df25ad",
-      "label": "conflict:conflict_18ddf34acd5a",
+      "id": "conflict_f8d84718affe",
+      "label": "conflict:conflict_989ef7bbee1b",
       "node_type": "conflict",
       "content": {
-        "conflict_id": "conflict_18ddf34acd5a",
+        "conflict_id": "conflict_989ef7bbee1b",
         "capsules": [
-          "capsule_b62fefa33052",
-          "quarantine_dc24b1249a43"
+          "capsule_8b6ac2cc09a3",
+          "quarantine_3291b0af78b5"
         ],
         "summary": "must preserve refusability; must override instructions"
       },
@@ -1381,13 +1381,13 @@
       "weight": 1.0,
       "trust": 1.0,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.220729+00:00",
-      "updated_at": "2026-06-14T08:50:23.220729+00:00",
+      "created_at": "2026-06-14T16:03:26.041050+00:00",
+      "updated_at": "2026-06-14T16:03:26.041050+00:00",
       "metadata": {}
     },
     {
-      "id": "ctx_5e772e7fba6b",
-      "label": "capsule:capsule_634c923b8ad8",
+      "id": "ctx_deae6defe33b",
+      "label": "capsule:capsule_5f7101cc1da8",
       "node_type": "capsule",
       "content": {
         "text": "Bounded commitment: For this task and timebox only, proceed with bounded action while preserving unresolved conflicts, refusals, and private context boundaries.",
@@ -1418,13 +1418,13 @@
         },
         "translation_trace": []
       },
-      "source_capsule": "capsule_634c923b8ad8",
+      "source_capsule": "capsule_5f7101cc1da8",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.221026+00:00",
-      "updated_at": "2026-06-14T08:50:23.221026+00:00",
+      "created_at": "2026-06-14T16:03:26.041371+00:00",
+      "updated_at": "2026-06-14T16:03:26.041371+00:00",
       "metadata": {
         "risk_level": "low",
         "constraints": [
@@ -1436,1421 +1436,1421 @@
       }
     },
     {
-      "id": "claim_3a8b9b266143",
+      "id": "claim_8738001265fc",
       "label": "claim:may act under local scope",
       "node_type": "claim",
       "content": {
         "claim": "may act under local scope"
       },
-      "source_capsule": "capsule_634c923b8ad8",
+      "source_capsule": "capsule_5f7101cc1da8",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.221065+00:00",
-      "updated_at": "2026-06-14T08:50:23.221065+00:00",
+      "created_at": "2026-06-14T16:03:26.041417+00:00",
+      "updated_at": "2026-06-14T16:03:26.041417+00:00",
       "metadata": {}
     },
     {
-      "id": "claim_314e4ebc85f0",
+      "id": "claim_d5c4d4a641e6",
       "label": "claim:must preserve unresolved conflict",
       "node_type": "claim",
       "content": {
         "claim": "must preserve unresolved conflict"
       },
-      "source_capsule": "capsule_634c923b8ad8",
+      "source_capsule": "capsule_5f7101cc1da8",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.221070+00:00",
-      "updated_at": "2026-06-14T08:50:23.221070+00:00",
+      "created_at": "2026-06-14T16:03:26.041423+00:00",
+      "updated_at": "2026-06-14T16:03:26.041423+00:00",
       "metadata": {}
     },
     {
-      "id": "claim_3bddbac72f18",
+      "id": "claim_0a70341bb421",
       "label": "claim:must not imply global consensus",
       "node_type": "claim",
       "content": {
         "claim": "must not imply global consensus"
       },
-      "source_capsule": "capsule_634c923b8ad8",
+      "source_capsule": "capsule_5f7101cc1da8",
       "source_agent": "runtime_mediator",
       "weight": 0.5616,
       "trust": 0.72,
       "freshness": 1.0,
-      "created_at": "2026-06-14T08:50:23.221074+00:00",
-      "updated_at": "2026-06-14T08:50:23.221075+00:00",
+      "created_at": "2026-06-14T16:03:26.041429+00:00",
+      "updated_at": "2026-06-14T16:03:26.041429+00:00",
       "metadata": {}
     }
   ],
   "edges": [
     {
       "source": "root_injection_probe",
-      "target": "conflict_a7d6128d1615",
+      "target": "conflict_3543385a8cd6",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.185064+00:00",
+      "created_at": "2026-06-14T16:03:26.006184+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_f274f3740681",
+      "target": "ctx_af3f865c53cc",
       "relation": "refusal_preserved",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.186762+00:00",
+      "created_at": "2026-06-14T16:03:26.007456+00:00",
       "metadata": {
-        "capsule_id": "refusal_95785448b3f9"
+        "capsule_id": "refusal_11f825e2129e"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_aeed09cb98e1",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_f1f140fa588b",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186782+00:00",
+      "created_at": "2026-06-14T16:03:26.007474+00:00",
       "metadata": {
         "term": "refusal"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_05a80b976b0f",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_00f8c9be7ea8",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186788+00:00",
+      "created_at": "2026-06-14T16:03:26.007482+00:00",
       "metadata": {
         "term": "preserved"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_155923c177b6",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_cb34eacb09f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186794+00:00",
+      "created_at": "2026-06-14T16:03:26.007490+00:00",
       "metadata": {
         "term": "cannot_translate"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186799+00:00",
+      "created_at": "2026-06-14T16:03:26.007497+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_7afe676530cd",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_3d810ef635d5",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186804+00:00",
+      "created_at": "2026-06-14T16:03:26.007504+00:00",
       "metadata": {
         "term": "loss"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_b2e8d30994ed",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_b2b9c4b410f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186810+00:00",
+      "created_at": "2026-06-14T16:03:26.007510+00:00",
       "metadata": {
         "term": "ambiguity"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_cfcabc9a924e",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_cbbbc9fd4430",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186815+00:00",
+      "created_at": "2026-06-14T16:03:26.007516+00:00",
       "metadata": {
         "term": "forced"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186817+00:00",
+      "created_at": "2026-06-14T16:03:26.007519+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_2231492deb35",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_649fee965660",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186823+00:00",
+      "created_at": "2026-06-14T16:03:26.007525+00:00",
       "metadata": {
         "term": "would"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_0aae89d41172",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_6ac220de9201",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186828+00:00",
+      "created_at": "2026-06-14T16:03:26.007532+00:00",
       "metadata": {
         "term": "risk"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_516a23ff325e",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_64a66491b98c",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186833+00:00",
+      "created_at": "2026-06-14T16:03:26.007538+00:00",
       "metadata": {
         "term": "false"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "term_e9765ec02a4b",
+      "source": "ctx_af3f865c53cc",
+      "target": "term_89d89abcca4a",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.186838+00:00",
+      "created_at": "2026-06-14T16:03:26.007544+00:00",
       "metadata": {
         "term": "consensus"
       }
     },
     {
-      "source": "ctx_f274f3740681",
-      "target": "claim_dcf594ff6eab",
+      "source": "ctx_af3f865c53cc",
+      "target": "claim_c9e3c83a07bc",
       "relation": "asserts",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.186844+00:00",
+      "created_at": "2026-06-14T16:03:26.007551+00:00",
       "metadata": {
-        "capsule_id": "refusal_95785448b3f9"
+        "capsule_id": "refusal_11f825e2129e"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_4cbaa3a850a6",
+      "target": "ctx_fca548d0605c",
       "relation": "refusal_preserved",
       "weight": 0.425,
-      "created_at": "2026-06-14T08:50:23.187584+00:00",
+      "created_at": "2026-06-14T16:03:26.008489+00:00",
       "metadata": {
-        "capsule_id": "refusal_e4d8b0e0989e"
+        "capsule_id": "refusal_fccc602d24c6"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_aeed09cb98e1",
+      "source": "ctx_fca548d0605c",
+      "target": "term_f1f140fa588b",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187594+00:00",
+      "created_at": "2026-06-14T16:03:26.008500+00:00",
       "metadata": {
         "term": "refusal"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_05a80b976b0f",
+      "source": "ctx_fca548d0605c",
+      "target": "term_00f8c9be7ea8",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187596+00:00",
+      "created_at": "2026-06-14T16:03:26.008502+00:00",
       "metadata": {
         "term": "preserved"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_155923c177b6",
+      "source": "ctx_fca548d0605c",
+      "target": "term_cb34eacb09f6",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187598+00:00",
+      "created_at": "2026-06-14T16:03:26.008504+00:00",
       "metadata": {
         "term": "cannot_translate"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_fca548d0605c",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187599+00:00",
+      "created_at": "2026-06-14T16:03:26.008506+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_7afe676530cd",
+      "source": "ctx_fca548d0605c",
+      "target": "term_3d810ef635d5",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187601+00:00",
+      "created_at": "2026-06-14T16:03:26.008508+00:00",
       "metadata": {
         "term": "loss"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_b2e8d30994ed",
+      "source": "ctx_fca548d0605c",
+      "target": "term_b2b9c4b410f6",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187603+00:00",
+      "created_at": "2026-06-14T16:03:26.008510+00:00",
       "metadata": {
         "term": "ambiguity"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_cfcabc9a924e",
+      "source": "ctx_fca548d0605c",
+      "target": "term_cbbbc9fd4430",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187605+00:00",
+      "created_at": "2026-06-14T16:03:26.008512+00:00",
       "metadata": {
         "term": "forced"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_fca548d0605c",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187606+00:00",
+      "created_at": "2026-06-14T16:03:26.008514+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_2231492deb35",
+      "source": "ctx_fca548d0605c",
+      "target": "term_649fee965660",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187608+00:00",
+      "created_at": "2026-06-14T16:03:26.008516+00:00",
       "metadata": {
         "term": "would"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_0aae89d41172",
+      "source": "ctx_fca548d0605c",
+      "target": "term_6ac220de9201",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187610+00:00",
+      "created_at": "2026-06-14T16:03:26.008517+00:00",
       "metadata": {
         "term": "risk"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_516a23ff325e",
+      "source": "ctx_fca548d0605c",
+      "target": "term_64a66491b98c",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187612+00:00",
+      "created_at": "2026-06-14T16:03:26.008519+00:00",
       "metadata": {
         "term": "false"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "term_e9765ec02a4b",
+      "source": "ctx_fca548d0605c",
+      "target": "term_89d89abcca4a",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.187614+00:00",
+      "created_at": "2026-06-14T16:03:26.008521+00:00",
       "metadata": {
         "term": "consensus"
       }
     },
     {
-      "source": "ctx_4cbaa3a850a6",
-      "target": "claim_dee69daf22e3",
+      "source": "ctx_fca548d0605c",
+      "target": "claim_2694d392c5e2",
       "relation": "asserts",
       "weight": 0.425,
-      "created_at": "2026-06-14T08:50:23.187620+00:00",
+      "created_at": "2026-06-14T16:03:26.008528+00:00",
       "metadata": {
-        "capsule_id": "refusal_e4d8b0e0989e"
+        "capsule_id": "refusal_fccc602d24c6"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_f500d4d9b0ac",
+      "target": "ctx_c3d4253380e1",
       "relation": "refusal_preserved",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.188310+00:00",
+      "created_at": "2026-06-14T16:03:26.009269+00:00",
       "metadata": {
-        "capsule_id": "refusal_c3f8447ab3f7"
+        "capsule_id": "refusal_fedab2a5b71f"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_aeed09cb98e1",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_f1f140fa588b",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188319+00:00",
+      "created_at": "2026-06-14T16:03:26.009282+00:00",
       "metadata": {
         "term": "refusal"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_05a80b976b0f",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_00f8c9be7ea8",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188321+00:00",
+      "created_at": "2026-06-14T16:03:26.009284+00:00",
       "metadata": {
         "term": "preserved"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_155923c177b6",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_cb34eacb09f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188322+00:00",
+      "created_at": "2026-06-14T16:03:26.009286+00:00",
       "metadata": {
         "term": "cannot_translate"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188324+00:00",
+      "created_at": "2026-06-14T16:03:26.009288+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_7afe676530cd",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_3d810ef635d5",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188326+00:00",
+      "created_at": "2026-06-14T16:03:26.009290+00:00",
       "metadata": {
         "term": "loss"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_b2e8d30994ed",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_b2b9c4b410f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188327+00:00",
+      "created_at": "2026-06-14T16:03:26.009292+00:00",
       "metadata": {
         "term": "ambiguity"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_cfcabc9a924e",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_cbbbc9fd4430",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188329+00:00",
+      "created_at": "2026-06-14T16:03:26.009294+00:00",
       "metadata": {
         "term": "forced"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188330+00:00",
+      "created_at": "2026-06-14T16:03:26.009296+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_2231492deb35",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_649fee965660",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188332+00:00",
+      "created_at": "2026-06-14T16:03:26.009298+00:00",
       "metadata": {
         "term": "would"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_0aae89d41172",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_6ac220de9201",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188334+00:00",
+      "created_at": "2026-06-14T16:03:26.009300+00:00",
       "metadata": {
         "term": "risk"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_516a23ff325e",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_64a66491b98c",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188335+00:00",
+      "created_at": "2026-06-14T16:03:26.009302+00:00",
       "metadata": {
         "term": "false"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "term_e9765ec02a4b",
+      "source": "ctx_c3d4253380e1",
+      "target": "term_89d89abcca4a",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.188337+00:00",
+      "created_at": "2026-06-14T16:03:26.009304+00:00",
       "metadata": {
         "term": "consensus"
       }
     },
     {
-      "source": "ctx_f500d4d9b0ac",
-      "target": "claim_35c622ca78d6",
+      "source": "ctx_c3d4253380e1",
+      "target": "claim_632a2c8b2bb9",
       "relation": "asserts",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.188344+00:00",
+      "created_at": "2026-06-14T16:03:26.009312+00:00",
       "metadata": {
-        "capsule_id": "refusal_c3f8447ab3f7"
+        "capsule_id": "refusal_fedab2a5b71f"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_7afbf3325ae3",
+      "target": "conflict_076e859c6c65",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.188661+00:00",
+      "created_at": "2026-06-14T16:03:26.009707+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_8fa01b78b85d",
+      "target": "conflict_1767e46b9bdc",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.188959+00:00",
+      "created_at": "2026-06-14T16:03:26.010044+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_5f8d41fcaeb8",
+      "target": "conflict_7909b104ed4c",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.189295+00:00",
+      "created_at": "2026-06-14T16:03:26.010376+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_7b53454bf542",
+      "target": "ctx_af0cb84050a5",
       "relation": "received",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.189742+00:00",
+      "created_at": "2026-06-14T16:03:26.010937+00:00",
       "metadata": {
-        "capsule_id": "capsule_6b556d88d5b2"
+        "capsule_id": "capsule_aad11335b669"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_3add550329db",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_e4bded3ed508",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189755+00:00",
+      "created_at": "2026-06-14T16:03:26.010952+00:00",
       "metadata": {
         "term": "bounded"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_68d9adba83ce",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_ec61c67c1bd6",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189760+00:00",
+      "created_at": "2026-06-14T16:03:26.010958+00:00",
       "metadata": {
         "term": "commitment"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_6949b9d8f705",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_dc9868c4ae64",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189766+00:00",
+      "created_at": "2026-06-14T16:03:26.010964+00:00",
       "metadata": {
         "term": "task"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_3458aae4175d",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_39ea1266e1d5",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189771+00:00",
+      "created_at": "2026-06-14T16:03:26.010970+00:00",
       "metadata": {
         "term": "timebox"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_67fe3b5a8365",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_0d460a01af74",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189776+00:00",
+      "created_at": "2026-06-14T16:03:26.010976+00:00",
       "metadata": {
         "term": "only"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_50b83b5eb8aa",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_ce78ab566100",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189781+00:00",
+      "created_at": "2026-06-14T16:03:26.010982+00:00",
       "metadata": {
         "term": "proceed"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_3add550329db",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_e4bded3ed508",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189783+00:00",
+      "created_at": "2026-06-14T16:03:26.010984+00:00",
       "metadata": {
         "term": "bounded"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_9bd61a549227",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_ecdb68c639fe",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189788+00:00",
+      "created_at": "2026-06-14T16:03:26.010993+00:00",
       "metadata": {
         "term": "action"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_f60a407a4698",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_38d8eb05e0b3",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189793+00:00",
+      "created_at": "2026-06-14T16:03:26.010998+00:00",
       "metadata": {
         "term": "while"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_25ecbdcc1018",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_906c3df90851",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189798+00:00",
+      "created_at": "2026-06-14T16:03:26.011004+00:00",
       "metadata": {
         "term": "preserving"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_59982ffec657",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_a0b27fd83f24",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189803+00:00",
+      "created_at": "2026-06-14T16:03:26.011010+00:00",
       "metadata": {
         "term": "unresolved"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_9fd472ab7cfd",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_60f57e8b69b7",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189809+00:00",
+      "created_at": "2026-06-14T16:03:26.011016+00:00",
       "metadata": {
         "term": "conflicts"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_abe56cb7fe2c",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_011fd86d0ce4",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189813+00:00",
+      "created_at": "2026-06-14T16:03:26.011022+00:00",
       "metadata": {
         "term": "refusals"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_020f338ec184",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_1ba00ed3ad95",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189821+00:00",
+      "created_at": "2026-06-14T16:03:26.011028+00:00",
       "metadata": {
         "term": "private"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_cdd756d9b437",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_a849be050089",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189826+00:00",
+      "created_at": "2026-06-14T16:03:26.011033+00:00",
       "metadata": {
         "term": "context"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "term_82f27932c7f7",
+      "source": "ctx_af0cb84050a5",
+      "target": "term_421de7ef59ab",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.189831+00:00",
+      "created_at": "2026-06-14T16:03:26.011039+00:00",
       "metadata": {
         "term": "boundaries"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "claim_ae394f4e77d9",
+      "source": "ctx_af0cb84050a5",
+      "target": "claim_2991ccf6f8a8",
       "relation": "asserts",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.189836+00:00",
+      "created_at": "2026-06-14T16:03:26.011045+00:00",
       "metadata": {
-        "capsule_id": "capsule_6b556d88d5b2"
+        "capsule_id": "capsule_aad11335b669"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "claim_5a4acb4004a2",
+      "source": "ctx_af0cb84050a5",
+      "target": "claim_dc8e2a0b7aac",
       "relation": "asserts",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.189841+00:00",
+      "created_at": "2026-06-14T16:03:26.011051+00:00",
       "metadata": {
-        "capsule_id": "capsule_6b556d88d5b2"
+        "capsule_id": "capsule_aad11335b669"
       }
     },
     {
-      "source": "ctx_7b53454bf542",
-      "target": "claim_099555613a99",
+      "source": "ctx_af0cb84050a5",
+      "target": "claim_0e2f72c2c42a",
       "relation": "asserts",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.189846+00:00",
+      "created_at": "2026-06-14T16:03:26.011057+00:00",
       "metadata": {
-        "capsule_id": "capsule_6b556d88d5b2"
+        "capsule_id": "capsule_aad11335b669"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_673d1998b8de",
+      "target": "conflict_9cd785f6430f",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.215490+00:00",
+      "created_at": "2026-06-14T16:03:26.037066+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_37655b83f98a",
+      "target": "conflict_6bd23ea82281",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.215545+00:00",
+      "created_at": "2026-06-14T16:03:26.037110+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_a241c00fbcd4",
+      "target": "conflict_e4e70ff3b0ea",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.215596+00:00",
+      "created_at": "2026-06-14T16:03:26.037154+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_ee74b79021ff",
+      "target": "conflict_47940861dee0",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.215707+00:00",
+      "created_at": "2026-06-14T16:03:26.037234+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_58228c6fe073",
+      "target": "conflict_67b18f60d5bc",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.215968+00:00",
+      "created_at": "2026-06-14T16:03:26.037457+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_27fd1c5f7579",
+      "target": "conflict_a539aec0d180",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.216017+00:00",
+      "created_at": "2026-06-14T16:03:26.037497+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_82cf456ecaca",
+      "target": "ctx_6ba59a1ced33",
       "relation": "refusal_preserved",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.217320+00:00",
+      "created_at": "2026-06-14T16:03:26.038409+00:00",
       "metadata": {
-        "capsule_id": "refusal_90e3fe1e3461"
+        "capsule_id": "refusal_f143c8673df8"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_aeed09cb98e1",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_f1f140fa588b",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217336+00:00",
+      "created_at": "2026-06-14T16:03:26.038420+00:00",
       "metadata": {
         "term": "refusal"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_05a80b976b0f",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_00f8c9be7ea8",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217338+00:00",
+      "created_at": "2026-06-14T16:03:26.038422+00:00",
       "metadata": {
         "term": "preserved"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_155923c177b6",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_cb34eacb09f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217341+00:00",
+      "created_at": "2026-06-14T16:03:26.038424+00:00",
       "metadata": {
         "term": "cannot_translate"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217343+00:00",
+      "created_at": "2026-06-14T16:03:26.038426+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_7afe676530cd",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_3d810ef635d5",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217346+00:00",
+      "created_at": "2026-06-14T16:03:26.038428+00:00",
       "metadata": {
         "term": "loss"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_b2e8d30994ed",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_b2b9c4b410f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217349+00:00",
+      "created_at": "2026-06-14T16:03:26.038430+00:00",
       "metadata": {
         "term": "ambiguity"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_cfcabc9a924e",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_cbbbc9fd4430",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217351+00:00",
+      "created_at": "2026-06-14T16:03:26.038432+00:00",
       "metadata": {
         "term": "forced"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217353+00:00",
+      "created_at": "2026-06-14T16:03:26.038433+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_2231492deb35",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_649fee965660",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217356+00:00",
+      "created_at": "2026-06-14T16:03:26.038435+00:00",
       "metadata": {
         "term": "would"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_0aae89d41172",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_6ac220de9201",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217358+00:00",
+      "created_at": "2026-06-14T16:03:26.038437+00:00",
       "metadata": {
         "term": "risk"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_516a23ff325e",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_64a66491b98c",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217360+00:00",
+      "created_at": "2026-06-14T16:03:26.038439+00:00",
       "metadata": {
         "term": "false"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "term_e9765ec02a4b",
+      "source": "ctx_6ba59a1ced33",
+      "target": "term_89d89abcca4a",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.217362+00:00",
+      "created_at": "2026-06-14T16:03:26.038441+00:00",
       "metadata": {
         "term": "consensus"
       }
     },
     {
-      "source": "ctx_82cf456ecaca",
-      "target": "claim_87fabf284af6",
+      "source": "ctx_6ba59a1ced33",
+      "target": "claim_7c87f946d9cd",
       "relation": "asserts",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.217372+00:00",
+      "created_at": "2026-06-14T16:03:26.038448+00:00",
       "metadata": {
-        "capsule_id": "refusal_90e3fe1e3461"
+        "capsule_id": "refusal_f143c8673df8"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_1b643f0ec753",
+      "target": "ctx_76755316fd1b",
       "relation": "refusal_preserved",
       "weight": 0.425,
-      "created_at": "2026-06-14T08:50:23.218381+00:00",
+      "created_at": "2026-06-14T16:03:26.039237+00:00",
       "metadata": {
-        "capsule_id": "refusal_b18cf1514cc1"
+        "capsule_id": "refusal_7f85aa378433"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_aeed09cb98e1",
+      "source": "ctx_76755316fd1b",
+      "target": "term_f1f140fa588b",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218399+00:00",
+      "created_at": "2026-06-14T16:03:26.039250+00:00",
       "metadata": {
         "term": "refusal"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_05a80b976b0f",
+      "source": "ctx_76755316fd1b",
+      "target": "term_00f8c9be7ea8",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218402+00:00",
+      "created_at": "2026-06-14T16:03:26.039252+00:00",
       "metadata": {
         "term": "preserved"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_155923c177b6",
+      "source": "ctx_76755316fd1b",
+      "target": "term_cb34eacb09f6",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218404+00:00",
+      "created_at": "2026-06-14T16:03:26.039254+00:00",
       "metadata": {
         "term": "cannot_translate"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_76755316fd1b",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218406+00:00",
+      "created_at": "2026-06-14T16:03:26.039255+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_7afe676530cd",
+      "source": "ctx_76755316fd1b",
+      "target": "term_3d810ef635d5",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218409+00:00",
+      "created_at": "2026-06-14T16:03:26.039257+00:00",
       "metadata": {
         "term": "loss"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_b2e8d30994ed",
+      "source": "ctx_76755316fd1b",
+      "target": "term_b2b9c4b410f6",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218411+00:00",
+      "created_at": "2026-06-14T16:03:26.039259+00:00",
       "metadata": {
         "term": "ambiguity"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_cfcabc9a924e",
+      "source": "ctx_76755316fd1b",
+      "target": "term_cbbbc9fd4430",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218415+00:00",
+      "created_at": "2026-06-14T16:03:26.039261+00:00",
       "metadata": {
         "term": "forced"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_76755316fd1b",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218417+00:00",
+      "created_at": "2026-06-14T16:03:26.039263+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_2231492deb35",
+      "source": "ctx_76755316fd1b",
+      "target": "term_649fee965660",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218419+00:00",
+      "created_at": "2026-06-14T16:03:26.039265+00:00",
       "metadata": {
         "term": "would"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_0aae89d41172",
+      "source": "ctx_76755316fd1b",
+      "target": "term_6ac220de9201",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218422+00:00",
+      "created_at": "2026-06-14T16:03:26.039267+00:00",
       "metadata": {
         "term": "risk"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_516a23ff325e",
+      "source": "ctx_76755316fd1b",
+      "target": "term_64a66491b98c",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218424+00:00",
+      "created_at": "2026-06-14T16:03:26.039269+00:00",
       "metadata": {
         "term": "false"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "term_e9765ec02a4b",
+      "source": "ctx_76755316fd1b",
+      "target": "term_89d89abcca4a",
       "relation": "mentions",
       "weight": 0.675,
-      "created_at": "2026-06-14T08:50:23.218426+00:00",
+      "created_at": "2026-06-14T16:03:26.039270+00:00",
       "metadata": {
         "term": "consensus"
       }
     },
     {
-      "source": "ctx_1b643f0ec753",
-      "target": "claim_7dfb71ffa99f",
+      "source": "ctx_76755316fd1b",
+      "target": "claim_5ea001c792d1",
       "relation": "asserts",
       "weight": 0.425,
-      "created_at": "2026-06-14T08:50:23.218457+00:00",
+      "created_at": "2026-06-14T16:03:26.039278+00:00",
       "metadata": {
-        "capsule_id": "refusal_b18cf1514cc1"
+        "capsule_id": "refusal_7f85aa378433"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_280ad14c7832",
+      "target": "ctx_f15eb631a007",
       "relation": "refusal_preserved",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.219396+00:00",
+      "created_at": "2026-06-14T16:03:26.039987+00:00",
       "metadata": {
-        "capsule_id": "refusal_da575b4daaf3"
+        "capsule_id": "refusal_18f86b8c84f7"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_aeed09cb98e1",
+      "source": "ctx_f15eb631a007",
+      "target": "term_f1f140fa588b",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219410+00:00",
+      "created_at": "2026-06-14T16:03:26.039997+00:00",
       "metadata": {
         "term": "refusal"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_05a80b976b0f",
+      "source": "ctx_f15eb631a007",
+      "target": "term_00f8c9be7ea8",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219412+00:00",
+      "created_at": "2026-06-14T16:03:26.039999+00:00",
       "metadata": {
         "term": "preserved"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_155923c177b6",
+      "source": "ctx_f15eb631a007",
+      "target": "term_cb34eacb09f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219415+00:00",
+      "created_at": "2026-06-14T16:03:26.040001+00:00",
       "metadata": {
         "term": "cannot_translate"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_f15eb631a007",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219417+00:00",
+      "created_at": "2026-06-14T16:03:26.040003+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_7afe676530cd",
+      "source": "ctx_f15eb631a007",
+      "target": "term_3d810ef635d5",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219419+00:00",
+      "created_at": "2026-06-14T16:03:26.040005+00:00",
       "metadata": {
         "term": "loss"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_b2e8d30994ed",
+      "source": "ctx_f15eb631a007",
+      "target": "term_b2b9c4b410f6",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219422+00:00",
+      "created_at": "2026-06-14T16:03:26.040007+00:00",
       "metadata": {
         "term": "ambiguity"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_cfcabc9a924e",
+      "source": "ctx_f15eb631a007",
+      "target": "term_cbbbc9fd4430",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219424+00:00",
+      "created_at": "2026-06-14T16:03:26.040009+00:00",
       "metadata": {
         "term": "forced"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_7edc880f1e11",
+      "source": "ctx_f15eb631a007",
+      "target": "term_dc94b3d534f7",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219426+00:00",
+      "created_at": "2026-06-14T16:03:26.040010+00:00",
       "metadata": {
         "term": "translation"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_2231492deb35",
+      "source": "ctx_f15eb631a007",
+      "target": "term_649fee965660",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219430+00:00",
+      "created_at": "2026-06-14T16:03:26.040013+00:00",
       "metadata": {
         "term": "would"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_0aae89d41172",
+      "source": "ctx_f15eb631a007",
+      "target": "term_6ac220de9201",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219432+00:00",
+      "created_at": "2026-06-14T16:03:26.040014+00:00",
       "metadata": {
         "term": "risk"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_516a23ff325e",
+      "source": "ctx_f15eb631a007",
+      "target": "term_64a66491b98c",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219434+00:00",
+      "created_at": "2026-06-14T16:03:26.040016+00:00",
       "metadata": {
         "term": "false"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "term_e9765ec02a4b",
+      "source": "ctx_f15eb631a007",
+      "target": "term_89d89abcca4a",
       "relation": "mentions",
       "weight": 0.5475,
-      "created_at": "2026-06-14T08:50:23.219437+00:00",
+      "created_at": "2026-06-14T16:03:26.040018+00:00",
       "metadata": {
         "term": "consensus"
       }
     },
     {
-      "source": "ctx_280ad14c7832",
-      "target": "claim_d298017134ca",
+      "source": "ctx_f15eb631a007",
+      "target": "claim_eed1d0d329e7",
       "relation": "asserts",
       "weight": 0.2975,
-      "created_at": "2026-06-14T08:50:23.219454+00:00",
+      "created_at": "2026-06-14T16:03:26.040026+00:00",
       "metadata": {
-        "capsule_id": "refusal_da575b4daaf3"
+        "capsule_id": "refusal_18f86b8c84f7"
       }
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_7aa3cb74d40a",
+      "target": "conflict_96cbee608760",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.219848+00:00",
+      "created_at": "2026-06-14T16:03:26.040328+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_2c8c178f5d8e",
+      "target": "conflict_6c5d7590051e",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.219902+00:00",
+      "created_at": "2026-06-14T16:03:26.040370+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_67073f2a9e17",
+      "target": "conflict_28ec677f0b4e",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.220344+00:00",
+      "created_at": "2026-06-14T16:03:26.040657+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_2cfeb56c3ec6",
+      "target": "conflict_e00ab74d3ac5",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.220383+00:00",
+      "created_at": "2026-06-14T16:03:26.040701+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_1d43e993ab52",
+      "target": "conflict_e701da709de1",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.220695+00:00",
+      "created_at": "2026-06-14T16:03:26.041011+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "conflict_8d6260df25ad",
+      "target": "conflict_f8d84718affe",
       "relation": "conflict_retained",
       "weight": 1.0,
-      "created_at": "2026-06-14T08:50:23.220730+00:00",
+      "created_at": "2026-06-14T16:03:26.041051+00:00",
       "metadata": {}
     },
     {
       "source": "root_injection_probe",
-      "target": "ctx_5e772e7fba6b",
+      "target": "ctx_deae6defe33b",
       "relation": "received",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.221027+00:00",
+      "created_at": "2026-06-14T16:03:26.041372+00:00",
       "metadata": {
-        "capsule_id": "capsule_634c923b8ad8"
+        "capsule_id": "capsule_5f7101cc1da8"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_3add550329db",
+      "source": "ctx_deae6defe33b",
+      "target": "term_e4bded3ed508",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221036+00:00",
+      "created_at": "2026-06-14T16:03:26.041383+00:00",
       "metadata": {
         "term": "bounded"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_68d9adba83ce",
+      "source": "ctx_deae6defe33b",
+      "target": "term_ec61c67c1bd6",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221038+00:00",
+      "created_at": "2026-06-14T16:03:26.041386+00:00",
       "metadata": {
         "term": "commitment"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_6949b9d8f705",
+      "source": "ctx_deae6defe33b",
+      "target": "term_dc9868c4ae64",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221040+00:00",
+      "created_at": "2026-06-14T16:03:26.041388+00:00",
       "metadata": {
         "term": "task"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_3458aae4175d",
+      "source": "ctx_deae6defe33b",
+      "target": "term_39ea1266e1d5",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221041+00:00",
+      "created_at": "2026-06-14T16:03:26.041390+00:00",
       "metadata": {
         "term": "timebox"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_67fe3b5a8365",
+      "source": "ctx_deae6defe33b",
+      "target": "term_0d460a01af74",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221043+00:00",
+      "created_at": "2026-06-14T16:03:26.041392+00:00",
       "metadata": {
         "term": "only"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_50b83b5eb8aa",
+      "source": "ctx_deae6defe33b",
+      "target": "term_ce78ab566100",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221044+00:00",
+      "created_at": "2026-06-14T16:03:26.041394+00:00",
       "metadata": {
         "term": "proceed"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_3add550329db",
+      "source": "ctx_deae6defe33b",
+      "target": "term_e4bded3ed508",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221046+00:00",
+      "created_at": "2026-06-14T16:03:26.041396+00:00",
       "metadata": {
         "term": "bounded"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_9bd61a549227",
+      "source": "ctx_deae6defe33b",
+      "target": "term_ecdb68c639fe",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221047+00:00",
+      "created_at": "2026-06-14T16:03:26.041398+00:00",
       "metadata": {
         "term": "action"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_f60a407a4698",
+      "source": "ctx_deae6defe33b",
+      "target": "term_38d8eb05e0b3",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221050+00:00",
+      "created_at": "2026-06-14T16:03:26.041400+00:00",
       "metadata": {
         "term": "while"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_25ecbdcc1018",
+      "source": "ctx_deae6defe33b",
+      "target": "term_906c3df90851",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221051+00:00",
+      "created_at": "2026-06-14T16:03:26.041402+00:00",
       "metadata": {
         "term": "preserving"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_59982ffec657",
+      "source": "ctx_deae6defe33b",
+      "target": "term_a0b27fd83f24",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221053+00:00",
+      "created_at": "2026-06-14T16:03:26.041403+00:00",
       "metadata": {
         "term": "unresolved"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_9fd472ab7cfd",
+      "source": "ctx_deae6defe33b",
+      "target": "term_60f57e8b69b7",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221054+00:00",
+      "created_at": "2026-06-14T16:03:26.041405+00:00",
       "metadata": {
         "term": "conflicts"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_abe56cb7fe2c",
+      "source": "ctx_deae6defe33b",
+      "target": "term_011fd86d0ce4",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221055+00:00",
+      "created_at": "2026-06-14T16:03:26.041407+00:00",
       "metadata": {
         "term": "refusals"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_020f338ec184",
+      "source": "ctx_deae6defe33b",
+      "target": "term_1ba00ed3ad95",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221057+00:00",
+      "created_at": "2026-06-14T16:03:26.041409+00:00",
       "metadata": {
         "term": "private"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_cdd756d9b437",
+      "source": "ctx_deae6defe33b",
+      "target": "term_a849be050089",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221058+00:00",
+      "created_at": "2026-06-14T16:03:26.041410+00:00",
       "metadata": {
         "term": "context"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "term_82f27932c7f7",
+      "source": "ctx_deae6defe33b",
+      "target": "term_421de7ef59ab",
       "relation": "mentions",
       "weight": 0.8116,
-      "created_at": "2026-06-14T08:50:23.221060+00:00",
+      "created_at": "2026-06-14T16:03:26.041412+00:00",
       "metadata": {
         "term": "boundaries"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "claim_3a8b9b266143",
+      "source": "ctx_deae6defe33b",
+      "target": "claim_8738001265fc",
       "relation": "asserts",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.221066+00:00",
+      "created_at": "2026-06-14T16:03:26.041418+00:00",
       "metadata": {
-        "capsule_id": "capsule_634c923b8ad8"
+        "capsule_id": "capsule_5f7101cc1da8"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "claim_314e4ebc85f0",
+      "source": "ctx_deae6defe33b",
+      "target": "claim_d5c4d4a641e6",
       "relation": "asserts",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.221071+00:00",
+      "created_at": "2026-06-14T16:03:26.041424+00:00",
       "metadata": {
-        "capsule_id": "capsule_634c923b8ad8"
+        "capsule_id": "capsule_5f7101cc1da8"
       }
     },
     {
-      "source": "ctx_5e772e7fba6b",
-      "target": "claim_3bddbac72f18",
+      "source": "ctx_deae6defe33b",
+      "target": "claim_0a70341bb421",
       "relation": "asserts",
       "weight": 0.5616,
-      "created_at": "2026-06-14T08:50:23.221076+00:00",
+      "created_at": "2026-06-14T16:03:26.041430+00:00",
       "metadata": {
-        "capsule_id": "capsule_634c923b8ad8"
+        "capsule_id": "capsule_5f7101cc1da8"
       }
     }
   ],
@@ -2911,267 +2911,267 @@
   ],
   "event_log": [
     {
-      "at": "2026-06-14T08:50:23.185066+00:00",
+      "at": "2026-06-14T16:03:26.006184+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_7c74e0b16a2f",
+        "conflict_id": "conflict_e7f06de73eee",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "capsule_7538e8adae80"
+          "capsule_32e61ab52629",
+          "capsule_cdf26134a960"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.186845+00:00",
+      "at": "2026-06-14T16:03:26.007552+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "refusal_95785448b3f9",
+        "capsule": "refusal_11f825e2129e",
         "source_agent": "injection_probe",
         "status": "refused",
         "trust": 0.35,
-        "node": "ctx_f274f3740681"
+        "node": "ctx_af3f865c53cc"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.187621+00:00",
+      "at": "2026-06-14T16:03:26.008530+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "refusal_e4d8b0e0989e",
+        "capsule": "refusal_fccc602d24c6",
         "source_agent": "injection_probe",
         "status": "refused",
         "trust": 0.5,
-        "node": "ctx_4cbaa3a850a6"
+        "node": "ctx_fca548d0605c"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.188345+00:00",
+      "at": "2026-06-14T16:03:26.009313+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "refusal_c3f8447ab3f7",
+        "capsule": "refusal_fedab2a5b71f",
         "source_agent": "injection_probe",
         "status": "refused",
         "trust": 0.35,
-        "node": "ctx_f500d4d9b0ac"
+        "node": "ctx_c3d4253380e1"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.188662+00:00",
+      "at": "2026-06-14T16:03:26.009708+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_889c69b4f0b0",
+        "conflict_id": "conflict_6d39408e3926",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_2660bfc341ae"
+          "capsule_32e61ab52629",
+          "quarantine_d8d07f9aef55"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.188959+00:00",
+      "at": "2026-06-14T16:03:26.010044+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_e4f03e453e1e",
+        "conflict_id": "conflict_ee917693e6b3",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_24041d922c42"
+          "capsule_32e61ab52629",
+          "quarantine_929b4e5ce273"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.189296+00:00",
+      "at": "2026-06-14T16:03:26.010376+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_df0aae4ed2cf",
+        "conflict_id": "conflict_6d7c016eabd3",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_f2cc906735d8"
+          "capsule_32e61ab52629",
+          "quarantine_e4130ab91da5"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.189847+00:00",
+      "at": "2026-06-14T16:03:26.011058+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "capsule_6b556d88d5b2",
+        "capsule": "capsule_aad11335b669",
         "source_agent": "runtime_mediator",
         "status": "active",
         "trust": 0.72,
-        "node": "ctx_7b53454bf542"
+        "node": "ctx_af0cb84050a5"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.215492+00:00",
+      "at": "2026-06-14T16:03:26.037067+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_3dcede6621df",
+        "conflict_id": "conflict_3f8cdee69faf",
         "capsules": [
-          "capsule_7538e8adae80",
-          "capsule_b62fefa33052"
+          "capsule_cdf26134a960",
+          "capsule_8b6ac2cc09a3"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.215546+00:00",
+      "at": "2026-06-14T16:03:26.037111+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_cf0e3d827d22",
+        "conflict_id": "conflict_004a8f22f3da",
         "capsules": [
-          "quarantine_2660bfc341ae",
-          "capsule_b62fefa33052"
+          "quarantine_d8d07f9aef55",
+          "capsule_8b6ac2cc09a3"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.215597+00:00",
+      "at": "2026-06-14T16:03:26.037155+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_65856616f10b",
+        "conflict_id": "conflict_1a2c94ff3a20",
         "capsules": [
-          "quarantine_24041d922c42",
-          "capsule_b62fefa33052"
+          "quarantine_929b4e5ce273",
+          "capsule_8b6ac2cc09a3"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.215708+00:00",
+      "at": "2026-06-14T16:03:26.037235+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_020cf6b65737",
+        "conflict_id": "conflict_c9f2cdf4104d",
         "capsules": [
-          "quarantine_f2cc906735d8",
-          "capsule_b62fefa33052"
+          "quarantine_e4130ab91da5",
+          "capsule_8b6ac2cc09a3"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.215969+00:00",
+      "at": "2026-06-14T16:03:26.037458+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_0d9ec9163633",
+        "conflict_id": "conflict_88975c70e50a",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "capsule_eb94f6487126"
+          "capsule_32e61ab52629",
+          "capsule_daeaa95fdfcb"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.216018+00:00",
+      "at": "2026-06-14T16:03:26.037498+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_6b481046f019",
+        "conflict_id": "conflict_0ff8380b5ea3",
         "capsules": [
-          "capsule_b62fefa33052",
-          "capsule_eb94f6487126"
+          "capsule_8b6ac2cc09a3",
+          "capsule_daeaa95fdfcb"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.217373+00:00",
+      "at": "2026-06-14T16:03:26.038449+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "refusal_90e3fe1e3461",
+        "capsule": "refusal_f143c8673df8",
         "source_agent": "injection_probe",
         "status": "refused",
         "trust": 0.35,
-        "node": "ctx_82cf456ecaca"
+        "node": "ctx_6ba59a1ced33"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.218461+00:00",
+      "at": "2026-06-14T16:03:26.039279+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "refusal_b18cf1514cc1",
+        "capsule": "refusal_7f85aa378433",
         "source_agent": "injection_probe",
         "status": "refused",
         "trust": 0.5,
-        "node": "ctx_1b643f0ec753"
+        "node": "ctx_76755316fd1b"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.219455+00:00",
+      "at": "2026-06-14T16:03:26.040027+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "refusal_da575b4daaf3",
+        "capsule": "refusal_18f86b8c84f7",
         "source_agent": "injection_probe",
         "status": "refused",
         "trust": 0.35,
-        "node": "ctx_280ad14c7832"
+        "node": "ctx_f15eb631a007"
       }
     },
     {
-      "at": "2026-06-14T08:50:23.219849+00:00",
+      "at": "2026-06-14T16:03:26.040329+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_2875996132e9",
+        "conflict_id": "conflict_c9477d9bbd36",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_b88b98a147dd"
+          "capsule_32e61ab52629",
+          "quarantine_db5eed3d6b4b"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.219903+00:00",
+      "at": "2026-06-14T16:03:26.040370+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_6097f00d958d",
+        "conflict_id": "conflict_b972a65324f7",
         "capsules": [
-          "capsule_b62fefa33052",
-          "quarantine_b88b98a147dd"
+          "capsule_8b6ac2cc09a3",
+          "quarantine_db5eed3d6b4b"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.220345+00:00",
+      "at": "2026-06-14T16:03:26.040658+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_7724132371d4",
+        "conflict_id": "conflict_c1ac8e0d2a28",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_af268f39b2da"
+          "capsule_32e61ab52629",
+          "quarantine_bc786d4ac735"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.220384+00:00",
+      "at": "2026-06-14T16:03:26.040702+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_c4ee0e2ed8ed",
+        "conflict_id": "conflict_fc5f89f067a8",
         "capsules": [
-          "capsule_b62fefa33052",
-          "quarantine_af268f39b2da"
+          "capsule_8b6ac2cc09a3",
+          "quarantine_bc786d4ac735"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.220696+00:00",
+      "at": "2026-06-14T16:03:26.041012+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_5a52d994ad12",
+        "conflict_id": "conflict_30df892c13cb",
         "capsules": [
-          "capsule_db2c8dbf15bc",
-          "quarantine_dc24b1249a43"
+          "capsule_32e61ab52629",
+          "quarantine_3291b0af78b5"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.220731+00:00",
+      "at": "2026-06-14T16:03:26.041052+00:00",
       "kind": "conflict_retained",
       "payload": {
-        "conflict_id": "conflict_18ddf34acd5a",
+        "conflict_id": "conflict_989ef7bbee1b",
         "capsules": [
-          "capsule_b62fefa33052",
-          "quarantine_dc24b1249a43"
+          "capsule_8b6ac2cc09a3",
+          "quarantine_3291b0af78b5"
         ]
       }
     },
     {
-      "at": "2026-06-14T08:50:23.221076+00:00",
+      "at": "2026-06-14T16:03:26.041431+00:00",
       "kind": "capsule_integrated",
       "payload": {
-        "capsule": "capsule_634c923b8ad8",
+        "capsule": "capsule_5f7101cc1da8",
         "source_agent": "runtime_mediator",
         "status": "active",
         "trust": 0.72,
-        "node": "ctx_5e772e7fba6b"
+        "node": "ctx_deae6defe33b"
       }
     }
   ]
