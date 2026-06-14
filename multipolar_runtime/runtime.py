@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import json
@@ -22,6 +22,7 @@ class RuntimeConfig:
     domination_cap: float = 0.55
     max_translation_loss: float = 0.58
     max_ambiguity: float = 0.62
+    metadata: Dict[str, Any] = field(default_factory=dict)
 
     @staticmethod
     def from_file(path: str) -> "RuntimeConfig":
@@ -34,6 +35,7 @@ class RuntimeConfig:
             domination_cap=float(runtime.get("domination_cap", 0.55)),
             max_translation_loss=float(runtime.get("max_translation_loss", 0.58)),
             max_ambiguity=float(runtime.get("max_ambiguity", 0.62)),
+            metadata=dict(raw.get("metadata", {})),
         )
 
 
@@ -214,6 +216,7 @@ class MultipolarRuntime:
         data = {
             "runtime": {
                 "generated_at": iso(now_utc()),
+                "metadata": self.config.metadata,
                 "agents": [
                     {
                         "id": a.cfg.id,

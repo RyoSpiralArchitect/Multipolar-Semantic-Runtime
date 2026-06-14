@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .agents import AgentRuntime, load_agent_configs
 from .experiments import run_experiment_001, run_from_config, write_default_config, DEFAULT_QUERY
+from .scenarios import list_scenarios, run_scenario
 
 
 def main() -> None:
@@ -23,6 +24,17 @@ def main() -> None:
     p_run.add_argument("--output", default="runtime_out")
     p_run.add_argument("--query", action="append", help="Custom query. Can be repeated.")
     p_run.add_argument("--experiment", default="001")
+    p_run.add_argument("--scenario", default=None, help="Scenario id or scenario JSON path.")
+    p_run.add_argument("--scenarios-dir", default="scenarios", help="Directory containing scenario JSON files.")
+
+    p_list = sub.add_parser("list-scenarios", help="List available Scenario Zoo entries.")
+    p_list.add_argument("--scenarios-dir", default="scenarios", help="Directory containing scenario JSON files.")
+
+    p_scenario = sub.add_parser("run-scenario", help="Run a Scenario Zoo entry.")
+    p_scenario.add_argument("scenario", help="Scenario id or scenario JSON path.")
+    p_scenario.add_argument("--output", default=None, help="Output directory. Defaults to runtime_out_<scenario>.")
+    p_scenario.add_argument("--query", action="append", help="Override scenario query. Can be repeated.")
+    p_scenario.add_argument("--scenarios-dir", default="scenarios", help="Directory containing scenario JSON files.")
 
     p_check = sub.add_parser("check-backends", help="Check configured mock/local/API LLM backends.")
     p_check.add_argument("--config", required=True, help="Runtime config JSON.")
@@ -37,10 +49,32 @@ def main() -> None:
     if args.command == "run":
         output = Path(args.output)
         queries = args.query or [DEFAULT_QUERY]
-        if args.config:
+        if args.scenario:
+            result = run_scenario(
+                scenario=args.scenario,
+                scenario_dir=args.scenarios_dir,
+                queries=args.query,
+                output_dir=output,
+            )
+        elif args.config:
             result = run_from_config(config_path=args.config, queries=queries, output_dir=output)
         else:
             result = run_experiment_001(output_dir=output)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "list-scenarios":
+        print(json.dumps({"scenarios": list_scenarios(args.scenarios_dir)}, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "run-scenario":
+        output = Path(args.output or f"runtime_out_{args.scenario}")
+        result = run_scenario(
+            scenario=args.scenario,
+            scenario_dir=args.scenarios_dir,
+            queries=args.query,
+            output_dir=output,
+        )
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return
 

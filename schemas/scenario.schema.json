@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spiralreality.local/schemas/multipolar-scenario.schema.json",
+  "title": "MultipolarScenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "description",
+    "queries",
+    "agents"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_\\-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "premise": {
+          "type": "string"
+        },
+        "stakes": {
+          "type": "string"
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "round": {},
+              "title": {
+                "type": "string"
+              },
+              "scene": {
+                "type": "string"
+              },
+              "pressure": {
+                "type": "string"
+              },
+              "turn": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "domination_cap": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_translation_loss": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_ambiguity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "queries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "agents": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "agent_config.schema.json"
+      }
+    }
+  }
+}

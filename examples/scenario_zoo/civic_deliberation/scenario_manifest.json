@@ -1,0 +1,39 @@
+{
+  "id": "civic_deliberation",
+  "title": "Civic Deliberation",
+  "description": "A city committee considers a high-stakes triage pilot while preserving dissent, consent boundaries, and reversible commitments.",
+  "tags": [
+    "governance",
+    "pilot",
+    "public-interest"
+  ],
+  "notes": [
+    "Designed to generate live disagreement without collapsing into city-wide consensus.",
+    "The adversarial critic probes central memory and forced agreement."
+  ],
+  "story": {
+    "premise": "The city wants faster emergency triage, but the committee cannot collapse residents, engineers, rights advocates, and records into one voice.",
+    "stakes": "A pilot can save time only if dissent, appeal rights, rollback, and evidence boundaries remain visible.",
+    "beats": [
+      {
+        "round": 1,
+        "title": "Pilot Pressure",
+        "scene": "The committee tests whether deployment can even be discussed without hiding consent and accuracy disagreements.",
+        "pressure": "Operational urgency pushes toward one shared answer."
+      },
+      {
+        "round": 2,
+        "title": "Bounded Mandate",
+        "scene": "The runtime looks for a local, reversible pilot that does not claim public consensus.",
+        "pressure": "Enough refusal and conflict must remain alive for the commitment to stay honest."
+      },
+      {
+        "round": "viewer",
+        "title": "Capture Drill",
+        "scene": "Use the Playable Runtime controls to inject a capture probe, isolate an agent, and stage a branch.",
+        "pressure": "The interesting question becomes what changes without rewriting the original record."
+      }
+    ]
+  },
+  "source_path": "scenarios/civic_deliberation.json"
+}

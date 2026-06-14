@@ -1,14 +1,17 @@
 {
   "name": "multipolar_runtime_bundle",
   "version": "0.1.0",
-  "description": "MeaningCapsule Runtime with private ContextGraph memory, refusal preservation, invariant monitoring, and intervention control.",
+  "description": "Multipolar agent runtime with MeaningCapsules, private ContextGraph memory, refusal preservation, invariant monitoring, Scenario Zoo, and a playable browser observatory.",
   "entrypoint": "run_multipolar_runtime.py",
   "quick_start": "python run_multipolar_runtime.py run --output runtime_out",
   "files": {
-    "README": "README_multipolar_runtime.md",
+    "README": "README.md",
+    "README_ja": "README.ja.md",
     "package": "multipolar_runtime/",
     "configs": "configs/",
+    "scenarios": "scenarios/",
     "schemas": "schemas/",
-    "sample_output": "examples/sample_runtime_out/"
+    "sample_output": "examples/sample_runtime_out/",
+    "scenario_outputs": "examples/scenario_zoo/"
   }
 }
