@@ -49,6 +49,15 @@
     "private_state": {
       "type": "object",
       "description": "Optional local-only state. This must never be emitted as a MeaningCapsule."
+    },
+    "behavior": {
+      "type": "string",
+      "description": "Runtime behavior preset used by mock and adversarial experiments."
+    },
+    "public_projection": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Optional bounded, public mock projection for Scenario Zoo experiments."
     }
   },
   "$defs": {

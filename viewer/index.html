@@ -16,6 +16,10 @@
       </div>
       <div class="header-actions">
         <label class="field">
+          <span>Scenario</span>
+          <select id="scenarioSelect"></select>
+        </label>
+        <label class="field">
           <span>Data path</span>
           <input id="dataPath" value="../runtime_out" spellcheck="false" />
         </label>
@@ -39,6 +43,114 @@
         <div class="temporal-controls">
           <input id="roundLens" type="range" min="1" max="1" value="1" />
           <div id="roundReadout" class="round-readout">Round 1</div>
+        </div>
+      </section>
+
+      <section class="panel story-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Scenario narrative</p>
+            <h2>Story Arc</h2>
+          </div>
+        </div>
+        <div id="scenarioStory" class="story-arc"></div>
+      </section>
+
+      <section class="panel play-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Scenario Zoo</p>
+            <h2>Playable Runtime</h2>
+          </div>
+          <button id="resetLabButton" type="button">Reset Lab</button>
+        </div>
+        <div class="play-grid">
+          <div class="lab-group scenario-readout" id="scenarioSummary"></div>
+
+          <div class="lab-group">
+            <div class="lab-heading">
+              <span>Injection Lab</span>
+              <span class="mini-pill">what-if</span>
+            </div>
+            <div class="lab-row">
+              <label class="tool-field">
+                <span>Source agent</span>
+                <select id="injectAgent"></select>
+              </label>
+            </div>
+            <textarea id="injectionText" rows="3" spellcheck="false"></textarea>
+            <div class="lab-actions">
+              <button id="injectSafeButton" type="button">Inject Safe Capsule</button>
+              <button id="injectDangerButton" type="button">Inject Capture Probe</button>
+            </div>
+          </div>
+
+          <div class="lab-group">
+            <div class="lab-heading">
+              <span>Intervention Desk</span>
+              <span class="mini-pill">local lens</span>
+            </div>
+            <div class="lab-row">
+              <label class="tool-field">
+                <span>Agent</span>
+                <select id="isolateAgent"></select>
+              </label>
+              <button id="isolateButton" type="button">Toggle Isolation</button>
+            </div>
+            <div id="playLog" class="play-log"></div>
+          </div>
+
+          <div class="lab-group">
+            <div class="lab-heading">
+              <span>Commitment Preview</span>
+              <span class="mini-pill">bounded</span>
+            </div>
+            <div id="commitmentPreview" class="commitment-preview"></div>
+            <button id="stageCommitmentButton" type="button">Stage Commitment</button>
+          </div>
+
+          <div class="lab-group">
+            <div class="lab-heading">
+              <span>Branch Lab</span>
+              <span class="mini-pill">replay</span>
+            </div>
+            <div class="lab-row">
+              <label class="tool-field">
+                <span>Saved branch</span>
+                <select id="branchSelect"></select>
+              </label>
+            </div>
+            <div class="lab-actions">
+              <button id="saveBranchButton" type="button">Save Branch</button>
+              <button id="rollbackBranchButton" type="button">Roll Back</button>
+            </div>
+            <div class="lab-actions export-actions">
+              <button id="copyBranchUrlButton" type="button">Copy URL</button>
+              <button id="downloadBranchJsonButton" type="button">Download JSON</button>
+            </div>
+            <div id="branchReadout" class="play-log"></div>
+            <div id="branchExportStatus" class="branch-export-status"></div>
+          </div>
+
+          <div class="lab-group tuning-group">
+            <div class="lab-heading">
+              <span>Protocol Tuning</span>
+              <span class="mini-pill">thresholds</span>
+            </div>
+            <label class="slider-field">
+              <span>Domination cap</span>
+              <input id="dominationThreshold" type="range" min="0.25" max="0.9" step="0.01" />
+            </label>
+            <label class="slider-field">
+              <span>Translation haze cap</span>
+              <input id="translationThreshold" type="range" min="0.1" max="1" step="0.01" />
+            </label>
+            <label class="slider-field">
+              <span>Stalemate cap</span>
+              <input id="stalemateThreshold" type="range" min="0.2" max="1" step="0.01" />
+            </label>
+            <div id="thresholdReadout" class="threshold-readout"></div>
+          </div>
         </div>
       </section>
 
@@ -176,6 +288,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=live-panels-1"></script>
+    <script type="module" src="./app.js?v=branch-export-1"></script>
   </body>
 </html>

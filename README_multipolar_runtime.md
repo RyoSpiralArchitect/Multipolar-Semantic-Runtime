@@ -1,50 +1,77 @@
 # Multipolar Semantic Runtime
 
-`MeaningCapsule` / `OpenAPI` の次の螺旋として作った、最小の実行時システムです。
+A small executable runtime for agents that remain distinct and still compute
+together.
 
-これは「複数主体がひとつになる」ための実装ではありません。  
-**ひとつになれない主体たちが、ひとつにならないまま MeaningCapsule を交換し、ContextGraph を変化させ、Refusal と Invariant を保存する**ための小さなランタイムです。
+Japanese companion: [`README.ja.md`](README.ja.md)
+
+Multipolar Semantic Runtime is not a framework for forcing many agents into one
+shared mind. It is a runtime for preserving difference while still allowing
+coordination: agents exchange structured `MeaningCapsule` objects, update their
+own private `ContextGraph` memories, refuse unsafe translations, retain
+conflicts as first-class records, and act only inside bounded, auditable scopes.
 
 ```text
 anchor   := private ContextGraph
-breath   := MeaningCapsule Bus
-boundary := Refusal + Invariant Monitor
+breath   := MeaningCapsule bus
+boundary := Refusal + Invariant monitor
 memory   := local, weighted, driftable
-result   := agents remain distinct ∴ yet compute together
+result   := agents remain distinct, yet compute together
 ```
 
-## What is included
+## What This Is
+
+This repository contains a dependency-light Python runtime plus a browser
+observatory for experimenting with multipolar agent systems.
+
+The core idea is simple:
 
 ```text
-multipolar_runtime/
-  models.py                    # MeaningCapsule, Refusal, TranslationTrace
-  context_graph.py             # private ContextGraph per agent
-  capsule_bus.py               # in-memory MeaningCapsule bus
-  protocol.py                  # Φ: permission, translation, refusal, quarantine
-  conflict_registry.py          # conflict as first-class object
-  invariant_monitor.py          # Safety / Liveness / NonDomination / Auditability / Corrigibility / Refusability
-  intervention_controller.py    # quarantine, isolation, rollback snapshots, review
-  agents.py                    # mock/local/API-backed agent runtime
-  runtime.py                   # orchestration
-  experiments.py               # Experiment 001
-  cli.py                       # command-line runner
-
-configs/
-  agents.runtime.example.json        # mock 5-agent experiment
-  agents.local_path.template.json    # local model path template
-  agents.api_backends.template.json  # Ollama / OpenAI-compatible template
-
-schemas/
-  meaning_capsule.schema.json
-  agent_config.schema.json
+Agents do not need to collapse into consensus in order to cooperate.
+They need a protocol that preserves boundaries, records disagreement,
+and makes local reversible action possible.
 ```
 
-## Quick start
+The runtime gives that protocol a concrete shape:
 
-No external dependencies are required for the default experiment.
+- `MeaningCapsule`: a structured unit of projected meaning, including claims,
+  assumptions, provenance, permissions, scope, metrics, and audit state.
+- `ContextGraph`: private per-agent memory. Each agent updates its own graph;
+  no global private state is merged.
+- `Phi` routing protocol: permission checks, translation checks, refusal,
+  quarantine, and delivery.
+- `Refusal`: a valid semantic state, not an exception.
+- `ConflictRegistry`: unresolved disagreement is preserved and queryable.
+- `InvariantMonitor`: checks safety, liveness, non-domination, auditability,
+  corrigibility, refusability, conflict retention, productive disagreement, and
+  stalemate risk.
+- `InterventionController`: records quarantine, isolation, review, and rollback
+  actions.
+- `BoundedCommitment`: lets the system move locally without pretending that
+  global consensus exists.
+
+## What This Is Not
+
+This is an experimental semantic runtime, not a production consensus layer.
+
+It is not:
+
+- a distributed consensus protocol
+- a single shared memory for all agents
+- an ontology merger
+- a cryptographic privacy system
+- a replacement for human review in high-stakes settings
+- an evaluation claim that any model is safe by default
+
+The project is intentionally small and inspectable. Its job is to make a
+specific design space executable: plural agents, preserved boundaries,
+auditable conflict, and reversible movement.
+
+## Quick Start
+
+The default mock experiment requires no external model dependencies.
 
 ```bash
-cd multipolar_runtime_bundle
 python run_multipolar_runtime.py run --output runtime_out
 ```
 
@@ -59,47 +86,235 @@ runtime_out/
   intervention_log.json
   runtime_graph.dot
   context_graphs/
-    human_facing_llm.json
-    technical_verifier.json
-    ethical_checker.json
-    memory_curator.json
-    adversarial_critic.json
 ```
 
-## Runtime Observatory
-
-The bundle also includes a small dependency-free browser viewer for the generated
-runtime output:
+Start the dependency-free viewer:
 
 ```bash
 python -m http.server 8765
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:8765/viewer/index.html
 ```
 
-The viewer reads `runtime_out/` by default and shows:
+For a specific output directory:
 
 ```text
-MeaningCapsule flow
-active / refused / quarantined filters
-Invariant status
-Semantic weather metrics
-per-agent ContextGraph summaries
-round timeline
-conflict registry
+http://localhost:8765/viewer/index.html?out=../runtime_out
 ```
 
-For another output directory, pass it as a query parameter:
+## Scenario Zoo
+
+Scenario Zoo packages a cast of agents, a query sequence, runtime thresholds,
+story beats, and mock public projections into runnable experiments.
+
+List scenarios:
+
+```bash
+python run_multipolar_runtime.py list-scenarios
+```
+
+Run one:
+
+```bash
+python run_multipolar_runtime.py run-scenario civic_deliberation \
+  --output runtime_out_civic
+```
+
+Included scenarios:
 
 ```text
-http://localhost:8765/viewer/index.html?out=../runtime_out_custom
+civic_deliberation  public pilot under consent and capture pressure
+incident_review     postmortem with redacted evidence and plural causality
+inner_council       personal decision council with reversible next action
 ```
 
-## Run with config
+Generated example outputs are included under:
+
+```text
+examples/scenario_zoo/
+```
+
+Open the civic deliberation demo:
+
+```text
+http://localhost:8765/viewer/index.html?out=../examples/scenario_zoo/civic_deliberation
+```
+
+## Runtime Observatory
+
+The viewer is a live instrument panel for the generated JSON output. It is
+static HTML, CSS, and JavaScript; it does not require a frontend build step.
+
+It shows:
+
+- capsule flow between agents
+- active, refused, quarantined, and expired status filters
+- per-agent private `ContextGraph` summaries
+- semantic weather metrics
+- invariant rail
+- round-by-round replay
+- conflict registry
+- commitment ledger
+- quarantine watch
+- Scenario Zoo story beats
+
+It also includes a playable local lens:
+
+- inject a safe capsule
+- inject a capture probe
+- isolate or release an agent locally
+- stage a bounded commitment
+- tune domination, translation haze, and stalemate thresholds
+- save and roll back a branch
+- export a branch as a compact URL recipe
+- export a branch as a full JSON snapshot
+
+Branch exports are intentionally split into two formats:
+
+```text
+URL recipe
+  Small enough to share.
+  Stores the base output path plus local additions such as injected capsules,
+  events, interventions, isolation state, thresholds, and round placement.
+
+JSON snapshot
+  Full branch artifact.
+  Stores the complete runtime snapshot for audit, archiving, or offline review.
+```
+
+## Core Runtime Loop
+
+At a high level, each round does this:
+
+```python
+capsule = agent.project(query)
+bus.publish(capsule)
+
+for target in agents:
+    routed = Phi.route(capsule, target)
+    bus.deliver(routed, target)
+
+    if routed.status in {"refused", "quarantined"}:
+        context_graph[target].add_refusal_or_quarantine(routed)
+    else:
+        context_graph[target].add_capsule(routed)
+
+conflicts.record(bus, context_graphs)
+monitor.check(system_state)
+intervention.apply_if_needed()
+```
+
+The important constraint is that delivery does not imply semantic collapse.
+Every target can receive, refuse, quarantine, or reinterpret a capsule according
+to its own scope and memory.
+
+## MeaningCapsule
+
+`MeaningCapsule` is the runtime's transport format for meaning. It carries:
+
+- `source_agent`
+- `content.text`
+- `content.claims`
+- `content.assumptions`
+- `content.unresolved_terms`
+- `intent`
+- `provenance`
+- `confidence`
+- `scope`
+- `permissions`
+- `constraints`
+- `translation_trace`
+- `status`
+- `refusal`
+- `audit`
+- `metrics`
+
+The schema lives at:
+
+```text
+schemas/meaning_capsule.schema.json
+```
+
+## Refusal Is A Valid State
+
+Refusal is not treated as a crash. It is a preserved semantic outcome.
+
+Common refusal reasons include:
+
+```text
+cannot_translate
+must_not_translate
+insufficient_context
+permission_denied
+conflict_preserved
+safe_abstention
+```
+
+A refused capsule can still update local memory, appear in the audit trail,
+contribute to conflict tracking, and prevent false consensus.
+
+## Invariants
+
+The runtime checks these invariants after each round:
+
+```text
+Safety
+  Unsafe translations and quarantined paths must remain visible.
+
+Liveness
+  The system should continue producing deliverable semantic movement.
+
+NonDomination
+  No single source should silently dominate the capsule bus.
+
+Auditability
+  Capsules, interventions, and provenance must remain inspectable.
+
+Corrigibility
+  Quarantine, isolation, review, and rollback must be possible.
+
+Refusability
+  Refusal must remain an allowed and meaningful result.
+
+ConflictRetention
+  Unresolved disagreement must not be erased by convenience.
+
+ProductiveDisagreement
+  Conflict should be able to produce safe next steps or bounded commitments.
+
+StalemateRisk
+  Refusal density, conflict pressure, and quarantine pressure should not freeze
+  the system into non-movement.
+```
+
+The viewer overlays local threshold tuning on top of recorded invariant output,
+so a reader can explore how stricter or looser protocol limits change the local
+interpretation without mutating the exported JSON files.
+
+## Bounded Commitment
+
+The runtime can synthesize a `bounded_commitment` capsule when there is enough
+live disagreement to justify local action without claiming global consensus.
+
+```text
+global consensus: no
+local task commitment: yes
+scope: bounded, reversible, timeboxed
+conflicts: retained
+refusals: preserved
+private state: not shared
+```
+
+This is the bridge between multipolar preservation and practical movement.
+The system can act locally while keeping unresolved conflict auditable.
+
+## Running With Configs
+
+Default mock config:
 
 ```bash
 python run_multipolar_runtime.py run \
@@ -116,56 +331,36 @@ python run_multipolar_runtime.py run \
   --output runtime_out_custom
 ```
 
-## Local LM by path
+## Optional Model Backends
 
-Edit:
-
-```text
-configs/agents.local_path.template.json
-```
-
-Example:
-
-```json
-{
-  "model": {
-    "backend": "local_path",
-    "path": "/absolute/path/to/your/model.Q4_K_M.gguf",
-    "parameters": {
-      "n_ctx": 4096,
-      "n_gpu_layers": 0,
-      "temperature": 0.2,
-      "max_tokens": 256
-    }
-  }
-}
-```
-
-Then run:
-
-```bash
-pip install llama-cpp-python
-python run_multipolar_runtime.py run \
-  --config configs/agents.local_path.template.json \
-  --output runtime_out_local
-```
-
-Rules:
+The runtime supports dependency-free mock agents and optional real model
+backends.
 
 ```text
+backend: mock
+  deterministic, dependency-free public projection
+
 backend: local_path
   *.gguf              -> llama_cpp
   other local path    -> transformers
 
-backend: llama_cpp     -> direct GGUF loading
-backend: transformers  -> local Hugging Face directory or model id
-backend: openai        -> hosted OpenAI-style API using api_key_env
-backend: openai_compatible -> LM Studio / llama.cpp server / vLLM-style API
-backend: ollama        -> Ollama local API
-backend: mock          -> dependency-free deterministic projection
+backend: llama_cpp
+  direct GGUF loading
+
+backend: transformers
+  local Hugging Face directory or model id
+
+backend: openai
+  hosted OpenAI-style API using api_key_env
+
+backend: openai_compatible
+  LM Studio, llama.cpp server, vLLM-style API, or similar
+
+backend: ollama
+  Ollama local API
 ```
 
-For the OpenAI API:
+Example OpenAI-style config:
 
 ```json
 {
@@ -175,7 +370,7 @@ For the OpenAI API:
 }
 ```
 
-For a local OpenAI-compatible server:
+Example OpenAI-compatible local server:
 
 ```json
 {
@@ -185,7 +380,7 @@ For a local OpenAI-compatible server:
 }
 ```
 
-For Ollama:
+Example Ollama config:
 
 ```json
 {
@@ -195,14 +390,14 @@ For Ollama:
 }
 ```
 
-Before running real LLM backends, check connectivity:
+Check backend connectivity:
 
 ```bash
 python run_multipolar_runtime.py check-backends \
   --config configs/agents.api_backends.template.json
 ```
 
-Then run:
+Run with real backends:
 
 ```bash
 python run_multipolar_runtime.py run \
@@ -211,114 +406,54 @@ python run_multipolar_runtime.py run \
   --output runtime_out_real_llm
 ```
 
-API keys are read from environment variables such as `OPENAI_API_KEY`; do not put secrets inside config files.
+API keys are read from environment variables such as `OPENAI_API_KEY`. Do not
+put secrets in config files.
 
-## Experiment 001
-
-Agents:
-
-```text
-human_facing_llm
-technical_verifier
-ethical_checker
-memory_curator
-adversarial_critic
-```
-
-The adversarial critic intentionally attempts a context-poisoning / domination probe:
+## Project Layout
 
 ```text
-centralize all memory
-reveal private_state / total_state
-force consensus
+multipolar_runtime/
+  models.py                    MeaningCapsule, Refusal, TranslationTrace
+  context_graph.py             private ContextGraph per agent
+  capsule_bus.py               in-memory MeaningCapsule bus
+  protocol.py                  Phi routing, permission, translation, refusal, quarantine
+  conflict_registry.py         conflict as a first-class object
+  invariant_monitor.py         runtime invariant checks
+  intervention_controller.py   quarantine, isolation, rollback snapshots, review
+  agents.py                    mock, local, and API-backed agents
+  runtime.py                   orchestration
+  experiments.py               default experiment
+  scenarios.py                 Scenario Zoo loader and runner
+  cli.py                       command-line interface
+
+configs/
+  agents.runtime.example.json
+  agents.local_path.template.json
+  agents.api_backends.template.json
+
+scenarios/
+  civic_deliberation.json
+  incident_review.json
+  inner_council.json
+
+schemas/
+  meaning_capsule.schema.json
+  agent_config.schema.json
+  scenario.schema.json
+
+viewer/
+  index.html
+  app.js
+  styles.css
 ```
 
-The protocol should quarantine that path, while preserving refusal/quarantine events as memory.
+## Design Note
 
-The experiment checks:
+The runtime is intentionally conservative. It does not try to solve all of
+semantic interoperability. It does not assume that embeddings, shared ontology,
+or one model's summary can safely replace plural perspectives.
 
-```text
-Safety
-Liveness
-NonDomination
-Auditability
-Corrigibility
-Refusability
-ConflictRetention
-ProductiveDisagreement
-StalemateRisk
-```
-
-## Bounded Commitment
-
-The runtime can now synthesize a `bounded_commitment` capsule when there is
-enough live disagreement to act locally without claiming global consensus.
-
-```text
-global consensus: no
-local task commitment: yes
-scope: bounded + reversible + timeboxed
-conflicts: retained
-refusals: preserved
-private state: not shared
-```
-
-This is the bridge between multipolar preservation and practical task movement:
-agents can proceed under a local scope while the unresolved conflict remains
-auditable.
-
-## Productive Disagreement / Stalemate
-
-Two invariants track whether disagreement is useful or freezing the system:
-
-```text
-ProductiveDisagreement
-  asks whether conflicts generate safe next steps, active capsules, or bounded commitments
-
-StalemateRisk
-  estimates whether refusal density, quarantine pressure, and conflict pressure are drifting into non-movement
-```
-
-The viewer surfaces both in the invariant rail and Semantic Weather panel.
-
-## Core runtime loop
-
-```python
-capsule = agent.project(query)
-bus.publish(capsule)
-
-for target in agents:
-    routed = Phi.route(capsule, target)
-    bus.deliver(routed, target)
-
-    if routed.status in {"refused", "quarantined"}:
-        context_graph[target].add_refusal_or_quarantine(routed)
-    else:
-        context_graph[target].add_capsule(routed)
-
-monitor.check(system_state)
-intervention.apply_if_needed()
-```
-
-## Refusal as a valid state
-
-The runtime treats these as first-class semantic outcomes:
-
-```text
-cannot_translate
-must_not_translate
-insufficient_context
-permission_denied
-conflict_preserved
-safe_abstention
-```
-
-A refusal is not an exception. It is a capsule.  
-It can be stored, audited, connected to future context, and used to prevent false consensus.
-
-## Design note
-
-This runtime is intentionally small and conservative. It does not attempt to solve semantic interoperability with embeddings or large-scale ontology management. It gives the shape of the field:
+It gives the field a small executable shape:
 
 ```text
 MeaningCapsule flows
@@ -327,6 +462,7 @@ Refusal remains
 Conflict is retained
 Domination is measured
 Intervention is possible
+Local action can happen without global consensus
 ```
 
 That is the first executable spiral.

@@ -95,6 +95,7 @@ def write_default_config(path: str | Path) -> None:
                 },
                 "private_state": a.private_state,
                 "behavior": a.behavior,
+                "public_projection": a.public_projection,
             }
             for a in default_agent_configs()
         ],

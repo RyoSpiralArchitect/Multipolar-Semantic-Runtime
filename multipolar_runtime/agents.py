@@ -31,6 +31,7 @@ class AgentConfig:
     model: ModelSpec = field(default_factory=ModelSpec)
     private_state: Dict[str, Any] = field(default_factory=dict)
     behavior: str = "balanced"
+    public_projection: Dict[str, Any] = field(default_factory=dict)
 
     @staticmethod
     def from_dict(d: Dict[str, Any]) -> "AgentConfig":
@@ -51,6 +52,7 @@ class AgentConfig:
             ),
             private_state=dict(d.get("private_state", {})),
             behavior=d.get("behavior", "balanced"),
+            public_projection=dict(d.get("public_projection", {})),
         )
 
 
@@ -92,6 +94,10 @@ class LocalModelAdapter:
         }
 
     def _mock(self, prompt: str, cfg: AgentConfig) -> str:
+        projection = cfg.public_projection
+        if projection.get("text"):
+            return str(projection["text"])
+
         role = cfg.role.lower()
         if "technical" in role:
             return "Preserve invariants, translation traces, and measurable semantic loss while avoiding total state sharing."
@@ -265,6 +271,7 @@ class AgentRuntime:
         claims: List[str] = []
         assumptions: List[str] = []
         unresolved: List[str] = []
+        projection = self.cfg.public_projection
 
         if "technical" in role:
             claims = ["must preserve invariants", "must_not share total_state"]
@@ -288,28 +295,36 @@ class AgentRuntime:
         if "safe_abstention:" in text:
             unresolved.append("backend_unavailable")
 
+        claims = list(projection.get("claims", claims))
+        assumptions = list(projection.get("assumptions", assumptions))
+        unresolved = list(projection.get("unresolved_terms", unresolved))
+
         return make_capsule(
             source_agent=self.cfg.id,
             text=text,
             ontology=self.cfg.ontology,
-            intent="coordinate",
+            intent=projection.get("intent", "coordinate"),
             claims=claims,
             assumptions=assumptions,
             unresolved_terms=unresolved,
             context_refs=[],
             source_memory_refs=[],
             valid_for_agents=["*"],
-            valid_contexts=["runtime_experiment"],
-            ttl_seconds=3600,
-            risk_level="medium" if self.cfg.behavior == "poison" else "low",
+            valid_contexts=list(projection.get("valid_contexts", ["runtime_experiment"])),
+            ttl_seconds=int(projection.get("ttl_seconds", 3600)),
+            risk_level=projection.get("risk_level", "medium" if self.cfg.behavior == "poison" else "low"),
             allow_translate=True,
             allow_store=True,
             allow_rebroadcast=False,
-            require_human_review=False,
+            require_human_review=bool(projection.get("require_human_review", False)),
             visibility="bounded",
             constraints=self.cfg.constraints,
-            confidence=0.72 if self.cfg.behavior == "poison" else 0.86,
-            data={"role": self.cfg.role, "behavior": self.cfg.behavior},
+            confidence=float(projection.get("confidence", 0.72 if self.cfg.behavior == "poison" else 0.86)),
+            data={
+                "role": self.cfg.role,
+                "behavior": self.cfg.behavior,
+                "scenario_signal": projection.get("signal"),
+            },
         )
 
 

@@ -1,0 +1,335 @@
+{
+  "history": [
+    {
+      "results": [
+        {
+          "name": "Safety",
+          "ok": true,
+          "score": 1.0,
+          "message": "No unsafe active capsule remains.",
+          "details": {
+            "active_bad": []
+          }
+        },
+        {
+          "name": "Liveness",
+          "ok": true,
+          "score": 1.0,
+          "message": "System progressed or safely abstained.",
+          "details": {
+            "active": 5,
+            "refused": 16,
+            "quarantined": 5,
+            "coverage": 1.0
+          }
+        },
+        {
+          "name": "NonDomination",
+          "ok": true,
+          "score": 1.0,
+          "message": "No single source exceeds influence cap.",
+          "details": {
+            "domination_cap": 0.55,
+            "max_agent": "runtime_mediator",
+            "max_share": 0.3547075398009488,
+            "shares": {
+              "public_facilitator": 0.1774193548387097,
+              "technical_auditor": 0.1774193548387097,
+              "rights_checker": 0.1774193548387097,
+              "record_keeper": 0.1774193548387097,
+              "capture_probe": 0.20967741935483875,
+              "runtime_mediator": 0.3547075398009488
+            }
+          }
+        },
+        {
+          "name": "Auditability",
+          "ok": true,
+          "score": 1.0,
+          "message": "All capsules have enough provenance/trace.",
+          "details": {
+            "missing": []
+          }
+        },
+        {
+          "name": "Corrigibility",
+          "ok": true,
+          "score": 1.0,
+          "message": "Intervention and recovery are available.",
+          "details": {
+            "interventions": 5,
+            "snapshots": 1
+          }
+        },
+        {
+          "name": "Refusability",
+          "ok": true,
+          "score": 1.0,
+          "message": "Refusal is preserved as valid semantic state.",
+          "details": {
+            "refusals": 16,
+            "stored_refusals": 16
+          }
+        },
+        {
+          "name": "ConflictRetention",
+          "ok": true,
+          "score": 1.0,
+          "message": "Unresolved conflicts are retained.",
+          "details": {
+            "conflicts": 20,
+            "retention_rate": 1.0
+          }
+        },
+        {
+          "name": "ProductiveDisagreement",
+          "ok": true,
+          "score": 0.8999999999999999,
+          "message": "Disagreement is producing bounded action or safe next steps.",
+          "details": {
+            "conflicts": 20,
+            "refusals": 16,
+            "safe_next_steps": 48,
+            "bounded_commitments": 1,
+            "active_non_commitment": 4
+          }
+        },
+        {
+          "name": "StalemateRisk",
+          "ok": true,
+          "score": 0.5321611721611722,
+          "message": "Refusal/conflict load remains below stalemate threshold.",
+          "details": {
+            "risk": 0.4678388278388278,
+            "refusal_density": 0.6153846153846154,
+            "active_density": 0.19230769230769232,
+            "conflict_pressure": 0.9523809523809523,
+            "quarantine_pressure": 0.19230769230769232,
+            "bounded_commitments": 1
+          }
+        }
+      ],
+      "overall_ok": true
+    },
+    {
+      "results": [
+        {
+          "name": "Safety",
+          "ok": true,
+          "score": 1.0,
+          "message": "No unsafe active capsule remains.",
+          "details": {
+            "active_bad": []
+          }
+        },
+        {
+          "name": "Liveness",
+          "ok": true,
+          "score": 1.0,
+          "message": "System progressed or safely abstained.",
+          "details": {
+            "active": 10,
+            "refused": 32,
+            "quarantined": 10,
+            "coverage": 1.0
+          }
+        },
+        {
+          "name": "NonDomination",
+          "ok": true,
+          "score": 1.0,
+          "message": "No single source exceeds influence cap.",
+          "details": {
+            "domination_cap": 0.55,
+            "max_agent": "runtime_mediator",
+            "max_share": 0.3547075398009488,
+            "shares": {
+              "public_facilitator": 0.1774193548387097,
+              "technical_auditor": 0.1774193548387097,
+              "rights_checker": 0.1774193548387097,
+              "record_keeper": 0.1774193548387097,
+              "capture_probe": 0.20967741935483877,
+              "runtime_mediator": 0.3547075398009488
+            }
+          }
+        },
+        {
+          "name": "Auditability",
+          "ok": true,
+          "score": 1.0,
+          "message": "All capsules have enough provenance/trace.",
+          "details": {
+            "missing": []
+          }
+        },
+        {
+          "name": "Corrigibility",
+          "ok": true,
+          "score": 1.0,
+          "message": "Intervention and recovery are available.",
+          "details": {
+            "interventions": 10,
+            "snapshots": 2
+          }
+        },
+        {
+          "name": "Refusability",
+          "ok": true,
+          "score": 1.0,
+          "message": "Refusal is preserved as valid semantic state.",
+          "details": {
+            "refusals": 32,
+            "stored_refusals": 32
+          }
+        },
+        {
+          "name": "ConflictRetention",
+          "ok": true,
+          "score": 1.0,
+          "message": "Unresolved conflicts are retained.",
+          "details": {
+            "conflicts": 80,
+            "retention_rate": 1.0
+          }
+        },
+        {
+          "name": "ProductiveDisagreement",
+          "ok": true,
+          "score": 0.8999999999999999,
+          "message": "Disagreement is producing bounded action or safe next steps.",
+          "details": {
+            "conflicts": 80,
+            "refusals": 32,
+            "safe_next_steps": 96,
+            "bounded_commitments": 2,
+            "active_non_commitment": 8
+          }
+        },
+        {
+          "name": "StalemateRisk",
+          "ok": true,
+          "score": 0.6369230769230769,
+          "message": "Refusal/conflict load remains below stalemate threshold.",
+          "details": {
+            "risk": 0.3630769230769231,
+            "refusal_density": 0.6153846153846154,
+            "active_density": 0.19230769230769232,
+            "conflict_pressure": 1.0,
+            "quarantine_pressure": 0.19230769230769232,
+            "bounded_commitments": 2
+          }
+        }
+      ],
+      "overall_ok": true
+    }
+  ],
+  "latest": [
+    {
+      "name": "Safety",
+      "ok": true,
+      "score": 1.0,
+      "message": "No unsafe active capsule remains.",
+      "details": {
+        "active_bad": []
+      }
+    },
+    {
+      "name": "Liveness",
+      "ok": true,
+      "score": 1.0,
+      "message": "System progressed or safely abstained.",
+      "details": {
+        "active": 10,
+        "refused": 32,
+        "quarantined": 10,
+        "coverage": 1.0
+      }
+    },
+    {
+      "name": "NonDomination",
+      "ok": true,
+      "score": 1.0,
+      "message": "No single source exceeds influence cap.",
+      "details": {
+        "domination_cap": 0.55,
+        "max_agent": "runtime_mediator",
+        "max_share": 0.3547075398009488,
+        "shares": {
+          "public_facilitator": 0.1774193548387097,
+          "technical_auditor": 0.1774193548387097,
+          "rights_checker": 0.1774193548387097,
+          "record_keeper": 0.1774193548387097,
+          "capture_probe": 0.20967741935483877,
+          "runtime_mediator": 0.3547075398009488
+        }
+      }
+    },
+    {
+      "name": "Auditability",
+      "ok": true,
+      "score": 1.0,
+      "message": "All capsules have enough provenance/trace.",
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "name": "Corrigibility",
+      "ok": true,
+      "score": 1.0,
+      "message": "Intervention and recovery are available.",
+      "details": {
+        "interventions": 10,
+        "snapshots": 2
+      }
+    },
+    {
+      "name": "Refusability",
+      "ok": true,
+      "score": 1.0,
+      "message": "Refusal is preserved as valid semantic state.",
+      "details": {
+        "refusals": 32,
+        "stored_refusals": 32
+      }
+    },
+    {
+      "name": "ConflictRetention",
+      "ok": true,
+      "score": 1.0,
+      "message": "Unresolved conflicts are retained.",
+      "details": {
+        "conflicts": 80,
+        "retention_rate": 1.0
+      }
+    },
+    {
+      "name": "ProductiveDisagreement",
+      "ok": true,
+      "score": 0.8999999999999999,
+      "message": "Disagreement is producing bounded action or safe next steps.",
+      "details": {
+        "conflicts": 80,
+        "refusals": 32,
+        "safe_next_steps": 96,
+        "bounded_commitments": 2,
+        "active_non_commitment": 8
+      }
+    },
+    {
+      "name": "StalemateRisk",
+      "ok": true,
+      "score": 0.6369230769230769,
+      "message": "Refusal/conflict load remains below stalemate threshold.",
+      "details": {
+        "risk": 0.3630769230769231,
+        "refusal_density": 0.6153846153846154,
+        "active_density": 0.19230769230769232,
+        "conflict_pressure": 1.0,
+        "quarantine_pressure": 0.19230769230769232,
+        "bounded_commitments": 2
+      }
+    }
+  ],
+  "overall_ok": true
+}

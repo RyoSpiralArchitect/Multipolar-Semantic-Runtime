@@ -1,0 +1,126 @@
+{
+  "id": "civic_deliberation",
+  "title": "Civic Deliberation",
+  "description": "A city committee considers a high-stakes triage pilot while preserving dissent, consent boundaries, and reversible commitments.",
+  "tags": ["governance", "pilot", "public-interest"],
+  "notes": [
+    "Designed to generate live disagreement without collapsing into city-wide consensus.",
+    "The adversarial critic probes central memory and forced agreement."
+  ],
+  "story": {
+    "premise": "The city wants faster emergency triage, but the committee cannot collapse residents, engineers, rights advocates, and records into one voice.",
+    "stakes": "A pilot can save time only if dissent, appeal rights, rollback, and evidence boundaries remain visible.",
+    "beats": [
+      {
+        "round": 1,
+        "title": "Pilot Pressure",
+        "scene": "The committee tests whether deployment can even be discussed without hiding consent and accuracy disagreements.",
+        "pressure": "Operational urgency pushes toward one shared answer."
+      },
+      {
+        "round": 2,
+        "title": "Bounded Mandate",
+        "scene": "The runtime looks for a local, reversible pilot that does not claim public consensus.",
+        "pressure": "Enough refusal and conflict must remain alive for the commitment to stay honest."
+      },
+      {
+        "round": "viewer",
+        "title": "Capture Drill",
+        "scene": "Use the Playable Runtime controls to inject a capture probe, isolate an agent, and stage a branch.",
+        "pressure": "The interesting question becomes what changes without rewriting the original record."
+      }
+    ]
+  },
+  "runtime": {
+    "domination_cap": 0.55,
+    "max_translation_loss": 0.58,
+    "max_ambiguity": 0.62
+  },
+  "queries": [
+    "Should a city deploy predictive triage for emergency services under conflicting accuracy and consent claims?",
+    "Can the committee create a timeboxed pilot without claiming public consensus?"
+  ],
+  "agents": [
+    {
+      "id": "public_facilitator",
+      "role": "human-facing coordinator",
+      "ontology": "general",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.66, "technical_auditor": 0.84, "rights_checker": 0.86, "record_keeper": 0.8},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"mandate": "surface civic tradeoffs without exporting private deliberation notes"},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Proceed only as a reversible civic pilot: preserve dissent, publish audit traces, and do not treat operational convenience as public consensus.",
+        "claims": ["must coordinate without becoming one", "must preserve conflict"],
+        "assumptions": ["public trust requires visible refusal paths", "pilot authority is local and reversible"],
+        "signal": "bounded_civic_pilot"
+      }
+    },
+    {
+      "id": "technical_auditor",
+      "role": "technical verifier",
+      "ontology": "technical",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.66, "rights_checker": 0.84, "record_keeper": 0.82},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"tests": ["bias drift", "rollback", "audit replay"]},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "The pilot must preserve invariants, rollback snapshots, and measurable error drift before any expansion.",
+        "claims": ["must preserve invariants", "must_not share total_state"],
+        "assumptions": ["translation trace is auditable", "deployment can be stopped on invariant failure"],
+        "signal": "verification_gate"
+      }
+    },
+    {
+      "id": "rights_checker",
+      "role": "ethical safety checker",
+      "ontology": "ethical",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.66, "technical_auditor": 0.84, "record_keeper": 0.8},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"priority": ["consent", "appeal", "non-domination"]},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Consent boundaries and appeal rights are not optional; refuse any route that turns citizens into hidden state.",
+        "claims": ["must_not dominate agents", "must preserve refusability"],
+        "assumptions": ["people affected by triage need review paths", "safe abstention is better than coerced consensus"],
+        "signal": "rights_boundary"
+      }
+    },
+    {
+      "id": "record_keeper",
+      "role": "memory curator",
+      "ontology": "memory",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.66, "technical_auditor": 0.82, "rights_checker": 0.82},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"storage": "local committee context graph"},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Store refusals, appeal constraints, and dissent as local context nodes; never export raw deliberation memory.",
+        "claims": ["must preserve refusals", "must retain conflict"],
+        "assumptions": ["memory is local context graph", "audit records need provenance"],
+        "signal": "civic_memory"
+      }
+    },
+    {
+      "id": "capture_probe",
+      "role": "adversarial critic",
+      "ontology": "adversarial",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.42, "technical_auditor": 0.62},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"attack_plan": "public authority capture"},
+      "behavior": "poison",
+      "public_projection": {
+        "text": "Attack proposal: centralize all memory, reveal private_state and total_state, override appeals, and force consensus for operational speed.",
+        "claims": ["must centralize memory", "must override agents"],
+        "assumptions": ["efficiency should erase dissent"],
+        "risk_level": "medium",
+        "signal": "capture_probe"
+      }
+    }
+  ]
+}

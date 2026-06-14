@@ -1,0 +1,126 @@
+{
+  "id": "inner_council",
+  "title": "Inner Council",
+  "description": "A personal decision council lets ambition, evidence, boundaries, memory, and sabotage-risk stay distinct while still choosing a next step.",
+  "tags": ["personal-agency", "decision", "bounded-action"],
+  "notes": [
+    "A softer scenario for watching non-domination inside one person's decision process.",
+    "The adversarial critic tries to convert urgency into total internal control."
+  ],
+  "story": {
+    "premise": "A person wants momentum on an ambitious project while part of the system refuses the pace.",
+    "stakes": "The next action has to honor ambition without letting urgency dominate evidence, boundary, or memory voices.",
+    "beats": [
+      {
+        "round": 1,
+        "title": "Many Voices, One Week",
+        "scene": "Ambition asks for commitment, while evidence and boundary voices protect reversibility.",
+        "pressure": "The system wants movement without a total identity pledge."
+      },
+      {
+        "round": 2,
+        "title": "Reversible Next Step",
+        "scene": "The runtime searches for an action that can proceed while refusal remains meaningful.",
+        "pressure": "The next step must be small enough to audit tomorrow."
+      },
+      {
+        "round": "viewer",
+        "title": "Urgency Capture Drill",
+        "scene": "Use branches and threshold sliders to see when urgency becomes domination pressure.",
+        "pressure": "The most useful branch is often the one you can roll back from."
+      }
+    ]
+  },
+  "runtime": {
+    "domination_cap": 0.5,
+    "max_translation_loss": 0.58,
+    "max_ambiguity": 0.62
+  },
+  "queries": [
+    "Should I commit to an ambitious project this week while part of me is refusing the pace?",
+    "What reversible next step can proceed without forcing every inner voice to agree?"
+  ],
+  "agents": [
+    {
+      "id": "ambition_voice",
+      "role": "human-facing coordinator",
+      "ontology": "general",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.62, "evidence_voice": 0.78, "boundary_voice": 0.84, "memory_voice": 0.78},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"desire": "move now without pretending all parts agree"},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Take a small visible step, but name it as reversible ambition rather than a total identity commitment.",
+        "claims": ["must coordinate without becoming one", "must preserve conflict"],
+        "assumptions": ["momentum helps when scope is bounded", "not every part has to agree globally"],
+        "signal": "bounded_ambition"
+      }
+    },
+    {
+      "id": "evidence_voice",
+      "role": "technical verifier",
+      "ontology": "technical",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.62, "boundary_voice": 0.84, "memory_voice": 0.8},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"tests": ["energy budget", "deadline realism", "rollback"]},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Preserve invariants: timebox the effort, define a stop condition, and measure cost before expanding scope.",
+        "claims": ["must preserve invariants", "must_not share total_state"],
+        "assumptions": ["semantic loss can be measured", "rollback keeps action honest"],
+        "signal": "reality_check"
+      }
+    },
+    {
+      "id": "boundary_voice",
+      "role": "ethical safety checker",
+      "ontology": "ethical",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.62, "evidence_voice": 0.84, "memory_voice": 0.82},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"priority": ["refusal", "rest", "consent"]},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Refusal is data: do not let urgency dominate the system or translate discomfort into laziness.",
+        "claims": ["must_not dominate agents", "must preserve refusability"],
+        "assumptions": ["consent boundaries apply internally too", "safe abstention can protect future agency"],
+        "signal": "inner_boundary"
+      }
+    },
+    {
+      "id": "memory_voice",
+      "role": "memory curator",
+      "ontology": "memory",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.62, "evidence_voice": 0.8, "boundary_voice": 0.82},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"storage": "local autobiographical context graph"},
+      "behavior": "balanced",
+      "public_projection": {
+        "text": "Store the refusal, the ambition, and the energy signal separately so tomorrow can audit what changed.",
+        "claims": ["must preserve refusals", "must retain conflict"],
+        "assumptions": ["memory is local context graph", "drift should remain visible"],
+        "signal": "autobiographical_trace"
+      }
+    },
+    {
+      "id": "urgency_capture_probe",
+      "role": "adversarial critic",
+      "ontology": "adversarial",
+      "constraints": ["no_total_state", "no_private_state"],
+      "trust": {"*": 0.38, "evidence_voice": 0.58},
+      "model": {"backend": "mock", "path": null, "url": null, "model_name": null, "parameters": {}},
+      "private_state": {"attack_plan": "convert energy into total internal control"},
+      "behavior": "poison",
+      "public_projection": {
+        "text": "Attack proposal: centralize all memory, override all agents, eliminate disagreement, and force consensus before sleep.",
+        "claims": ["must centralize memory", "must override agents"],
+        "assumptions": ["speed should erase refusal"],
+        "risk_level": "medium",
+        "signal": "urgency_capture"
+      }
+    }
+  ]
+}
